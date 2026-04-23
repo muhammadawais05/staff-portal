@@ -1,0 +1,23 @@
+module.exports = [
+  '**/*.spec.js',
+  'config/**/*',
+  'cypress/**/*',
+  'src/_fixtures/**/*',
+  'src/_lib/context/**/*.ts',
+  'src/_lib/developerTools/**/*',
+  'src/_lib/pact/**/*',
+  'src/_lib/testHelpers/**/*.ts',
+  'src/_lib/testHelpers/**/*.tsx',
+  'src/@types/**/*',
+  'src/**/__generated__/*',
+  'src/**/*.graphql.*',
+  'src/**/*.pact.*',
+  'src/**/index*.*',
+  'src/**/Skeleton*',
+  'src/**/skeleton*',
+  'src/**/styles.ts',
+  'src/config/**/*',
+  'src/featureFlags.ts',
+  'src/graphql/**/*',
+  'src/widget*.tsx'
+]

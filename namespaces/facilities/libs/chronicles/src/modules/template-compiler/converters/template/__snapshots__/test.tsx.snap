@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`template payload type should interpolate model description template with variables 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/staff/289076"
+    >
+      Barbara Horvat
+    </a>
+     
+    finished
+     
+    task
+     
+    
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1"
+    >
+      "Check attitude and pass to tech 1 screener"
+    </span>
+     on 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1680879"
+    >
+      Rose Streich
+    </a>
+    
+    
+  </div>
+</div>
+`;
+
+exports[`template payload type should interpolate performed action template with variables 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    Grzegorz Kaczorek
+     updated ability 
+    Client: Manage Parent
+    : 
+    
+    Sales
+     was removed
+     as 
+    parents
+    
+  </div>
+</div>
+`;

@@ -1,0 +1,71 @@
+{
+  "changeModal": {
+    "form": {
+      "actions": {
+        "submit": "Change Commitment"
+      },
+      "fields": {
+        "changeDate": {
+          "label": "Change date"
+        },
+        "commitment": {
+          "label": "Commitment"
+        },
+        "markup": {
+          "label": "Markup"
+        },
+        "notifyCompany": {
+          "label": "Notify the client about the change"
+        },
+        "notifyTalent": {
+          "label": "Notify the talent about the change"
+        },
+        "overrideReason": {
+          "label": "Rate override reason"
+        },
+        "rateMethod": {
+          "hint": "To change rates, first update your rate method.",
+          "label": "Rate Method",
+          "options": {
+            "default": "Default",
+            "legacy": "Legacy",
+            "overrideUsingCustomValues": "Override using custom values",
+            "overrideUsingMarkupDiscountValues": "Override using markup/discount values"
+          }
+        },
+        "rateTable": {
+          "header": {
+            "company": "Company",
+            "discount": "Discount",
+            "talent": "Talent"
+          },
+          "rateChangeWarning": {
+            "previousClientRates": "Previous client hourly / PT / FT rate: ${{companyHourlyRate}} / ${{companyPartTimeRate}} / ${{companyFullTimeRate}}",
+            "previousMarkupDiscount": "Estimated previous markup/discount: ${{markup}} / ${{discount}}%",
+            "previousTalentRates": "Previous talent hourly / PT / FT rate: ${{talentHourlyRate}} / ${{talentPartTimeRate}} / ${{talentFullTimeRate}}",
+            "text": "Please note that the rate has been updated from previous rates."
+          },
+          "rowHeader": {
+            "fullTime": "Full-time per week",
+            "hourly": "Hourly rate",
+            "partTime": "Part-time per week"
+          },
+          "warning": "Companies that pay with ACH or Wire will receive a 3% discount."
+        }
+      }
+    },
+    "note": {
+      "text": "Are you sure you want to change commitment for this engagement?<br />Changes will be applied starting from the change date."
+    },
+    "title": "Change Commitment",
+    "warning": {
+      "text": "All related invoices, payments, and commissions will be sent to the accounting team for review and updated accordingly.",
+      "title": "Warning"
+    }
+  },
+  "notification": {
+    "success": {
+      "update": "The Commitment was successfully changed."
+    }
+  }
+}

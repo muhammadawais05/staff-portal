@@ -1,0 +1,28 @@
+{
+  "name": "@staff-portal/navigation",
+  "description": "Staff Portal's navigation service",
+  "version": "0.151.0",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/utils": "0.0.2",
+    "@topkit/react-router": "^0.3.4",
+    "@topkit/router": "^0.6.4",
+    "qs": "^6.10.1",
+    "react": "16.14.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0",
+    "@types/qs": "^6.9.5",
+    "@types/react-router": "^5.1.1",
+    "@types/react-router-dom": "^5.1.5"
+  },
+  "sideEffects": false
+}

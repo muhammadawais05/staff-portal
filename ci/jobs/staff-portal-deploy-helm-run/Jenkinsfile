@@ -1,0 +1,138 @@
+@Library('globalLibrary@master') _
+
+helmVersion = '3'
+
+semanticEnvName = ''
+semanticEnvNameTag = ''
+
+pipeline {
+  agent { label 'docker' }
+
+  options {
+    ansiColor('xterm')
+    timestamps()
+    timeout(time: 1, unit: 'HOURS')
+    buildDiscarder(logRotator(numToKeepStr: '20'))
+    skipDefaultCheckout()
+  }
+
+  parameters {
+    string(name: 'GIT_COMMIT', defaultValue: '', description: 'SHA of a commit to deploy')
+    string(name: 'RELEASE', defaultValue: '', description: 'Release (environment) name [demo1, demo2, staging, internal]')
+
+    string(name: 'REPOSITORY_NAME', defaultValue: 'staff-portal', description: 'Name of repository')
+    string(name: 'HELM_BRANCH', defaultValue: 'master', description: 'Helm branch')
+    string(name: 'ENV', defaultValue: '', description: 'Leave it blank or set up environment values in format ENV.key1=value1,ENV.key2=value2')
+  }
+
+  environment {
+    GOOGLE_IMAGE_TAGGING_CREDENTIALS = credentials("jenkins-storage-administrator")
+  }
+
+  stages {
+    stage('Verify params') {
+      steps {
+        script {
+          if (
+            (params.REPOSITORY_NAME == "") ||
+            (params.GIT_COMMIT == "") ||
+            (params.RELEASE == "")
+          ) {
+            error("== REPOSITORY_NAME, GIT_COMMIT and RELEASE are mandatory parameters ==")
+          }
+
+          semanticEnvName = params.RELEASE
+          semanticEnvNameTag = semanticEnvName // Add a postfix for testing
+
+          info "Environment name is: " + semanticEnvName
+          info "Environment tag is: " + semanticEnvNameTag
+        } //script
+      } //steps
+    } //stage
+
+    stage('Deploy with HELM') {
+      agent { docker { image "gcr.io/toptal-hub/helm:${helmVersion}" } }
+
+      stages {
+        stage('Checkout INF-HELM repo') {
+          steps {
+            script {
+              info "== Checking out ${params.HELM_BRANCH} =="
+
+              gitCheckout(
+                branches: params.HELM_BRANCH,
+                credentials: [username: 'git', description: 'jenkins/inf-helm'],
+                url: 'git@github.com:toptal/inf-helm.git',
+                additionalBehaviours: [
+                  cleanBeforeCheckout: true
+                ]
+              )
+
+              success "== Checked out ${params.HELM_BRANCH} at ${gitCommit()}"
+
+              configuration = new helpers.JobHelper().readYaml('configuration.yml')
+              configurationName = "${params.REPOSITORY_NAME}-${params.RELEASE}-deployment"
+              data = configuration[configurationName]
+
+              release = data.release
+              chart = data.chart
+              project = data.project
+              cluster = data.cluster
+              zone = data.zone
+
+              // in case of an empty string value, fallback to helm_vars by not setting ENV at all
+              set_params_env = (params.ENV == '') ? "" : "--set ${params.ENV}"
+            }
+          } // steps
+        } //stage
+
+        stage('Deploy HELM chart') {
+          environment {
+            GOOGLE_APPLICATION_CREDENTIALS = credentials("jenkins-deployment")
+          }
+
+          steps {
+            script {
+              sh """
+              gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+              gcloud config set project $project
+              gcloud container clusters get-credentials $cluster --zone $zone --project $project
+              HELM_OPTS='\
+              $set_params_env \
+              --set image.tag=${params.GIT_COMMIT} \
+              --set image.repository=gcr.io/toptal-hub/${params.REPOSITORY_NAME}-release \
+              --set davinci-app.image.tag=${params.GIT_COMMIT} \
+              --set davinci-app.image.repository=gcr.io/toptal-hub/${params.REPOSITORY_NAME}-release' \
+              make $chart $release login dep_build atomic upgrade
+              """
+            }
+
+            success "== Deployed tag ${params.GIT_COMMIT} =="
+          }
+        } //stage
+      } //stages
+    } //stage
+
+    stage('Tag Staff Portal Image') {
+      steps {
+        script {
+          info "== Tagging Staff Portal Image =="
+          sh "gcloud auth activate-service-account --key-file=$GOOGLE_IMAGE_TAGGING_CREDENTIALS"
+
+          sh "gcloud container images add-tag --quiet gcr.io/toptal-hub/staff-portal-release:${params.GIT_COMMIT} gcr.io/toptal-hub/staff-portal-release:${semanticEnvNameTag}"
+          sh "gcloud container images add-tag --quiet gcr.io/toptal-hub/staff-portal-dev:${params.GIT_COMMIT} gcr.io/toptal-hub/staff-portal-dev:${semanticEnvNameTag}"
+        }
+      }
+    } //stage
+
+  } //stages
+
+  post {
+    always {
+      script {
+        sendBuildData(currentBuild)
+      }
+    }
+  }
+}
+// vim:ft=groovy

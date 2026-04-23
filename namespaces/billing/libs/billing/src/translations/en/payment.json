@@ -1,0 +1,237 @@
+{
+  "accountDetails": {
+    "accountNumber": "Account number",
+    "bankAddress": "Bank address",
+    "bankName": "Bank name",
+    "businessName": "Business name",
+    "comment": "Comment",
+    "email": "Email",
+    "expires": "Expires",
+    "iban": "Account number or IBAN",
+    "name": "Name",
+    "nameOnAccount": "Name on account",
+    "number": "Number",
+    "payoneer": "Payoneer ID",
+    "payoneerId": "Payoneer ID",
+    "paypal": "PayPal ID",
+    "paypalId": "PayPal ID",
+    "personalAddress": "Personal address",
+    "routingNumber": "Routing number or SWIFT",
+    "type": "Type",
+    "username": "PayPal ID"
+  },
+  "actions": {
+    "addDocumentNote": "Add Note",
+    "addMemorandumToCommercialDocument": "Add Memorandum",
+    "applyUnallocatedMemorandumsToCommercialDocument": "Apply Memorandums",
+    "cancelPayment": "Cancel Payment",
+    "convertPaymentIntoCreditMemorandum": "Convert Into Credit Memorandum",
+    "details": "Details",
+    "disabledDownloadHtmlUrl": "HTML",
+    "disabledDownloadPdfUrl": "PDF",
+    "disputeCommercialDocument": "Dispute",
+    "downloadHtmlUrl": "HTML",
+    "downloadPdfUrl": "PDF",
+    "editDocumentNote": "Update Note",
+    "pay": "Pay",
+    "resolveDisputeOfCommercialDocument": "Resolve Dispute",
+    "updateCommercialDocumentDueDate": "Update Due Date"
+  },
+  "chart": {
+    "subtitle": "Early Payments (Standard Term Clients)",
+    "tooltip": {
+      "notReceived": "Payment not Received: {{value}}%",
+      "paidEarly": "Paid Early: {{value}}%",
+      "timeZone": "Time is displayed in <strong>{{timeZone}}</strong><br /><strong>{{date}}</strong> in your time zone"
+    }
+  },
+  "form": {
+    "cancelPayment": {
+      "actions": {
+        "submit": "Cancel Payment"
+      },
+      "fields": {
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Please leave a comment"
+        }
+      },
+      "intro": "By canceling payment you acknowledge that it was moved to the paid status by mistake, no real funds were transferred, and understand that this isn't going to affect anyones local account.",
+      "title": "Cancel Payment #{{documentNumber}}"
+    },
+    "pay": {
+      "actions": {
+        "submit": "Pay Payment"
+      },
+      "fields": {
+        "amount": {
+          "label": "Amount"
+        },
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Please leave a comment",
+          "validationError": "You must specify a reason"
+        },
+        "paymentMethod": {
+          "label": "Payment method",
+          "placeholder": "Please select a payment method",
+          "placeholdersHint": "The payee has no payment methods configured. Please select one of the possible methods."
+        }
+      },
+      "profileLink": "Subject profile link"
+    }
+  },
+  "kind": {
+    "cashLeadPromotion": "Cash lead promotion",
+    "cashLeadReward": "Cash lead reward",
+    "companyClaimingCommission": "Engagement letter commission",
+    "enterpriseClientPartnerCommission": "Enterprise client partner commission",
+    "enterpriseCompanyClaimingCommission": "Enterprise company claiming commission",
+    "jobClaimingCommission": "Engagement commission",
+    "projectSalesCommission": "SMB Project Sales commission",
+    "referredCommission": "Referred commission",
+    "returnedCredit": "Refunded credit balance",
+    "roleStepCommission": "Talent screening commission",
+    "salesAnalysisCommission": "Sales analysis commission",
+    "salesOwnerCommission": "SMB Sales commission",
+    "sourcingCommission": "Sourcing commission",
+    "talentPayment": "Talent payment",
+    "topSkillBonusReferredCommission": "Top skill bonus referred commission",
+    "topSkillBonusTalentSourcingCommission": "Top skill bonus sourcing commission"
+  },
+  "modals": {
+    "cancelPayment": {
+      "notification": {
+        "success": "Notice of Payment #{{documentNumber}} was successfully canceled."
+      }
+    },
+    "convertToCreditMemo": {
+      "fields": {
+        "comment": {
+          "error": "You must specify a reason",
+          "label": "Comment",
+          "placeholder": "Please specify a reason."
+        }
+      },
+      "notification": {
+        "success": "The Payment was successfully converted into an unallocated credit memo"
+      },
+      "submit": "Convert",
+      "title": "Convert Notice of Payment #{{paymentId}} into a credit memo"
+    },
+    "multiplePayModal": {
+      "defaultWarning": "Only payments that have a preferred payment method and are not part of a payment group are displayed.",
+      "fields": {
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Please leave a comment"
+        }
+      },
+      "info": "Payments selected: {{selectedCount}} of {{totalCount}}. Total amount: {{totalAmount, formatAsUSD}}.",
+      "noPaymentsWithPreferredPaymentMethodWarning": "No more payments matching search criteria with a preferred payment method could be found. Note that external screeners must have an associated talent role with a preferred payment method.",
+      "notification": {
+        "success": "{{paidCount}} payments successfully paid"
+      },
+      "submit": "Pay Selected",
+      "title": "Pay Multiple Payments"
+    },
+    "pay": {
+      "appendPreferredLabel": "{{text}} (preferred)",
+      "notEligibleToBePaidOut": "This payment is not eligible to be paid out yet. You must first obtain written permission from {{contactName}} (<0>{{contactEmail}}</0>) before it can be processed. If you obtained permission, specify details and reason in the comment field below.",
+      "notification": {
+        "success": "Notice of Payment #{{documentNumber}} was successfully paid."
+      },
+      "title": "Pay Notice of Payment #{{documentNumber}}",
+      "tooltips": {
+        "notPending": "You may only pay outstanding, due or overdue payments.",
+        "pendingPaymentInGroup": "Payments that are part of a payment group cannot be made individually."
+      }
+    }
+  },
+  "operations": {
+    "downloadDisabled": "You do not have required abilities"
+  },
+  "page": {
+    "details": {
+      "amount": "Amount",
+      "balanceDue": "Balance Due",
+      "company": "Company",
+      "createdOn": "Created On",
+      "dueDate": "Due Date",
+      "duePeriod": "Due Period",
+      "engagement": "Engagement",
+      "paymentFor": "Payment For",
+      "paymentGroup": "Payment Group",
+      "paymentMethod": "Payment Method",
+      "paymentOnHold": "Payment on hold",
+      "status": "Status",
+      "subtitle": "Details",
+      "type": "Type"
+    },
+    "header": {
+      "actions": {
+        "pay": "Pay"
+      },
+      "title": "Notice of Payment #{{paymentId}}"
+    }
+  },
+  "paymentOnHold": {
+    "amount": "with a threshold of {{amount}}",
+    "date": "until {{date}}",
+    "requested": "until requested"
+  },
+  "shortDescription": {
+    "cashLeadPromotion": "Promotional reward for adding multiple Leads-for-Cash leads",
+    "cashLeadReward": "Reward for Leads-for-Cash approved lead",
+    "companyClaimingCommission": "Commission for engagement letter <0>{{talent}}</0> to <1>{{job}}</1>",
+    "enterpriseClientPartnerCommission": "Commission for enterprise company client partner of <2>{{company}}</2> to <1>{{job}}</1>",
+    "enterpriseCompanyClaimingCommission": "Commission for enterprise company claimer of <2>{{company}}</2> to <1>{{job}}</1>",
+    "jobClaimingCommission": "Commission for engagement <0>{{talent}}</0> to <1>{{job}}</1>",
+    "projectSalesCommission": "Commission for projects engagement of <0>{{talent}}</0> to <1>{{job}}</1>",
+    "referredCommission": "Commission for being referred by {{reasonReferType}} <3>{{reasonRefer}}</3>",
+    "returnedCredit": "Refunded credit balance payment",
+    "roleStepCommission": "Commission for screening {{reasonStepShort}} step of <0>{{reasonRole}}</0>",
+    "salesAnalysisCommission": "Commission for sales analysis <0>{{talent}}</0> to <1>{{job}}</1>",
+    "salesOwnerCommission": "Commission for engagement of <0>{{talent}}</0> to <1>{{job}}</1>",
+    "sourcingCommission": {
+      "company": "Commission for referring company <4>{{reason}}</4>",
+      "partner": "Commission for referring partner <4>{{reason}}</4>",
+      "talent": {
+        "default": "Commission for referring {{reasonType}} <4>{{reason}}</4>",
+        "new": "Commission for sourcing {{reasonType}} <4>{{reason}}</4>"
+      }
+    },
+    "talentPayment": {
+      "default": "{{shortDuration}} on <1>{{job}}</1> for <2>{{company}}</2>",
+      "extraExpenses": "Extra expenses on position <1>{{job}}</1> for <2>{{company}}</2>"
+    },
+    "topSkillBonusReferredCommission": "Commission for being referred by {{reasonReferType}} <3>{{reasonRefer}}</3>",
+    "topSkillBonusTalentSourcingCommission": "Commission for referring {{reasonType}} <4>{{reason}}</4>"
+  },
+  "taskCard": {
+    "actions": {
+      "addMemo": "Add Memorandum",
+      "timeline": "Timeline"
+    },
+    "description": {
+      "title": "Concept"
+    },
+    "details": {
+      "companyLink": "Company Link",
+      "createdOn": "Created On",
+      "duePeriod": "Due Period",
+      "jobLink": "Job Link",
+      "paymentFor": "Payment For",
+      "paymentGroupLink": "Payment Group Link",
+      "paymentMethod": "Payment Method",
+      "paymentOnHold": "Payment on hold",
+      "type": "Type"
+    },
+    "summary": {
+      "amount": "Amount",
+      "balanceDue": "Balance Due",
+      "dueDate": "Due Date",
+      "status": "Status"
+    }
+  }
+}

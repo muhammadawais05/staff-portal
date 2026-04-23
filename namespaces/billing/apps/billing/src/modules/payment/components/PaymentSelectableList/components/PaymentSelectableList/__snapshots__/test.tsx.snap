@@ -1,0 +1,479 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentSelectableList when its a non selectable List default render 1`] = `
+.c6.c6 {
+  text-align: right;
+}
+
+.c7.c7 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.c0 {
+  table-layout: fixed;
+}
+
+.c1.c1 {
+  width: 4rem;
+  vertical-align: top;
+}
+
+.c2.c2 {
+  width: 6rem;
+  vertical-align: top;
+}
+
+.c3.c3 {
+  text-align: right;
+  width: 4rem;
+  vertical-align: top;
+}
+
+.c4.c4 {
+  width: 5.5rem;
+  vertical-align: top;
+}
+
+.c5.c5 {
+  width: 100%;
+  vertical-align: top;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <table
+          _css="table-layout:fixed;"
+          class="MuiTable-root PaymentSelectableList___StyledTable-sc-1s1gv4j c0"
+        >
+          <thead
+            class="MuiTableHead-root PicassoTableHead-root"
+          >
+            <tr
+              class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+            >
+              <th
+                _css2="&&{width:,4rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell-sc-1s1gv4j c1"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  ID
+                </div>
+              </th>
+              <th
+                _css3="&&{width:,6rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell2-sc-1s1gv4j c2"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Payee
+                </div>
+              </th>
+              <th
+                _css4="&&{text-align:right;width:,4rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell3-sc-1s1gv4j c3"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Amount
+                </div>
+              </th>
+              <th
+                _css5="&&{width:,5.5rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell4-sc-1s1gv4j c4"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Created
+                </div>
+              </th>
+              <th
+                _css6="&&{width:100%;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell5-sc-1s1gv4j c5"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Description
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="MuiTableBody-root"
+          >
+            <tr
+              class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            >
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                data-testid="PaymentSelectableListRow-payment-id"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+                    data-testid="LinkWrapper-link"
+                    href="http://localhost:3000/platform/staff/payments/1104428"
+                  >
+                    #1104428
+                  </a>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                data-testid="PaymentSelectableListRow-recipient"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+                    data-testid="LinkWrapper-link"
+                    href="http://localhost:3000/platform/staff/staff/1455082"
+                  >
+                    <div
+                      data-testid="TypographyOverflow"
+                    >
+                      José Silva
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td
+                _css="&&{text-align:right;}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body PaymentSelectableListRow___StyledTableCell-a1tysy c6"
+                data-testid="PaymentSelectableListRow-amount"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <div
+                    data-testid="CommercialDocumentAmountWithColorAndTooltip"
+                  >
+                    0
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1"
+                    data-testid="PaymentSelectableListRow-created-on-date"
+                  >
+                    Jul 21, 2020
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <div
+                    class="PicassoContainer-flex"
+                  >
+                    <div
+                      _css2="&&{flex-grow:1;width:100%;}"
+                      class="PaymentSelectableListRow___StyledContainer-a1tysy c7"
+                    >
+                      <div
+                        data-testid="TypographyOverflow"
+                      >
+                        <span
+                          data-testid="PaymentShortDescription"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class=""
+                      style="margin-left: 0.5rem;"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PaymentSelectableList when its a selectable List default render 1`] = `
+.c6.c6 {
+  text-align: right;
+}
+
+.c7.c7 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.c0 {
+  table-layout: fixed;
+}
+
+.c1.c1 {
+  width: 4rem;
+  vertical-align: top;
+}
+
+.c2.c2 {
+  width: 6rem;
+  vertical-align: top;
+}
+
+.c3.c3 {
+  text-align: right;
+  width: 4rem;
+  vertical-align: top;
+}
+
+.c4.c4 {
+  width: 5.5rem;
+  vertical-align: top;
+}
+
+.c5.c5 {
+  width: 100%;
+  vertical-align: top;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <table
+          _css="table-layout:fixed;"
+          class="MuiTable-root PaymentSelectableList___StyledTable-sc-1s1gv4j c0"
+        >
+          <thead
+            class="MuiTableHead-root PicassoTableHead-root"
+          >
+            <tr
+              class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+            >
+              <td
+                data-testid="PaymentSelectableList-checkbox-all"
+              />
+              <th
+                _css2="&&{width:,4rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell-sc-1s1gv4j c1"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  ID
+                </div>
+              </th>
+              <th
+                _css3="&&{width:,6rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell2-sc-1s1gv4j c2"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Payee
+                </div>
+              </th>
+              <th
+                _css4="&&{text-align:right;width:,4rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell3-sc-1s1gv4j c3"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Amount
+                </div>
+              </th>
+              <th
+                _css5="&&{width:,5.5rem,;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell4-sc-1s1gv4j c4"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Created
+                </div>
+              </th>
+              <th
+                _css6="&&{width:100%;,
+  vertical-align: top;
+,}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentSelectableList___StyledTableCell5-sc-1s1gv4j c5"
+                scope="col"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                >
+                  Description
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="MuiTableBody-root"
+          >
+            <tr
+              class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            >
+              <td
+                data-testid="PaymentSelectableListRow-checkbox"
+              />
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                data-testid="PaymentSelectableListRow-payment-id"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+                    data-testid="LinkWrapper-link"
+                    href="http://localhost:3000/platform/staff/payments/1104428"
+                  >
+                    #1104428
+                  </a>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                data-testid="PaymentSelectableListRow-recipient"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+                    data-testid="LinkWrapper-link"
+                    href="http://localhost:3000/platform/staff/staff/1455082"
+                  >
+                    <div
+                      data-testid="TypographyOverflow"
+                    >
+                      José Silva
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td
+                _css="&&{text-align:right;}"
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body PaymentSelectableListRow___StyledTableCell-a1tysy c6"
+                data-testid="PaymentSelectableListRow-amount"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <div
+                    data-testid="CommercialDocumentAmountWithColorAndTooltip"
+                  >
+                    0
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1"
+                    data-testid="PaymentSelectableListRow-created-on-date"
+                  >
+                    Jul 21, 2020
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+              >
+                <div
+                  class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                >
+                  <div
+                    class="PicassoContainer-flex"
+                  >
+                    <div
+                      _css2="&&{flex-grow:1;width:100%;}"
+                      class="PaymentSelectableListRow___StyledContainer-a1tysy c7"
+                    >
+                      <div
+                        data-testid="TypographyOverflow"
+                      >
+                        <span
+                          data-testid="PaymentShortDescription"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class=""
+                      style="margin-left: 0.5rem;"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+`;

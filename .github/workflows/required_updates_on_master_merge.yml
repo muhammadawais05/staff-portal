@@ -1,0 +1,50 @@
+name: Enforce required updates on merge to master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  notifyPRs:
+    name: Notify PRs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check if required commit changed
+        uses: actions/cache@v3
+        id: required-commit-cache
+        with:
+          path: REQUIRED_COMMIT_SHA
+          key: ${{ runner.os }}-required-commit-sha-${{ hashFiles('REQUIRED_COMMIT_SHA') }}
+
+      - name: Notify opened PRs
+        uses: actions/github-script@v6
+        if: ${{ steps.required-commit-cache.outputs.cache-hit != 'true' }}
+        with:
+          github-token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          script: |
+            const { owner, repo } = context.issue;
+            const workflows = await github.paginate(github.rest.actions.listRepoWorkflows, { owner, repo })
+
+            const workflow = workflows.find(workflow => workflow.name === 'Required Updates')
+            if(!workflow) throw new Error(`Unable to find workflow 'Required Updates' in ${owner}/${repo} 😥`)
+
+            const prs = await github.paginate(github.rest.pulls.list, { owner, repo })
+
+            for (const pr of prs) {
+              console.log(`Dispatching workflow run for: ${pr.title}`)
+
+              try {
+                const dispatchResp = await github.request(`POST /repos/${owner}/${repo}/actions/workflows/${workflow.id}/dispatches`, {
+                  ref: pr.head.ref,
+                  inputs: {}
+                })
+
+                console.log(`API response status: ${dispatchResp.status} 🚀`)
+              } catch (err) {
+                console.log(err)
+              }
+            }

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WriteOffModal default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="WriteOffModalForm"
+    >
+      {"initialValues":{"comment":"","invoiceId":"VjEtSW52b2ljZS0xMjM0"},"documentNumber":"1234"}
+    </div>
+  </div>
+</div>
+`;

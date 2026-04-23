@@ -1,0 +1,18 @@
+{
+  "GqlQueryError": {
+    "GQL": {
+      "extensions": "Extensions",
+      "message": "Message",
+      "nodes": "Nodes",
+      "originalError": "Original error",
+      "path": "Path",
+      "positions": "Positions",
+      "source": "Source",
+      "title": "{{numberOfErrors}} GQL errors"
+    },
+    "details": "Error details:",
+    "extraInfo": "Additional information:",
+    "message": "Original error message:",
+    "status": "Error status:"
+  }
+}

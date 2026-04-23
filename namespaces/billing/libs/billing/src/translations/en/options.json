@@ -1,0 +1,21 @@
+{
+  "businessType": {
+    "devShopOrAgency": "Dev shop or Agency",
+    "enterpriseBusiness": "Enterprise business",
+    "government": "Government",
+    "individual": "Individual",
+    "mediumBusiness": "Medium business",
+    "nonProfit": "Non profit",
+    "smallBusiness": "Small business",
+    "startUp": "Start-up"
+  },
+  "collectionSpeed": {
+    "slowPay": "Slow Pay",
+    "standard": "Standard"
+  },
+  "commitment": {
+    "fullTime": "Full-time (40+ hours/week)",
+    "hourly": "Hourly",
+    "partTime": "Part-time (20+ hours/week)"
+  }
+}

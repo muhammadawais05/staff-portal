@@ -1,0 +1,7 @@
+export { default as updateTalentListPageStubs } from './talent-list-page-stubs-update'
+export { default as updateAddTalentToJobFavoritesStubs } from './add-talent-to-job-favorites-stubs-update'
+export { default as updateRemoveTalentFromJobFavoritesStubs } from './remove-talent-from-job-favorites-stubs-update'
+export { default as updateRequestTalentAvailabilityStubs } from './request-talent-availability-stubs-update'
+export { default as updateNavigateTalentListItemTabsStubs } from './navigate-talent-list-item-tabs-stubs-update'
+export { default as updateCreateSoftSkillRatingStubs } from './create-soft-skills-rating-stubs-update'
+export { default as updateRemoveSoftSkillRatingStubs } from './remove-soft-skills-rating-stubs-update'

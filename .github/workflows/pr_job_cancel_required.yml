@@ -1,0 +1,23 @@
+name: Cancel
+on:
+  pull_request:
+    types: [synchronize, closed]
+    branches: [master]
+
+jobs:
+  cancelRunning:
+    name: 'Previous checks'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: styfle/cancel-workflow-action@0.9.1
+        if: ${{ github.event.action == 'closed' }}
+        with:
+          workflow_id: pr_job_pact.yml, pr_job_cypress.yml, pr_job_jest.yml, pr_job_lint.yml, pr_required_updates.yml, pr_job_build_image.yml, dangerjs.yml
+          access_token: ${{ github.token }}
+          ignore_sha: true
+      - uses: styfle/cancel-workflow-action@0.9.1
+        if: ${{ github.event.action != 'closed' }}
+        with:
+          workflow_id: pr_job_pact.yml, pr_job_cypress.yml, pr_job_jest.yml, pr_job_lint.yml, pr_required_updates.yml
+          access_token: ${{ github.token }}

@@ -1,0 +1,27 @@
+{
+  "shortDescription": {
+    "companyClaimingCommission": "Commission for engagement letter <0>{{talent}}</0> to <1>{{job}}</1>",
+    "enterpriseClientPartnerCommission": "Commission for enterprise company client partner of <2>{{company}}</2> to <1>{{job}}</1>",
+    "enterpriseCompanyClaimingCommission": "Commission for enterprise company claimer of <2>{{company}}</2> to <1>{{job}}</1>",
+    "jobClaimingCommission": "Commission for engagement <0>{{talent}}</0> to <1>{{job}}</1>",
+    "projectSalesCommission": "Commission for projects engagement of <0>{{talent}}</0> to <1>{{job}}</1>",
+    "referredCommission": "Commission for being referred by {{referType}} <3>{{refer}}</3>",
+    "roleStepCommission": "Commission for screening {{step}} step of <4>{{user}}</4>",
+    "salesAnalysisCommission": "Commission for sales analysis <0>{{talent}}</0> to <1>{{job}}</1>",
+    "salesOwnerCommission": "Commission for engagement of <0>{{talent}}</0> to <1>{{job}}</1>",
+    "sourcingCommission": {
+      "company": "Commission for referring company <4>{{user}}</4>",
+      "partner": "Commission for referring partner <4>{{user}}</4>",
+      "talent": {
+        "acquisition": "Commission for sourcing {{roleType}} <4>{{user}}</4>",
+        "default": "Commission for referring {{roleType}} <4>{{user}}</4>"
+      }
+    },
+    "topSkillBonusReferredCommission": "Commission for being referred by {{referType}} <3>{{refer}}</3>",
+    "topSkillBonusTalentSourcingCommission": {
+      "company": "Commission for referring company <4>{{user}}</4>",
+      "partner": "Commission for referring partner <4>{{user}}</4>",
+      "talent": "Commission for referring {{roleType}} <4>{{user}}</4>"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RowExpander when row is collapsed default render 1`] = `
+.c0 {
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <button
+      class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+      data-component-type="button"
+      data-testid="RowExpander"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+      >
+        <svg
+          class="PicassoSvgArrowDownMinor16-root RowExpander___StyledArrowDownMinor-sc-92iwtk c0 PicassoButton-icon"
+          style="min-width: 16px; min-height: 16px;"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="m11.997 5.29.707.707-4 4-.707.707-.707-.707-4-4 .707-.707 4 4 4-4Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`RowExpander when row is expanded default render 1`] = `
+.c0 {
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <button
+      class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+      data-component-type="button"
+      data-testid="RowExpander"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+      >
+        <svg
+          class="PicassoSvgArrowDownMinor16-root RowExpander___StyledArrowDownMinor-sc-92iwtk c0 PicassoButton-icon"
+          style="min-width: 16px; min-height: 16px;"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="m11.997 5.29.707.707-4 4-.707.707-.707-.707-4-4 .707-.707 4 4 4-4Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;

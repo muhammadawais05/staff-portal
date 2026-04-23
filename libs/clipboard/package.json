@@ -1,0 +1,24 @@
+{
+  "name": "@staff-portal/clipboard",
+  "description": "Staff Portal's clipboard related utils",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test --config config/jest.specs.js",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/error-handling": "0.1.24",
+    "clipboard": "^2.0.8",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@toptal/picasso": "^25.0.0"
+  },
+  "private": true,
+  "sideEffects": false
+}

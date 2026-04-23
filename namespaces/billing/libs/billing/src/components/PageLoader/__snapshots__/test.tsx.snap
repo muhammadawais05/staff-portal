@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageLoader default render 1`] = `
+.c0 {
+  min-width: 8rem;
+  min-height: 8rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="min-width:8rem;min-height:8rem;"
+      class="PageLoader___StyledContainer-uxu3aw c0"
+      data-testid="PageLoader"
+      style="margin-top: 5rem; margin-bottom: 5rem;"
+    >
+      <div
+        class="PicassoLoader-root"
+      >
+        <div
+          aria-valuenow="35"
+          class="MuiCircularProgress-root PicassoCircularProgress-root PicassoLoader-spinnerBlue MuiCircularProgress-colorPrimary MuiCircularProgress-static"
+          role="progressbar"
+          style="width: 32px; height: 32px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleStatic"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20.2"
+              stroke-width="3.6"
+              style="stroke-dasharray: 126.920; stroke-dashoffset: 82.498px;"
+            />
+          </svg>
+        </div>
+        <div
+          class="PicassoLoader-label"
+        >
+          Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

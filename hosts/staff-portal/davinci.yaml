@@ -1,0 +1,10 @@
+is_progressive_web_app: true
+safety_workers:
+  - service-worker.js
+pr:
+  contract_testing: false
+master:
+  conventional_commits: true
+  publish_as_package: true
+  deploy_staging: true
+  deploy: false

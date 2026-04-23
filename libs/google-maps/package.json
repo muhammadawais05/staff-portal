@@ -1,0 +1,20 @@
+{
+  "name": "@staff-portal/google-maps",
+  "description": "Staff Portal's google maps functionality",
+  "version": "0.2.8",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/ui": "0.10.13",
+    "@toptal/picasso": "^25.0.0",
+    "react": "16.14.0",
+    "use-debounce": "^7.0.0"
+  },
+  "sideEffects": false
+}

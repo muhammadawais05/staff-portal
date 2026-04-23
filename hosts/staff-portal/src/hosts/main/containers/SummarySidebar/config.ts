@@ -1,0 +1,4 @@
+import { GENERAL_APP_QUERIES_BATCH_KEY } from '@staff-portal/data-layer-service'
+
+export const SUMMARY_SIDEBAR_BATCH_KEY = GENERAL_APP_QUERIES_BATCH_KEY
+export const INITIAL_OPERATIONAL_ISSUES_COUNT = 10

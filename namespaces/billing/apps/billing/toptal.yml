@@ -1,0 +1,10 @@
+owner:
+  name: Billing Team (Frontend)
+  url: https://team.toptal.net/users?team_id=46
+  channel: #-billing-core
+
+app:
+  production: https://toptal.com
+  staging: http://staging.toptal.net
+
+technology: ['node']

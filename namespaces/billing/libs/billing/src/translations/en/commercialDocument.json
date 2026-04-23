@@ -1,0 +1,155 @@
+{
+  "billingNotes": "Finance notes",
+  "detailsDescription": {
+    "description": {
+      "title": "Description"
+    },
+    "documentNote": {
+      "title": "Note"
+    }
+  },
+  "modals": {
+    "applyMemos": {
+      "actions": {
+        "skipAndContinue": "Skip and continue",
+        "submit": "Allocate selected",
+        "submitAndContinue": "Allocate selected and continue"
+      },
+      "intro": {
+        "invoice": "Select available prepayment and/or one or more unallocated user's memorandums to apply to the invoice.",
+        "payment": "Select one or more unallocated memorandums from the user's local account to apply to the payment before paying."
+      },
+      "notification": {
+        "error": "At least one item must be selected.",
+        "success": "The memorandums were successfully allocated to {{type, lowercase}} #{{id}}."
+      },
+      "secondaryIntro": "Leave all of the checkboxes empty to skip this action and proceed to payment.",
+      "table": {
+        "amount": "Amount",
+        "credit": "Credit",
+        "debit": "Debit",
+        "description": "Description",
+        "prepayments": "Prepayments",
+        "prepaymentsDescription": "Available customer prepayment"
+      },
+      "title": {
+        "invoice": "Allocate memorandums to Invoice #{{id}}",
+        "payment": "Allocate memorandums to Notice of Payment #{{id}}"
+      }
+    },
+    "dispute": {
+      "fields": {
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Please include as many details as possible."
+        },
+        "disputeTalentPayments": {
+          "label": "Include talent payments in this dispute."
+        },
+        "dueDate": {
+          "label": "Due date"
+        }
+      },
+      "invoice": {
+        "actions": {
+          "submit": "Dispute Invoice"
+        },
+        "intro": "What is the invoice issue that you're disputing?",
+        "notification": {
+          "success": "The Invoice Dispute was successfully submitted."
+        },
+        "title": "Dispute Invoice #{{nodeId}}"
+      },
+      "payment": {
+        "actions": {
+          "submit": "Dispute Payment"
+        },
+        "intro": "What is the exact payment issue that you're disputing?",
+        "notification": {
+          "success": "The Payment Dispute was successfully submitted."
+        },
+        "title": "Dispute Notice of Payment #{{nodeId}}"
+      }
+    },
+    "disputeResolveModal": {
+      "actions": {
+        "submit": "Resolve dispute"
+      },
+      "fields": {
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Please specify a reason."
+        },
+        "resolveTalentPaymentDisputes": {
+          "label": "Include talent payments in this dispute resolution"
+        }
+      },
+      "intro": "Are you sure you want to resolve this dispute?",
+      "notification": {
+        "success": "The {{type, startCase}} Dispute was successfully resolved."
+      },
+      "title": "Resolve dispute for {{type, startCase}} #{{documentNumber}}"
+    },
+    "editDocumentNote": {
+      "documentNote": {
+        "placeholder": {
+          "invoice": "A note with additional details for the client.",
+          "payment": "A note with additional details for the payee."
+        }
+      },
+      "notification": {
+        "success": {
+          "create": {
+            "invoice": "Note for Invoice #{{documentNumber}} was successfully created.",
+            "payment": "Note for Notice of Payment #{{documentNumber}} was successfully created."
+          },
+          "update": {
+            "invoice": "Note for Invoice #{{documentNumber}} has been updated.",
+            "payment": "Note for Notice of Payment #{{documentNumber}} has been updated."
+          }
+        }
+      },
+      "title": {
+        "create": {
+          "invoice": "Create note for Invoice #{{documentNumber}}",
+          "payment": "Create note for Notice of Payment #{{documentNumber}}"
+        },
+        "update": {
+          "invoice": "Update note for Invoice #{{documentNumber}}",
+          "payment": "Update note for Notice of Payment #{{documentNumber}}"
+        }
+      }
+    },
+    "updateCommercialDocumentDueDateModal": {
+      "fields": {
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Please specify a reason."
+        },
+        "dueDate": {
+          "label": "Due date"
+        }
+      },
+      "notification": {
+        "success": {
+          "invoice": "The due date of Invoice #{{documentNumber}} was successfully updated.",
+          "payment": "The due date of Payment #{{documentNumber}} was successfully updated."
+        }
+      },
+      "title": {
+        "invoice": "Update due date of Invoice #{{documentNumber}}",
+        "payment": "Update due date of Payment #{{documentNumber}}"
+      }
+    }
+  },
+  "table": {
+    "row": {
+      "credited": "{{amount}} credited",
+      "debited": "{{amount}} debited",
+      "dueDate": "Due on {{dueDate, formatDateMed}}",
+      "id": "ID",
+      "paidDate": "Paid on {{dueDate, formatDateMed}}",
+      "tillDate": "Until {{tillDate, formatDateMed}}"
+    }
+  }
+}

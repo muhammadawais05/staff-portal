@@ -1,0 +1,38 @@
+{
+  "name": "@staff-portal/talents-card-builder",
+  "description": "Staff Portal's talent card builder",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "storybook": "kurama storybook",
+    "test": "kurama test --config ../../../../config/jest-with-global-mocks.specs.js",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/date-time-utils": "0.5.24",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/sortable": "0.0.1",
+    "@staff-portal/string": "0.3.23",
+    "@staff-portal/utils": "0.0.2",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-forms": "^44.0.0",
+    "pluralize": "^8.0.0",
+    "react": "16.14.0",
+    "react-responsive": "^8.2.0",
+    "styled-components": "5.3.0",
+    "yup": "0.32.11"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@types/react": "^16.9.35",
+    "@types/react-responsive": "^8.0.4"
+  },
+  "private": true,
+  "sideEffects": false
+}

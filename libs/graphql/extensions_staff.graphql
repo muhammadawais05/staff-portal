@@ -1,0 +1,37 @@
+# This file can be used to provide client schema extensions.
+# The definitions added below will be merged with the Graphql Gateway Staff schema.
+#
+# To extend existing enum with a value that will be soon added to the remote schema,
+# add the enum extension:
+#
+# extend enum SomeExistingEnum {
+#   NEW_VALUE
+# }
+extend enum EngagementStatus {
+  CANCELLED_DRAFT
+}
+
+extend enum SalesOwnerRelationship {
+  CLASSIC_AM
+  CP
+  ISOLATED_CASE
+}
+
+extend enum InterviewCommunicationType {
+  ZOOM
+}
+
+# SUPPLY_HEALTH_MODEL_UNFIT_SKILLS will be added
+# SUPPLY_HEALTH_MODEL_UNFIT_DESIGNER_SKILLS will be removed
+extend enum SpecializationApplicationRejectionReasonValue {
+  SUPPLY_HEALTH_MODEL_UNFIT_SKILLS
+  SUPPLY_HEALTH_MODEL_UNFIT_DESIGNER_SKILLS
+}
+
+extend enum CompanyRepresentativeCommunicationOption {
+  NOTIFY_BILLING
+}
+
+extend enum SkillNameTalentStatus {
+  REJECTED_BY_PRIORITIZER
+}

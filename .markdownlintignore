@@ -1,0 +1,6 @@
+node_modules/
+.changeset/
+CHANGELOG.md
+PULL_REQUEST_TEMPLATE.md
+build/
+dist/

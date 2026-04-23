@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobListHeader default render 1`] = `
+.c3.c3 {
+  width: 5rem;
+}
+
+.c2.c2 {
+  width: 8rem;
+}
+
+.c1.c1 {
+  width: 3rem;
+}
+
+.c0.c0 {
+  width: 3rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table
+      class="MuiTable-root"
+    >
+      <thead
+        class="MuiTableHead-root PicassoTableHead-root"
+      >
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+        >
+          <th
+            _css="&&{width:,3rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head JobsListHeader___StyledTableCell-cshu7t c0"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Job ID
+            </div>
+          </th>
+          <th
+            _css2="&&{width:,3rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head JobsListHeader___StyledTableCell2-cshu7t c1"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Engagement ID
+            </div>
+          </th>
+          <th
+            _css3="&&{width:,8rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head JobsListHeader___StyledTableCell3-cshu7t c2"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Title
+            </div>
+          </th>
+          <th
+            _css4="&&{width:,5rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head JobsListHeader___StyledTableCell4-cshu7t c3"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Status
+            </div>
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+`;

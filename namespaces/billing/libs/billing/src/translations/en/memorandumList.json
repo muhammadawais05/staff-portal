@@ -1,0 +1,54 @@
+{
+  "filters": {
+    "fields": {
+      "common": {
+        "balance": "Balance",
+        "status": "Status"
+      },
+      "radio": {
+        "balance": {
+          "credit": "Credit",
+          "debit": "Debit"
+        },
+        "status": {
+          "allocated": "Allocated",
+          "unallocated": "Unallocated"
+        }
+      }
+    }
+  },
+  "header": {
+    "actions": {
+      "addMemorandum": "Add memorandum"
+    },
+    "title": "Memorandums"
+  },
+  "table": {
+    "empty": {
+      "message": "There are no memorandums for this search criteria"
+    },
+    "head": {
+      "actions": "Actions",
+      "amount": "Amount",
+      "balance": "Balance",
+      "date": "Created on",
+      "details": "Details",
+      "id": "ID",
+      "receiver": "Receiver"
+    },
+    "item": {
+      "balance": {
+        "adjustment": "Deposit invoice adjustment",
+        "status": {
+          "credit": "Credit",
+          "debit": "Debit"
+        }
+      },
+      "description": {
+        "consolidated": "consolidated",
+        "current": "current",
+        "portion": "Amount of {{amount}} has been allocated to <0>#{{documentNumber}}</0><1>{{consolidated}}</1> on {{date}}"
+      }
+    }
+  }
+}

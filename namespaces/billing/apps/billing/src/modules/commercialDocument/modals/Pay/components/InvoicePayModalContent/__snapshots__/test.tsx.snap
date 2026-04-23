@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoicePayModalContent when invoice is already paid display message that action is unavailable 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoModalTitle-root"
+      data-testid="AlertModal-title"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2"
+      >
+        Add Payment for Invoice #377249
+      </h2>
+    </div>
+    <div
+      class="PicassoModalContent-wrapper"
+    >
+      <div
+        class="PicassoModalContent-modalContent"
+      >
+        <p
+          class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+          data-testid="AlertModal-text"
+        >
+          You can only add payment to pending invoices.
+        </p>
+      </div>
+    </div>
+    <div
+      class="PicassoModalAction-root"
+      data-testid="ModalFooter"
+    >
+      <button
+        class="MuiButtonBase-root PicassoButton-medium PicassoButton-secondary PicassoButton-root"
+        data-component-type="button"
+        data-testid="cancel"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+        >
+          OK
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`InvoicePayModalContent when invoice is not yet paid renders form 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="InvoicePayModalForm"
+    >
+      {"availablePaymentSources":{},"invoiceId":"VjEtSW52b2ljZS0zNzcyNDk"}
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,537 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "Reference",
+        "possibleTypes": [
+          {
+            "name": "ModelDescriptionLabel"
+          },
+          {
+            "name": "ModelDescriptionLink"
+          },
+          {
+            "name": "ModelDescriptionTemplate"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "TemplateVariableValue",
+        "possibleTypes": [
+          {
+            "name": "ModelDescriptionLabel"
+          },
+          {
+            "name": "ModelDescriptionLink"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "_Entity",
+        "possibleTypes": [
+          {
+            "name": "Badge"
+          },
+          {
+            "name": "CallbackRequest"
+          },
+          {
+            "name": "Client"
+          },
+          {
+            "name": "CompanyRepresentative"
+          },
+          {
+            "name": "Contact"
+          },
+          {
+            "name": "Country"
+          },
+          {
+            "name": "EmailTemplate"
+          },
+          {
+            "name": "Engagement"
+          },
+          {
+            "name": "EngagementBreak"
+          },
+          {
+            "name": "FeedbackReason"
+          },
+          {
+            "name": "Interview"
+          },
+          {
+            "name": "Invoice"
+          },
+          {
+            "name": "Job"
+          },
+          {
+            "name": "Leader"
+          },
+          {
+            "name": "MasterBookingPageConfiguration"
+          },
+          {
+            "name": "Meeting"
+          },
+          {
+            "name": "MeetingScheduler"
+          },
+          {
+            "name": "Note"
+          },
+          {
+            "name": "OperationalIssue"
+          },
+          {
+            "name": "OperationalIssueCauseTemplate"
+          },
+          {
+            "name": "OperationalIssueTemplate"
+          },
+          {
+            "name": "PlaybookTemplate"
+          },
+          {
+            "name": "PurchaseOrder"
+          },
+          {
+            "name": "ReferralPartner"
+          },
+          {
+            "name": "RoleStep"
+          },
+          {
+            "name": "Skill"
+          },
+          {
+            "name": "Specialization"
+          },
+          {
+            "name": "Staff"
+          },
+          {
+            "name": "Talent"
+          },
+          {
+            "name": "TalentPartner"
+          },
+          {
+            "name": "Task"
+          },
+          {
+            "name": "TaskTag"
+          },
+          {
+            "name": "Team"
+          },
+          {
+            "name": "Timesheet"
+          },
+          {
+            "name": "TimesheetConnection"
+          },
+          {
+            "name": "UserRoleFlag"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Node",
+        "possibleTypes": [
+          {
+            "name": "Badge"
+          },
+          {
+            "name": "CallbackRequest"
+          },
+          {
+            "name": "Client"
+          },
+          {
+            "name": "Staff"
+          },
+          {
+            "name": "Contact"
+          },
+          {
+            "name": "EmailTemplate"
+          },
+          {
+            "name": "CompanyRepresentative"
+          },
+          {
+            "name": "Country"
+          },
+          {
+            "name": "PurchaseOrder"
+          },
+          {
+            "name": "UserRoleFlag"
+          },
+          {
+            "name": "Leader"
+          },
+          {
+            "name": "ReferralPartner"
+          },
+          {
+            "name": "Talent"
+          },
+          {
+            "name": "TalentPartner"
+          },
+          {
+            "name": "Engagement"
+          },
+          {
+            "name": "EngagementBreak"
+          },
+          {
+            "name": "FeedbackReason"
+          },
+          {
+            "name": "Interview"
+          },
+          {
+            "name": "Job"
+          },
+          {
+            "name": "Skill"
+          },
+          {
+            "name": "Specialization"
+          },
+          {
+            "name": "Invoice"
+          },
+          {
+            "name": "Note"
+          },
+          {
+            "name": "MasterBookingPageConfiguration"
+          },
+          {
+            "name": "Meeting"
+          },
+          {
+            "name": "MeetingScheduler"
+          },
+          {
+            "name": "RoleStep"
+          },
+          {
+            "name": "OperationalIssue"
+          },
+          {
+            "name": "OperationalIssueTemplate"
+          },
+          {
+            "name": "OperationalIssueCauseTemplate"
+          },
+          {
+            "name": "PlaybookTemplate"
+          },
+          {
+            "name": "Task"
+          },
+          {
+            "name": "TaskTag"
+          },
+          {
+            "name": "Team"
+          },
+          {
+            "name": "Timesheet"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "RoleOrClient",
+        "possibleTypes": [
+          {
+            "name": "Client"
+          },
+          {
+            "name": "CompanyRepresentative"
+          },
+          {
+            "name": "Leader"
+          },
+          {
+            "name": "ReferralPartner"
+          },
+          {
+            "name": "Staff"
+          },
+          {
+            "name": "Talent"
+          },
+          {
+            "name": "TalentPartner"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "WebResource",
+        "possibleTypes": [
+          {
+            "name": "Client"
+          },
+          {
+            "name": "Staff"
+          },
+          {
+            "name": "CompanyRepresentative"
+          },
+          {
+            "name": "Leader"
+          },
+          {
+            "name": "ReferralPartner"
+          },
+          {
+            "name": "Talent"
+          },
+          {
+            "name": "TalentPartner"
+          },
+          {
+            "name": "Job"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Role",
+        "possibleTypes": [
+          {
+            "name": "Staff"
+          },
+          {
+            "name": "CompanyRepresentative"
+          },
+          {
+            "name": "Leader"
+          },
+          {
+            "name": "ReferralPartner"
+          },
+          {
+            "name": "Talent"
+          },
+          {
+            "name": "TalentPartner"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Notable",
+        "possibleTypes": [
+          {
+            "name": "Invoice"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "MutationResult",
+        "possibleTypes": [
+          {
+            "name": "AddTaskCommentPayload"
+          },
+          {
+            "name": "AddTaskTagPayload"
+          },
+          {
+            "name": "AddTaskWatcherPayload"
+          },
+          {
+            "name": "ApproveClientPayload"
+          },
+          {
+            "name": "ApproveOperationalIssuePayload"
+          },
+          {
+            "name": "AssignMeetingAttendeePayload"
+          },
+          {
+            "name": "BecomeMeetingOrganizerPayload"
+          },
+          {
+            "name": "CancelMeetingPayload"
+          },
+          {
+            "name": "CancelTaskPayload"
+          },
+          {
+            "name": "ChangeTaskRecurringPeriodPayload"
+          },
+          {
+            "name": "ClaimCallbackRequestPayload"
+          },
+          {
+            "name": "ClaimClientEnterprisePayload"
+          },
+          {
+            "name": "ClaimOperationalIssuePayload"
+          },
+          {
+            "name": "CompleteMeetingPayload"
+          },
+          {
+            "name": "CreateClientClaimerPayload"
+          },
+          {
+            "name": "CreateEmailContactPayload"
+          },
+          {
+            "name": "CreateGlobalTaskTagPayload"
+          },
+          {
+            "name": "CreateNotePayload"
+          },
+          {
+            "name": "CreatePersonalTaskTagPayload"
+          },
+          {
+            "name": "CreateTaskPayload"
+          },
+          {
+            "name": "DestroyTaskTagPayload"
+          },
+          {
+            "name": "DisableBetaPayload"
+          },
+          {
+            "name": "DisputeTaskPayload"
+          },
+          {
+            "name": "EditJobInvoiceNotePayload"
+          },
+          {
+            "name": "EnableBetaPayload"
+          },
+          {
+            "name": "FailMeetingPayload"
+          },
+          {
+            "name": "FinishTaskPayload"
+          },
+          {
+            "name": "KeepClientUnclaimablePayload"
+          },
+          {
+            "name": "LogoutPayload"
+          },
+          {
+            "name": "MarkClientAsBadLeadPayload"
+          },
+          {
+            "name": "MarkClientAsClaimablePayload"
+          },
+          {
+            "name": "PauseClientPayload"
+          },
+          {
+            "name": "ReassignTaskPayload"
+          },
+          {
+            "name": "RejectClientPayload"
+          },
+          {
+            "name": "RemoveCallbackRequestPayload"
+          },
+          {
+            "name": "RemoveMeetingPayload"
+          },
+          {
+            "name": "RemoveNotePayload"
+          },
+          {
+            "name": "RemoveNoteAttachmentPayload"
+          },
+          {
+            "name": "RemoveTaskTagPayload"
+          },
+          {
+            "name": "RemoveTaskWatcherPayload"
+          },
+          {
+            "name": "ReopenOperationalIssuePayload"
+          },
+          {
+            "name": "RepauseClientPayload"
+          },
+          {
+            "name": "ResetTaskDueDatePayload"
+          },
+          {
+            "name": "ResolveOperationalIssuePayload"
+          },
+          {
+            "name": "RestartTaskPayload"
+          },
+          {
+            "name": "RestoreClientPayload"
+          },
+          {
+            "name": "RestoreClientFromBadLeadPayload"
+          },
+          {
+            "name": "ResumeClientPayload"
+          },
+          {
+            "name": "ScheduleEngagementBreakPayload"
+          },
+          {
+            "name": "SendEmailToPayload"
+          },
+          {
+            "name": "StarTaskPayload"
+          },
+          {
+            "name": "TouchCounterPayload"
+          },
+          {
+            "name": "TransferMeetingPayload"
+          },
+          {
+            "name": "UpdateNotePayload"
+          },
+          {
+            "name": "UpdateTaskDescriptionPayload"
+          },
+          {
+            "name": "UpdateTaskTagPayload"
+          },
+          {
+            "name": "VerifyOperationalIssuePayload"
+          },
+          {
+            "name": "BaseMutationObject"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "UserError",
+        "possibleTypes": [
+          {
+            "name": "GraniteError"
+          }
+        ]
+      }
+    ]
+  }
+}

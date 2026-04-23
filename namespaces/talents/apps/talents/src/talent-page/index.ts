@@ -1,0 +1,1 @@
+export { Talent } from './pages'

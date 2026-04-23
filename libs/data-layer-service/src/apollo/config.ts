@@ -1,0 +1,6 @@
+export const ANALYTICS_CONTEXT = 'Analytics'
+export const CHRONICLES_CONTEXT = 'Chronicles'
+export const KIPPER_CONTEXT = 'Kipper'
+export const LENS_CONTEXT = 'Lens'
+export const PLATFORM_CONTEXT = 'Platform'
+export const STAFF_CONTEXT = 'Gateway'

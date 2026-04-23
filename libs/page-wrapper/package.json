@@ -1,0 +1,33 @@
+{
+  "name": "@staff-portal/page-wrapper",
+  "description": "Staff Portal's page wrapper",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "storybook": "kurama storybook",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/browser": "0.0.11",
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/dependency-injector": "0.0.1",
+    "@staff-portal/error-handling": "0.1.24",
+    "@staff-portal/monitoring-service": "0.1.7",
+    "@staff-portal/navigation": "0.151.0",
+    "@staff-portal/ui": "0.10.13",
+    "@staff-portal/utils": "0.0.2",
+    "@testing-library/react": "^11.2.6",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-provider": "^1.1.2",
+    "react": "16.14.0",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24"
+  },
+  "sideEffects": false
+}

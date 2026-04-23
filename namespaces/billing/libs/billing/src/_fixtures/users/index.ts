@@ -1,0 +1,73 @@
+import { UserRole } from '../../@types/types'
+import { encodeId } from '../../_lib/helpers/apollo'
+
+export type MockUserParams = {
+  token?: string
+  companyId?: string
+  clientId?: string
+  invoiceId?: string
+  jobId?: string
+  paymentId?: string
+  paymentGroupId?: string
+  engagementId?: string
+  purchaseOrderId?: string
+}
+
+export type MockUser = {
+  ACCESS_TOKEN: string
+  ENGAGEMENT_ID: string
+  ROLE: UserRole
+  companyId?: string
+  clientId?: string
+  email: string
+  name: string
+  fullName: string
+  id: string
+  locale: { value: 'en-US' | string }
+  timeZone: { value: 'europe/vienna' | string; name: string }
+  invoiceId?: string
+  jobId?: string
+  paymentId?: string
+  paymentGroupId?: string
+  engagementId?: string
+  purchaseOrderId?: string
+  type: string
+}
+
+const StaffUser = (user?: MockUserParams): MockUser => ({
+  ACCESS_TOKEN:
+    user?.token ||
+    'Bearer eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE5MDU3MjgwMjksInJvbGUiOnsiZ2lkIjoiZ2lkOi8vcGxhdGZvcm0vU3RhZmYvMzQ0MzI4IiwiZnVsbF9uYW1lIjoiS2ltYmVybHkgU29tbWVycyIsInJvbGVfdHlwZXMiOlsicm9sZSIsInN0YWZmIiwiYWNjb3VudGFudCJdfSwiYXV0aG9yaXphdGlvbiI6eyJmaW5hbmNlX21lbWJlcl9jdXN0b21lcl9naWRzIjpbXSwicGFydHlfZ2lkIjoiZ2lkOi8vcGxhdGZvcm0vQWNjcnVhbEFjY291bnRpbmc6OlBhcnR5LzYzODIwOSIsInRhbGVudF9naWRzX2J5X3RhbGVudF9wYXJ0bmVyIjpbXSwiY29tcGFueV9yZXByZXNlbnRhdGl2ZV9jdXN0b21lcl9naWRzIjpbImdpZDovL3BsYXRmb3JtL0FjY3J1YWxBY2NvdW50aW5nOjpQYXJ0eS8xMjcxMzkwIl0sImFiaWxpdGllcyI6W3siaWRlbnRpZmllciI6Im1hbmFnZV9hdHRhY2hfdGltZXNoZWV0c190b19pbnZvaWNlcyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJjcmVhdGVfcGxhY2VtZW50X2ZlZV9lbmdhZ2VtZW50IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNyZWF0ZV9lbmdhZ2VtZW50X2V4dHJhX2V4cGVuc2VzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV9lbmdhZ2VtZW50X2JpbGxpbmdfZnJlcXVlbmN5IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFkZF9pbnZvaWNlX21lbW8iLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwbHlfaW52b2ljZV9wcmVwYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJhcHBseV9pbnZvaWNlX3Byb21vdGlvbnMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXNzaWduX3B1cmNoYXNlX29yZGVyX2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiY2FuY2VsX2ludm9pY2VfdHJhbnNmZXIiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiY2xhaW1fdHJhbnNmZXJfcmVmdW5kX2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiZGlzcHV0ZV9pbnZvaWNlX3RhbGVudF9wYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJmYWlsX2ludm9pY2VfdHJhbnNmZXIiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicGF5X3RyYW5zZmVyX2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicG9zdHBvbmVfaW52b2ljZV90cmFuc2ZlciIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJyZWNvcmRfaW52b2ljZV9iYWRfZGVidCIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJyZXF1ZXN0X2ludm9pY2VfZGlzcHV0ZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJyZXF1ZXN0X2ludm9pY2VfZGlzcHV0ZV9yZXNvbHV0aW9uIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InJldmVydF9pbnZvaWNlX3ByZXBheW1lbnRzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV9pbnZvaWNlX2Rpc3B1dGUiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidXBkYXRlX2ludm9pY2VfZHVlX2RhdGUiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoid3JpdGVfb2ZmX2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwcm92ZV9hbmRfcmVqZWN0X3RpbWVzaGVldCIsInJlc3RyaWN0aW9uIjoiZm9yX2NvbXBhbnlfZmluYW5jZV90ZWFtX21lbWJlciJ9LHsiaWRlbnRpZmllciI6InZpZXdfaGlzdG9yeSIsInJlc3RyaWN0aW9uIjoiZm9yX2ludm9pY2UifSx7ImlkZW50aWZpZXIiOiJ2aWV3X2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidmlld19iaWxsaW5nX2N5Y2xlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InZpZXdfcGF5bWVudHMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiY2FuY2VsX2ludm9pY2VfdHJhbnNmZXIiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiZmFpbF9pbnZvaWNlX3RyYW5zZmVyIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InBvc3Rwb25lX2ludm9pY2VfdHJhbnNmZXIiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicmVjb3JkX2ludm9pY2VfYmFkX2RlYnQiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicmVxdWVzdF9pbnZvaWNlX2Rpc3B1dGUiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicmVxdWVzdF9pbnZvaWNlX2Rpc3B1dGVfcmVzb2x1dGlvbiIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJyZXZlcnRfaW52b2ljZV9wcmVwYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ1cGRhdGVfaW52b2ljZV9kaXNwdXRlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV9pbnZvaWNlX2R1ZV9kYXRlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFkZF9pbnZvaWNlX21lbW8iLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwbHlfaW52b2ljZV9wcmVwYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJkaXNwdXRlX2ludm9pY2VfdGFsZW50X3BheW1lbnRzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFwcGx5X2ludm9pY2VfcHJvbW90aW9ucyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJwYXlfdHJhbnNmZXJfaW52b2ljZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJjcmVhdGVfcGxhY2VtZW50X2ZlZV9lbmdhZ2VtZW50IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFzc2lnbl9wdXJjaGFzZV9vcmRlcl9pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNsYWltX3RyYW5zZmVyX3JlZnVuZF9pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV9lbmdhZ2VtZW50X2JpbGxpbmdfZnJlcXVlbmN5IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6Im1hbmFnZV9hdHRhY2hfdGltZXNoZWV0c190b19pbnZvaWNlcyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJhcHByb3ZlX2FuZF9yZWplY3RfdGltZXNoZWV0IiwicmVzdHJpY3Rpb24iOiJmb3JfY29tcGFueV9maW5hbmNlX3RlYW1fbWVtYmVyIn0seyJpZGVudGlmaWVyIjoiY3JlYXRlX2VuZ2FnZW1lbnRfZXh0cmFfZXhwZW5zZXMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidmlld19pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InZpZXdfYmlsbGluZ19jeWNsZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ2aWV3X3BheW1lbnRzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNyZWF0ZV9lbmdhZ2VtZW50X2V4dHJhX2V4cGVuc2VzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InZpZXdfaW52b2ljZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ2aWV3X2JpbGxpbmdfY3ljbGUiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidmlld19wYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJhcHByb3ZlX2FuZF9yZWplY3RfdGltZXNoZWV0IiwicmVzdHJpY3Rpb24iOm51bGx9XX0sImlzcyI6InRvcHRhbC1wbGF0Zm9ybSJ9.Dg6FZ6DpFsNTT_gT0nXtHcLUiJ_SO06pSjgfRWlooEwfjZtLUgxOKCzFhr-F7CgZAaelzA8t6tc4PxpFcHaC8A',
+  ENGAGEMENT_ID:
+    user?.engagementId || encodeId({ id: '189716', type: 'engagement' }),
+  ROLE: UserRole.staff,
+  companyId: user?.companyId || encodeId({ id: '511860', type: 'client' }),
+  clientId: user?.clientId || 'VjEtQ2xpZW50LTQ5MjgwNQ',
+  email: 'kimb-8c228ac84dbe4f46@toptal.io',
+  fullName: 'Kimberly Sommers',
+  jobId: encodeId({ id: '169386', type: 'job' }),
+  id: encodeId({ id: '344328', type: 'staff' }),
+  invoiceId: user?.invoiceId || encodeId({ id: '414285', type: 'invoice' }),
+  locale: { value: 'en-US' },
+  name: 'Kimberly (Staff)',
+  paymentId: user?.paymentId || encodeId({ id: '189716', type: 'payment' }),
+  paymentGroupId:
+    user?.paymentGroupId || encodeId({ id: '186369', type: 'paymentGroup' }),
+  purchaseOrderId:
+    user?.purchaseOrderId || encodeId({ id: '2003', type: 'purchaseOrder' }),
+  timeZone: { value: 'europe/vienna', name: 'Europe/Vienna' },
+  type: 'Staff'
+})
+
+const users: {
+  staffUser: MockUser
+} = {
+  staffUser: StaffUser()
+}
+
+export const init = (user?: MockUserParams) => {
+  users.staffUser = StaffUser(user)
+}
+
+export const getAll = () => Object.values(users)
+export const getByRole = () => users

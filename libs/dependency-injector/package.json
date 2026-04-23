@@ -1,0 +1,16 @@
+{
+  "name": "@staff-portal/dependency-injector",
+  "description": "Staff Portal's simple typesafe DI solution",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "react": "16.14.0"
+  },
+  "sideEffects": false
+}

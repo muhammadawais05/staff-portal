@@ -1,0 +1,7 @@
+export { companiesBasicTabStubs } from './basic-stubs'
+export { companiesBillingTabStubs } from './billing-stubs'
+export { companiesContactsTabStubs } from './contacts-stubs'
+export { companiesLegalTabStubs } from './legal-stubs'
+export { companiesNotesTabStubs } from './notes-stubs'
+export { companiesWebAndSocialTabStubs } from './web-and-social'
+export { companiesTopscreenTabStubs } from './topscreen-stubs'

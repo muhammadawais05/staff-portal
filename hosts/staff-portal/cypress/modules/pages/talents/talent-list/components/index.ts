@@ -1,0 +1,5 @@
+export { default as JobFavoriteCandidatesWidget } from './JobFavoriteCandidatesWidget'
+export { default as TalentListItem } from './TalentListItem'
+export { default as TalentAvailabilityRequestModal } from './TalentAvailabilityRequestModal'
+export { default as CreateSoftSkillRatingModal } from '../../components/CreateSoftSkillRatingModal'
+export { default as RemoveSoftSkillRatingModal } from '../../components/RemoveSoftSkillRatingModal'

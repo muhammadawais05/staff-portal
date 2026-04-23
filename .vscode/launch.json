@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Tests - Current File",
+      "type": "node",
+      "runtimeExecutable": "yarn",
+      "request": "launch",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "runtimeArgs": ["test", "${relativeFile}"]
+    }
+  ]
+}

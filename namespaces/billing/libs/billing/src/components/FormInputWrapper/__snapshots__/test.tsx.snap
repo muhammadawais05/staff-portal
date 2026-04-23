@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInputWrapper when field is NOT in error state renders a wrapped child component with no error 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoFormField-root"
+      data-field-has-error="false"
+      data-testid="undefined-field"
+    >
+      <input />
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FormInputWrapper when field is in error state renders a wrapped child component with no error 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoFormField-root"
+      data-field-has-error="true"
+      data-testid="undefined-field"
+    >
+      <input />
+      <div
+        class="PicassoFormError-root PicassoFormField-error"
+      >
+        <p
+          class="MuiTypography-root PicassoTypography-bodyXxsmall PicassoTypography-red PicassoFormError-error MuiTypography-body1"
+        >
+          <span
+            data-testid="undefined-error"
+          >
+            error message
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

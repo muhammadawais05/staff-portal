@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionsItem when operation is "Disabled" default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="Tooltip"
+    >
+      <div
+        data-testid="Tooltip-content"
+      >
+        Test tooltip text
+      </div>
+      <div
+        data-testid="Tooltip-children"
+      >
+        <div>
+          <li
+            aria-disabled="true"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root PicassoMenuItem-root PicassoMenuItem-light PicassoMenuItem-disabled MuiMenuItem-gutters PicassoMenuItem-gutters MuiListItem-gutters Mui-disabled MuiListItem-button Mui-disabled"
+            data-document-number="123456"
+            data-testid="updateCommercialDocumentDueDate"
+            data-value="updateCommercialDocumentDueDate"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <div
+              class="PicassoContainer-flex PicassoContainer-column PicassoMenuItem-content"
+            >
+              <div
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+              />
+            </div>
+          </li>
+        </div>
+      </div>
+      <div
+        data-testid="Tooltip-placement"
+      >
+        left
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionsItem when operation is "Enabled" default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <li
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root PicassoMenuItem-root PicassoMenuItem-light MuiMenuItem-gutters PicassoMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+      data-document-number="123456"
+      data-testid="updateCommercialDocumentDueDate"
+      data-value="updateCommercialDocumentDueDate"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <div
+        class="PicassoContainer-flex PicassoContainer-column PicassoMenuItem-content"
+      >
+        <div
+          class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+        />
+      </div>
+    </li>
+  </div>
+</div>
+`;
+
+exports[`ActionsItem when url is not empty default render 1`] = `
+.c0.c0:visited {
+  color: inherit;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <li>
+      <a
+        _css="&&:visited{color:inherit;}"
+        aria-disabled="false"
+        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root MenuLink___StyledLink-sc-10agu55 c0 MuiButtonBase-root MuiListItem-root MuiMenuItem-root PicassoMenuItem-root PicassoMenuItem-light MuiMenuItem-gutters PicassoMenuItem-gutters MuiListItem-gutters MuiListItem-button PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+        data-testid="downloadPdfUrl"
+        href="example.com/test"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <div
+          class="PicassoContainer-flex PicassoContainer-column PicassoMenuItem-content"
+        >
+          <div
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+          >
+            <span
+              class="PicassoMenuItem-stringContent"
+            >
+              Download PDF
+            </span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </div>
+</div>
+`;

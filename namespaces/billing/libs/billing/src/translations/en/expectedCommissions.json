@@ -1,0 +1,21 @@
+{
+  "generalNotice": "Based on your role in the sourcing and matching processes, you may receive a commission when your client and/or talent begins successful engagements. Commissions are issued at the end of each billing cycle related to the engagements in which your talent and clients are involved. Please note that this page lists only expected commissions, which are subject to change at any time. Commissions will be paid only after clients make their payments.",
+  "header": {
+    "actions": {
+      "download": "Download Expected Commissions"
+    },
+    "title": "Expected commissions"
+  },
+  "table": {
+    "empty": {
+      "message": "You don't have any expected commissions from Toptal at the moment"
+    },
+    "head": {
+      "amount": "Amount",
+      "company": "Company",
+      "description": "Description",
+      "expectedDate": "Expected Date",
+      "job": "Job"
+    }
+  }
+}

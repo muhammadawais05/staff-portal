@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title='Main/Introduction' />
+
+# Welcome to Billing Storybooks
+
+This is not just a showcase of available widgets, but a nice development environment.
+
+Just create a `.stories.tsx` file for you widget and wrap it into `StoryShell`.
+
+E.g. `StaffInvoiceDetailsPage` component:
+
+```tsx
+import React, { FC } from 'react'
+
+import Component from './StaffInvoiceDetailsPage'
+import { encodeId } from '@staff-portal/billing/src/_lib/helpers/apollo'
+import StoryShell, {
+  RelatedTasks,
+  renderRecentActivityButton
+} from '../../story-shell'
+
+export default {
+  title: 'Billing/Pages/Staff Invoice Details Page',
+  component: Component,
+  args: {
+    legacyInvoiceId: '414285'
+  },
+  argTypes: {
+    legacyInvoiceId: {
+      control: { type: 'text' }
+    }
+  }
+}
+
+interface Props {
+  legacyInvoiceId: string
+}
+
+export const StaffInvoiceDetailsPage: FC<Props> = ({ legacyInvoiceId }) => (
+  <StoryShell
+    render={appProps => (
+      <Component
+        {...appProps}
+        invoiceId={encodeId({ id: legacyInvoiceId, type: 'invoice' })}
+        RelatedTasks={RelatedTasks}
+        renderRecentActivityButton={renderRecentActivityButton}
+      />
+    )}
+  />
+)
+```

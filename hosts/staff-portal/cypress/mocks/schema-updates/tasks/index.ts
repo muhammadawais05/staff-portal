@@ -1,0 +1,5 @@
+export { default as updateTasksPageActionsStubs } from './tasks-page-actions-stubs-update'
+export { default as updateActivityCardTaskStubs } from './activity-card-task-stubs-update'
+export { default as updateCompanyCardTaskStubs } from './company-card-task-stubs-update'
+export { default as updateDetailsCardTaskStubs } from './details-card-task-stubs-update'
+export { default as updateJobCardTaskStubs } from './job-card-task-stubs-update'

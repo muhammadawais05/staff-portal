@@ -1,0 +1,48 @@
+.idea
+yarn-error.log
+/dist-package
+/dist
+/logs
+
+# Ignore visual regression tests diff output
+__diff_output__
+
+.env
+.envrc
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/.coverage
+/coverage
+/.nyc_output
+
+# misc
+.DS_Store
+*.swo
+*.swp
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# cypress exclude
+/cypress/screenshots
+/cypress/videos
+
+# Visual Studio
+/.vscode
+
+# pact contracts
+pacts/
+
+# tarball packages
+toptal-billing-frontend*.tgz

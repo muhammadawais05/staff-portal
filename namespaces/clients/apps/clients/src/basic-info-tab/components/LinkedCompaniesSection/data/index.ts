@@ -1,0 +1,5 @@
+export * from './get-company-linked-companies-data.staff.gql'
+export * from './get-company-linked-companies-data.staff.gql.types'
+export * from './company-negotiation-fragment.staff.gql'
+export * from './linked-company-node-fragment.staff.gql'
+export * from './linked-company-node-fragment.staff.gql.types'

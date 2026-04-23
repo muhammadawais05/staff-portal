@@ -1,0 +1,1 @@
+export { LinkOpportunityModal } from './LinkOpportunityModal'

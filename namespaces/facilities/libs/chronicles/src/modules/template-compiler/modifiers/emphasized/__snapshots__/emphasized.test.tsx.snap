@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`emphasized modifier for object payload should render template with replaced emphasized modifier with the colored label 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    Ruthanne Bartoletti
+     
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red PicassoTypography-semibold MuiTypography-body1"
+    >
+      reopened
+    </span>
+     operational issue 
+    Overdue tasks
+    
+  </div>
+</div>
+`;

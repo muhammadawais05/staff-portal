@@ -1,0 +1,5 @@
+export * from './set-investigation-resolve-reported-issues.staff.gql.types'
+export * from './set-investigation-resolve-client-feedback.staff.gql.types'
+export * from './set-investigation-resolve-legal.staff.gql.types'
+export * from './set-investigation-resolve-payment-problem.staff.gql.types'
+export * from './set-investigation-resolve-other.staff.gql.types'

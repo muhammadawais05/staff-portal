@@ -1,0 +1,1 @@
+export { TalentInfractionsList } from './pages'

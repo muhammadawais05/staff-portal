@@ -1,0 +1,12 @@
+diff --git a/node_modules/@toptal/browserslist-config/src/index.js b/node_modules/@toptal/browserslist-config/src/index.js
+index 424c6ab..b6e7e53 100644
+--- a/node_modules/@toptal/browserslist-config/src/index.js
++++ b/node_modules/@toptal/browserslist-config/src/index.js
+@@ -1,6 +1,6 @@
+ module.exports = [
+   'edge >= 20',
+   'firefox >= 68',
+-  'chrome >= 78',
++  'chrome >= 65',
+   'safari >= 13'
+ ]

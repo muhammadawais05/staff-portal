@@ -1,0 +1,42 @@
+{
+  "name": "@staff-portal/talents-infractions-app",
+  "description": "Talent infractions app",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "storybook": "kurama storybook",
+    "test": "kurama test --config ../../../../config/jest-with-global-mocks.specs.js",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/clients": "0.0.30",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/filters": "0.0.1",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/modals-service": "0.60.31",
+    "@staff-portal/navigation": "0.151.0",
+    "@staff-portal/page-wrapper": "0.0.1",
+    "@staff-portal/query-params-state": "0.1.7",
+    "@staff-portal/story-shell": "0.0.1",
+    "@staff-portal/talents": "0.0.30",
+    "@staff-portal/talents-infractions": "0.0.1",
+    "@staff-portal/ui": "0.10.13",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/staff-portal-message-bus": "1.0.22",
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
+  },
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^8.0.0",
+    "graphql-tag": "^2.12.4"
+  },
+  "sideEffects": false
+}

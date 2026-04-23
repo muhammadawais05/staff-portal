@@ -1,0 +1,102 @@
+{
+  "filters": {
+    "fields": {
+      "checkboxes": {
+        "businessTypes": {
+          "devShopOrAgency": "Dev shop or Agency",
+          "enterpriseBusiness": "Enterprise business",
+          "government": "Government",
+          "individual": "Individual",
+          "mediumBusiness": "Medium business",
+          "nonProfit": "Non profit",
+          "smallBusiness": "Small business",
+          "startUp": "Start-up"
+        },
+        "kind": {
+          "companyBill": "Bill",
+          "companyDeposit": "Deposit",
+          "companyFine": "Fine",
+          "consolidated": "Consolidated",
+          "extraExpenses": "Extra expenses",
+          "extraHours": "Extra hours",
+          "placementFee": "Placement fee",
+          "toptalServicesBill": "Toptal services bill"
+        }
+      },
+      "common": {
+        "businessTypes": "Business type",
+        "kinds": "Kind",
+        "paymentMethods": "Payment made via",
+        "preferredMethod": "Preferred method",
+        "statuses": "Status"
+      },
+      "dropdown": {
+        "clientPartnerId": "Enterprise client partner",
+        "companyAccountManagerId": "Account Manager",
+        "companyClaimerId": "Claimer",
+        "companyProjectRelationshipManagerId": "Project Relationship Manager",
+        "companyProjectSalesSpecialistId": "Project Sales Specialist",
+        "companyRelationshipManagerId": "Relationship Manager",
+        "financeTeamMemberId": "Finance team member"
+      }
+    }
+  },
+  "header": {
+    "actions": {
+      "createConsolidated": "Create consolidated invoice",
+      "downloadInvoices": "Download invoices",
+      "downloadInvoicesTooManyRecords": "Too many records to download. Please adjust search to display less than {{max}} invoices.",
+      "reconciliation": "Payment Reconciliation"
+    },
+    "title": "Invoices"
+  },
+  "modals": {
+    "createConsolidatedInvoice": {
+      "error": {
+        "invoices": "Multiple invoices required to consolidate."
+      },
+      "fields": {
+        "billTo": "Bill to:",
+        "netTerms": {
+          "default": "Upon receipt",
+          "label": "Billing terms",
+          "term": "Net {{term}}"
+        },
+        "notification": "Send email notification to client",
+        "relatedCompanies": {
+          "label": "Related Companies",
+          "placeholder": "Select Multiple Companies",
+          "selectAllCompanies": "Select all companies"
+        }
+      },
+      "notification": {
+        "success": "Consolidated invoice successfully created"
+      },
+      "submit": "Create consolidated invoice",
+      "subtitle": "Are you sure you want to create consolidated invoices from the selected invoices?",
+      "title": "Create consolidated invoice",
+      "warning": "The following invoices returned by the search cannot be consolidated due to issue memo tasks pending. Resolve them before proceeding with the consolidation process."
+    }
+  },
+  "table": {
+    "empty": {
+      "message": "There are no invoices for this search criteria"
+    },
+    "head": {
+      "actions": "Actions",
+      "amount": "Amount",
+      "client": "Company",
+      "date": "Date issued",
+      "description": "Description",
+      "id": "ID",
+      "recipient": "Invoice to",
+      "status": "Status"
+    },
+    "row": {
+      "date": {
+        "due": "Due on {{date, formatDateMed}}",
+        "paid": "Paid on {{date, formatDateMed}}"
+      }
+    }
+  }
+}

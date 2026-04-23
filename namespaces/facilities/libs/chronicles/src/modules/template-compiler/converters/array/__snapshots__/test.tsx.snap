@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`array payload type should render array of change payloads types (second variant) with and separator 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     
+    updated
+     
+    developer
+     
+    Allow anonymous booking
+     from 
+    30
+     to 
+    40
+     and 
+    Owner ids
+     from 
+    30
+     to 
+    15
+    
+  </div>
+</div>
+`;
+
+exports[`array payload type should render array of change payloads types with and separator 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     
+    updated
+     
+    developer
+     
+    Allow anonymous booking
+     from 
+    No
+     to 
+    Yes
+     and 
+    Owner ids
+     from 
+    531826
+     to 
+    531826
+     and 
+    ""
+    
+  </div>
+</div>
+`;
+
+exports[`array payload type should render array of change payloads types with comma and and separator 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     
+    updated
+     
+    developer
+     
+    Allow anonymous booking
+     from 
+    30
+     to 
+    40
+    , 
+    Owner ids
+     from 
+    30
+     to 
+    15
+    , and 
+    Allow anonymous booking
+     from 
+    200
+     to 
+    20
+    
+  </div>
+</div>
+`;
+
+exports[`array payload type should render array of plain items 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    Removed all permissions for 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+    : 
+    Master booking page configurations: Manage
+     and 
+    Matcher
+    
+  </div>
+</div>
+`;

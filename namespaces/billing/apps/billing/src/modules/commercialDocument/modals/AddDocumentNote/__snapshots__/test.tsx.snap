@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddDocumentNote default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EditDocumentNoteForm"
+    >
+      {"initialValues":{"commercialDocumentId":"VjEtSW52b2ljZS0zNzcyNDk","note":""},"isCreate":true,"nodeId":"377249","nodeType":"invoice"}
+    </div>
+  </div>
+</div>
+`;

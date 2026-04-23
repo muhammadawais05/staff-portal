@@ -1,0 +1,881 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimesheetDay default props default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #fff;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#fff,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"date":"2019-05-20","hours":5}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-regular MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            —
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isBreak\` default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #ebeced;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#ebeced,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isBreak":true,"date":"2019-05-20","hours":5}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-semibold MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            Break Day
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isBreak\` isPartOfTimesheet when hours is "" default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #ebeced;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#ebeced,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isBreak":true,"date":"2019-05-20","hours":"","isEdit":true,"isPartOfTimesheet":true}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-semibold MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            Break Day
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isBreak\` isPartOfTimesheet when hours is ".0" default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #ebeced;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#ebeced,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isBreak":true,"date":"2019-05-20","hours":".0","isEdit":true,"isPartOfTimesheet":true}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-semibold MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            Break Day
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isBreak\` isPartOfTimesheet when hours is "0." default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #ebeced;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#ebeced,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isBreak":true,"date":"2019-05-20","hours":"0.","isEdit":true,"isPartOfTimesheet":true}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-semibold MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            Break Day
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isBreak\` isPartOfTimesheet when hours is "0.0" default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #ebeced;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#ebeced,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isBreak":true,"date":"2019-05-20","hours":"0.0","isEdit":true,"isPartOfTimesheet":true}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-semibold MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            Break Day
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isBreak\` isPartOfTimesheet when hours is 0 default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #ebeced;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#ebeced,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isBreak":true,"date":"2019-05-20","hours":0,"isEdit":true,"isPartOfTimesheet":true}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-semibold MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            Break Day
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isLastDayInWeek\` default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #fff;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#fff,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isLastDayInWeek":true,"date":"2019-05-20","hours":5}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-regular MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            —
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isLastWeek\` default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #fff;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#fff,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isLastWeek":true,"date":"2019-05-20","hours":5}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-regular MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            —
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isPartOfTimesheet\` default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #fff;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#fff,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isPartOfTimesheet":true,"date":"2019-05-20","hours":5}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-regular MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            —
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimesheetDay props \`isWeekend\` default render 1`] = `
+.c3.c3 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 68%;
+  -ms-flex-preferred-size: 68%;
+  flex-basis: 68%;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c1.c1 {
+  margin-top: 0.125rem;
+  -webkit-flex-basis: 16%;
+  -ms-flex-preferred-size: 16%;
+  flex-basis: 16%;
+}
+
+.c0.c0 {
+  background-color: #ebeced;
+  border-bottom: solid 1px #d8d9dc;
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{background-color:,#ebeced,;border-bottom:solid 1px ,#d8d9dc,;padding:0.5rem 1rem;}"
+      class="MuiGrid-root TimesheetDay___StyledGridItem-p0ei60 c0 MuiGrid-item MuiGrid-grid-xs"
+      data-testid="TimesheetDay"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css2="&&{margin-top:0.125rem;flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem2-p0ei60 c1 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date"
+          >
+            May 20
+          </p>
+           
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="day_date_weekday"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css3="&&{flex-basis:16%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem3-p0ei60 c2 MuiGrid-item MuiGrid-grid-xs"
+        >
+          {"isWeekend":true,"date":"2019-05-20","hours":5}
+        </div>
+        <div
+          _css4="&&{margin-top:0.125rem;flex-basis:68%;}"
+          class="MuiGrid-root TimesheetDay___StyledGridItem4-p0ei60 c3 MuiGrid-item"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-black PicassoTypography-regular MuiTypography-body1"
+            data-testid="day_worknote"
+          >
+            —
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

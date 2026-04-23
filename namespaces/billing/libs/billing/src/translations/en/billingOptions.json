@@ -1,0 +1,27 @@
+{
+  "actions": {
+    "setPrimary": "Set Primary",
+    "unsetPrimary": "Unset Primary"
+  },
+  "verificationStatus": {
+    "comments": {
+      "canBeCharged": "Verification transaction was successful",
+      "cannotBeCharged": "Verification transaction failed",
+      "cardDeclined": "Card declined",
+      "cvcExpiredCard": "Card expired",
+      "cvcFailed": "CVC check failed",
+      "cvcPass": "CVC check passed",
+      "cvcUnchecked": "CVC unchecked",
+      "incorrectCVC": "Security code incorrect",
+      "missing": "Card declined",
+      "pending": "Verification transaction is in progress",
+      "processingError": "Processing error"
+    },
+    "labels": {
+      "chargeFailed": "Charge failed",
+      "failed": "Failed",
+      "pendingVerification": "Pending verification",
+      "verified": "Verified"
+    }
+  }
+}

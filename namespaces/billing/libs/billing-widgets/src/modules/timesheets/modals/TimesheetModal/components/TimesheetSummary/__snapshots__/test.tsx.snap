@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimesheetSummary default render 1`] = `
+.c5.c5 {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.c4.c4 {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.c3.c3 {
+  padding: 0.5rem 1rem;
+}
+
+.c2.c2 {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.c1.c1 {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.c0.c0 {
+  padding: 0.5rem 1rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+      data-testid="TimesheetSummary"
+      style="margin-bottom: 1rem;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+      >
+        <div
+          _css="&&{padding:0.5rem 1rem;}"
+          class="MuiGrid-root TimesheetSummary___StyledGridItem-sc-1rv8kv c0 MuiGrid-item MuiGrid-grid-xs"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+          >
+            <div
+              _css2="&&{flex-basis:50%;}"
+              class="MuiGrid-root TimesheetSummary___StyledGridItem2-sc-1rv8kv c1 MuiGrid-item"
+            >
+              <h3
+                class="MuiTypography-root PicassoTypography-headingMedium MuiTypography-h3"
+              >
+                Summary
+              </h3>
+            </div>
+            <div
+              _css3="&&{flex-basis:50%;}"
+              class="MuiGrid-root TimesheetSummary___StyledGridItem3-sc-1rv8kv c2 MuiGrid-item"
+            >
+              <h3
+                class="MuiTypography-root PicassoTypography-headingMedium MuiTypography-h3"
+              >
+                Additional Note
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          _css4="&&{padding:0.5rem 1rem;}"
+          class="MuiGrid-root TimesheetSummary___StyledGridItem4-sc-1rv8kv c3 MuiGrid-item MuiGrid-grid-xs"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+          >
+            <div
+              _css5="&&{flex-basis:50%;}"
+              class="MuiGrid-root TimesheetSummary___StyledGridItem5-sc-1rv8kv c4 MuiGrid-item"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                  >
+                    Total Hours Submitted:
+                  </p>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                    data-testid="totalHours"
+                  >
+                    <strong>
+                      15
+                       
+                      hrs
+                    </strong>
+                     
+                    <strong>
+                      30
+                       
+                      mins
+                    </strong>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                  >
+                    Minimum Commitment Applied:
+                  </p>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                    data-testid="minimumHours"
+                  >
+                    <strong>
+                      20
+                       
+                      hrs
+                    </strong>
+                     
+                  </p>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-align-items-xs-flex"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                  >
+                    Total Hours Charged:
+                  </p>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                    data-testid="chargedHours"
+                  >
+                    <strong>
+                      20
+                       
+                      hrs
+                    </strong>
+                     
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              _css6="&&{flex-basis:50%;}"
+              class="MuiGrid-root TimesheetSummary___StyledGridItem6-sc-1rv8kv c5 MuiGrid-item"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                data-testid="timesheetComment"
+              >
+                <span
+                  data-testid="MultilineComment"
+                >
+                  Sample comment
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

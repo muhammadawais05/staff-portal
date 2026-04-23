@@ -1,0 +1,4 @@
+[defaults]
+project=billing-frontend
+org=toptal
+url=https://sentry.io

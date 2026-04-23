@@ -1,0 +1,6 @@
+export { default as payeeRoleConfig } from './payee-role'
+export { default as kindsFilterConfig } from './kinds'
+export { default as presetsFilterConfig } from './presets'
+export { default as primaryMethodsConfig } from './primary-methods'
+export { default as toptalPayments } from './toptal-payments'
+export { default as statusesFilterConfig } from './statuses'

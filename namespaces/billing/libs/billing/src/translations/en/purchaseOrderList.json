@@ -1,0 +1,29 @@
+{
+  "page": {
+    "header": {
+      "actions": {
+        "create": {
+          "label": "Add Purchase Order"
+        }
+      },
+      "title": "Purchase orders"
+    }
+  },
+  "table": {
+    "empty": {
+      "message": "There are no purchase orders for this search criteria"
+    },
+    "head": {
+      "amount": "Amount",
+      "company": "Company",
+      "draftedTotal": "Drafted Total",
+      "invoicedTotal": "Invoiced Total",
+      "number": "Number",
+      "threshold": "Threshold",
+      "totalAmount": "Total Amount"
+    },
+    "row": {
+      "archivedTooltip": "This Purchase Order was archived."
+    }
+  }
+}

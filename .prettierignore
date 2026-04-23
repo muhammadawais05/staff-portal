@@ -1,0 +1,10 @@
+dist
+dist-package
+tmp-graphql
+*.types.tsx
+CHANGELOG.md
+LICENSE.MD
+coverage
+.coverage
+.nyc_output
+

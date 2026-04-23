@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`no payload fixture should replace subject and performer in template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/advanced_recruiters/128917"
+    >
+      Mahiara Pimentel
+    </a>
+     updated profile of 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/companies/1493407"
+    >
+      Schimmel-Weimann
+    </a>
+    
+  </div>
+</div>
+`;
+
+exports[`no payload fixture without model descriptions should render template without fields filled 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    performer
+     updated profile of 
+    subject
+    
+  </div>
+</div>
+`;
+
+exports[`simple object payload with designation field used from model description should return subject, performer ids and 1 id from the payload 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/advanced_recruiters/128917"
+    >
+      Mahiara Pimentel
+    </a>
+     added flag '
+    Publicity not accepted
+    ' to 
+    company
+     
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/companies/1472501"
+    >
+      Senger, West and Abernathy
+    </a>
+    
+  </div>
+</div>
+`;

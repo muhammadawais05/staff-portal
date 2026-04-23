@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceAmountWithColorAndTooltip default render without tooltip 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+      data-testid="InvoiceAmountWithColorAndTooltip-amount"
+    >
+      $2,295.00
+    </span>
+  </div>
+</div>
+`;
+
+exports[`InvoiceAmountWithColorAndTooltip with icon tooltip rendered before amount (position: left) 1`] = `
+.c0 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.c1.c1 {
+  margin-left: 0.35em;
+  margin-right: 0.35em;
+  vertical-align: -0.25rem;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="Tooltip"
+    >
+      <div
+        data-testid="Tooltip-content"
+      >
+        The company has selected  as their primary payment method. They can reduce the amount to $2,295.00 (% discount) by switching to ACH or Wire.
+      </div>
+      <div
+        data-testid="Tooltip-children"
+      >
+        <div
+          _css="width:min-content;"
+          class="PicassoContainer-flex PicassoContainer-inline CommercialDocumentAmountWithColorAndTooltip___StyledContainer-doet7l c0"
+        >
+          <span
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="InvoiceAmountWithColorAndTooltip-amount"
+          >
+            $2,295.00
+          </span>
+          <svg
+            class="PicassoSvgExclamation16-root CommercialDocumentAmountWithColorAndTooltip___StyledExclamation-doet7l c1 PicassoSvgExclamation16-black"
+            data-testid="InvoiceAmountWithColorAndTooltip-exclamation-icon"
+            style="min-width: 16px; min-height: 16px;"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M7.5 15a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Zm0-1a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13ZM7 3h1v6H7V3Zm0 8h1v1H7v-1Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        data-testid="Tooltip-placement"
+      >
+        top
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`InvoiceAmountWithColorAndTooltip with tooltip when preferredBillingOption is discountable 1`] = `
+.c0 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.c1.c1 {
+  margin-left: 0.35em;
+  margin-right: 0.35em;
+  vertical-align: -0.25rem;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="Tooltip"
+    >
+      <div
+        data-testid="Tooltip-content"
+      >
+        The company will pay a rate of $2,295.00 (% discount) if they use their primary payment method, which is .
+      </div>
+      <div
+        data-testid="Tooltip-children"
+      >
+        <div
+          _css="width:min-content;"
+          class="PicassoContainer-flex PicassoContainer-inline CommercialDocumentAmountWithColorAndTooltip___StyledContainer-doet7l c0"
+        >
+          <span
+            class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="InvoiceAmountWithColorAndTooltip-amount"
+          >
+            $2,295.00
+          </span>
+          <svg
+            class="PicassoSvgHelp16-root CommercialDocumentAmountWithColorAndTooltip___StyledHelp-doet7l c1"
+            data-testid="InvoiceAmountWithColorAndTooltip-help-icon"
+            style="min-width: 16px; min-height: 16px;"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Zm0-1A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm0-6v2H7V8h1a2 2 0 1 0-2-2H5a3 3 0 1 1 3 3Zm-1 3h1v1H7v-1Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        data-testid="Tooltip-placement"
+      >
+        top
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`InvoiceAmountWithColorAndTooltip with tooltip when preferredBillingOption is not discountable 1`] = `
+.c0 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.c1.c1 {
+  margin-left: 0.35em;
+  margin-right: 0.35em;
+  vertical-align: -0.25rem;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="Tooltip"
+    >
+      <div
+        data-testid="Tooltip-content"
+      >
+        The company has selected  as their primary payment method. They can reduce the amount to $2,295.00 (% discount) by switching to ACH or Wire.
+      </div>
+      <div
+        data-testid="Tooltip-children"
+      >
+        <div
+          _css="width:min-content;"
+          class="PicassoContainer-flex PicassoContainer-inline CommercialDocumentAmountWithColorAndTooltip___StyledContainer-doet7l c0"
+        >
+          <span
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1 MuiTypography-displayInline"
+            data-testid="InvoiceAmountWithColorAndTooltip-amount"
+          >
+            $2,295.00
+          </span>
+          <svg
+            class="PicassoSvgExclamation16-root CommercialDocumentAmountWithColorAndTooltip___StyledExclamation-doet7l c1 PicassoSvgExclamation16-black"
+            data-testid="InvoiceAmountWithColorAndTooltip-exclamation-icon"
+            style="min-width: 16px; min-height: 16px;"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M7.5 15a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Zm0-1a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13ZM7 3h1v6H7V3Zm0 8h1v1H7v-1Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        data-testid="Tooltip-placement"
+      >
+        top
+      </div>
+    </div>
+  </div>
+</div>
+`;

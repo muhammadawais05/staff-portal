@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimesheetDayStatic default render 1`] = `
+.c0.c0 {
+  margin-top: 0.2rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <p
+      _css="&&{margin-top:0.2rem;}"
+      class="MuiTypography-root PicassoTypography-bodySmall TimesheetDayStatic___StyledTypography-wy6j9d c0 MuiTypography-body1"
+      data-testid="TimesheetDayStatic"
+    >
+      <strong>
+        2
+         
+        hrs
+      </strong>
+       
+      <strong>
+        45
+         
+        mins
+      </strong>
+    </p>
+  </div>
+</div>
+`;

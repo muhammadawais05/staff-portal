@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true,
+  "sideEffects": false
+}

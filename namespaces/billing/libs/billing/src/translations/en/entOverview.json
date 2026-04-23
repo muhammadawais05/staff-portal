@@ -1,0 +1,61 @@
+{
+  "billing": {
+    "filter": {
+      "my-billing": "My Billing",
+      "team-billing": "Team Billing"
+    },
+    "invoices": {
+      "table": {
+        "amount": "Amount",
+        "company": "Company",
+        "contact": "Job Contact",
+        "dueDate": "Due Date",
+        "issueDate": "Issue Date",
+        "jobName": "Job Name",
+        "netTerms": "Net Terms",
+        "pastDue": "Past Due"
+      },
+      "timePeriod": "{{period}} ago",
+      "title": {
+        "disputed": "Most Recently Disputed Invoices",
+        "overdue": "Longest Overdue Invoices"
+      }
+    },
+    "purchaseOrders": {
+      "table": {
+        "amountLeft": "Amount Left",
+        "company": "Company",
+        "expiryDate": "Expiry Date",
+        "invoicedTotal": "Invoiced Total",
+        "number": "Number",
+        "totalAmount": "Total Amount"
+      },
+      "title": {
+        "closestToExpiration": "Purchase Orders Closest to Expiration",
+        "closestToLimit": "Purchase Orders Closest to Reaching the Limit"
+      }
+    },
+    "summary": {
+      "dateFilter": {
+        "all": "All Time",
+        "quarter": "Current Quarter",
+        "year": "Current Year"
+      },
+      "title": "Invoice Totals"
+    },
+    "timesheetsOverdue": {
+      "table": {
+        "company": "Company",
+        "jobName": "Job Name",
+        "pastDue": "Past Due",
+        "recruiter": "Recruiter",
+        "talent": "Talent"
+      },
+      "title": "Longest Overdue Timesheets"
+    },
+    "title": "Billing Overview"
+  },
+  "emptyTable": "No data available at the moment.",
+  "generalError": "There was a problem trying to display the Overview Page. Please contact IT support.",
+  "title": "Overview"
+}

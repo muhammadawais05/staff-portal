@@ -1,0 +1,8 @@
+export enum ActivityContentField {
+  ACTIVITY_DATE,
+  ACTIVITY_SUB_TYPE,
+  ACTIVITY_TYPE,
+  CONTACT,
+  DURATION,
+  OUTCOME
+}

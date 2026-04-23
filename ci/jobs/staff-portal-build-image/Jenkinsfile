@@ -1,0 +1,124 @@
+@Library('globalLibrary@master') _
+
+image = null
+
+repositoryName =  REPOSITORY_NAME
+repositorySSHUrl = "git@github.com:toptal/${repositoryName}.git"
+
+pipeline {
+  agent { label 'slave_aws' }
+
+  options {
+    ansiColor('xterm')
+    timestamps()
+    timeout(time: params.TIMEOUT, unit: 'MINUTES')
+    buildDiscarder(logRotator(numToKeepStr: '20'))
+    skipDefaultCheckout()
+  }
+
+  parameters {
+    string(name: 'BRANCH', defaultValue: 'master', description: 'Branch or tag to build')
+    string(name: 'IMAGE_NAME', description: 'Image name')
+    string(name: 'VERSION', description: 'Tag for the created docker image')
+    string(name: 'ALIAS_VERSIONS', defaultValue: "", description: 'Comma separated list of alias tags for the created docker image. Ex: "master,latest"')
+    string(name: 'REPOSITORY_NAME', description: 'Repository name')
+    string(name: 'DAVINCI_BRANCH', defaultValue: 'master', description: 'Davinci branch to checkout')
+    string(name: 'TIMEOUT', defaultValue: '35', description: 'Timeout value for the job (in minutes)')
+  }
+
+  environment {
+    GCE_ACCOUNT_KEY = credentials('jenkins-storage-administrator')
+    GCE_GQL_SCHEMAS_BUCKET_ACCOUNT = credentials('gcr_gqlgw_schemas_bucket_account')
+    NPM_TOKEN = credentials('npm-token-for-toptal-private-registry')
+  }
+
+  stages {
+
+    stage('Git checkouts') {
+      parallel {
+
+        stage('Git checkout project') {
+          steps {
+            dir(repositoryName) {
+              info "== Checking out ${BRANCH} =="
+              gitCheckout(
+                branches: BRANCH,
+                credentials: [username: 'toptal-build', description: "toptal-build-ssh-key"],
+                url: repositorySSHUrl,
+                additionalBehaviours: [
+                  cleanBeforeCheckout: true
+                ])
+              success "== Checked out ${BRANCH} at ${gitCommit()}"
+            }
+          }
+        } //checkout project
+
+     } // parallel
+    } //checkout
+
+    stage("Download schemas from the Google Cloud bucket") {
+      steps {
+        script {
+          sh """
+            gcloud auth activate-service-account --key-file $GCE_GQL_SCHEMAS_BUCKET_ACCOUNT
+
+            mkdir -p staff-portal/tmp-graphql/
+
+            gsutil cp \
+              gs://gqlgw-introspection/production_staff_schema.graphql \
+              staff-portal/tmp-graphql/gateway_schema.graphql
+            gsutil cp \
+              gs://gqlgw-introspection/production_lens_schema.graphql \
+              staff-portal/tmp-graphql/lens_schema.graphql
+          """
+        }
+      }
+    } //download schemas
+
+    stage('Build image') {
+      steps {
+        script {
+          sh "gcloud auth activate-service-account --key-file=$GCE_ACCOUNT_KEY"
+
+          if (!isDockerImagePresentRemotely("gcr.io/toptal-hub/${IMAGE_NAME}", VERSION)) {
+            image = docker.build(
+              "toptal-hub/${IMAGE_NAME}:${VERSION}",
+              """-f ./staff-portal/docker/Dockerfile \
+              --build-arg NPM_TOKEN=${NPM_TOKEN} \
+              ./${repositoryName}"""
+            )
+            success "== Built image for version ${VERSION} =="
+          } else {
+            success "== Found image for version ${VERSION} =="
+          }
+        }
+      }
+    } //build image
+
+    stage('Push image') {
+      steps {
+        script {
+          if (image) {
+            docker.withRegistry('https://gcr.io/toptal-hub/') {
+              image.push(VERSION)
+              if(ALIAS_VERSIONS) {
+                ALIAS_VERSIONS.split(',').each { aliasVersion ->
+                  image.push(aliasVersion)
+                }
+              }
+            }
+            success "== Pushed image with tag ${VERSION} =="
+          }
+        }
+      }
+    } //push image
+  }
+
+  post {
+    always {
+      script {
+        sendBuildData(currentBuild)
+      }
+    }
+  }
+}

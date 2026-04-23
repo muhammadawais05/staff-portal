@@ -1,0 +1,36 @@
+{
+  "notification": {
+    "success": {
+      "update": "The billing cycle settings were successfully updated."
+    }
+  },
+  "updateModal": {
+    "form": {
+      "actions": {
+        "submit": "Update Billing Cycle Settings"
+      },
+      "fields": {
+        "billCycle": {
+          "label": "How often should invoices be issued?"
+        },
+        "billDay": {
+          "label": "Which day should invoices be issued?",
+          "placeholder": "Please select a day"
+        },
+        "currentCycleEndDate": {
+          "label": "Which date should the current billing cycle end on?"
+        },
+        "netTerms": {
+          "label": "Net terms for company invoices"
+        }
+      }
+    },
+    "title": "Update Billing Cycle Settings",
+    "warnings": {
+      "autoConsolidationEnabled": "Auto-consolidation is enabled for this engagement.\nChanging the Billing Cycle Settings will disable auto-consolidation and may cause billing issues.\nPlease consult with the Finance team before performing this action.",
+      "billDayChanged": "Invoice issuing day changed to {{day}}.",
+      "cycleTooLong": "Cycle end date should not be more than 2 weeks after the start date.",
+      "noSemiMonthlyTalentAgreement": "The talent must have Semi-Monthly Payments Agreement."
+    }
+  }
+}

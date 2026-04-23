@@ -1,0 +1,51 @@
+{
+  "AddModal": {
+    "fields": {
+      "company": {
+        "error": "You cannot charge the company less than what you will pay the developer",
+        "hint": "Companies that pay with ACH or Wire will receive a {{discountPercentage}}% discount and pay {{reducedCompanyAmount}}. Companies that pay via Credit Card or PayPal will pay the full amount of {{companyAmount}}",
+        "label": "Company amount"
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Extra expenses from {{talentName}} for {{jobTitle}}"
+      },
+      "developer": {
+        "label": "Talent amount"
+      },
+      "discounted": {
+        "label": "Invoice is {{discountPercentage}}% discounted regardless of payment method"
+      },
+      "line": {
+        "label": "Purchase Order line number"
+      },
+      "purchase": {
+        "label": "Purchase order number",
+        "placeholder": "Not Selected"
+      }
+    },
+    "submit": "Add Extra Expenses",
+    "title": "New Extra Expenses",
+    "trigger": "Add Extra Expense"
+  },
+  "Table": {
+    "TableHead": {
+      "commissions": "Commissions",
+      "company": "Company",
+      "date": "Date",
+      "talent": "Talent"
+    },
+    "emptyTable": "No related extra expenses",
+    "footer": {
+      "credit": "Total Credits",
+      "debit": "Total Debits",
+      "paid": "Total Paid"
+    },
+    "title": "Extra Expenses"
+  },
+  "notification": {
+    "add": {
+      "success": "The Extra Expenses were successfully created."
+    }
+  }
+}

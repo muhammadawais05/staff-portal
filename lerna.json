@@ -1,0 +1,16 @@
+{
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "version": "independent",
+  "command": {
+    "version": {
+      "ignoreChanges": [
+        "*.md"
+      ],
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "yes": true,
+      "message": "chore(release): publish [skip ci]"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInputDatePicker default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoFormField-root"
+      data-field-has-error="false"
+      data-testid="undefined-field"
+    >
+      <div
+        data-testid="DatePicker"
+      >
+        {"width":"full","testIds":{},"name":"foo","value":"2015-05-05T00:00:00.000Z","displayDateFormat":"yyyy-MM-dd","editDateFormat":"yyyy-MM-dd","weekStartsOn":1,"error":false}
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;

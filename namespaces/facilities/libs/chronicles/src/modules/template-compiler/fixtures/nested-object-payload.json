@@ -1,0 +1,11 @@
+{
+  "id": "0005898a-2047-f227-0000-000001b2e0e7",
+  "occurredAt": "2019-05-23T11:47:03+03:00",
+  "action": "changed_account_manager",
+  "subjectGID": "gid://platform/Company/831057",
+  "subjectName": null,
+  "performerGID": null,
+  "comment": null,
+  "payload": "{\"account_manager\":{\"to\":{\"gid\":\"gid://platform/Staff/1417608\"},\"from\":{\"gid\":\"gid://platform/Staff/1434378\"},\"salesforce_user\":{\"gid\":\"gid://platform/System/0\"},\"$type\":\"change\"}}",
+  "template": "%{performer} assigned %{payload.account_manager.to} as an account manager for the %{subject.designation} %{subject} %{payload.salesforce_user}"
+}

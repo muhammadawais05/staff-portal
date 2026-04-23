@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertModal default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoModalTitle-root"
+      data-testid="AlertModal-title"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2"
+      >
+        Modal title
+      </h2>
+    </div>
+    <div
+      class="PicassoModalContent-wrapper"
+    >
+      <div
+        class="PicassoModalContent-modalContent"
+      >
+        <p
+          class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+          data-testid="AlertModal-text"
+        >
+          Some message
+        </p>
+      </div>
+    </div>
+    <div
+      data-testid="InvoiceModalVariations"
+    />
+  </div>
+</div>
+`;
+
+exports[`AlertModal renders custom cancel button text 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoModalTitle-root"
+      data-testid="AlertModal-title"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2"
+      >
+        Modal title
+      </h2>
+    </div>
+    <div
+      class="PicassoModalContent-wrapper"
+    >
+      <div
+        class="PicassoModalContent-modalContent"
+      >
+        <p
+          class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+          data-testid="AlertModal-text"
+        >
+          Some message
+        </p>
+      </div>
+    </div>
+    <div
+      data-testid="InvoiceModalVariations"
+    />
+  </div>
+</div>
+`;

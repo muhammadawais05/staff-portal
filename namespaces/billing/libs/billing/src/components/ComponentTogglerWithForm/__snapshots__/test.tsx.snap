@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentTogglerWithForm default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class=""
+          data-testid="componentTogglerWithForm"
+        >
+          <span
+            data-testid="componentA"
+          >
+            Component A
+          </span>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="componentTogglerWithFormButton"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgRotate16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.707 3H15v5h-1V4H2.707l1.5 1.5-.707.707-2-2L.793 3.5 3.5.793l.707.707-1.5 1.5Zm10.586 10H1V8h1v4h11.293l-1.5-1.5.707-.707 2 2 .707.707-2.707 2.707-.707-.707 1.5-1.5Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ComponentTogglerWithForm renders ComponentB 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class=""
+          data-testid="componentTogglerWithForm"
+        >
+          <span
+            data-testid="componentB"
+          >
+            Component B
+             
+            <button
+              data-testid="submit"
+              type="submit"
+            >
+              submit
+            </button>
+          </span>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="componentTogglerWithFormButton"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgRotate16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.707 3H15v5h-1V4H2.707l1.5 1.5-.707.707-2-2L.793 3.5 3.5.793l.707.707-1.5 1.5Zm10.586 10H1V8h1v4h11.293l-1.5-1.5.707-.707 2 2 .707.707-2.707 2.707-.707-.707 1.5-1.5Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ComponentTogglerWithForm renders ComponentB, submits form and receives proper data 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class=""
+          data-testid="componentTogglerWithForm"
+        >
+          <span
+            data-testid="componentB"
+          >
+            Component B
+             
+            <button
+              data-testid="submit"
+              type="submit"
+            >
+              submit
+            </button>
+          </span>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="componentTogglerWithFormButton"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgRotate16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.707 3H15v5h-1V4H2.707l1.5 1.5-.707.707-2-2L.793 3.5 3.5.793l.707.707-1.5 1.5Zm10.586 10H1V8h1v4h11.293l-1.5-1.5.707-.707 2 2 .707.707-2.707 2.707-.707-.707 1.5-1.5Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ComponentTogglerWithForm renders custom toggle button component 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class=""
+          data-testid="componentTogglerWithForm"
+        >
+          <span
+            data-testid="componentA"
+          >
+            Component A
+          </span>
+          <button
+            data-testid="customToggleButton"
+          >
+            Toggle
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ComponentTogglerWithForm renders with toggle button positioned left 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class=""
+          data-testid="componentTogglerWithForm"
+        >
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="componentTogglerWithFormButton"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgRotate16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.707 3H15v5h-1V4H2.707l1.5 1.5-.707.707-2-2L.793 3.5 3.5.793l.707.707-1.5 1.5Zm10.586 10H1V8h1v4h11.293l-1.5-1.5.707-.707 2 2 .707.707-2.707 2.707-.707-.707 1.5-1.5Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <span
+            data-testid="componentA"
+          >
+            Component A
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,30 @@
+{
+  "name": "@staff-portal/monitoring-service",
+  "description": "Staff Portal's monitoring service",
+  "version": "0.1.7",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@apollo/client": "3.4.14",
+    "@datadog/browser-rum": "^4.3.0",
+    "@sentry/react": "^6.14.1",
+    "@sentry/tracing": "^6.14.1",
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/navigation": "0.151.0",
+    "@testing-library/react-hooks": "^8.0.0",
+    "@topkit/sentry-logrocket-integration": "^1.2.0",
+    "@types/logrocket-react": "^3.0.0",
+    "@types/segment-analytics": "^0.0.33",
+    "graphql": "^15.5.0",
+    "logrocket": "2.1.0",
+    "logrocket-react": "^4.0.1",
+    "react": "16.14.0"
+  },
+  "sideEffects": false
+}

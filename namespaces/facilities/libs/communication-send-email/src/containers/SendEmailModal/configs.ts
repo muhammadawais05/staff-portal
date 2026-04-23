@@ -1,0 +1,2 @@
+export const PROJECT_BRIEF_START_TOKEN = '--- PROJECT BRIEF START ---'
+export const PROJECT_BRIEF_END_TOKEN = '--- PROJECT BRIEF END ---'

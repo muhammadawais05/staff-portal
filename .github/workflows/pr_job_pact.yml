@@ -1,0 +1,107 @@
+name: Pact
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: pact-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pact:
+    name: Run Pact
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PACT_BROKER_URL: 'https://pact-broker.toptal.net'
+      PACT_BROKER_USR: ${{ secrets.PACT_BROKER_USR }}
+      PACT_BROKER_PSW: ${{ secrets.PACT_BROKER_PSW }}
+      GIT_COMMIT: ${{ github.sha }}
+      STATUS_CHECK_NAME: Test:Pact
+      STATUS_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+    steps:
+      - name: Set status check - pending
+        uses: actions/github-script@v6
+        env:
+          STATUS_STATE: pending
+        with:
+          script: |
+            const { owner, repo } = context.issue;
+            await github.rest.repos.createCommitStatus({
+              owner,
+              repo,
+              sha: context.sha,
+              context: process.env.STATUS_CHECK_NAME,
+              state: process.env.STATUS_STATE,
+              target_url: process.env.STATUS_TARGET_URL
+            })
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Install dependencies
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --silent --non-interactive
+
+      - name: Setup Google cloud toolchain
+        uses: google-github-actions/setup-gcloud@v0.6.0
+        with:
+          service_account_key: ${{ secrets.GCR_GQLGW_SCHEMAS_BUCKET_ACCOUNT }}
+          export_default_credentials: true
+
+      - name: Fetch gql schemas
+        run: yarn fetch:graphql-schemas
+
+      - name: Check types cache
+        uses: actions/cache@v3
+        id: gql-types-cache
+        with:
+          path: |
+            libs/graphql
+            **/*.gql.types.tsx
+          key: ${{ runner.os }}-types-${{ hashFiles('**/codegen.js', '**/*.graphql', '**/*.gql.ts') }}
+
+      - name: Generate types
+        if: ${{ steps.gql-types-cache.outputs.cache-hit != 'true' }}
+        run: yarn generate:types
+
+      - name: Set env variables
+        run: |
+          echo GIT_BRANCH=$([ ${GITHUB_EVENT_NAME} == "pull_request" ] && echo ${GITHUB_HEAD_REF} || echo ${GITHUB_REF#refs/heads/}) | tee -a $GITHUB_ENV
+          echo "BUILD_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" | tee -a $GITHUB_ENV
+
+      - name: Run pact test
+        run: yarn pact:ci
+
+      - name: Publish pact test
+        run: yarn pact:publish
+
+      - name: Wait for verification
+        run: yarn pact:verify
+
+      - name: Set status check - success / failure / error
+        if: ${{ always() }}
+        uses: actions/github-script@v6
+        env:
+          STATUS_STATE: ${{ job.status != 'cancelled' && job.status || 'error' }}
+        with:
+          script: |
+            const { owner, repo } = context.issue;
+            await github.rest.repos.createCommitStatus({
+              owner,
+              repo,
+              sha: context.sha,
+              context: process.env.STATUS_CHECK_NAME,
+              state: process.env.STATUS_STATE,
+              target_url: process.env.STATUS_TARGET_URL
+            })

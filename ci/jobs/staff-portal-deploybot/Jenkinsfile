@@ -1,0 +1,261 @@
+@Library('globalLibrary@master') _
+
+helmVersion = '3'
+helmBranch = 'master'
+sentryOrg = 'toptal'
+
+semanticEnvNameTag = 'production'
+
+repositoryName = 'staff-portal'
+releaseName = 'production'
+environmentFilename = "hosts/staff-portal/.env.production"
+staffPortalSha = ''
+envVars = ''
+
+def hasCommandInDavinci(args) {
+  def command = args.command
+  def repoName = args.repoName
+  def tag = args.tag
+
+  def davinciHelpOutput = sh(
+    script: """
+      docker run \
+      --rm \
+      -u 469:469 \
+      gcr.io/toptal-hub/${repoName}:${tag} \
+      yarn davinci help
+    """,
+    returnStdout: true
+  ).trim() as String
+
+  return davinciHelpOutput.contains(command)
+}
+
+def getEnvironmentVariables(environmentFilename) {
+  if(!fileExists(environmentFilename)) {
+    return 'ENV=null'
+  }
+
+  return sh(
+    script: "egrep -v '^(#|\$)' ${environmentFilename} | sed  's/^/ENV./'| awk '{print}' ORS=',' | sed 's/,*\$//g'",
+    returnStdout: true
+  ).trim() as String
+}
+
+pipeline {
+  agent { label 'docker' }
+
+  options {
+    ansiColor('xterm')
+    timestamps()
+    timeout(time: 1, unit: 'HOURS')
+    buildDiscarder(logRotator(numToKeepStr: '20'))
+    skipDefaultCheckout()
+  }
+
+  parameters {
+    string(name: 'GIT_COMMIT', defaultValue: '', description: 'SHA of a commit to deploy')
+  }
+
+  environment {
+    SENTRY_AUTH_TOKEN = credentials('sentry_auth_token')
+    GOOGLE_APPLICATION_CREDENTIALS = credentials('staff-portal-deployment')
+    GOOGLE_IMAGE_TAGGING_CREDENTIALS = credentials('jenkins-storage-administrator')
+  }
+
+  stages {
+    stage('Verify params') {
+      steps {
+        script {
+          if (params.GIT_COMMIT == "") {
+            error("== GIT_COMMIT is a mandatory parameter ==")
+          }
+        } //script
+      } //steps
+    } //stage
+
+    stage('Git checkout') {
+      steps {
+        script {
+          info "== Checking out ${repositoryName} =="
+
+          dir(repositoryName) {
+            gitCheckout(
+              branches: params.GIT_COMMIT,
+              credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+              url: "git@github.com:toptal/${repositoryName}.git",
+              additionalBehaviours: [
+                cleanBeforeCheckout: true,
+              ]
+            )
+
+            staffPortalSha = gitCommit()
+            envVars = getEnvironmentVariables(environmentFilename)
+          }
+
+          success "${repositoryName} checkout successful."
+        } // script
+      } // steps
+    } // stage
+
+    stage("Download source maps from the Google Cloud bucket") {
+      steps {
+        script {
+          sh """
+            gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+
+            mkdir -p ${repositoryName}/dist/
+
+            gsutil -m cp -r gs://${repositoryName}-source-maps/${staffPortalSha}/* ${repositoryName}/dist
+          """
+        }
+      }
+    } //stage
+
+    stage("Download most recent production schemas") {
+      steps {
+        script {
+          sh """
+            gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+
+            mkdir -p ${repositoryName}/tmp-graphql/
+
+            gsutil cp \
+              gs://gqlgw-introspection/production_staff_schema.graphql \
+              ${repositoryName}/tmp-graphql/gateway_schema.graphql
+            gsutil cp \
+              gs://gqlgw-introspection/production_lens_schema.graphql \
+              ${repositoryName}/tmp-graphql/lens_schema.graphql
+          """
+        }
+      }
+    } //stage
+
+    stage('Typecheck for a most recent type schema') {
+      steps {
+        script {
+          sh """
+            docker run --rm \
+            -v $WORKSPACE/${repositoryName}/tmp-graphql:/app/tmp-graphql \
+            gcr.io/toptal-hub/${repositoryName}-dev:${staffPortalSha} \
+            /bin/bash -c "yarn generate:types:from-root-schema && yarn typecheck"
+          """
+        }
+      }
+    } //stage
+
+    stage('Deploy with HELM') {
+      agent { docker { image "gcr.io/toptal-hub/helm:${helmVersion}" } }
+
+      environment {
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('staff-portal-deployment')
+      }
+
+      stages {
+        stage('Checkout INF-HELM repo') {
+          steps {
+            script {
+              info "== Checking out ${helmBranch} =="
+
+              gitCheckout(
+                branches: helmBranch,
+                credentials: [username: 'git', description: 'jenkins/inf-helm'],
+                url: 'git@github.com:toptal/inf-helm.git',
+                additionalBehaviours: [
+                  cleanBeforeCheckout: true
+                ]
+              )
+
+              success "== Checked out ${helmBranch} at ${gitCommit()}"
+
+              configuration = new helpers.JobHelper().readYaml('configuration.yml')
+              configurationName = "${repositoryName}-${releaseName}-deployment"
+              data = configuration[configurationName]
+
+              release = data.release
+              extra_vars = data.extra_vars
+              chart = data.chart
+              project = data.project
+              cluster = data.cluster
+              zone = data.zone
+
+
+            }
+          } // steps
+        } //stage
+
+        stage('Deploy HELM chart') {
+          steps {
+            script {
+              // in case of an empty string value, fallback to helm_vars by not setting ENV at all
+              set_params_env = (envVars == '') ? "" : "--set ${envVars}"
+              sh """
+                gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+                gcloud config set project $project
+                gcloud container clusters get-credentials $cluster --zone $zone --project $project
+                export $extra_vars
+                export CLUSTER=$cluster
+                HELM_OPTS='\
+                $set_params_env \
+                --set image.tag=${staffPortalSha} \
+                --set image.repository=gcr.io/toptal-hub/${repositoryName}-release' \
+                make staff-portal $release dep_build atomic upgrade
+              """
+            }
+
+            success "== Deployed tag ${staffPortalSha} =="
+          }
+        } //stage
+      } //stages
+    } //stage
+
+    stage('Tag Staff Portal Image') {
+      steps {
+        script {
+          info "== Tagging Staff Portal Image =="
+          sh "gcloud auth activate-service-account --key-file=$GOOGLE_IMAGE_TAGGING_CREDENTIALS"
+
+          sh "gcloud container images add-tag --quiet gcr.io/toptal-hub/staff-portal-release:${staffPortalSha} gcr.io/toptal-hub/staff-portal-release:${semanticEnvNameTag}"
+          sh "gcloud container images add-tag --quiet gcr.io/toptal-hub/staff-portal-dev:${staffPortalSha} gcr.io/toptal-hub/staff-portal-dev:${semanticEnvNameTag}"
+        }
+      }
+    } //stage
+
+    stage('Upload source maps to Sentry') {
+      steps {
+        script {
+          def commandExists = hasCommandInDavinci(
+            command: 'sentry-upload-source-maps',
+            repoName: "${repositoryName}-dev",
+            tag: staffPortalSha
+          )
+
+          if (commandExists) {
+            sh """
+              docker run \
+              --rm \
+              -u 469:469 \
+              -e SENTRY_ORG=${sentryOrg} \
+              -e SENTRY_PROJECT=${repositoryName} \
+              -e SENTRY_AUTH_TOKEN=${SENTRY_AUTH_TOKEN} \
+              -v $WORKSPACE/${repositoryName}/dist:/app/dist \
+              gcr.io/toptal-hub/${repositoryName}-dev:${staffPortalSha} \
+              yarn davinci engine sentry-upload-source-maps
+            """
+          } else {
+            info "Your current davinci version is not supporting uploading source maps to Sentry. Please update davinci package version in your app."
+          }
+        }
+      } //steps
+    } //stage
+  } //stages
+
+  post {
+    always {
+      script {
+        sendBuildData(currentBuild)
+      }
+    }
+  }
+}
+// vim:ft=groovy

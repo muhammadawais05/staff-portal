@@ -1,0 +1,17 @@
+{
+  "name": "@staff-portal/notifications",
+  "description": "Staff Portal's browser notifications wrapper",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/monitoring-service": "0.1.7",
+    "react": "16.14.0"
+  },
+  "sideEffects": false
+}

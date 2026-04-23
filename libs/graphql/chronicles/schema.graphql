@@ -1,0 +1,48 @@
+type Query {
+  dummy: String
+}
+
+type ModelDescription {
+  associationReferences: ModelDesctiptionAssociationReference
+  designation: String
+  gid: String
+  reference: ReferenceType
+}
+
+type ModelDesctiptionAssociationReference {
+  name: String
+  reference: ReferenceType!
+}
+
+union ReferenceType =
+    ModelDescriptionLink
+  | ModelDescriptionLabel
+  | ModelDescriptionTemplate
+
+type ModelDescriptionLink {
+  accessible: Boolean
+  options: [ModelDescriptionLinkOption]
+  path: String!
+  text: String
+}
+
+type ModelDescriptionLabel {
+  text: String
+}
+
+type ModelDescriptionTemplate {
+  template: String
+  variables: [ModelDescriptionTemplateVariable]
+}
+
+union TemplateVariableValueType = ModelDescriptionLink | ModelDescriptionLabel
+
+type ModelDescriptionTemplateVariable {
+  name: String
+  value: TemplateVariableValueType!
+}
+
+type ModelDescriptionLinkOption {
+  name: String
+  value: String!
+}

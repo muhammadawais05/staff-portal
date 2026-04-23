@@ -1,0 +1,23 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "baseUrl": "../node_modules",
+    "noEmit": true,
+    "target": "es2015",
+    "lib": ["es2015", "dom", "dom.iterable", "esnext"],
+    "types": [
+      "node",
+      "cypress",
+      "cypress-real-events",
+      "../../../node_modules/@types/google.maps",
+      "../../../@types/graphql-tools",
+      "../../../node_modules/@types/segment-analytics",
+      "cypress-file-upload"
+    ],
+    "declaration": false,
+    "paths": {
+      "~integration/*": ["../cypress/*"]
+    }
+  },
+  "include": ["../../../@types/**/*", "**/*.ts", "../src/@types/**/*"]
+}

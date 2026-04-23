@@ -1,0 +1,41 @@
+{
+  "name": "@staff-portal/talents-task-card",
+  "description": "SP talent task card related functionality",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@staff-portal/communication": "0.0.7",
+    "@staff-portal/communication-send-email": "0.0.1",
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/current-user": "0.0.50",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/date-time-utils": "0.5.24",
+    "@staff-portal/facilities": "0.0.23",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/navigation": "0.151.0",
+    "@staff-portal/role-profile": "0.0.1",
+    "@staff-portal/talents": "0.0.30",
+    "@staff-portal/tasks": "0.0.4",
+    "@staff-portal/tasks-cards": "0.0.1",
+    "@staff-portal/ui": "0.10.13",
+    "@staff-portal/utils": "0.0.2",
+    "@toptal/picasso": "^25.0.0",
+    "graphql-tag": "^2.12.4",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6"
+  },
+  "sideEffects": false
+}

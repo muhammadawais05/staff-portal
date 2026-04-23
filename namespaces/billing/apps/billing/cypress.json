@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:3032/",
+  "fixturesFolder": "./src/_fixtures",
+  "supportFile": "./cypress/support/index.ts",
+  "video": false,
+  "viewportHeight": 890,
+  "viewportWidth": 822,
+  "retries": {
+    "runMode": 1
+  }
+}

@@ -1,0 +1,497 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplyUnallocatedMemorandumsForm invoice render 1`] = `
+.c5.c5 {
+  text-align: right;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c3.c3 {
+  width: 7rem;
+  text-align: right;
+}
+
+.c2 {
+  width: 3rem;
+}
+
+.c1 {
+  width: 3rem;
+}
+
+.c0 {
+  table-layout: fixed;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form>
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="ApplyUnallocatedMemorandumsForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Allocate memorandums to Invoice #280759
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+        >
+          <div
+            class=""
+            style="margin-bottom: 2rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+              data-testid="ApplyUnallocatedMemorandumsForm-intro"
+            >
+              Select available prepayment and/or one or more unallocated user's memorandums to apply to the invoice.
+            </p>
+          </div>
+          <table
+            _css="table-layout:fixed;"
+            class="MuiTable-root ApplyUnallocatedMemorandumsForm___StyledTable-j73748 c0"
+          >
+            <thead
+              class="MuiTableHead-root PicassoTableHead-root"
+            >
+              <tr
+                class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+              >
+                <th
+                  _css2="width:,3rem,;"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell-j73748 c1"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  />
+                </th>
+                <th
+                  _css3="width:,3rem,;"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell2-j73748 c2"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    ID
+                  </div>
+                </th>
+                <th
+                  _css4="&&{width:,7rem,;text-align:right;}"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell3-j73748 c3"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    Amount
+                  </div>
+                </th>
+                <th
+                  _css5="width:100%;"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell4-j73748 c4"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    Description
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <caption
+              data-testid="MemosListWithHeader"
+            >
+              {"fieldArrayName":"debitMemorandums"}
+            </caption>
+            <tbody
+              class="MuiTableBody-root"
+            >
+              <tr
+                class="MuiTableRow-root PicassoTableRow-root PicassoTableSectionHead-sectionHeaderRow PicassoTableRow-bordered"
+              >
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                  colspan="100"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    Prepayments
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tbody
+              class="MuiTableBody-root"
+            >
+              <tr
+                class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-stripeEven PicassoTableRow-bordered"
+              >
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  >
+                    <div
+                      class="PicassoFormField-root"
+                      data-field-has-error="false"
+                      data-testid="applyPrepayments-field"
+                    >
+                      <span
+                        class="PicassoContainer-flex PicassoContainer-inline PicassoCheckbox-checkboxWrapper"
+                      >
+                        <span
+                          aria-disabled="false"
+                          class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root MuiCheckbox-root PicassoCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                          data-testid="applyPrepayments"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <input
+                              class="PrivateSwitchBase-input"
+                              data-indeterminate="false"
+                              name="applyPrepayments"
+                              type="checkbox"
+                              value=""
+                            />
+                            <div
+                              class="PicassoCheckbox-uncheckedIcon"
+                            />
+                          </span>
+                        </span>
+                      </span>
+                      
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  />
+                </td>
+                <td
+                  _css6="&&{text-align:right;}"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body ApplyUnallocatedMemorandumsForm___StyledTableCell5-j73748 c5"
+                  data-testid="ApplyUnallocatedMemorandumsForm-amount"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  >
+                    <span
+                      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                    >
+                      $1,267.89
+                    </span>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                  data-testid="ApplyUnallocatedMemorandumsForm-description"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  >
+                    <div
+                      data-testid="TypographyOverflow"
+                    >
+                      Available customer prepayment
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <caption
+              data-testid="MemosListWithHeader"
+            >
+              {"fieldArrayName":"creditMemorandums"}
+            </caption>
+          </table>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Allocate Selected
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`ApplyUnallocatedMemorandumsForm payment render 1`] = `
+.c5.c5 {
+  text-align: right;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c3.c3 {
+  width: 7rem;
+  text-align: right;
+}
+
+.c2 {
+  width: 3rem;
+}
+
+.c1 {
+  width: 3rem;
+}
+
+.c0 {
+  table-layout: fixed;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form>
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="ApplyUnallocatedMemorandumsForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Allocate memorandums to Notice of Payment #280759
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+        >
+          <div
+            class=""
+            style="margin-bottom: 2rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+              data-testid="ApplyUnallocatedMemorandumsForm-intro"
+            >
+              Select one or more unallocated memorandums from the user's local account to apply to the payment before paying.
+            </p>
+          </div>
+          <table
+            _css="table-layout:fixed;"
+            class="MuiTable-root ApplyUnallocatedMemorandumsForm___StyledTable-j73748 c0"
+          >
+            <thead
+              class="MuiTableHead-root PicassoTableHead-root"
+            >
+              <tr
+                class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+              >
+                <th
+                  _css2="width:,3rem,;"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell-j73748 c1"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  />
+                </th>
+                <th
+                  _css3="width:,3rem,;"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell2-j73748 c2"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    ID
+                  </div>
+                </th>
+                <th
+                  _css4="&&{width:,7rem,;text-align:right;}"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell3-j73748 c3"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    Amount
+                  </div>
+                </th>
+                <th
+                  _css5="width:100%;"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head ApplyUnallocatedMemorandumsForm___StyledTableCell4-j73748 c4"
+                  scope="col"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    Description
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <caption
+              data-testid="MemosListWithHeader"
+            >
+              {"fieldArrayName":"debitMemorandums"}
+            </caption>
+            <tbody
+              class="MuiTableBody-root"
+            >
+              <tr
+                class="MuiTableRow-root PicassoTableRow-root PicassoTableSectionHead-sectionHeaderRow PicassoTableRow-bordered"
+              >
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                  colspan="100"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+                  >
+                    Prepayments
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tbody
+              class="MuiTableBody-root"
+            >
+              <tr
+                class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-stripeEven PicassoTableRow-bordered"
+              >
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  >
+                    <div
+                      class="PicassoFormField-root"
+                      data-field-has-error="false"
+                      data-testid="applyPrepayments-field"
+                    >
+                      <span
+                        class="PicassoContainer-flex PicassoContainer-inline PicassoCheckbox-checkboxWrapper"
+                      >
+                        <span
+                          aria-disabled="false"
+                          class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root MuiCheckbox-root PicassoCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                          data-testid="applyPrepayments"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <input
+                              class="PrivateSwitchBase-input"
+                              data-indeterminate="false"
+                              name="applyPrepayments"
+                              type="checkbox"
+                              value=""
+                            />
+                            <div
+                              class="PicassoCheckbox-uncheckedIcon"
+                            />
+                          </span>
+                        </span>
+                      </span>
+                      
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  />
+                </td>
+                <td
+                  _css6="&&{text-align:right;}"
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body ApplyUnallocatedMemorandumsForm___StyledTableCell5-j73748 c5"
+                  data-testid="ApplyUnallocatedMemorandumsForm-amount"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  >
+                    <span
+                      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                    >
+                      $1,267.89
+                    </span>
+                  </div>
+                </td>
+                <td
+                  class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+                  data-testid="ApplyUnallocatedMemorandumsForm-description"
+                >
+                  <div
+                    class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+                  >
+                    <div
+                      data-testid="TypographyOverflow"
+                    >
+                      Available customer prepayment
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <caption
+              data-testid="MemosListWithHeader"
+            >
+              {"fieldArrayName":"creditMemorandums"}
+            </caption>
+          </table>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Allocate Selected
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

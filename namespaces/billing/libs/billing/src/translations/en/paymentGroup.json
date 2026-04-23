@@ -1,0 +1,89 @@
+{
+  "actions": {
+    "cancelPaymentGroup": "Cancel Payment",
+    "details": "Details"
+  },
+  "modals": {
+    "applyMemos": {
+      "actions": {
+        "skipAndContinue": "Skip and continue",
+        "submitAndContinue": "Allocate selected and continue"
+      },
+      "intro": "Select one or more unallocated memorandums from the user's local account to add to the documents in the payment group before paying.",
+      "notification": {
+        "success": "The memorandums were successfully allocated to Payment Group #{{id}}."
+      },
+      "secondaryIntro": "Leave all of the checkboxes empty to skip this action and proceed to payment.",
+      "table": {
+        "amount": "Amount",
+        "credit": "Credit",
+        "debit": "Debit",
+        "description": "Description"
+      },
+      "title": "Allocate memorandums to Payment Group #{{id}}"
+    },
+    "cancelPaymentGroup": {
+      "form": {
+        "actions": {
+          "submit": "Cancel Payment Group"
+        },
+        "fields": {
+          "comment": {
+            "label": "Comment",
+            "placeholder": "Please specify a reason."
+          }
+        },
+        "intro": "By canceling payment group you acknowledge that it was moved to the paid status by mistake, no real funds were transferred, and understand that this isn't going to affect anyones local account.",
+        "title": "Cancel Payment Group #{{number}}"
+      },
+      "notification": {
+        "success": "Payment group #{{number}} cancellation process has been started. It will require up to a couple of minutes (depending on the number of payments) to be completed."
+      }
+    },
+    "pay": {
+      "form": {
+        "actions": {
+          "submit": "Pay Payment Group"
+        }
+      },
+      "notification": {
+        "success": "Payment group payment process has been started. It will require up to a couple of minutes (depending on the number of payments) to be completed."
+      },
+      "title": "Pay Payment Group #{{number}}"
+    },
+    "removePaymentFromPaymentGroup": {
+      "confirmRemove": {
+        "message": "Are you sure you want to remove the payment from the group?",
+        "submitText": "Remove payment",
+        "title": "Remove Payment #{{number}} from the Group",
+        "warning": {
+          "withheld": "The user's payments are withheld, so as soon as you remove this payment from the group it will become withheld as well, and you won't be able to add it back to this group."
+        }
+      },
+      "notification": {
+        "success": "The Payment #{{number}} was successfully removed from the group."
+      }
+    },
+    "revertPaymentToPaymentGroup": {
+      "notification": {
+        "success": "The Payment #{{number}} was successfully added to the group."
+      }
+    }
+  },
+  "page": {
+    "header": {
+      "actions": {
+        "cancel": "Cancel payment",
+        "pay": "Pay"
+      },
+      "browserTitle": "Payments for {{subject}}",
+      "initialTitle": "Payments",
+      "title": "Payments for <0>{{subject}}</0>"
+    }
+  },
+  "paymentsTable": {
+    "empty": {
+      "message": "All payments from this payment group were removed"
+    }
+  }
+}

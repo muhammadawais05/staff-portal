@@ -1,0 +1,35 @@
+{
+  "awaitingConfirmation": "Awaiting delivery confirmation (updated every 15 minutes)",
+  "emailSentTimestamp": "Email sent at: <0>{{date}}</0>",
+  "status": {
+    "invoice": {
+      "notAvailable": "Email delivery tracking is not available for invoices created before {{date}}"
+    },
+    "payment": {
+      "notAvailable": "Email delivery tracking is not available for payments created before {{date}}"
+    }
+  },
+  "table": {
+    "header": {
+      "message": "Message",
+      "recipient": "Recipient",
+      "status": "Status"
+    },
+    "row": {
+      "status": {
+        "bounce": "Bounce",
+        "deferred": "Deferred",
+        "delivered": "Delivered",
+        "dropped": "Dropped",
+        "missing": "Missing",
+        "processed": "Processed"
+      }
+    }
+  },
+  "title": "Email Status",
+  "unsentReason": {
+    "companyNotificationsDisabled": "Not sent. Company has disabled invoice notifications.",
+    "consolidatedInvoice": "Not sent. This invoice was consolidated or it is marked for auto-consolidation.",
+    "invoiceNotificationsDisabled": "Not sent. Invoice notifications were not enabled for this invoice."
+  }
+}

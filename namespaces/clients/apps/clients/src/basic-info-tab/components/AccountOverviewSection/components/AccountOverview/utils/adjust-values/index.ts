@@ -1,0 +1,5 @@
+export { adjustContactName } from './adjust-contact-name'
+export { adjustLegalName } from './adjust-legal-name'
+export { adjustPrimaryRegionId } from './adjust-primary-region'
+export { adjustSecondaryRegionId } from './adjust-secondary-region'
+export { adjustLocation } from './adjust-location'

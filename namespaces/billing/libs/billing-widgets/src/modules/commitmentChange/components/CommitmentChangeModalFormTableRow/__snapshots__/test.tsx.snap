@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommitmentChangeModalFormTableRow default render 1`] = `
+.c0 {
+  min-width: 140px;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root CommitmentChangeModalFormTableRow___StyledTableCell-sc-1km9gfu c0"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              Hourly rate
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                class="PicassoFormField-root"
+                data-field-has-error="false"
+                data-testid="talent-hourly-rate-field"
+              >
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium MuiInputBase-fullWidth MuiInputBase-adornedStart MuiOutlinedInput-adornedStart MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                >
+                  <div
+                    class="MuiInputAdornment-root PicassoInputAdornment-root MuiInputAdornment-disablePointerEvents MuiInputAdornment-positionStart"
+                  >
+                    <span
+                      class="PicassoInput-icon"
+                      role="presentation"
+                    >
+                      $
+                    </span>
+                  </div>
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                    data-testid="talent-hourly-rate"
+                    name="talentHourlyRate"
+                    placeholder="0.00"
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                
+              </div>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                class="PicassoFormField-root"
+                data-field-has-error="false"
+                data-testid="company-hourly-rate-field"
+              >
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium MuiInputBase-fullWidth MuiInputBase-adornedStart MuiOutlinedInput-adornedStart MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+                >
+                  <div
+                    class="MuiInputAdornment-root PicassoInputAdornment-root MuiInputAdornment-disablePointerEvents MuiInputAdornment-positionStart"
+                  >
+                    <span
+                      class="PicassoInput-icon"
+                      role="presentation"
+                    >
+                      $
+                    </span>
+                  </div>
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                    data-testid="company-hourly-rate"
+                    name="companyHourlyRate"
+                    placeholder="0.00"
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

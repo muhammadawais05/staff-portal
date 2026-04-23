@@ -1,0 +1,7 @@
+export const BRANDED_TEMPLATE_FIELD = 'brandedTemplate'
+export const NAME_FIELD = 'name'
+export const PRIVATE_FIELD = 'private'
+export const RAW_TEMPLATE_FIELD = 'rawTemplate'
+export const SENDING_FROM_FIELD = 'sendingFrom'
+export const TARGET_ROLE_FIELD = 'targetRole'
+export const TOKEN_FIELD = 'token'

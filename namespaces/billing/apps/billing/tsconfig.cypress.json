@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es6",
+    "types": ["node", "cypress", "cypress-react-selector"],
+    "allowJs": true
+  },
+  "exclude": ["src/**/test*", "src/**/story/*"]
+}

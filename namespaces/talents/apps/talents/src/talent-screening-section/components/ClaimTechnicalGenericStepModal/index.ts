@@ -1,0 +1,1 @@
+export { useClaimTechnicalGenericStepModal } from './hooks'

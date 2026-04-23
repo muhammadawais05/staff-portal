@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormBaseErrorContainer no errors 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form>
+      <button
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;

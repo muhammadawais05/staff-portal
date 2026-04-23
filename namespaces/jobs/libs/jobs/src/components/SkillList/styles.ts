@@ -1,0 +1,3 @@
+export const skillsListWrapper = `
+  margin-bottom: -0.5rem;
+`

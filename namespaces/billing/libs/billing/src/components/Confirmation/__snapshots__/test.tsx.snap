@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirmation all possible props default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="Confirmation"
+    >
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="Confirmation-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          example title
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+        >
+          <div
+            class=""
+            style="margin-bottom: 2rem;"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-semibold MuiTypography-body1"
+              data-testid="Confirmation-description"
+            >
+              example description
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+            data-testid="Confirmation-notice"
+          >
+            example notice
+          </div>
+        </div>
+      </div>
+      <div
+        class="PicassoModalAction-root"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-root"
+          data-component-type="button"
+          data-testid="Confirmation-cancel"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Example Cancel
+          </span>
+        </button>
+        <button
+          class="MuiButtonBase-root PicassoButton-disabled PicassoButton-medium PicassoButton-primary PicassoButton-root Mui-disabled"
+          data-component-type="button"
+          data-testid="Confirmation-action"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-hidden PicassoButton-content"
+          >
+            Example Action
+          </span>
+          <div
+            class="PicassoLoader-root PicassoButton-loader PicassoLoader-inline"
+          >
+            <div
+              aria-valuenow="35"
+              class="MuiCircularProgress-root PicassoCircularProgress-root PicassoLoader-spinnerInherit MuiCircularProgress-colorPrimary MuiCircularProgress-static"
+              role="progressbar"
+              style="width: 16px; height: 16px; transform: rotate(-90deg);"
+            >
+              <svg
+                class="MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleStatic"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20.2"
+                  stroke-width="3.6"
+                  style="stroke-dasharray: 126.920; stroke-dashoffset: 82.498px;"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Confirmation default render default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="Confirmation"
+    >
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+        />
+      </div>
+      <div
+        class="PicassoModalAction-root"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-secondary PicassoButton-root"
+          data-component-type="button"
+          data-testid="Confirmation-cancel"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Cancel
+          </span>
+        </button>
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="Confirmation-action"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Example Action
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

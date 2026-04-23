@@ -1,0 +1,127 @@
+{
+  "createModal": {
+    "fields": {
+      "amount": {
+        "label": "Amount"
+      },
+      "client": {
+        "error": "You can't leave this empty",
+        "label": "Company"
+      },
+      "expiryDate": {
+        "label": "Expiration"
+      },
+      "number": {
+        "label": "Purchase Order Number"
+      },
+      "poLinesName": {
+        "label": "Line {{index}} Number"
+      },
+      "threshold": {
+        "disabledMessage": "Enter an amount before editing the threshold.",
+        "label": "Threshold"
+      }
+    },
+    "form": {
+      "actions": {
+        "addPOLine": "Add PO Line",
+        "delete": "Remove Line {{index}}",
+        "submit": "Add Purchase Order"
+      }
+    },
+    "notification": {
+      "success": "The purchase order has been successfully created"
+    },
+    "title": "New Purchase Order"
+  },
+  "editModal": {
+    "notification": {
+      "success": "The purchase order has been successfully updated"
+    },
+    "title": "Edit Purchase Order",
+    "form": { "actions": { "submit": "Save" } }
+  },
+  "invoices": {
+    "empty": "No invoices have been assigned to this purchase order yet"
+  },
+  "mutation": {
+    "archivePurchaseOrder": {
+      "notification": {
+        "success": "Purchase order has been archived"
+      }
+    },
+    "unarchivePurchaseOrder": {
+      "notification": {
+        "success": "Purchase order has been unarchived"
+      }
+    },
+    "archivePurchaseOrderLine": {
+      "notification": {
+        "success": "Purchase order line has been archived"
+      }
+    },
+    "unarchivePurchaseOrderLine": {
+      "notification": {
+        "success": "Purchase order line has been unarchived"
+      }
+    },
+    "updatePurchaseOrder": {
+      "notification": {
+        "amount": "The purchase order amount has been updated",
+        "expiryDate": "The purchase order expiration date has been updated",
+        "threshold": "The purchase order threshold has been updated"
+      }
+    }
+  },
+  "page": {
+    "details": {
+      "amount": "Amount",
+      "company": "Company",
+      "draftedTotal": "Drafted total",
+      "expirationDate": "Expiration date",
+      "invoicedTotal": "Invoiced total",
+      "poNumber": "Number",
+      "shared": "This purchase order is shared between multiple companies.",
+      "subtitle": "Details",
+      "threshold": "Threshold",
+      "totalAmount": "Total Amount",
+      "mainPO": "Main PO"
+    },
+    "header": {
+      "title": "Purchase Order #{{purchaseOrderId}}"
+    }
+  },
+  "purchaseDetails": {
+    "header": {
+      "actions": {
+        "archive": "Archive",
+        "unarchive": "Unarchive",
+        "edit": "Edit Purchase Order"
+      }
+    }
+  },
+  "purchaseOrderLineDetails": {
+    "jobs": {
+      "empty": "There are no jobs yet.",
+      "header": {
+        "engagementId": "Engagement ID",
+        "jobId": "Job ID",
+        "status": "Status",
+        "title": "Title"
+      }
+    }
+  },
+  "purchaseOrderLines": {
+    "archived": "This Purchase Order line was archived.",
+    "empty": "There are no PO lines yet.",
+    "table": {
+      "head": {
+        "amount": "Amount",
+        "draftedTotal": "Drafted Total",
+        "invoicedTotal": "Invoiced Total",
+        "poLineName": "PO Line Name"
+      }
+    },
+    "title": "PO Lines"
+  }
+}

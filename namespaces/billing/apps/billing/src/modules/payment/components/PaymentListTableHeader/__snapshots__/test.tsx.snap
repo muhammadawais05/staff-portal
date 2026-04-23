@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header default render 1`] = `
+.c6.c6 {
+  padding: 0.5rem 1rem;
+  text-align: right;
+  width: 5.2rem;
+}
+
+.c5.c5 {
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.c4.c4 {
+  padding: 0.5rem 1rem;
+  width: 7.25rem;
+}
+
+.c3.c3 {
+  padding: 0.5rem 1rem;
+  width: 6rem;
+  text-align: right;
+}
+
+.c2.c2 {
+  padding: 0.5rem 1rem;
+  width: 7.7rem;
+}
+
+.c1.c1 {
+  padding: 0.5rem 1rem;
+  width: 7.4rem;
+}
+
+.c0.c0 {
+  padding: 0.5rem 1rem;
+  width: 5.35rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table
+      class="MuiTable-root"
+    >
+      <thead
+        class="MuiTableHead-root PicassoTableHead-root"
+        data-testid="PaymentListTableHeader-head"
+      >
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+        >
+          <th
+            _css="&&{,
+  padding: 0.5rem 1rem;
+, width:,5.35rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentListTableHeader___StyledTableCell-vvy9m3 c0"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              ID
+            </div>
+          </th>
+          <th
+            _css2="&&{,
+  padding: 0.5rem 1rem;
+, width:,7.4rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentListTableHeader___StyledTableCell2-vvy9m3 c1"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Status
+            </div>
+          </th>
+          <th
+            _css3="&&{,
+  padding: 0.5rem 1rem;
+, width:,7.7rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentListTableHeader___StyledTableCell3-vvy9m3 c2"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Payee
+            </div>
+          </th>
+          <th
+            _css4="&&{,
+  padding: 0.5rem 1rem;
+, width:,6rem,;text-align:right;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentListTableHeader___StyledTableCell4-vvy9m3 c3"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Amount
+            </div>
+          </th>
+          <th
+            _css5="&&{,
+  padding: 0.5rem 1rem;
+, width:,7.25rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentListTableHeader___StyledTableCell5-vvy9m3 c4"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Date Issued
+            </div>
+          </th>
+          <th
+            _css6="&&{,
+  padding: 0.5rem 1rem;
+, width:100%;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentListTableHeader___StyledTableCell6-vvy9m3 c5"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Description
+            </div>
+          </th>
+          <th
+            _css7="&&{,
+  padding: 0.5rem 1rem;
+, text-align:right;width:,5.2rem,;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head PaymentListTableHeader___StyledTableCell7-vvy9m3 c6"
+            scope="col"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Actions
+            </div>
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+`;

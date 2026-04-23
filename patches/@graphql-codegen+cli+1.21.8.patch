@@ -1,0 +1,22 @@
+diff --git a/node_modules/@graphql-codegen/cli/bin.js b/node_modules/@graphql-codegen/cli/bin.js
+index 3359753..b31d261 100755
+--- a/node_modules/@graphql-codegen/cli/bin.js
++++ b/node_modules/@graphql-codegen/cli/bin.js
+@@ -1718,6 +1718,17 @@ function cliError(err, exitOnError = true) {
+     let msg;
+     if (err instanceof Error) {
+         msg = err.message || err.toString();
++
++        if (Array.isArray(err.errors) && err.errors.length) {
++          const allErrs = err.errors.map(errItem => {
++            let subMsg = errItem.message || errItem.toString();
++            if (pluginHelpers.isDetailedError(errItem)) {
++              subMsg = `${subMsg} for "${errItem.source}"${errItem.details}`;
++            }
++            return subMsg;
++          });
++          msg = `${msg}\n${allErrs.join("\n")}`;
++        }
+     }
+     else if (typeof err === 'string') {
+         msg = err;

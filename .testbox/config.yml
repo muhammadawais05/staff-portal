@@ -1,0 +1,22 @@
+docker:
+  build:
+    args:
+      NPM_TOKEN: <%= ENV['NPM_TOKEN'] %>
+  ports:
+    - 4015:80
+  env:
+    HOST: 0.0.0.0
+    PORT: 80
+  compose:
+    healthcheck:
+      test: curl -f --max-time 1 http://localhost
+      interval: 10s
+      retries: 30
+
+resources:
+  cpu: 0.03
+  memory: 16M
+
+faketime: false
+scripts:
+  start: /usr/local/bin/env-runtime.entrypoint.sh nginx -g "daemon off;"

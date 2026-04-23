@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentTaskCard card is rendered properly 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TaskCardLayout"
+    >
+      <div
+        data-testid="PaymentTaskCardContent"
+      >
+        "VjEtUGF5bWVudC0xMTA0NDI4"
+      </div>
+    </div>
+  </div>
+</div>
+`;

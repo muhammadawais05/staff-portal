@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig",
+  "include": [
+    "@types/**/*",
+    "libs/**/src/**/*",
+    "namespaces/**/src/**/*",
+    "hosts/**/src/**/*"
+  ],
+  "exclude": [
+    "namespaces/billing/libs/billing/src/**/*test.ts*",
+    "namespaces/billing/libs/billing/src/**/story/*",
+    "namespaces/billing/libs/billing-widgets/src/**/*test.ts*",
+    "namespaces/billing/libs/billing-widgets/src/**/story/*",
+    "namespaces/billing/apps/billing/src/**/*test.ts*",
+    "namespaces/billing/apps/billing/src/**/story/*"
+  ]
+}

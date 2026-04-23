@@ -1,0 +1,191 @@
+@Library('globalLibrary@master') _
+
+anvilHelper = new helpers.AnvilHelper()
+jobHelper = new helpers.JobHelper()
+slackHelper = new helpers.SlackHelper()
+
+slackRcChannel = "#staff-portal-rc"
+slackNotificationChannel = "#staff-portal-bullhorn"
+platform_job_name = 'distrib/platform-pr-features-staff-portal-parent'
+platform_build_number = null
+sha = null
+platformRevision = null
+revisionSha = null
+
+def sendCustomSlackNotificationFeatures(vertical, buildNum, buildUrl, slackNotificationChannel, currentBuild) {
+  def String message = ""
+  def prData = ""
+  def duration = currentBuild.duration
+  def durationFormatted = slackHelper.formatTime(duration)
+  def result = currentBuild.currentResult
+  def productionDeploymentSha = getProductionDeploymentSha()
+  def pullRequestNumber = getPullRequestNumberForSha(revisionSha)
+  def pullRequestAssigneeLogin = getPullRequestAssigneeLogin(pullRequestNumber)
+  def pullRequestAssigneeName = getGithubUserNameByLogin(pullRequestAssigneeLogin)
+  def pullRequestAssigneeLink = "https://github.com/${pullRequestAssigneeLogin}"
+  def pullRequestLink = "https://github.com/toptal/staff-portal/pull/${pullRequestNumber}"
+  def githubCommitLink = "https://github.com/toptal/staff-portal/commit/${revisionSha}"
+  def githubDiffLink = "https://github.com/toptal/staff-portal/compare/${productionDeploymentSha}...${revisionSha}"
+  def executionReportUrl = buildUrl + "Test_20Summary/"
+
+  if (pullRequestNumber) {
+    prData = " (PR <${pullRequestLink}|#${pullRequestNumber}> by <${pullRequestAssigneeLink}|${pullRequestAssigneeName}>)"
+  }
+
+  try {
+    message = slackHelper.getCustomSlackNotificationTextFeatures(vertical, buildNum, buildUrl, duration, result)
+  } catch (caughtError) {
+    println "Error happened while trying to create custom Slack message: " + caughtError
+    println "Swiching to simple Slack message format.."
+    message = slackHelper.simpleSlackFormat(result, vertical, buildNum, buildUrl)
+  }
+
+  if (result == "SUCCESS") {
+    message = "SP Features build <${buildUrl}|#${buildNum}>${prData} is :green_heart: (${durationFormatted} | <${executionReportUrl}|Report>).\nCommit: <${githubCommitLink}|${revisionSha}> | <${githubDiffLink}|Github diff>"
+  }
+
+  slackSend color: slackHelper.getBuildStatusColor(result),
+          channel: slackNotificationChannel,
+          message: message
+}
+
+def getProductionDeploymentSha() {
+  command = "curl https://staff.toptal.com/REVISION.txt".stripIndent().trim()
+  sh(script: command, returnStdout: true).trim()
+}
+
+def getPullRequestNumberForSha(sha) {
+  command = "curl -H \"Authorization: token ${GITHUB_TOKEN}\" https://api.github.com/repos/toptal/staff-portal/commits/${sha}/pulls | jq -r 'first? | .number'"
+  
+  sh(script: command, returnStdout: true).trim()
+}
+
+def getPullRequestAssigneeLogin(pullRequestNumber) {
+  command = "curl -H \"Authorization: token ${GITHUB_TOKEN}\" https://api.github.com/repos/toptal/staff-portal/pulls/${pullRequestNumber} | jq -r '.assignee.login'"
+  
+  sh(script: command, returnStdout: true).trim()
+}
+
+def getGithubUserNameByLogin(username) {
+  command = "curl -H \"Authorization: token ${GITHUB_TOKEN}\" https://api.github.com/users/${username} | jq -r '.name'"
+  
+  sh(script: command, returnStdout: true).trim()
+}
+
+pipeline {
+  agent { label 'slave_aws' }
+
+  parameters {
+    string(name: 'REVISION', defaultValue: 'master', description: 'Optional Staff Portal commit reference on master to build')
+    string(name: 'PLATFORM_REVISION', defaultValue: 'master', description: 'Optional Platform commit reference to use')
+    string(name: 'CLIENT_PORTAL_REVISION', defaultValue: 'master', description: 'Optional Client Portal commit reference to use')
+    string(name: 'ANVIL_URL', defaultValue: 'https://anvil.toptal.net', description: '')
+    string(name: 'ANVIL_PARENT_BUILD_ID', defaultValue: '', description: '')
+  }
+
+  options {
+    ansiColor('xterm')
+    timestamps()
+    timeout(time: 3, unit: 'HOURS')
+    skipDefaultCheckout()
+    buildDiscarder(logRotator(daysToKeepStr: '3'))
+  }
+
+  environment {
+    GITHUB_TOKEN = credentials('toptal-bot-github-token')
+  }
+
+  stages {
+    stage('Register build in Anvil') {
+      steps {
+        script {
+          sha = env.ghprbActualCommit ?: (params.REVISION ?: env.GIT_COMMIT)
+          revisionSha = anvilHelper.lastSha('staff-portal', sha)
+          platformRevision = env.ghprbActualCommit ? jobHelper.getPlatformBranch(env.ghprbCommentBody) : env.PLATFORM_REVISION
+          env.ANVIL_DEPENDENCIES = "platform,${env.ghprbActualCommit ?: jobHelper.getPlatformBranch(env.ghprbCommentBody)}"
+          env.ANVIL_BUILD_ID = anvilHelper.registerBuild()
+        }
+      }
+    }
+
+    stage('Trigger staff-portal features from platform') {
+      steps {
+        script {
+          def build = buildWithParameters(
+                 jobName: platform_job_name,
+                 propagate: false,
+                 wait: true,
+                 parameters: [
+                         GIT_COMMIT: env.ghprbActualCommit ?: revisionSha,
+                         PLATFORM_REVISION: platformRevision,
+                         STAFF_PORTAL_REVISION: sha
+                 ] + anvilHelper.envVarsForChild())
+          platform_build_number = build.getNumber()
+          currentBuild.result = build.result
+        }
+      }
+    }
+  }
+  post {
+    always {
+      script {
+        sendBuildData(currentBuild)
+        copyArtifacts(
+          projectName: platform_job_name,
+          selector: specific(platform_build_number.toString()),
+          filter: 'results/html/index.html',
+          optional: true
+        )
+        archiveArtifacts(artifacts: "results/html/index.html", fingerprint: false, allowEmptyArchive: true)
+        publishHtmlReports(
+          reportName: 'Cucumber report',
+          reportDir: 'results/html',
+          reportFiles: 'index.html',
+          reportTitles: 'Cucumber'
+        )
+      }
+    }
+    success {
+      success 'Build succeeded!'
+
+      sendCustomSlackNotificationFeatures('Staff Portal',
+                                          env.BUILD_NUMBER,
+                                          env.BUILD_URL,
+                                          slackRcChannel,
+                                          currentBuild)
+    }
+    fixed {
+      script {
+        if (!env.ghprbActualCommit) {
+          info "Sending Slack notifications..."
+
+          slackHelper.sendSlackNotificationFeatures('Staff Portal',
+                                                    env.BUILD_NUMBER,
+                                                    env.BUILD_URL,
+                                                    slackNotificationChannel,
+                                                    currentBuild)
+        }
+      }
+    }
+    failure {
+      script {
+        if (!env.ghprbActualCommit) {
+          info "Sending Slack notifications..."
+
+          slackHelper.sendSlackNotificationFeatures('Staff Portal',
+                                                    env.BUILD_NUMBER,
+                                                    env.BUILD_URL,
+                                                    slackNotificationChannel,
+                                                    currentBuild)
+
+          sendCustomSlackNotificationFeatures('Staff Portal',
+                                              env.BUILD_NUMBER,
+                                              env.BUILD_URL,
+                                              slackRcChannel,
+                                              currentBuild)
+        }
+        err "Build failed."
+      }
+    }
+  }//post
+}

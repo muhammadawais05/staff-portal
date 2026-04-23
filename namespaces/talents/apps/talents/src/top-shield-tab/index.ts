@@ -1,0 +1,1 @@
+export { TopShieldTab } from './components'

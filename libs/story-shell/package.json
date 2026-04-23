@@ -1,0 +1,26 @@
+{
+  "name": "@staff-portal/story-shell",
+  "description": "Staff Portal's stories environment",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.tsx",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/app-shell": "0.1.25",
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/modals-service": "0.60.31",
+    "@staff-portal/navigation": "0.151.0",
+    "@staff-portal/routes": "0.14.4",
+    "@toptal/picasso-forms": "^44.0.0",
+    "@toptal/staff-portal-message-bus": "1.0.22",
+    "react": "16.14.0",
+    "styled-components": "5.3.0"
+  },
+  "sideEffects": false
+}

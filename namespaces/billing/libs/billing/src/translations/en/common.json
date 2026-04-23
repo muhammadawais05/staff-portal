@@ -1,0 +1,132 @@
+{
+  "actionUnavailable": "This action is not available.",
+  "actions": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "change": "Change",
+    "close": "Close",
+    "copy": {
+      "copyToClipboard": "Copy to clipboard",
+      "error": "Whoops, not copied!",
+      "manualPrompt": "Copy to clipboard: Ctrl+C or Command+C, Enter",
+      "success": "Copied!"
+    },
+    "create": "Create",
+    "delete": "Delete",
+    "download": "Download",
+    "edit": "Edit",
+    "history": {
+      "empty": "No activity to list.",
+      "label": "History"
+    },
+    "more": "More",
+    "ok": "OK",
+    "remove": "Remove",
+    "submit": "Submit",
+    "update": "Update"
+  },
+  "details": {
+    "values": {
+      "no": "No",
+      "yes": "Yes"
+    }
+  },
+  "documents": {
+    "credits": "Credits: ",
+    "debits": "Debits: ",
+    "hasChildAdjustments": "There are adjustments made to the original invoices",
+    "statuses": {
+      "credited": "Credited",
+      "debited": "Debited",
+      "disputed": "Disputed",
+      "disputedDueOn": "Disputed due {{actionDueOn}}",
+      "draft": "Draft",
+      "due": "Due",
+      "inCollections": "In collections",
+      "onHold": "On hold",
+      "outstanding": "Outstanding",
+      "overdue": "Overdue",
+      "paid": "Paid",
+      "pendingReceipt": "Pending receipt",
+      "writtenOff": "Written off"
+    }
+  },
+  "error": {
+    "operationError": "This entity cannot be modified",
+    "renderError": {
+      "action": {
+        "refreshPage": "Refresh page"
+      },
+      "description": "The Support team is working to fix this issue. Please try again later.",
+      "title": "Module error occurred"
+    },
+    "searchError": "Unable to fetch items"
+  },
+  "filters": {
+    "fields": {
+      "autocomplete": {
+        "company_ids": "companies",
+        "ids": "ids",
+        "jobs": "jobs",
+        "manager_ids": "managers",
+        "numbers": "numbers",
+        "payee_ids": "payees",
+        "talent_ids": "talents"
+      },
+      "common": {
+        "amount": "Amount",
+        "businessTypes": "Business type",
+        "engagementId": "Engagement",
+        "kinds": "Kind",
+        "paymentMethods": "Payment made via",
+        "preferredMethod": "Preferred method",
+        "statuses": "Status"
+      },
+      "datePickers": {
+        "allocationDate": "Allocation date",
+        "creationDate": "Creation date",
+        "dueOn": "Due on",
+        "expectedDate": "Expected date",
+        "issuedOn": "Issued on",
+        "paidOn": "Paid on"
+      },
+      "dropdown": {
+        "empty": "Not Selected",
+        "me": "Me",
+        "none": "None"
+      }
+    }
+  },
+  "loader": "Loading...",
+  "memorandums": "Memorandums",
+  "more": "More",
+  "notSelected": "Not Selected",
+  "primary": "Primary",
+  "table": {
+    "empty": {
+      "message": "There are no results for this search criteria"
+    }
+  },
+  "unit": {
+    "from": "from",
+    "hour": "hour",
+    "hr": "hr",
+    "min": "min",
+    "minutes": "minutes",
+    "till": "till"
+  },
+  "validation": {
+    "between": "{{unit}} must be greater than or equal to {{minValue}}",
+    "equal": "{{unit}} must be equal to {{value}}",
+    "greatOrEqual": "{{unit}} must be greater than or equal to {{value}}",
+    "greaterOrEqualValue": "The value cannot be less than {{label}}",
+    "integer": "{{unit}} must be an integer",
+    "lessOrEqual": "{{unit}} must be less than or equal to {{value}}",
+    "lessThanOrEqualValue": "The value cannot be greater than {{label}}",
+    "permissionError": "This entity cannot be modified",
+    "positive": "Must be greater than 0",
+    "required": "Please complete this field.",
+    "todayOrLater": "The date cannot be in the past",
+    "validNumber": "Must be a valid number"
+  }
+}

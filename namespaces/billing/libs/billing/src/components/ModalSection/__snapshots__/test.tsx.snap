@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalSection prop \`hasBorderMargin\` is \`false\` default render 1`] = `
+.c0.c0 {
+  width: 100%;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{width:100%;}"
+      class="MuiGrid-root ModalSection___StyledGridItem-qrv6br c0 MuiGrid-item"
+      data-testid="ModalSection"
+    >
+      <div
+        class=""
+        style="margin-bottom: 0rem;"
+      >
+        <h3
+          class="MuiTypography-root PicassoTypography-headingMedium PicassoTypography-green PicassoTypography-semibold MuiTypography-h3"
+        >
+          Total
+        </h3>
+        <div
+          class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ModalSection prop \`hasBorderMargin\` is \`true\` default render 1`] = `
+.c0.c0 {
+  width: 100%;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{width:100%;}"
+      class="MuiGrid-root ModalSection___StyledGridItem-qrv6br c0 MuiGrid-item"
+      data-testid="ModalSection"
+    >
+      <div
+        class=""
+        style="margin-bottom: 2rem;"
+      >
+        <h3
+          class="MuiTypography-root PicassoTypography-headingMedium PicassoTypography-green PicassoTypography-semibold MuiTypography-h3"
+        >
+          Total
+        </h3>
+        <div
+          class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,6 @@
+/bin
+/config/_pact
+/dist
+/dist-package
+/node_modules
+/src/graphql/**/generated

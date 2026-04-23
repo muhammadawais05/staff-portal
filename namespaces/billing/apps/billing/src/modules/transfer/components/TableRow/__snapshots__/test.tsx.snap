@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransfersTableRow default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+          data-testid="invoice-transfer-table-row"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-green MuiTypography-body1"
+                data-testid="status"
+              >
+                Paid
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+            data-testid="payment-method"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="TypographyOverflow"
+              >
+                Visa ending in 4789
+              </div>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignRight"
+                data-testid="amount"
+              >
+                $500.00
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1"
+                data-testid="date"
+              >
+                Feb 5, 2020
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                class="PicassoContainer-centerAlignItems PicassoContainer-spaceBetweenJustifyContent PicassoContainer-flex"
+              >
+                <div
+                  data-testid="details"
+                >
+                  Sent for processing to the bank network
+                </div>
+                <div
+                  data-testid="TableRowActions"
+                >
+                  589030
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`TransfersTableRow when 'isStripeEven' is 'true' default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+          data-testid="invoice-transfer-table-row"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-green MuiTypography-body1"
+                data-testid="status"
+              >
+                Paid
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+            data-testid="payment-method"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="TypographyOverflow"
+              >
+                Visa ending in 4789
+              </div>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignRight"
+                data-testid="amount"
+              >
+                $500.00
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1"
+                data-testid="date"
+              >
+                Feb 5, 2020
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                class="PicassoContainer-centerAlignItems PicassoContainer-spaceBetweenJustifyContent PicassoContainer-flex"
+              >
+                <div
+                  data-testid="details"
+                >
+                  Sent for processing to the bank network
+                </div>
+                <div
+                  data-testid="TableRowActions"
+                >
+                  589030
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`TransfersTableRow when a debt collection transfer has an associated fee default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+          data-testid="invoice-transfer-table-row"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-green MuiTypography-body1"
+                data-testid="status"
+              >
+                Paid
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+            data-testid="payment-method"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="TypographyOverflow"
+              >
+                Visa ending in 4789
+              </div>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignRight"
+                data-testid="amount"
+              >
+                $500.00
+              </p>
+              <p
+                class="MuiTypography-root PicassoTypography-bodyXsmall MuiTypography-body1 MuiTypography-alignRight"
+                data-testid="collectionFees"
+              >
+                + $100.00 fees
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1"
+                data-testid="date"
+              >
+                Feb 5, 2020
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                class="PicassoContainer-centerAlignItems PicassoContainer-spaceBetweenJustifyContent PicassoContainer-flex"
+              >
+                <div
+                  data-testid="details"
+                >
+                  Sent for processing to the bank network
+                </div>
+                <div
+                  data-testid="TableRowActions"
+                >
+                  589030
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

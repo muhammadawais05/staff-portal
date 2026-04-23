@@ -1,0 +1,9 @@
+export enum RateChangeRequestContentField {
+  RATE_CHANGE_REQUEST,
+  REQUEST_TYPE,
+  STATUS,
+  CREATED_AT,
+  TALENT_CONTACTED_AT,
+  TALENT_COMMENT,
+  MATCHER_COMMENT
+}

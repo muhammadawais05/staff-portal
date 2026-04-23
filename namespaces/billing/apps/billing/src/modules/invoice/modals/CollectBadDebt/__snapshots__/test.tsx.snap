@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceCollectBadDebtModal default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="CollectBadDebtForm"
+    >
+      377249
+    </div>
+  </div>
+</div>
+`;

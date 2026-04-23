@@ -1,0 +1,31 @@
+{
+  "name": "@staff-portal/talents-review-call-email",
+  "description": "Staff Portal's Talents Review Call Email related functionality",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/communication-send-email": "0.0.1",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/modals-service": "0.60.31",
+    "@staff-portal/mutation-result-handlers": "0.2.18",
+    "@staff-portal/talents": "0.0.30",
+    "@toptal/picasso": "^25.0.0",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "graphql-tag": "^2.12.4"
+  },
+  "private": true,
+  "sideEffects": false
+}

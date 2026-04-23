@@ -1,0 +1,106 @@
+name: Publish Billing alpha package
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: billing-alpha-release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish Billing alpha package (legacy)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUBLISH }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_SOURCEMAP_UPLOAD_TOKEN }}
+      COMMENT_BODY: ${{ github.event.comment.body }}
+
+    steps:
+      - name: Checkout PR code
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Check yarn cache
+        uses: actions/cache@v3
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install Dependencies (from network)
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional
+
+      - name: Install Dependencies (from cache)
+        if: steps.yarn-cache.outputs.cache-hit == 'true'
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --offline
+
+      - name: Build schema cache
+        uses: actions/cache@v3
+        with:
+          path: 'tmp-graphql/*.graphql'
+          key: ${{ runner.os }}-schema-${{ github.run_id }} }}
+
+      - name: Setup Google cloud toolchain
+        uses: google-github-actions/setup-gcloud@v0.6.0
+        with:
+          service_account_key: ${{ secrets.GCR_GQLGW_SCHEMAS_BUCKET_ACCOUNT }}
+          export_default_credentials: true
+
+      - name: Fetch gql schemas
+        run: yarn fetch:graphql-schemas
+
+      - name: Build types cache
+        uses: actions/cache@v3
+        id: gql-types-cache
+        with:
+          path: |
+            libs/graphql
+            **/*.gql.types.tsx
+          key: ${{ runner.os }}-types-${{ hashFiles('**/codegen.js', '**/*.graphql', '**/*.gql.ts') }}
+
+      - name: Generate types
+        if: ${{ steps.gql-types-cache.outputs.cache-hit != 'true' }}
+        run: yarn generate:types
+
+      - name: Set GIT_BRANCH
+        run: |
+          echo GIT_BRANCH=$(echo ${GITHUB_REF_NAME}) | tee -a $GITHUB_ENV
+
+      - name: Set environment vars
+        run: |
+          echo "GIT_COMMITTER_EMAIL=$(git log '${{ github.sha }}' -1 --pretty=format:'%ce')" >> $GITHUB_ENV
+          echo "GIT_COMMITTER_NAME=$(git log '${{ github.sha }}' -1 --pretty=format:'%cn')" >> $GITHUB_ENV
+
+      - name: Publish the package
+        run: |
+          yarn workspace @toptal/billing-frontend build:package:legacy
+
+          rm -rf ./namespaces/billing/apps/billing/dist-package
+          mv ./namespaces/billing/apps/billing/dist/platform ./dist-package
+
+          npx davinci engine publish-package \
+          --alpha \
+          --nonMonorepo \
+          --outputVersion .version \
+          --branch ${GIT_BRANCH}
+
+          echo "NEW_VERSION=$(cat .version)" >> $GITHUB_ENV

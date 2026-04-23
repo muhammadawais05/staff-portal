@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntOverviewEmpty default render 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="border-bottom:solid 1px ,#e5e7ea,;"
+      class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+    >
+      <div
+        class=""
+        style="margin-left: 1rem;"
+      >
+        <div
+          class=""
+          style="margin-bottom: 0.5rem;"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+          >
+            No data available at the moment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

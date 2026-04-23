@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoicePayModalFullyCovered is not paid render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoModalTitle-root"
+      data-testid="InvoicePayModalFullyCovered-title"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2"
+      >
+        Add Payment for Invoice #123
+      </h2>
+    </div>
+    <div
+      class="PicassoModalContent-wrapper"
+    >
+      <div
+        class="PicassoModalContent-modalContent"
+      >
+        <p
+          class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1"
+        >
+          Invoice amount is fully covered with payments. There is no reason to add other payments to this invoice. If you want to add a memorandum to the company, use 
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+            href="/platform/memos?badges[company_ids[]=clientId&status=unallocated"
+          >
+            memorandums page
+          </a>
+          .
+        </p>
+        <div
+          class=""
+          style="margin-top: 1rem;"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+          >
+            Invoice status is not paid yet because some of the payments are still processing. If these payments are charged successfully, invoice will be updated to paid. If charge fails you will be able to add new payment.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="InvoiceModalVariations"
+    />
+  </div>
+</div>
+`;
+
+exports[`InvoicePayModalFullyCovered is paid render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoModalTitle-root"
+      data-testid="InvoicePayModalFullyCovered-title"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2"
+      >
+        Add Payment for Invoice #123
+      </h2>
+    </div>
+    <div
+      class="PicassoModalContent-wrapper"
+    >
+      <div
+        class="PicassoModalContent-modalContent"
+      >
+        <p
+          class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1"
+        >
+          Invoice amount is fully covered with payments. There is no reason to add other payments to this invoice. If you want to add a memorandum to the company, use 
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+            href="/platform/memos?badges[company_ids[]=clientId&status=unallocated"
+          >
+            memorandums page
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+    <div
+      data-testid="InvoiceModalVariations"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,51 @@
+{
+  "name": "codeowners",
+  "description": "A tool for working with CODEOWNERS files",
+  "version": "5.1.1",
+  "bugs": "https://github.com/beaugunderson/codeowners/issues",
+  "homepage": "https://github.com/beaugunderson/codeowners#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "beaugunderson/codeowners.git",
+  "scripts": {
+    "lint": "exit 0",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nodelib/fs.walk": "^1.2.6",
+    "commander": "^6.2.1",
+    "ervy": "^1.0.7",
+    "find-up": "^2.1.0",
+    "ignore": "^5.2.0",
+    "is-directory": "^0.3.1",
+    "jest": "^27.3.1",
+    "lodash.intersection": "^4.4.0",
+    "lodash.maxby": "^4.6.0",
+    "lodash.padend": "^4.6.1",
+    "lodash.padstart": "4.6.1",
+    "true-case-path": "^1.0.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.4.1",
+    "prettier-eslint": "^14.0.1"
+  },
+  "bin": {
+    "codeowners": "index.js"
+  },
+  "contributors": [
+    "Beau Gunderson <beau@beaugunderson.com> (https://beaugunderson.com/)",
+    "Noah Manneschmidt (https://noah.manneschmidt.net/)"
+  ],
+  "keywords": [
+    "codeowners",
+    "github",
+    "gitlab"
+  ],
+  "types": "codeowners.d.ts"
+}

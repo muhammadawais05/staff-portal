@@ -1,0 +1,56 @@
+{
+  "AddModal": {
+    "actions": {
+      "addInstallment": "Add Installment",
+      "addInstallmentLimitReached": "You cannot schedule more than six installments",
+      "continue": "Continue"
+    },
+    "confirm": {
+      "actions": {
+        "submit": "Add Placement Fee"
+      },
+      "summaryEnd": "below:",
+      "summaryStart": "Please review and confirm the payment plan for",
+      "title": "Confirm Placement Fee Payment Plan"
+    },
+    "fields": {
+      "amount": {
+        "errorBlank": "The amount cannot be blank",
+        "errorPositive": "The amount must be a positive number",
+        "label": "Amount"
+      },
+      "dueDate": {
+        "error": "The date cannot be blank",
+        "label": "Due date"
+      },
+      "line": {
+        "label": "Line number"
+      },
+      "purchase": {
+        "label": "Purchase order number",
+        "placeholder": "Not Selected"
+      }
+    },
+    "summary": "Add placement fee for the total amount of",
+    "title": "New Placement Fee",
+    "trigger": "Add Placement Fee"
+  },
+  "Table": {
+    "TableFooter": {
+      "totalCredits": "Total Credits",
+      "totalDebits": "Total Debits",
+      "totalPaid": "Total Paid"
+    },
+    "TableHead": {
+      "amount": "Amount",
+      "commissions": "Commissions",
+      "description": "Description",
+      "dueDate": "Due Date"
+    },
+    "emptyTable": "No related placement fees",
+    "title": "Placement Fees"
+  },
+  "notification": {
+    "submit": "The Placement Fee was successfully created."
+  }
+}

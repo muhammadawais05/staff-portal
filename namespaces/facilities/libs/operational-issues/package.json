@@ -1,0 +1,38 @@
+{
+  "name": "@staff-portal/operational-issues",
+  "description": "Staff Portal's OI-related functionality",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/date-time-utils": "0.5.24",
+    "@staff-portal/error-handling": "0.1.24",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/modals-service": "0.60.31",
+    "@staff-portal/mutation-result-handlers": "0.2.18",
+    "@staff-portal/navigation": "0.151.0",
+    "@staff-portal/operations": "0.5.13",
+    "@staff-portal/routes": "0.14.4",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-forms": "^44.0.0",
+    "react": "16.14.0",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "graphql-tag": "^2.12.4"
+  },
+  "private": true,
+  "sideEffects": false
+}

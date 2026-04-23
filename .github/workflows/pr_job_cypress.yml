@@ -1,0 +1,303 @@
+name: Cypress
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: cypressparallel-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  STATUS_CHECK_NAME: Test:Cypress
+  STATUS_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+  CYPRESS_STAFF_PORTAL_CHUNKS_COUNT: 6
+  CYPRESS_BILLING_PACKAGE_CHUNKS_COUNT: 2
+  CYPRESS_COVERAGE: true
+
+jobs:
+  setup:
+    name: Set up Cypress tests
+    runs-on: ['org/toptal', 'os/linux', 'arch/x64', 'size/large']
+    steps:
+      - name: Set status check - pending
+        uses: actions/github-script@v6
+        env:
+          STATUS_STATE: pending
+        with:
+          script: |
+            const { owner, repo } = context.issue;
+            await github.rest.repos.createCommitStatus({
+              owner,
+              repo,
+              sha: context.sha,
+              context: process.env.STATUS_CHECK_NAME,
+              state: process.env.STATUS_STATE,
+              target_url: process.env.STATUS_TARGET_URL
+            })
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Build node modules cache
+        uses: actions/cache@v3
+        id: node-modules-cache
+        with:
+          path: |
+            **/node_modules
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-node_modules-${{ github.sha }}
+
+      - name: Get yarn cache directory path
+        if: ${{ steps.node-modules-cache.outputs.cache-hit != 'true' }}
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Check yarn cache
+        if: ${{ steps.node-modules-cache.outputs.cache-hit != 'true' }}
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: node-cache-${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-cache-${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --silent --non-interactive
+
+      - name: Build schema cache
+        uses: actions/cache@v3
+        with:
+          path: 'tmp-graphql/*.graphql'
+          key: ${{ runner.os }}-schema-${{ github.run_id }} }}
+
+      - name: Setup Google cloud toolchain
+        uses: google-github-actions/setup-gcloud@v0.6.0
+        with:
+          service_account_key: ${{ secrets.GCR_GQLGW_SCHEMAS_BUCKET_ACCOUNT }}
+          export_default_credentials: true
+
+      - name: Fetch gql schemas
+        run: yarn fetch:graphql-schemas
+
+      - name: Build types cache
+        uses: actions/cache@v3
+        id: gql-types-cache
+        with:
+          path: |
+            libs/graphql
+            **/*.gql.types.tsx
+          key: ${{ runner.os }}-types-${{ hashFiles('**/codegen.js', '**/*.graphql', '**/*.gql.ts') }}
+
+      - name: Generate types
+        if: ${{ steps.gql-types-cache.outputs.cache-hit != 'true' }}
+        run: yarn generate:types
+
+  setup_cypress_parallel_matrix:
+    name: Set up Cypress parallel matrix
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: 'Generate matrix json'
+        id: set-matrix
+        run: node scripts/cypressParallelMatrix.js
+
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+  cypress_test_worker:
+    name: 'Run Cypress tests for ${{ matrix.instance }} chunk #${{ matrix.chunk }}'
+    needs: [setup, setup_cypress_parallel_matrix]
+    runs-on: ['org/toptal', 'os/linux', 'arch/x64', 'size/large']
+    timeout-minutes: 60
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      STATUS_CHECK_NAME: Test:Cypress
+      STATUS_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      CYPRESS_CHUNK_ID: ${{ matrix.chunk }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.setup_cypress_parallel_matrix.outputs.matrix) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Restore node modules cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-node_modules-${{ github.sha }}
+
+      - name: Restore schemas
+        uses: actions/cache@v3
+        with:
+          path: 'tmp-graphql/*.graphql'
+          key: ${{ runner.os }}-schema-${{ github.run_id }} }}
+
+      - name: Restore types
+        uses: actions/cache@v3
+        with:
+          path: |
+            libs/graphql
+            **/*.gql.types.tsx
+          key: ${{ runner.os }}-types-${{ hashFiles('**/codegen.js', '**/*.graphql', '**/*.gql.ts') }}
+
+      - name: Increase max_user_watches
+        run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v2
+        env:
+          CI_NODE_TOTAL: ${{ strategy.job-total }}
+          CI_NODE_INDEX: ${{ matrix.instance }}
+        with:
+          install: false
+          command: yarn test:ui:ci
+
+      - name: Store Cypress Screenshots Artifact
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: ${{ matrix.instance }}-${{ matrix.chunk }}-cypress-screenshots
+          path: |
+            */*/cypress/screenshots
+          retention-days: 3
+
+      - name: Rename Staff Portal cypress coverage reports
+        if: ${{ env.CYPRESS_COVERAGE == 'true' && matrix.instance == 'staff-portal' }}
+        run: |
+          mv "hosts/staff-portal/coverage/cypress/coverage-summary.json" "hosts/staff-portal/coverage/cypress/coverage-summary-${{ matrix.instance }}-${{ matrix.chunk }}.json"
+          mv "hosts/staff-portal/coverage/cypress/coverage-final.json" "hosts/staff-portal/coverage/cypress/coverage-final-${{ matrix.instance }}-${{ matrix.chunk }}.json"
+
+      - name: Store Staff Portal cypress report artifacts
+        if: ${{ env.CYPRESS_COVERAGE == 'true' && matrix.instance == 'staff-portal'}}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-report-worker-${{ matrix.instance }}-${{ matrix.chunk }}
+          path: hosts/staff-portal/coverage
+
+      - name: Rename Billing cypress coverage reports
+        if: ${{ env.CYPRESS_COVERAGE == 'true' && matrix.instance == 'billing-package' }}
+        run: |
+          mv "namespaces/billing/apps/billing/coverage/cypress/coverage-summary.json" "namespaces/billing/apps/billing/coverage/cypress/coverage-summary-${{ matrix.instance }}-${{ matrix.chunk }}.json"
+          mv "namespaces/billing/apps/billing/coverage/cypress/coverage-final.json" "namespaces/billing/apps/billing/coverage/cypress/coverage-final-${{ matrix.instance }}-${{ matrix.chunk }}.json"
+
+      - name: Store Billing cypress report artifacts
+        if: ${{ env.CYPRESS_COVERAGE == 'true' && matrix.instance == 'billing-package'}}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-report-worker-${{ matrix.instance }}-${{ matrix.chunk }}
+          path: namespaces/billing/apps/billing/coverage
+
+  test_coverage:
+    name: 'Combined Cypress test coverage report'
+    needs: cypress_test_worker
+    runs-on: ['org/toptal', 'os/linux', 'arch/x64', 'size/large']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Restore node modules cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-node_modules-${{ github.sha }}
+
+      - name: 'Download all artifacts'
+        if: ${{ env.CYPRESS_COVERAGE == 'true' }}
+        uses: actions/download-artifact@v3
+        with:
+          path: coverage
+
+      - name: Generate report
+        if: ${{ env.CYPRESS_COVERAGE == 'true' }}
+        run: |
+          mkdir coverage/cypress
+          cp coverage/cypress-report-worker-*/cypress/coverage-final-*.json coverage/cypress/
+          mkdir coverage/cypress-overall
+          yarn nyc merge coverage/cypress coverage/cypress-overall/cypress-coverage.json
+          yarn nyc report --temp-dir coverage/cypress-overall --reporter html --report-dir coverage/cypress-html
+
+      # Based on this https://github.com/actions/upload-artifact/issues/199
+      # Uploading a file could take 100ms (per file), so archiving the output folder should improve the speed
+      - name: Archive coverage artifacts
+        if: ${{ env.CYPRESS_COVERAGE == 'true' }}
+        run: |
+          zip -r -j cypress-coverage-json.zip coverage/cypress-overall/cypress-coverage.json
+          zip -r cypress-coverage-report.zip coverage/cypress-html/
+
+      - name: Save coverage json
+        if: ${{ env.CYPRESS_COVERAGE == 'true' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-coverage-json
+          path: cypress-coverage-json.zip
+
+      - name: Save coverage report
+        if: ${{ env.CYPRESS_COVERAGE == 'true' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-coverage-report
+          path: cypress-coverage-report.zip
+
+  combined_coverage:
+    uses: toptal/staff-portal/.github/workflows/pr_job_combined_coverage.yml@master
+    name: Combined Jest + Cypress coverage report
+    needs: [ test_coverage ]
+    secrets:
+      NPM_TOKEN_READ_ONLY: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+    with:
+      callerWorkflowType: cypress
+      branchRef: ${{github.event.ref}}
+
+  complete:
+    name: Update Cypress check status
+    runs-on: ['org/toptal', 'os/linux', 'arch/x64', 'size/standard']
+    needs: [cypress_test_worker, test_coverage, combined_coverage]
+    if: always()
+    steps:
+      - name: Set status check - success / failure / error
+        uses: actions/github-script@v6
+        env:
+          STATUS_STATE: ${{ needs.cypress_test_worker.result == 'success' && 'success' || 'error' }}
+        with:
+          script: |
+            const { owner, repo } = context.issue;
+            await github.rest.repos.createCommitStatus({
+              owner,
+              repo,
+              sha: context.sha,
+              context: process.env.STATUS_CHECK_NAME,
+              state: process.env.STATUS_STATE,
+              target_url: process.env.STATUS_TARGET_URL
+            })

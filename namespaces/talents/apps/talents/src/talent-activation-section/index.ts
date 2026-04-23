@@ -1,0 +1,1 @@
+export { TalentActivationSection } from './components'

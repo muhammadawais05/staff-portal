@@ -1,0 +1,1 @@
+# Communication Email Templates application

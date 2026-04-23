@@ -1,0 +1,1070 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BillingCycleSettingsModalForm default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form
+      data-testid="BillingCycleSettingsModalForm"
+    >
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="BillingCycleSettingsModalForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Update Billing Cycle Settings
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+          data-testid="BillingCycleSettingsModalForm-content"
+        >
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billCycle-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billCycle-label"
+              for="billCycle"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                How Often Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billCycle"
+                  type="hidden"
+                  value="Bi-weekly"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billCycle"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billCycle"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Bi-weekly"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billDay-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billDay-label"
+              for="billDay"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                Which Day Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billDay"
+                  type="hidden"
+                  value="Sunday"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billDay"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billDay"
+                    placeholder="Please select a day"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Sunday"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Update Billing Cycle Settings
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`BillingCycleSettingsModalForm when \`autoConsolidationEnabled\` defined default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form
+      data-testid="BillingCycleSettingsModalForm"
+    >
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="BillingCycleSettingsModalForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Update Billing Cycle Settings
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+          data-testid="BillingCycleSettingsModalForm-content"
+        >
+          <div
+            class=""
+            style="margin-bottom: 1rem;"
+          >
+            <div
+              class="PicassoContainer-yellowVariant PicassoContainer-mediumPadding PicassoContainer-rounded PicassoHelpbox-root"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-black MuiTypography-body1"
+                data-testid="BillingCycleSettingsModalForm-auto-consolidation"
+              >
+                Auto-consolidation is enabled for this engagement.
+Changing the Billing Cycle Settings will disable auto-consolidation and may cause billing issues.
+Please consult with the Finance team before performing this action.
+              </div>
+            </div>
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billCycle-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billCycle-label"
+              for="billCycle"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                How Often Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billCycle"
+                  type="hidden"
+                  value="Bi-weekly"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billCycle"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billCycle"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Bi-weekly"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billDay-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billDay-label"
+              for="billDay"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                Which Day Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billDay"
+                  type="hidden"
+                  value="Sunday"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billDay"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billDay"
+                    placeholder="Please select a day"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Sunday"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Update Billing Cycle Settings
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`BillingCycleSettingsModalForm when \`currentCycleStartDate\` defined default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form
+      data-testid="BillingCycleSettingsModalForm"
+    >
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="BillingCycleSettingsModalForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Update Billing Cycle Settings
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+          data-testid="BillingCycleSettingsModalForm-content"
+        >
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billCycle-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billCycle-label"
+              for="billCycle"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                How Often Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billCycle"
+                  type="hidden"
+                  value="Bi-weekly"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billCycle"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billCycle"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Bi-weekly"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billDay-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billDay-label"
+              for="billDay"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                Which Day Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billDay"
+                  type="hidden"
+                  value="Sunday"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billDay"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billDay"
+                    placeholder="Please select a day"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Sunday"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="currentCycleEndDate-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="currentCycleEndDate-label"
+              for="currentCycleEndDate"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                Which Date Should the Current Billing Cycle End On?
+                 (optional)
+              </span>
+            </label>
+            <div
+              data-testid="currentCycleEndDate"
+            >
+              {"width":"full","testIds":{"input":"currentCycleEndDate"},"name":"currentCycleEndDate","displayDateFormat":"","editDateFormat":"","id":"currentCycleEndDate","weekStartsOn":0,"error":false}
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Update Billing Cycle Settings
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`BillingCycleSettingsModalForm when \`netTerms\` defined default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form
+      data-testid="BillingCycleSettingsModalForm"
+    >
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="BillingCycleSettingsModalForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Update Billing Cycle Settings
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+          data-testid="BillingCycleSettingsModalForm-content"
+        >
+          <div
+            class=""
+            style="margin-top: 1.5rem; margin-bottom: 1.5rem;"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container PicassoGrid-container MuiGrid-spacing-xs MuiGrid-align-items-xs-flex"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+                >
+                  Net terms for company invoices
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-semibold MuiTypography-body1"
+                  data-testid="BillingCycleSettingsModalForm-net"
+                >
+                  Net 20
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billCycle-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billCycle-label"
+              for="billCycle"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                How Often Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billCycle"
+                  type="hidden"
+                  value="Bi-weekly"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billCycle"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billCycle"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Bi-weekly"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billDay-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billDay-label"
+              for="billDay"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                Which Day Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billDay"
+                  type="hidden"
+                  value="Sunday"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billDay"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billDay"
+                    placeholder="Please select a day"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Sunday"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Update Billing Cycle Settings
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`BillingCycleSettingsModalForm when \`semiMonthlyPaymentTalentAgreement\` defined default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form
+      data-testid="BillingCycleSettingsModalForm"
+    >
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="BillingCycleSettingsModalForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Update Billing Cycle Settings
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+          data-testid="BillingCycleSettingsModalForm-content"
+        >
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billCycle-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billCycle-label"
+              for="billCycle"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                How Often Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billCycle"
+                  type="hidden"
+                  value="Bi-weekly"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billCycle"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billCycle"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Bi-weekly"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="billDay-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="billDay-label"
+              for="billDay"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                Which Day Should Invoices Be Issued?
+              </span>
+            </label>
+            <div
+              class="makeStyles-root makeStyles-rootFull"
+            >
+              <div
+                class="makeStyles-inputWrapper"
+              >
+                <input
+                  name="billDay"
+                  type="hidden"
+                  value="Sunday"
+                />
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+                  data-testid="billDay"
+                  role="textbox"
+                >
+                  <input
+                    aria-invalid="false"
+                    autocomplete="off"
+                    class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                    id="billDay"
+                    placeholder="Please select a day"
+                    readonly=""
+                    size="1"
+                    type="text"
+                    value="Sunday"
+                  />
+                  <fieldset
+                    aria-hidden="true"
+                    class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                    style="padding-left: 8px;"
+                  >
+                    <legend
+                      class="PrivateNotchedOutline-legend"
+                      style="width: 0.01px;"
+                    >
+                      <span>
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+                <svg
+                  class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Update Billing Cycle Settings
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

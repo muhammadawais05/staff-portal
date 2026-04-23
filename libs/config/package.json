@@ -1,0 +1,16 @@
+{
+  "name": "@staff-portal/config",
+  "description": "Staff Portal's global config",
+  "version": "0.137.7",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/config.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@toptal/picasso": "^25.0.0"
+  },
+  "sideEffects": false
+}

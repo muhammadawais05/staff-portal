@@ -1,0 +1,527 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-07-14T14:40:02.387Z",
+  "__export_source": "insomnia.desktop.app:v2020.3.3",
+  "resources": [
+    {
+      "_id": "req_c8b2cf6c700642b8871e5e8b2297b66a",
+      "authentication": { "token": "{{ admin_token  }}", "type": "bearer" },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Entities($representations: [_Any!]!) {\\n  _entities(representations: $representations) {\\n    ... on Invoice {\\n      id\\n      invoiceKind\\n      memorandums {\\n        nodes {\\n          id\\n          number\\n          balance\\n          depositCorrection\\n          amount\\n          allocatedAt\\n          description\\n          downloadPdfUrl\\n          downloadHtmlUrl\\n          operations {\\n            revertInvoicePrepayments {\\n              callable\\n              messages\\n            }\\n          }\\n        }\\n      }\\n      associatedMemorandums {\\n        nodes {\\n          id\\n          number\\n          balance\\n          depositCorrection\\n          amount\\n          allocated\\n          amountDue\\n          portions {\\n            id\\n            number\\n            document {\\n              __typename\\n              id\\n              ... on Invoice {\\n                invoiceKind\\n              }\\n            }\\n          }\\n          description\\n          document {\\n            __typename\\n            id\\n            ... on Invoice {\\n              invoiceKind\\n            }\\n          }\\n        }\\n      }\\n    }\\n  }\\n}\\n\",\"variables\":{\"representations\":[{\"__typename\":\"Invoice\",\"id\":\"VjEtSW52b2ljZS0zODg2MjQ\"}]},\"operationName\":\"Entities\"}"
+      },
+      "created": 1587572899999,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1587572899999,
+      "method": "POST",
+      "modified": 1594737467671,
+      "name": "Memorandums",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/billing/documents/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "created": 1587572886537,
+      "description": "",
+      "modified": 1587572886537,
+      "name": "Toptal",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_559bd533a5c544b5bfc3d7d24d07d544",
+      "authentication": { "token": "{{ admin_token }}", "type": "bearer" },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Invoice_documents($invoiceId: Int!) {\\n  invoice(number: $invoiceId) {\\n    actionDueOn\\n    amount\\n    balanceDue\\n    id\\n    billingCycleGid\\n    cleanOutstandingAmount\\n    listedAmount\\n    # consolidatedDocument\\n    createdOn\\n    creditedAmount\\n    status\\n    consolidatedDocument {\\n      amount\\n      id\\n    }\\n    transfers {\\n      nodes {\\n        amount\\n        billingOption {\\n          billingMethod\\n        }\\n        effectiveDate\\n        description\\n        operations {\\n          cancelTransfer {\\n            callable\\n            messages\\n          }\\n          claimTransferRefund {\\n            callable\\n            messages\\n          }\\n          failTransfer {\\n            callable\\n            messages\\n          }\\n          payTransfer {\\n            callable\\n            messages\\n          }\\n          postponeTransfer {\\n            callable\\n            messages\\n          }\\n        }\\n      }\\n    }\\n    webResource {\\n      text\\n      url\\n    }\\n  }\\n}\\n\",\"variables\":{\"invoiceId\":409140},\"operationName\":\"Invoice_documents\"}"
+      },
+      "created": 1587802842018,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1585395648973.5,
+      "method": "POST",
+      "modified": 1594737473368,
+      "name": "Invoice Query",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/billing/documents/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_55840b6a8d1d46c0a05014107ccbc60b",
+      "authentication": {
+        "disabled": false,
+        "token": "{{ admin_token  }}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Invoice($invoiceId: Int!) {\\n  invoice(number: $invoiceId) {\\n    actionDueOn\\n    amount\\n    id\\n    job {\\n      id\\n    }\\n    balanceDue\\n    billingCycleGid\\n    cleanOutstandingAmount\\n    creditedAmount\\n    transfers {\\n      nodes {\\n        amount\\n        id\\n        operations {\\n          cancelTransfer {\\n            callable\\n            messages\\n          }\\n          claimTransferRefund {\\n            callable\\n            messages\\n          }\\n          failTransfer {\\n            callable\\n            messages\\n          }\\n          payTransfer {\\n            callable\\n            messages\\n          }\\n          postponeTransfer {\\n            callable\\n            messages\\n          }\\n        }\\n      }\\n    }\\n  }\\n}  \",\"variables\":{\"invoiceId\":406624},\"operationName\":\"Invoice\"}"
+      },
+      "created": 1588074776400,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584851336217.125,
+      "method": "POST",
+      "modified": 1594737478187,
+      "name": "Fedaration: Notes Query",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a22ba456230b4e86ae483a710bbf080e",
+      "authentication": {
+        "disabled": false,
+        "token": "{{ admin_token  }}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Nodes_gateway($ids: [ID!]!) {\\n  viewer {\\n    me {\\n      fullName\\n      email\\n    }\\n  }\\n  nodes(ids: $ids) {\\n    id\\n    __typename\\n    ... on Job {\\n      id\\n      _jobOrEngagementId\\n    }\\n    ... on Talent {\\n      id\\n      _talentOrEngagementId\\n    }\\n    ... on Invoice {\\n      id\\n      amount\\n      documentNumber\\n      consolidatedInvoice {\\n        amount\\n      }\\n      job {\\n        id\\n      }\\n      talent {\\n        id\\n      }\\n    }\\n  }\\n}\\n\\n\",\"variables\":{\"ids\":[\"VjEtSW52b2ljZS00MDg0NzY\",\"VjEtSW52b2ljZS00MDkxNDA\"]},\"operationName\":\"Nodes_gateway\"}"
+      },
+      "created": 1589441561635,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584783297122.5781,
+      "method": "POST",
+      "modified": 1594737484717,
+      "name": "Fedaration: Invoice",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a2e9b979c7ce40c5bf3851442ecffce9",
+      "authentication": {
+        "disabled": false,
+        "token": "{{ admin_token  }}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Nodes_gateway($ids: [ID!]!) {\\n  viewer {\\n    me {\\n      fullName\\n      email\\n    }\\n  }\\n  nodes(ids: $ids) {\\n    ... on Job {\\n      id\\n      _jobOrEngagementId\\n    }\\n    ... on Talent {\\n      id\\n      _talentOrEngagementId\\n    }\\n    ... on Invoice {\\n      id\\n      amount\\n      consolidatedInvoice {\\n        amount\\n      }\\n      job {\\n        id\\n      }\\n      talent {\\n        id\\n      }\\n    }\\n  }\\n}\\n\\n\",\"variables\":{\"ids\":[\"VjEtSW52b2ljZS00MDc0MjA\"]},\"operationName\":\"Nodes_gateway\"}"
+      },
+      "created": 1590130131576,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584681238480.7578,
+      "method": "POST",
+      "modified": 1594737487464,
+      "name": "Fedaration: Invoice - Transfer Postpone",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5636c0e9de2c4c28b5a62f71c8d92c17",
+      "authentication": {
+        "disabled": false,
+        "token": "{{ admin_token  }}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Nodes_gateway($ids: [ID!]!) {\\n  viewer {\\n    me {\\n      fullName\\n      email\\n    }\\n  }\\n  nodes(ids: $ids) {\\n    ... on Job {\\n      id\\n      _jobOrEngagementId\\n    }\\n    ... on Talent {\\n      id\\n      _talentOrEngagementId\\n    }\\n    ... on Invoice {\\n      id\\n      amount\\n      memorandums {\\n        nodes {\\n          id\\n          number\\n          balance\\n        }\\n      }\\n      actionDueOn\\n      associatedMemorandums {\\n        nodes {\\n          id\\n          number\\n          balance\\n        }\\n      }\\n      consolidatedInvoice {\\n        amount\\n      }\\n      job {\\n        id\\n      }\\n      talent {\\n        id\\n      }\\n    }\\n  }\\n}\\n\\n\",\"variables\":{\"ids\":[\"VjEtSW52b2ljZS00MDg0NzY\",\"VjEtSW52b2ljZS00MDkxNDA\",\"VjEtSW52b2ljZS0zODg2MjQ\"]},\"operationName\":\"Nodes_gateway\"}"
+      },
+      "created": 1589540694304,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584647218933.4844,
+      "method": "POST",
+      "modified": 1594737489575,
+      "name": "Fedaration: Invoice Playground",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_58f1b4b82d5744d591dc9244e9717e48",
+      "authentication": {
+        "disabled": false,
+        "token": "{{ admin_token  }}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation markFailedTransfer_documents($input: FailTransferInput!) {\\n  failInvoiceTransfer(input: $input) {\\n    clientMutationId\\n    invoice {\\n      documentNote\\n      id\\n      transfers {\\n        nodes {\\n          id\\n          status\\n        }\\n      }\\n    }\\n    notice\\n    success\\n    errors {\\n      code\\n      key\\n      message\\n    }\\n  }\\n}\\n\",\"variables\":{\"input\":{\"comment\":\"Test\",\"invoiceId\":\"VjEtSW52b2ljZS00MDgwMjc\",\"transferId\":\"VjEtVHJhbnNmZXItNjM5MDgw\"}},\"operationName\":\"markFailedTransfer_documents\"}"
+      },
+      "created": 1589187382164,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584579179838.9375,
+      "method": "POST",
+      "modified": 1594737498172,
+      "name": "Fedaration: Mutation - Fail Transfer",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d3cf93aee13744278b87d58864c97b73",
+      "authentication": {
+        "disabled": false,
+        "token": "{{ admin_token  }}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation cancelTransfer_gateway($input: CancelTransferInput!) {\\n  cancelInvoiceTransfer(input: $input) {\\n    __typename\\n    clientMutationId\\n    invoice {\\n      __typename\\n      documentNote\\n      id\\n      transfers {\\n        __typename\\n        nodes {\\n          id\\n          status\\n        }\\n      }\\n    }\\n    notice\\n    success\\n    errors {\\n      __typename\\n      code\\n      key\\n      message\\n    }\\n  }\\n}\\n\",\"variables\":{\"input\":{\"comment\":\"Reason\",\"invoiceId\":\"VjEtSW52b2ljZS00MDkxNzE\",\"transferId\":\"VjEtVHJhbnNmZXItNjQwMjA1\"}},\"operationName\":\"cancelTransfer_gateway\"}"
+      },
+      "created": 1589377572145,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584443101649.8438,
+      "method": "POST",
+      "modified": 1594737500497,
+      "name": "Fedaration: Mutation - Cancel Transfer",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e17ceb83b9f94278beebdf2e5a350ece",
+      "authentication": {
+        "disabled": false,
+        "token": "{{ admin_token  }}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation postponeTransfer_gateway($input: PostponeTransferInput!) {\\n  postponeInvoiceTransfer(input: $input) {\\n    clientMutationId\\n    invoice {\\n      documentNote\\n      id\\n      transfers {\\n        nodes {\\n          id\\n          status\\n        }\\n      }\\n    }\\n    notice\\n    success\\n    errors {\\n      code\\n      key\\n      message\\n    }\\n  }\\n}\\n\",\"variables\":{\"input\":{\"comment\":\"Test\",\"invoiceId\":\"VjEtSW52b2ljZS00MDkxNDA\",\"pendingReceiptOn\":\"2020-05-12\",\"transferId\":\"VjEtVHJhbnNmZXItNjM5NjI1\"}},\"operationName\":\"postponeTransfer_gateway\"}"
+      },
+      "created": 1589526186348,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584375062555.2969,
+      "method": "POST",
+      "modified": 1593427586440,
+      "name": "Fedaration: Mutation - Postpone Transfer",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_621e870dfcb0429e8d22f55f6c6da2f2",
+      "authentication": { "token": "{{ admin-token  }}", "type": "bearer" },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query notes($invoiceId: Int!) {\\n  notes(invoiceId: $invoiceId) {\\n    comment\\n    title\\n    created_at\\n    updated_at\\n    creator_name\\n    id\\n    attachment {\\n      identifier\\n      url\\n    }\\n  }\\n}\\n\",\"variables\":{\"representations\":[{\"__typename\":\"Invoice\",\"id\":\"VjEtSW52b2ljZS0zODg2MjQ\"}]},\"operationName\":\"notes\"}"
+      },
+      "created": 1587993734201,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1584307023460.75,
+      "method": "POST",
+      "modified": 1594737501200,
+      "name": "Notes Query",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/billing/documents/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_94db0d7053094906a6ee205633c3e82d",
+      "authentication": { "token": "{{ admin-token  }}", "type": "bearer" },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation updateNote(\\n  $noteId: ID!\\n  $title: String!\\n  $comment: String!\\n  $attachment: Upload\\n) {\\n  updateNote(\\n    input: {\\n      noteId: $noteId\\n      title: $title\\n      comment: $comment\\n      attachment: $attachment\\n    }\\n  ) {\\n    note {\\n      answers {\\n        nodes {\\n          comment\\n          question {\\n            kind\\n            label\\n          }\\n          value\\n        }\\n      }gi\\n      attachment {\\n        identifier\\n        url\\n      }\\n      comment\\n      createdAt\\n      creator {\\n        ... on Role {\\n          fullName\\n          id\\n        }\\n      }\\n      id\\n      newSalesCall\\n      operations {\\n        removeNote {\\n          callable\\n          messages\\n        }\\n        removeNoteAttachment {\\n          callable\\n          messages\\n        }\\n        updateNote {\\n          callable\\n          messages\\n        }\\n      }\\n      screeningCall\\n      title\\n      updatedAt\\n    }\\n    success\\n    errors {\\n      code\\n      key\\n      message\\n    }\\n  }\\n}\\n\",\"variables\":{\"noteId\":\"VjEtTm90ZS0xMDY0Njkz\",\"title\":\"Test\",\"comment\":\"comment\",\"attachment\":\"asdfasdkflj\"},\"operationName\":\"updateNote\"}"
+      },
+      "created": 1588079925247,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1583762710704.375,
+      "method": "POST",
+      "modified": 1594737551381,
+      "name": "Update note",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/api/graphql/staff",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b6925b38d22a4894b0153b38726e42d3",
+      "authentication": { "token": "{{ admin-token  }}", "type": "bearer" },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation revertInvoicePrepayments_gateway($input: RevertPrepaymentsInput!) {\\n  revertInvoicePrepayments(input: $input) {\\n    invoice {\\n      id\\n      memorandums {\\n        nodes {\\n          id\\n          balance\\n          amount\\n        }\\n      }\\n    }\\n    notice\\n    success\\n    errors {\\n      code\\n      key\\n      message\\n    }\\n  }\\n}\\n\",\"variables\":{\"representations\":[{\"__typename\":\"Invoice\",\"id\":\"VjEtSW52b2ljZS0zODg2MjQ\"},{\"__typename\":\"Memorandum\",\"id\":\"VjEtTWVtb3JhbmR1bS0xNTE1Njk\"}]},\"operationName\":\"revertInvoicePrepayments_gateway\"}"
+      },
+      "created": 1590498606759,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1582129772435.25,
+      "method": "POST",
+      "modified": 1593427597420,
+      "name": "Fedaration: Revert prepayment",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:3000/billing/documents/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "req_871673123a83456e8072c101a4d9d5f9",
+      "authentication": { "token": "{{ admin-token  }}", "type": "bearer" },
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation ($input: RevertPrepaymentsInput!) {\\n  revertInvoicePrepayments(input: $input) {\\n    invoice {\\n      id\\n      memorandums {\\n        nodes {\\n          id\\n          balance\\n          amount\\n        }\\n      }\\n    }\\n    notice\\n    success\\n    errors {\\n      code\\n      key\\n      message\\n    }\\n  }\\n}\\n\",\"variables\":{\"input\":{\"invoiceId\":\"VjEtSW52b2ljZS0zODg2MjQ\",\"memorandumId\":\"VjEtTWVtb3JhbmR1bS0xNTE1Njk\",\"comment\":\"Changed my mind\"}}}"
+      },
+      "created": 1587708344530,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_994683901f574ed4bb6701388557d55f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1581041146922.5,
+      "method": "POST",
+      "modified": 1593427600281,
+      "name": "Mutation: Revert prepayment",
+      "parameters": [],
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:5000/staff/graphql",
+      "_type": "request"
+    },
+    {
+      "_id": "env_b1cdb64fce659cf1d858dff0bbd81a05a931c0da",
+      "color": null,
+      "created": 1587572886581,
+      "data": {
+        "admin-token": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE5MDQ5NDY2MzgsInJvbGUiOnsiZ2lkIjoiZ2lkOi8vcGxhdGZvcm0vU3RhZmYvMTAwMDEwIiwiZnVsbF9uYW1lIjoiQWxleGFuZGVyIERhbmlsZW5rbyIsInJvbGVfdHlwZXMiOlsicm9sZSIsInN0YWZmIiwicmVjcnVpdGVyIiwiYWR2YW5jZWRfcmVjcnVpdGVyIiwiYWRtaW4iXX0sImF1dGhvcml6YXRpb24iOnsiZmluYW5jZV9tZW1iZXJfY3VzdG9tZXJfZ2lkcyI6W10sInBhcnR5X2dpZCI6ImdpZDovL3BsYXRmb3JtL0FjY3J1YWxBY2NvdW50aW5nOjpQYXJ0eS82MzkyODQiLCJ0YWxlbnRfZ2lkc19ieV90YWxlbnRfcGFydG5lciI6W10sImNvbXBhbnlfcmVwcmVzZW50YXRpdmVfY3VzdG9tZXJfZ2lkcyI6WyJnaWQ6Ly9wbGF0Zm9ybS9BY2NydWFsQWNjb3VudGluZzo6UGFydHkvNjU4MzMzIiwiZ2lkOi8vcGxhdGZvcm0vQWNjcnVhbEFjY291bnRpbmc6OlBhcnR5LzY0MjM3MiJdLCJhYmlsaXRpZXMiOlt7ImlkZW50aWZpZXIiOiJhZG1pbmlzdHJhdG9yIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNyZWF0ZV9wbGFjZW1lbnRfZmVlX2VuZ2FnZW1lbnQiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwcm92ZV9hbmRfcmVqZWN0X3RpbWVzaGVldCIsInJlc3RyaWN0aW9uIjoiZm9yX2NvbXBhbnlfZmluYW5jZV90ZWFtX21lbWJlciJ9LHsiaWRlbnRpZmllciI6InVwZGF0ZV9lbmdhZ2VtZW50X2JpbGxpbmdfZnJlcXVlbmN5IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6Im1hbmFnZV9hdHRhY2hfdGltZXNoZWV0c190b19pbnZvaWNlcyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ2aWV3X2JpbGxpbmdfY3ljbGUiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwcm92ZV9hbmRfcmVqZWN0X3RpbWVzaGVldCIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJzdWJtaXRfdGltZXNoZWV0IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV90aW1lc2hlZXQiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidW5zdWJtaXRfdGltZXNoZWV0IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFkZF9pbnZvaWNlX21lbW8iLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwbHlfaW52b2ljZV9wcmVwYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJjYW5jZWxfaW52b2ljZV90cmFuc2ZlciIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJkaXNwdXRlX2ludm9pY2VfdGFsZW50X3BheW1lbnRzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImZhaWxfaW52b2ljZV90cmFuc2ZlciIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJwb3N0cG9uZV9pbnZvaWNlX3RyYW5zZmVyIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InJlY29yZF9pbnZvaWNlX2JhZF9kZWJ0IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InJlcXVlc3RfaW52b2ljZV9kaXNwdXRlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InJlcXVlc3RfaW52b2ljZV9kaXNwdXRlX3Jlc29sdXRpb24iLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicmV2ZXJ0X2ludm9pY2VfcHJlcGF5bWVudHMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidXBkYXRlX2ludm9pY2VfZGlzcHV0ZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ1cGRhdGVfaW52b2ljZV9kdWVfZGF0ZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ3cml0ZV9vZmZfaW52b2ljZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJhcHBseV9pbnZvaWNlX3Byb21vdGlvbnMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXNzaWduX3B1cmNoYXNlX29yZGVyX2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiY2xhaW1fdHJhbnNmZXJfcmVmdW5kX2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicGF5X3RyYW5zZmVyX2ludm9pY2UiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiY3JlYXRlX2VuZ2FnZW1lbnRfZXh0cmFfZXhwZW5zZXMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidmlld19wYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ2aWV3X2hpc3RvcnkiLCJyZXN0cmljdGlvbiI6ImZvcl9pbnZvaWNlIn0seyJpZGVudGlmaWVyIjoidmlld19pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9XX0sImlzcyI6InRvcHRhbC1wbGF0Zm9ybSJ9.Lg57FTom0Gb5p77YmAE1xDA1EkvFxJCnibEqXOpqIGFnUycK-Z3DwjMp84OzARJdd3Z9_DDO77W5mCuvQjOz1w"
+      },
+      "dataPropertyOrder": { "&": ["admin-token"] },
+      "isPrivate": false,
+      "metaSortKey": 1587572886581,
+      "modified": 1589377141365,
+      "name": "Base Environment",
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_b1cdb64fce659cf1d858dff0bbd81a05a931c0da",
+      "cookies": [
+        {
+          "creation": "2020-05-29T10:31:04.518Z",
+          "domain": "localhost",
+          "expires": "2040-06-29T10:43:17.000Z",
+          "extensions": ["SameSite=Lax"],
+          "hostOnly": true,
+          "httpOnly": true,
+          "id": "5852836726408259",
+          "key": "_toptal_session_id",
+          "lastAccessed": "2020-06-29T14:19:17.924Z",
+          "maxAge": 631139040,
+          "path": "/",
+          "value": "668ee47c794aac4c46e77267e7402cac"
+        }
+      ],
+      "created": 1587572886584,
+      "modified": 1593440357924,
+      "name": "Default Jar",
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_a6ed683477e348be8692a1f775524c5a",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1593415945928,
+      "fileName": "Toptal",
+      "modified": 1593415945928,
+      "parentId": "wrk_72528613e3fe4eea83a4cc223ed57f68",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_d8a40646847747fdb3ec517e36087728",
+      "color": "#311f76",
+      "created": 1589377153940,
+      "data": {
+        "admin_cookie": "_toptal_session_id=0c2566d1670ead541d520824af06e6eb; Domain=localhost:5000; Path=/",
+        "admin_token": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE5MDkwMDk1NDMsInJvbGUiOnsiZ2lkIjoiZ2lkOi8vcGxhdGZvcm0vU3RhZmYvMTMxMTU2NyIsImZ1bGxfbmFtZSI6IlRoYWQgV2FsdGVyIn0sImF1dGhvcml6YXRpb24iOnsiZmluYW5jZV9tZW1iZXJfY3VzdG9tZXJfZ2lkcyI6W10sInBhcnR5X2dpZCI6ImdpZDovL3BsYXRmb3JtL0FjY3J1YWxBY2NvdW50aW5nOjpQYXJ0eS8xMjgyNDcxIiwidGFsZW50X2dpZHNfYnlfdGFsZW50X3BhcnRuZXIiOltdLCJjb21wYW55X3JlcHJlc2VudGF0aXZlX2N1c3RvbWVyX2dpZHMiOltdLCJhYmlsaXRpZXMiOlt7ImlkZW50aWZpZXIiOiJhZG1pbmlzdHJhdG9yIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNyZWF0ZV9wbGFjZW1lbnRfZmVlX2VuZ2FnZW1lbnQiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwcm92ZV9hbmRfcmVqZWN0X3RpbWVzaGVldCIsInJlc3RyaWN0aW9uIjoiZm9yX2NvbXBhbnlfZmluYW5jZV90ZWFtX21lbWJlciJ9LHsiaWRlbnRpZmllciI6ImRvd25sb2FkX2ludm9pY2VzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV9lbmdhZ2VtZW50X2JpbGxpbmdfZnJlcXVlbmN5IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6Im1hbmFnZV9hdHRhY2hfdGltZXNoZWV0c190b19pbnZvaWNlcyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ2aWV3X2JpbGxpbmdfY3ljbGUiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwcm92ZV9hbmRfcmVqZWN0X3RpbWVzaGVldCIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJzdWJtaXRfdGltZXNoZWV0IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV90aW1lc2hlZXQiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidW5zdWJtaXRfdGltZXNoZWV0IiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFkZF9pbnZvaWNlX21lbW8iLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiYXBwbHlfaW52b2ljZV9wcmVwYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJhcHBseV9pbnZvaWNlX3VuYWxsb2NhdGVkX21lbW9yYW5kdW1zIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNhbmNlbF9pbnZvaWNlX3RyYW5zZmVyIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImRpc3B1dGVfaW52b2ljZV90YWxlbnRfcGF5bWVudHMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoiZmFpbF9pbnZvaWNlX3RyYW5zZmVyIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InBvc3Rwb25lX2ludm9pY2VfdHJhbnNmZXIiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicmVjb3JkX2ludm9pY2VfYmFkX2RlYnQiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicmVxdWVzdF9pbnZvaWNlX2Rpc3B1dGUiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoicmVxdWVzdF9pbnZvaWNlX2Rpc3B1dGVfcmVzb2x1dGlvbiIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJyZXZlcnRfaW52b2ljZV9wcmVwYXltZW50cyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJ1cGRhdGVfaW52b2ljZV9kaXNwdXRlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InVwZGF0ZV9pbnZvaWNlX2R1ZV9kYXRlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6IndyaXRlX29mZl9pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFwcGx5X2ludm9pY2VfcHJvbW90aW9ucyIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJjb25zb2xpZGF0ZV9pbnZvaWNlX2Zyb21fc2VhcmNoIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImFzc2lnbl9wdXJjaGFzZV9vcmRlcl9pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNsYWltX3RyYW5zZmVyX3JlZnVuZF9pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InBheV90cmFuc2Zlcl9pbnZvaWNlIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6ImNyZWF0ZV9lbmdhZ2VtZW50X2V4dHJhX2V4cGVuc2VzIiwicmVzdHJpY3Rpb24iOm51bGx9LHsiaWRlbnRpZmllciI6InZpZXdfcGF5bWVudHMiLCJyZXN0cmljdGlvbiI6bnVsbH0seyJpZGVudGlmaWVyIjoidmlld19oaXN0b3J5IiwicmVzdHJpY3Rpb24iOiJmb3JfaW52b2ljZSJ9LHsiaWRlbnRpZmllciI6InZpZXdfaW52b2ljZSIsInJlc3RyaWN0aW9uIjpudWxsfSx7ImlkZW50aWZpZXIiOiJyZXZlcnRfbWVtb3JhbmR1bSIsInJlc3RyaWN0aW9uIjpudWxsfV19LCJpc3MiOiJ0b3B0YWwtcGxhdGZvcm0ifQ.yIixbL071Y-Eir8f2ZLKGIZpu2Rdsw5SNhij0ARKsyQC-8Ftx8xGxgFwzbpVLqqnV9eb4xMB8toZ2x-29Otwqg"
+      },
+      "dataPropertyOrder": { "&": ["admin_token", "admin_cookie"] },
+      "isPrivate": false,
+      "metaSortKey": 1589377153940,
+      "modified": 1593440155446,
+      "name": "Toptal",
+      "parentId": "env_b1cdb64fce659cf1d858dff0bbd81a05a931c0da",
+      "_type": "environment"
+    }
+  ]
+}

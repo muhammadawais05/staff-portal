@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`range payload type with dates when both dates exist should render range with keywords (from, till) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     from Jun 17, 2019
+     till Jun 19, 2019
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with dates when only start date exists should render only start value with keyword (from) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     from Jun 17, 2019
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with dates when only stop date exists should render only stop value with keyword (till) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     till Jun 19, 2019
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with dates when start and stop date are equal should render only single value with keyword (on) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     on Jun 19, 2019
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with plain values when both values exist should render range with keywords (from till) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     from 
+    yesterday
+     till 
+    today
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with plain values when only equal value exists should render only single value 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+      
+    today
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with plain values when only start value exists should render only start value with keyword (from) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     from 
+    yesterday
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with plain values when only stop value exists should render only stop value 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     till 
+    today
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with times when both times exist should render range with keywords (from, till) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     from 10:20am
+     till 12:00pm
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with times when only start time exists should render only start value with keyword (from) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     from 10:20am
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with times when only stop time exists should render only stop value with keyword (till) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     till 12:00pm
+    
+  </div>
+</div>
+`;
+
+exports[`range payload type with times when start and stop time are equal should render only single value with keyword (at) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     scheduled working day(s) 
+     at 12:00pm
+    
+  </div>
+</div>
+`;

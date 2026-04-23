@@ -1,0 +1,9 @@
+{
+  "baseUrl": "http://localhost:4016",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 20000,
+  "video": false,
+  "viewportWidth": 1280,
+  "viewportHeight": 1000,
+  "scrollBehavior": "center"
+}

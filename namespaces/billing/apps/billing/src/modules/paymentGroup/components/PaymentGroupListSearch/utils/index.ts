@@ -1,0 +1,1 @@
+export { searchBarCategories } from './searchAutocompleteConfig'

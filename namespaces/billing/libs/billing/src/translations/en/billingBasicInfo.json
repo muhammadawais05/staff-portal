@@ -1,0 +1,45 @@
+{
+  "accountBalance": "Account balance",
+  "actions": {
+    "refund": "Refund Credit Balance"
+  },
+  "creditBalance": "Credit balance",
+  "paymentMethods": "Payment methods",
+  "paymentMethodsTooltip": "Click to see details",
+  "refundModal": {
+    "actions": {
+      "submit": "Create Payment"
+    },
+    "fields": {
+      "amount": {
+        "label": "Amount"
+      },
+      "comment": {
+        "label": "Description"
+      },
+      "notifyReceiver": {
+        "label": "Send the notification to {{clientName}}"
+      }
+    },
+    "notification": {
+      "success": "Credit balance was successfully refunded."
+    },
+    "title": "Refund Credit Balance",
+    "zeroCreditBalance": "Credit balance is zero"
+  },
+  "title": "Basic Billing Info",
+  "unappliedCashBalance": "Unapplied cash balance",
+  "details": "Details",
+  "unappliedCashModal": {
+    "title": "Unapplied Cash Details",
+    "subtitle": "Below is the list of recorded unapplied cash for {{name}}.",
+    "table": {
+      "head": {
+        "date": "Date Received",
+        "amount": "Original Amount",
+        "balance": "Balance"
+      },
+      "empty": "There are no Unnaplied Cash entries yet."
+    }
+  }
+}

@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPaymentDetailsContent content returned properly 1`] = `
+Array [
+  Object {
+    "key": "paymentFor",
+    "label": "Payment For",
+    "value": <Memo(ContactLink)
+      contact={
+        Object {
+          "__typename": "Staff",
+          "fullName": "José Silva",
+          "id": "VjEtU3RhZmYtMTQ1NTA4Mg",
+          "unallocatedMemorandums": Object {
+            "__typename": "MemorandumConnection",
+            "nodes": Array [],
+          },
+          "webResource": Object {
+            "__typename": "Link",
+            "text": "José Silva",
+            "url": "http://localhost:3000/platform/staff/staff/1455082",
+            "webResource": Object {
+              "__typename": "Link",
+              "text": "José Silva",
+              "url": "http://localhost:3000/platform/staff/staff/1455082",
+            },
+          },
+        }
+      }
+      data-testid="paymentFor"
+    />,
+  },
+  Object {
+    "key": "companyLink",
+    "label": "Company Link",
+    "value": <LinkWrapper
+      data-testid="companyLink-link"
+      href="http://localhost:3000/platform/staff/companies/256814"
+      target="_blank"
+    >
+      <TypographyOverflow
+        color="inherit"
+      >
+        Baumbach-Willms UK
+      </TypographyOverflow>
+    </LinkWrapper>,
+  },
+  Object {
+    "key": "jobLink",
+    "label": "Job Link",
+    "value": <LinkWrapper
+      data-testid="companyLink-link"
+      href="http://localhost:3000/platform/staff/jobs/94454"
+      target="_blank"
+    >
+      <TypographyOverflow
+        color="inherit"
+      >
+        Principal Marketing Developer (94454)
+      </TypographyOverflow>
+    </LinkWrapper>,
+  },
+  Object {
+    "key": "type",
+    "label": "Type",
+    "value": "Talent screening commission",
+  },
+  Object {
+    "key": "paymentMethod",
+    "label": "Payment Method",
+    "value": "Payoneer",
+  },
+  Object {
+    "key": "paymentGroupLink",
+    "label": "Payment Group Link",
+    "value": <LinkWrapper
+      data-testid="companyLink-link"
+      href="http://localhost:3000/platform/staff/payment_groups/94691"
+      target="_blank"
+    >
+      <TypographyOverflow
+        color="inherit"
+      >
+        94691
+      </TypographyOverflow>
+    </LinkWrapper>,
+  },
+  Object {
+    "key": "createdOn",
+    "label": "Created On",
+    "value": "Jul 21, 2020",
+  },
+  Object {
+    "key": "duePeriod",
+    "label": "Due Period",
+    "value": "Jul 21, 2020",
+  },
+  Object {
+    "key": "paymentOnHold",
+    "label": "Payment on hold",
+    "value": "—",
+  },
+]
+`;
+
+exports[`getPaymentDetailsContent empty states returned properly 1`] = `
+Array [
+  Object {
+    "key": "paymentFor",
+    "label": "Payment For",
+    "value": "—",
+  },
+  Object {
+    "key": "companyLink",
+    "label": "Company Link",
+    "value": "—",
+  },
+  Object {
+    "key": "jobLink",
+    "label": "Job Link",
+    "value": "—",
+  },
+  Object {
+    "key": "type",
+    "label": "Type",
+    "value": "Talent screening commission",
+  },
+  Object {
+    "key": "paymentMethod",
+    "label": "Payment Method",
+    "value": "—",
+  },
+  Object {
+    "key": "paymentGroupLink",
+    "label": "Payment Group Link",
+    "value": "—",
+  },
+  Object {
+    "key": "createdOn",
+    "label": "Created On",
+    "value": "—",
+  },
+  Object {
+    "key": "duePeriod",
+    "label": "Due Period",
+    "value": "—",
+  },
+  Object {
+    "key": "paymentOnHold",
+    "label": "Payment on hold",
+    "value": "—",
+  },
+]
+`;
+
+exports[`getPaymentDetailsContent paymentOnHold returned properly 1`] = `
+Array [
+  Object {
+    "key": "paymentFor",
+    "label": "Payment For",
+    "value": "—",
+  },
+  Object {
+    "key": "companyLink",
+    "label": "Company Link",
+    "value": <LinkWrapper
+      data-testid="companyLink-link"
+      href="http://localhost:3000/platform/staff/companies/256814"
+      target="_blank"
+    >
+      <TypographyOverflow
+        color="inherit"
+      >
+        Baumbach-Willms UK
+      </TypographyOverflow>
+    </LinkWrapper>,
+  },
+  Object {
+    "key": "jobLink",
+    "label": "Job Link",
+    "value": <LinkWrapper
+      data-testid="companyLink-link"
+      href="http://localhost:3000/platform/staff/jobs/94454"
+      target="_blank"
+    >
+      <TypographyOverflow
+        color="inherit"
+      >
+        Principal Marketing Developer (94454)
+      </TypographyOverflow>
+    </LinkWrapper>,
+  },
+  Object {
+    "key": "type",
+    "label": "Type",
+    "value": "Talent screening commission",
+  },
+  Object {
+    "key": "paymentMethod",
+    "label": "Payment Method",
+    "value": "Payoneer",
+  },
+  Object {
+    "key": "paymentGroupLink",
+    "label": "Payment Group Link",
+    "value": <LinkWrapper
+      data-testid="companyLink-link"
+      href="http://localhost:3000/platform/staff/payment_groups/94691"
+      target="_blank"
+    >
+      <TypographyOverflow
+        color="inherit"
+      >
+        94691
+      </TypographyOverflow>
+    </LinkWrapper>,
+  },
+  Object {
+    "key": "createdOn",
+    "label": "Created On",
+    "value": "Jul 21, 2020",
+  },
+  Object {
+    "key": "duePeriod",
+    "label": "Due Period",
+    "value": "Jul 21, 2020",
+  },
+  Object {
+    "key": "paymentOnHold",
+    "label": "Payment on hold",
+    "value": "until requested",
+  },
+]
+`;

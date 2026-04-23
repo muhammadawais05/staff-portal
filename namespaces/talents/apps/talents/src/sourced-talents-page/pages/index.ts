@@ -1,0 +1,1 @@
+export { SourcedTalents } from './SourcedTalents'

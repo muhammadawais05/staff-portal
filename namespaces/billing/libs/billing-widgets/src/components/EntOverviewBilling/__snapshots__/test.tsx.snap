@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntOverviewBilling default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+      data-testid="EntOverviewBilling"
+    >
+      <div
+        data-testid="EntOverviewBillingHeader"
+      />
+      <div
+        data-testid="EntOverviewBillingSummary"
+      />
+      <div
+        data-testid="EntOverviewBillingInvoicesTable"
+      />
+      <div
+        data-testid="EntOverviewBillingInvoicesTable"
+      />
+      <div
+        data-testid="EntOverviewBillingPurchaseOrdersTable"
+      />
+      <div
+        data-testid="EntOverviewBillingPurchaseOrdersTable"
+      />
+      <div
+        data-testid="EntOverviewBillingTimesheetsTable"
+      />
+    </div>
+  </div>
+</div>
+`;

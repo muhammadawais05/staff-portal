@@ -1,0 +1,24 @@
+{
+  "name": "@staff-portal/utils",
+  "description": "Staff Portal's generic utils, use as a last resort",
+  "version": "0.0.2",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test --config ../../config/jest-with-global-mocks.specs.js",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@toptal/picasso": "^25.0.0",
+    "@types/js-cookie": "^3.0.1",
+    "js-cookie": "^3.0.1",
+    "react": "16.14.0",
+    "use-debounce": "^7.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "sideEffects": false
+}

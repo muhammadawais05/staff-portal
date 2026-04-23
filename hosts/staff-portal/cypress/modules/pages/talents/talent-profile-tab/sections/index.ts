@@ -1,0 +1,6 @@
+export { default as RelatedTasksSection } from './RelatedTasksSection'
+export { default as GeneralSection } from './GeneralSection'
+export { default as ContractsAndAgreementsSection } from './ContractsAndAgreementsSection'
+export { default as OfacComplianceSection } from './OfacComplianceSection'
+export { default as SpecializationApplicationsSection } from './SpecializationApplicationsSection'
+export { default as TalentScreeningSpecialistStatusSection } from './TalentScreeningSpecialistStatusSection'

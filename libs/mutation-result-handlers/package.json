@@ -1,0 +1,30 @@
+{
+  "name": "@staff-portal/mutation-result-handlers",
+  "description": "Staff Portal's mutation result handlers",
+  "version": "0.2.18",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/graphql": "0.4.0",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-forms": "^44.0.0",
+    "@toptal/staff-portal-message-bus": "1.0.22",
+    "graphql": "^15.5.0",
+    "html-react-parser": "^1.4.0",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0",
+    "react-test-renderer": "^16.13.1"
+  },
+  "sideEffects": false
+}

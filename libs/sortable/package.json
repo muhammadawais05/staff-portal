@@ -1,0 +1,25 @@
+{
+  "name": "@staff-portal/sortable",
+  "description": "Staff Portal sortable",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^5.0.3",
+    "@dnd-kit/modifiers": "^5.0.0",
+    "@dnd-kit/sortable": "^7.0.0",
+    "@dnd-kit/utilities": "^3.1.0",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "private": true,
+  "sideEffects": false
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@staff-portal/opportunities",
+  "description": "SP opportunities common",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/operations": "0.5.13",
+    "graphql-tag": "^2.12.4"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,24 @@
+# Create the image with Nginx environment.
+FROM nginx:alpine
+
+# Copy results from the build folder to the image.
+COPY ./dist /usr/share/nginx/html
+
+# Copy the entrypoint.
+COPY ./docker/env-runtime.entrypoint.sh /usr/local/bin/env-runtime.entrypoint.sh
+
+RUN chmod +x /usr/local/bin/env-runtime.entrypoint.sh
+
+# Copy configuration file for Nginx and replace the default one.
+COPY ./docker/nginx-vhost.conf /etc/nginx/conf.d/default.conf
+
+# version is used in build process, so the value won't be available here otherwise
+ARG VERSION
+ENV DAVINCI_RELEASE_VERSION $VERSION
+
+RUN echo $VERSION > /usr/share/nginx/html/REVISION.txt
+
+# Entry point to provide Run Time Environment Variables for the App.
+ENTRYPOINT ["/usr/local/bin/env-runtime.entrypoint.sh"]
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,20 @@
+{
+  "name": "@staff-portal/pact-utils",
+  "description": "Staff Portal's pact utils",
+  "version": "0.1.41",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@pact-foundation/pact": "^9.16.0",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/graphql": "0.4.0",
+    "graphql": "^15.5.0",
+    "node-fetch": "^2.6.0"
+  },
+  "sideEffects": false
+}

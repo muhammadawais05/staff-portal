@@ -1,0 +1,107 @@
+name: Combined Coverage
+
+on:
+  workflow_call:
+    inputs:
+      branchRef:
+        required: true
+        type: string
+      callerWorkflowType:
+        # Available values:
+        # - 'jest' when this workflow is called from `jest` workflow
+        # - 'cypress' when this workflow is called from `cypress` workflow
+        required: true
+        type: string
+    secrets:
+      NPM_TOKEN_READ_ONLY:
+        required: true
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+
+jobs:
+  combined_coverage:
+    name: Combined Jest + Cypress coverage report
+    runs-on: [ 'org/toptal', 'os/linux', 'arch/x64', 'size/large' ]
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Restore node modules cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-node_modules-${{ github.sha }}
+
+      - name: Extract commit data
+        run: |
+          commitSha=$(git rev-parse $githubRef)
+          echo "::set-output name=branchName::${githubRef#refs/heads/}"
+          echo "::set-output name=commitSha::${commitSha}"
+        id: commitData
+        env:
+          githubRef: ${{ inputs.branchRef }}
+
+      - name: Download Jest coverage artifact from current workflow
+        if: inputs.callerWorkflowType == 'jest'
+        uses: actions/download-artifact@v3
+        with:
+          name: jest-coverage-json
+          path: coverage/combined
+
+      - name: Download Cypress coverage artifact from current workflow
+        if: inputs.callerWorkflowType == 'cypress'
+        uses: actions/download-artifact@v3
+        with:
+          name: cypress-coverage-json
+          path: coverage/combined
+
+      - name: Download Jest artifact from parallel workflow
+        if: inputs.callerWorkflowType == 'cypress'
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow: pr_job_jest.yml
+          workflow_conclusion: success
+          branch: ${{steps.commitData.outputs.branchName}}
+          commit: ${{steps.commitData.outputs.commitSha}}
+          name: jest-coverage-json
+          path: coverage/combined
+
+      - name: Download Cypress artifact from parallel workflow
+        if: inputs.callerWorkflowType == 'jest'
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow: pr_job_cypress.yml
+          workflow_conclusion: success
+          branch: ${{steps.commitData.outputs.branchName}}
+          commit: ${{steps.commitData.outputs.commitSha}}
+          name: cypress-coverage-json
+          path: coverage/combined
+
+      - name: Combine coverage
+        run: |
+          unzip coverage/combined/jest-coverage-json.zip -d coverage/combined
+          unzip coverage/combined/cypress-coverage-json.zip -d coverage/combined
+          yarn nyc merge coverage/combined coverage/overall/combined-coverage.json
+          yarn nyc report --temp-dir coverage/overall --reporter html --reporter json-summary --report-dir coverage/combined-html
+
+      # Based on this https://github.com/actions/upload-artifact/issues/199
+      # Uploading a file could take 100ms (per file), so archiving the output folder should improve the speed
+      - name: Archive combined coverage report
+        run: zip -r coverage.zip coverage/combined-html/
+
+      - name: Save combined coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: combined-coverage
+          path: coverage.zip

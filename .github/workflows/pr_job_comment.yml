@@ -1,0 +1,105 @@
+name: PR Comments
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  triggerPrWorkflow:
+    name: Trigger PR Workflow
+    if: >
+      github.event.issue.pull_request &&
+      startsWith(github.event.comment.body, '@toptal-bot run') &&
+      (
+        contains(github.event.comment.body, 'required') ||
+        contains(github.event.comment.body, 'lint') ||
+        contains(github.event.comment.body, 'jest') ||
+        contains(github.event.comment.body, 'pact') ||
+        contains(github.event.comment.body, 'check:updates') ||
+        contains(github.event.comment.body, 'cypress') ||
+        contains(github.event.comment.body, 'package:billing:alpha-release') ||
+        contains(github.event.comment.body, 'features')
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo github event
+        env:
+          EVENT: '${{ toJson(github.event) }}'
+        run: echo $EVENT
+
+      - id: prData
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo, number } = context.issue;
+            const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number: number });
+            core.setOutput('ref', pr.head.ref)
+
+      - name: Trigger Lint
+        if: ${{ contains(github.event.comment.body, 'required') ||  contains(github.event.comment.body, 'lint') }}
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: Lint
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          ref: ${{ steps.prData.outputs.ref }}
+          inputs: '{ "ref": "refs/pull/${{ github.event.issue.number }}/merge" }'
+
+      - name: Trigger Jest
+        if: ${{ contains(github.event.comment.body, 'required') ||  contains(github.event.comment.body, 'jest') }}
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: Jest
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          ref: ${{ steps.prData.outputs.ref }}
+
+      - name: Trigger Cypress
+        if: ${{ contains(github.event.comment.body, 'required') ||  contains(github.event.comment.body, 'cypress') }}
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: Cypress
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          ref: ${{ steps.prData.outputs.ref }}
+
+      - name: Trigger Cucumber Features
+        if: ${{ contains(github.event.comment.body, 'features') }}
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: Cucumber Features
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          ref: ${{ steps.prData.outputs.ref }}
+
+      - name: Trigger Required Updates Check
+        if: ${{ contains(github.event.comment.body, 'required') ||  contains(github.event.comment.body, 'check:updates') }}
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: Required Updates
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          ref: ${{ steps.prData.outputs.ref }}
+
+      - name: Trigger Pact
+        if: ${{ contains(github.event.comment.body, 'required') ||  contains(github.event.comment.body, 'pact') }}
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: Pact
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          ref: ${{ steps.prData.outputs.ref }}
+
+      - name: Trigger Billing alpha legacy package
+        if: ${{ contains(github.event.comment.body, 'package:billing:alpha-release') }}
+        uses: benc-uk/workflow-dispatch@v1.1
+        with:
+          workflow: Publish Billing alpha package
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          ref: ${{ steps.prData.outputs.ref }}
+
+      - name: React to comment - success or failure
+        if: ${{ always() }}
+        env:
+          JOB_STATUS: ${{ job.status }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          script: |
+            const { owner, repo } = context.issue;
+            const content = process.env.JOB_STATUS === 'success' ? '+1' : '-1'
+            await github.rest.reactions.createForIssueComment({ owner, repo, comment_id: context.payload.comment.id, content });

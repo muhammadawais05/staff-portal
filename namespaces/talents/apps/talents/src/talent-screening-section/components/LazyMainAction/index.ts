@@ -1,0 +1,1 @@
+export { useRenderLazyMainAction } from './LazyMainAction'

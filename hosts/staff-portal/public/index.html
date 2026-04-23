@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="application-name" content="Staff Portal" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="preconnect" href="%DAVINCI_PLATFORM_API_URL%" />
+    <link rel="preconnect" href="%DAVINCI_KIPPER_API_URL%" />
+    <link rel="preconnect" href="https://maps.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.segment.com" />
+    <link rel="preconnect" href="https://cdn.lr-ingest.io" />
+    <link rel="preconnect" href="https://js-agent.newrelic.com" />
+    <title>Toptal®</title>
+
+    <script>
+      window.SP = {
+        DAVINCI_ENV: '%DAVINCI_ENV%',
+        DAVINCI_PLATFORM_API_URL: '%DAVINCI_PLATFORM_API_URL%',
+        DAVINCI_KIPPER_API_URL: '%DAVINCI_KIPPER_API_URL%',
+        DAVINCI_SENTRY_DSN: '%DAVINCI_SENTRY_DSN%',
+        DAVINCI_RELEASE_VERSION: '%DAVINCI_RELEASE_VERSION%',
+        DAVINCI_LOG_ROCKET_APPID: '%DAVINCI_LOG_ROCKET_APPID%',
+        DAVINCI_LOG_ROCKET_HOSTNAME: '%DAVINCI_LOG_ROCKET_HOSTNAME%',
+        DAVINCI_DATA_DOG_APP_ID: '%DAVINCI_DATA_DOG_APP_ID%',
+        DAVINCI_DATA_DOG_CLIENT_TOKEN: '%DAVINCI_DATA_DOG_CLIENT_TOKEN%',
+        DAVINCI_DATA_DOG_SITE: '%DAVINCI_DATA_DOG_SITE%',
+        DAVINCI_DATA_DOG_SERVICE: '%DAVINCI_DATA_DOG_SERVICE%',
+        DAVINCI_PENDO_AGENT_KEY: '%DAVINCI_PENDO_AGENT_KEY%'
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=%DAVINCI_GOOGLE_MAPS_API_KEY%&libraries=places"
+      defer
+      async
+    ></script>
+    <script>
+      !(function () {
+        // Skip non production environments
+        if (window.SP.DAVINCI_ENV !== 'production') {
+          return
+        }
+
+        var analytics = (window.analytics = window.analytics || [])
+
+        if (analytics.initialize) {
+          return
+        }
+
+        if (analytics.invoked) {
+          console.error('Segment snippet included twice.')
+          return
+        }
+
+        analytics.invoked = !0
+        analytics.methods = [
+          'trackSubmit',
+          'trackClick',
+          'trackLink',
+          'trackForm',
+          'pageview',
+          'identify',
+          'reset',
+          'group',
+          'track',
+          'ready',
+          'alias',
+          'debug',
+          'page',
+          'once',
+          'off',
+          'on',
+          'addSourceMiddleware',
+          'addIntegrationMiddleware',
+          'setAnonymousId',
+          'addDestinationMiddleware'
+        ]
+
+        analytics.factory = function (e) {
+          return function () {
+            var t = Array.prototype.slice.call(arguments)
+            t.unshift(e)
+            analytics.push(t)
+            return analytics
+          }
+        }
+
+        for (var e = 0; e < analytics.methods.length; e++) {
+          var key = analytics.methods[e]
+          analytics[key] = analytics.factory(key)
+        }
+
+        analytics.load = function (key, e) {
+          var t = document.createElement('script')
+          t.type = 'text/javascript'
+          t.async = !0
+          t.src =
+            'https://cdn.segment.com/analytics.js/v1/' +
+            key +
+            '/analytics.min.js'
+          var n = document.getElementsByTagName('script')[0]
+          n.parentNode.insertBefore(t, n)
+          analytics._loadOptions = e
+        }
+
+        analytics.SNIPPET_VERSION = '4.13.1'
+        analytics.load('%DAVINCI_SEGMENT_ID%')
+      })()
+    </script>
+    <script>
+      (function(apiKey){
+        if (!apiKey) return;
+
+        if (!['production', 'staging'].includes(window.SP.DAVINCI_ENV)) {
+          return
+        }
+
+        (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+          v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+          y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+          z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+      })(window.SP.DAVINCI_PENDO_AGENT_KEY);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+# This workflow runs pact testing for master branch
+
+name: Pact on merge to master
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency: pact-on-merge-to-master
+
+jobs:
+  pact:
+    name: Test:Pact
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PACT_BROKER_URL: 'https://pact-broker.toptal.net'
+      PACT_BROKER_USR: ${{ secrets.PACT_BROKER_USR }}
+      PACT_BROKER_PSW: ${{ secrets.PACT_BROKER_PSW }}
+      GIT_COMMIT: ${{ github.sha }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Install dependencies
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --silent --non-interactive
+
+      - name: Setup Google cloud toolchain
+        uses: google-github-actions/setup-gcloud@v0.6.0
+        with:
+          service_account_key: ${{ secrets.GCR_GQLGW_SCHEMAS_BUCKET_ACCOUNT }}
+          export_default_credentials: true
+
+      - name: Fetch gql schemas
+        run: yarn fetch:graphql-schemas
+
+      - name: Check types cache
+        uses: actions/cache@v3
+        id: gql-types-cache
+        with:
+          path: |
+            libs/graphql
+            **/*.gql.types.tsx
+          key: ${{ runner.os }}-types-${{ hashFiles('**/codegen.js', '**/*.graphql', '**/*.gql.ts') }}
+
+      - name: Generate types
+        if: ${{ steps.gql-types-cache.outputs.cache-hit != 'true' }}
+        run: yarn generate:types
+
+      - name: Set env variables
+        run: |
+          echo GIT_BRANCH=$([ ${GITHUB_EVENT_NAME} == "pull_request" ] && echo ${GITHUB_HEAD_REF} || echo ${GITHUB_REF#refs/heads/}) | tee -a $GITHUB_ENV
+          echo "BUILD_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" | tee -a $GITHUB_ENV
+
+      - name: Run pact test
+        run: yarn pact:ci
+
+      - name: Publish pact test
+        run: yarn pact:publish
+
+      - name: Wait for verification
+        run: yarn pact:verify
+
+      - name: Send a Slack notification on success / failure
+        if: ${{ success() || failure() }}
+        uses: rtCamp/action-slack-notify@12e36fc18b0689399306c2e0b3e0f2978b7f1ee7
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_COLOR: ${{ job.status == 'success' && '#00D000' || '#D00000'}}
+          SLACK_CHANNEL: staff-portal-bullhorn
+          SLACK_MESSAGE: "${{ job.status == 'success' && 'Pact tests on Master are :green_heart:' || '<!here> Pact tests on Master are broken' }} (staff-portal). \n${{ steps.commit-details.outputs.message }}"
+          SLACK_ICON: https://avatars.slack-edge.com/2020-01-27/923018880464_3b9998ac0406ff419d65_88.png
+          SLACK_USERNAME: Staff Portal Bot
+          MSG_MINIMAL: true
+          SLACK_FOOTER: ''

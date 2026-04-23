@@ -1,0 +1,30 @@
+{
+  "name": "@staff-portal/operations",
+  "description": "Staff Portal operation related functionality",
+  "version": "0.5.13",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/ui": "0.10.13",
+    "@toptal/picasso": "^25.0.0",
+    "graphql": "^15.5.0",
+    "react": "16.14.0",
+    "react-markdown": "^5.0.3"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "sideEffects": false
+}

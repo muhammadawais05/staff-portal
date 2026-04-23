@@ -1,0 +1,138 @@
+{
+  "actions": {
+    "downloadHtmlUrl": "HTML",
+    "downloadPdfUrl": "PDF",
+    "revertCommercialDocumentMemorandum": "Revert Memorandum",
+    "revertInvoicePrepayments": "Revert Prepayment",
+    "revertRoleMemorandum": "Revert Memorandum"
+  },
+  "addModal": {
+    "confirmOverride": {
+      "message": "You have manually modified the comment. Are you OK with losing those changes?",
+      "submitText": "Yes",
+      "title": "Confirm"
+    },
+    "fields": {
+      "affectsCommissions": "Allow memorandum to affect revenue for commission payouts.",
+      "amount": {
+        "error": "Must be a valid number",
+        "label": "Amount"
+      },
+      "balanceType": {
+        "credit": "Credit",
+        "debit": "Debit",
+        "error": "Please select a proper balance type",
+        "label": "Balance type"
+      },
+      "category": {
+        "label": "Category"
+      },
+      "comment": {
+        "error": "You must specify a reason",
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      },
+      "notification": {
+        "noName": "Send the notification to receiver.",
+        "withName": "Send the notification to {{notifyReceiverName}}."
+      },
+      "originalInvoice": {
+        "label": "Original invoice",
+        "optionText": "Invoice #{{originalDocumentNumber}} ({{adjustedDueAmount}} due)"
+      },
+      "receiver": {
+        "errorInvalidSelection": "Please provide existing talent or company as the receiver",
+        "errorRequired": "You must specify a receiver",
+        "info": "Unallocated memorandums cannot be created for staff members. Please add the memorandum to a specific document instead.",
+        "label": "Receiver",
+        "noOptionsText": "No receivers found",
+        "placeholder": "Start typing..."
+      }
+    },
+    "intro": "A memorandum will be automatically allocated when a new document is created.",
+    "notification": {
+      "consolidatedSuccess": "The Memorandum has been successfully added to the consolidated invoice #{{documentNumber}}.",
+      "roleSuccess": "The Memorandum was successfully added to user's account.",
+      "success": "The Memorandum has been successfully added to invoice."
+    },
+    "submit": "Add Memorandum",
+    "title": "Add Memorandum",
+    "warning": {
+      "affectsCommissionsWarning": "Warning: performing this action will prevent the memo from impacting commission calculations.",
+      "depositCorrection": "Credit memorandums, applied to the deposit invoice, adjust the balance due on the invoice but create <strong>no</strong> accounting transactions. You <strong>cannot</strong> apply debit memorandums to the deposit invoice.",
+      "title": "Please note:",
+      "willBeAllocatedToConsolidatedInvoice": "The added memorandum will be allocated to the consolidated invoice <0>#{{documentNumber}}</0>.",
+      "willNotBeAllocatedInvoice": "Memorandums cannot be allocated to the paid invoice. The memorandum will be created as unallocated.",
+      "willNotBeAllocatedPayment": "Memorandums cannot be allocated to the paid or disputed payment. The memorandum will be created as unallocated."
+    }
+  },
+  "allocated": {
+    "balance": {
+      "credit": "Credit",
+      "debit": "Debit"
+    },
+    "empty": "There are no memorandums yet.",
+    "info": "Memorandums allocated to the current {{type}}. These memorandums affect the {{type}} balance.",
+    "table": {
+      "head": {
+        "amount": "Amount",
+        "date": "Date",
+        "details": "Details",
+        "id": "ID",
+        "type": "Type"
+      }
+    },
+    "title": "Allocated memorandums"
+  },
+  "associated": {
+    "empty": "There are no memorandums yet.",
+    "info": "Memorandums associated with the current {{type}}. These memorandums don't affect the {{type}} amount, but are merely displayed to show their origin.",
+    "table": {
+      "head": {
+        "allocated": "Allocated to",
+        "amount": "Amount",
+        "details": "Details",
+        "id": "Id",
+        "type": "Type"
+      },
+      "row": {
+        "consolidated": "consolidated",
+        "current": "current",
+        "left": "<0/> left"
+      }
+    },
+    "title": "Associated memorandums"
+  },
+  "revertModal": {
+    "description": "You are about to revert a {{balance}} memorandum #{{number}} in the amount of <0/>. Would you like to proceed?",
+    "fields": {
+      "comment": {
+        "error": "You must specify a reason",
+        "initialValue": "Revert {{balance}} memorandum #{{number}}.",
+        "label": "Comment"
+      },
+      "notifyReceiver": {
+        "label": "Send the notification to {{receiverName}}"
+      }
+    },
+    "notification": {
+      "success": "The Memorandum was successfully reverted."
+    },
+    "submit": "Revert Memorandum",
+    "title": "Revert Memorandum"
+  },
+  "revertPrepaymentModal": {
+    "description": "You are about to revert a prepayment originally found in memorandum #{{memoNumber}} in the amount of <0></0>. Would you like to proceed?",
+    "fields": {
+      "comment": {
+        "error": "You must specify a reason",
+        "label": "Comment"
+      }
+    },
+    "notification": {
+      "success": "Prepayment was successfully reverted to Invoice #{{documentNumber}}"
+    },
+    "submit": "Revert",
+    "title": "Revert prepayment to Invoice #{{documentNumber}}"
+  }
+}

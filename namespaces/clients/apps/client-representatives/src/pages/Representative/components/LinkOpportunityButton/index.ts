@@ -1,0 +1,1 @@
+export { LinkOpportunityButton } from './LinkOpportunityButton'

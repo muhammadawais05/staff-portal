@@ -1,0 +1,103 @@
+@Library('globalLibrary@master') _
+
+githubHelper = new helpers.GithubNotifyHelper()
+slackNotificationChannel = "staff-portal-bullhorn"
+runConsumerContractsVerification = false
+
+pipeline {
+  parameters {
+    string(name: 'JOB_TYPE', description: 'Type of parent job that initiate contracts verification. Possible values: pr, master')
+    string(name: 'GIT_COMMIT', description: 'Git commit which is used as a pact contract version')
+  }
+
+  agent {
+    docker {
+      image 'pactfoundation/pact-cli'
+      args """
+        --entrypoint "" --interactive \
+        --tty --user root
+      """
+    }
+  }
+
+  options {
+    ansiColor('xterm')
+    skipDefaultCheckout()
+    timestamps()
+    timeout(time: 20, unit: 'MINUTES')
+    buildDiscarder(logRotator(daysToKeepStr: '3'))
+  }
+
+  environment {
+    PACT_BROKER_URL = 'https://pact-broker.toptal.net'
+    PACT_BROKER = credentials('pact-broker')
+  }
+
+  stages {
+    stage('Run can-i-deploy contracts verification') {
+      when {
+        expression { runConsumerContractsVerification == true }
+      }
+      steps {
+        script {
+          info "Contract version is ${env.GIT_COMMIT}"
+
+          if (env.JOB_TYPE == 'pr') {
+            githubHelper.notifyPR(
+              'Consumer contracts: production', 'PENDING', 'Running contracts verification', env.GIT_COMMIT, env.BUILD_URL, 'staff-portal'
+            )
+          }
+          sh """
+          cd /pact;
+          bundle exec bin/pact broker can-i-deploy \
+            --broker-base-url ${env.PACT_BROKER_URL} \
+            --broker_username ${env.PACT_BROKER_USR} \
+            --broker_password ${env.PACT_BROKER_PSW} \
+            --pacticipant 'Staff Portal' \
+            --version ${env.GIT_COMMIT} \
+            --to production \
+            --retry-while-unknown 90
+        """
+        }
+      }
+    }
+  }
+
+  post {
+    success {
+      script {
+        if (env.JOB_TYPE == 'pr') {
+          githubHelper.notifyPR(
+            'Consumer contracts: production', 'SUCCESS', 'Contracts passed verification', env.GIT_COMMIT, env.BUILD_URL, 'staff-portal'
+          )
+        }
+      }
+    }
+
+    fixed {
+      script {
+        if (env.JOB_TYPE == 'master') {
+          message = "${env.JOB_NAME} - #${currentBuild.number} back to normal <${env.BUILD_URL}|(Open)>"
+          slackSend color: 'good', channel: slackNotificationChannel, message: message
+        }
+      }
+    }
+
+    failure {
+      script {
+        if (env.JOB_TYPE == 'master') {
+          message = "${env.JOB_NAME} - #${currentBuild.number} failed <${env.BUILD_URL}|(Open)>"
+          slackSend color: 'danger', channel: slackNotificationChannel, message: message
+        } else {
+          githubHelper.notifyPR(
+            'Consumer contracts: production', 'FAILURE', 'Contracts failed or missing verification', env.GIT_COMMIT, env.BUILD_URL, 'staff-portal'
+          )
+        }
+      }
+    }
+
+    always {
+      sendBuildData(currentBuild)
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Document": {
+    "adjustments": {
+      "credits": "Credits: ",
+      "debits": "Debits: ",
+      "hasChildAdjustments": "There are adjustments made to the original invoices"
+    }
+  },
+  "NotIssuedYet": "Not issued yet",
+  "TableFooter": {
+    "totalCredits": "Total Credits",
+    "totalDebits": "Total Debits",
+    "totalPaid": "Total Paid"
+  }
+}

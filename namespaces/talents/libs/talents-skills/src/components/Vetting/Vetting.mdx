@@ -1,0 +1,35 @@
+import { Canvas, Story } from '@storybook/addon-docs'
+
+## Vetting
+
+Use `Vetting` to show a vetting result for certain talent skill.
+
+#### Thresholds
+
+The `threshold75` represents the 75th percentile of all talents.
+
+Similarly `threshold25` represents the 25th percentile of all talents.
+
+### Top %25
+
+When the passed `value` is greater than or equal to the `threshold75`, then this talent is one of our **Top 25%** in this skill.
+
+<Canvas>
+  <Story id='talents-skills-vetting--top-25' />
+</Canvas>
+
+### Between %25 and %75
+
+When the passed `value` is greater than or equal to the `threshold25`, then this talent is **Between our Top 25-75%** in this skill.
+
+<Canvas>
+  <Story id='talents-skills-vetting--between-25-and-75' />
+</Canvas>
+
+### Bottom %25
+
+When the passed `value` is less than the `threshold25`, then this talent is one of our **Bottom 25%** in this skill.
+
+<Canvas>
+  <Story id='talents-skills-vetting--bottom-25' />
+</Canvas>

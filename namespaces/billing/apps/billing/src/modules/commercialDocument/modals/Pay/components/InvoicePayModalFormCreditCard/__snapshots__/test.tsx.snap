@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoicePayModalFormCreditCard default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+      data-testid="InvoicePayModalFormCreditCard"
+    >
+      <div
+        class="PicassoFormField-root"
+        data-field-has-error="false"
+      >
+        <label
+          class="PicassoFormLabel-root"
+        >
+          <span
+            class="PicassoFormLabel-medium"
+          >
+            Credit Card
+          </span>
+        </label>
+        <p
+          class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1"
+        >
+          **** **** **** 1234
+        </p>
+        <div
+          class="FormHint-root PicassoFormField-hint"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyXxsmall MuiTypography-body1"
+          >
+            Company credit card will be charged
+          </p>
+        </div>
+      </div>
+      <div
+        class="PicassoFormField-root"
+        data-field-has-error="false"
+      >
+        <div
+          class="PicassoFormField-root"
+          data-field-has-error="false"
+          data-testid="payment-processing-date-field"
+        >
+          <label
+            class="PicassoFormLabel-root"
+            data-testid="payment-processing-date-label"
+            for="payment-processing-date"
+          >
+            <span
+              class="PicassoFormLabel-medium"
+            >
+              <span
+                class="PicassoFormLabel-asterisk"
+              >
+                *
+              </span>
+              Processing Date
+            </span>
+          </label>
+          <div
+            data-testid="payment-processing-date"
+          >
+            {"width":"full","testIds":{"input":"payment-processing-date"},"name":"processingDate","minDate":"2019-01-01T19:00:00.000Z","displayDateFormat":"","editDateFormat":"","id":"payment-processing-date","weekStartsOn":0,"error":false}
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

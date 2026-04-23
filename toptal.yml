@@ -1,0 +1,12 @@
+# This file stores the project specific information
+#
+# Docs about the format of total.yml file:
+# https://github.com/toptal/cataloger#toptalyml
+#
+
+owner:
+  name: Staff Portal Tango & Cache
+  url: https://team.toptal.net/users?team_id=144
+  channel: #staff-portal
+
+technology: ['node']

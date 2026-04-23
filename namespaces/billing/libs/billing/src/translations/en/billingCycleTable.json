@@ -1,0 +1,37 @@
+{
+  "BillingCycleKind": {
+    "development": "Development",
+    "expired_trial": "Expired trial",
+    "multi": "Multi",
+    "rejected_trial": "Rejected trial",
+    "successful_trial": "Successful trial",
+    "trial": "Trial"
+  },
+  "CommitmentAvailability": {
+    "extra_hours": "Extra Hours",
+    "full_time": "Full-time",
+    "hourly": "Hourly",
+    "multi": "Multi",
+    "part_time": "Part-time"
+  },
+  "CommitmentChange": {
+    "availability": "• Availability changed from {{from}} to {{to}}",
+    "availabilityHours": "• Availability hours changed from {{from}} to {{to}}",
+    "companyRate": "• Company rate changed from <0></0> to <1></1>",
+    "date": "Commitment change on {{date}}:",
+    "talentRate": "• Talent rate changed from <0></0> to <1></1>"
+  },
+  "ConsolidatedInvoice": "Paid from consolidated ",
+  "TableHead": {
+    "commissions": "Commissions",
+    "commitment": "Commitment",
+    "company": "Company",
+    "endDate": "End date",
+    "hours": "Hours",
+    "startDate": "Start date",
+    "talent": "Talent",
+    "type": "Type"
+  },
+  "emptyTable": "No related billing cycles",
+  "title": "Billing Cycles"
+}

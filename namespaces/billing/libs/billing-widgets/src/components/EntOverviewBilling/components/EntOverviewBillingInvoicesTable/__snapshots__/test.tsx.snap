@@ -1,0 +1,1099 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntOverviewBillingInvoicesTable With null data 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingInvoicesTable"
+    >
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-title"
+      >
+        Most Recently Disputed Invoices
+      </span>
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingInvoicesTable Without rows 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingInvoicesTable"
+    >
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-title"
+      >
+        Most Recently Disputed Invoices
+      </span>
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingInvoicesTable variant \`Disputed\` 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingInvoicesTable"
+    >
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-title"
+      >
+        Most Recently Disputed Invoices
+      </span>
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingInvoicesTable variant \`Overdue\` 1`] = `
+.c8 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c14 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c13 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c12 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c11 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c10 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c9 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c7 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c6 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c5 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c4 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c3 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c2 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c1 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c0 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingInvoicesTable"
+    >
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-title"
+      >
+        Longest Overdue Invoices
+      </span>
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingInvoicesTable-subtitle"
+      />
+      <table
+        class="MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root PicassoTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+          >
+            <th
+              _css="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingInvoicesTable___StyledTableCell-sc-12k1o8z c0"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Company
+              </div>
+            </th>
+            <th
+              _css2="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingInvoicesTable___StyledTableCell2-sc-12k1o8z c1"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Past Due
+              </div>
+            </th>
+            <th
+              _css3="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingInvoicesTable___StyledTableCell3-sc-12k1o8z c2"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Issue Date
+              </div>
+            </th>
+            <th
+              _css4="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingInvoicesTable___StyledTableCell4-sc-12k1o8z c3"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Job Name
+              </div>
+            </th>
+            <th
+              _css5="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingInvoicesTable___StyledTableCell5-sc-12k1o8z c4"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Job Contact
+              </div>
+            </th>
+            <th
+              _css6="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingInvoicesTable___StyledTableCell6-sc-12k1o8z c5"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Net Terms
+              </div>
+            </th>
+            <th
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingInvoicesTable___StyledTableCell7-sc-12k1o8z c6 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Amount
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingInvoicesTable-row"
+          >
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell8-sc-12k1o8z c7"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Weber, Smitham and Lehner
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1111246"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Weber, Smitham and Lehner
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell9-sc-12k1o8z c9"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  3 months ago
+                </p>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell10-sc-12k1o8z c10"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Dec 31, 2018
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell11-sc-12k1o8z c11"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Senior Security Developer (144329)
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/jobs/144329"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Senior Security Developer (144329)
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell12-sc-12k1o8z c12"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Sandy Smith
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/company_representatives/1111247"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Sandy Smith
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css13="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell13-sc-12k1o8z c13"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Net 
+                90
+              </div>
+            </td>
+            <td
+              _css14="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell14-sc-12k1o8z c14 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $9,600.00
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingInvoicesTable-row"
+          >
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell8-sc-12k1o8z c7"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Weber, Smitham and Lehner
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1111246"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Weber, Smitham and Lehner
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell9-sc-12k1o8z c9"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  8 months ago
+                </p>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell10-sc-12k1o8z c10"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Jan 14, 2019
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell11-sc-12k1o8z c11"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Senior Security Developer (144329)
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/jobs/144329"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Senior Security Developer (144329)
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell12-sc-12k1o8z c12"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Sandy Smith
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/company_representatives/1111247"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Sandy Smith
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css13="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell13-sc-12k1o8z c13"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Net 
+                90
+              </div>
+            </td>
+            <td
+              _css14="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell14-sc-12k1o8z c14 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $9,600.00
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingInvoicesTable-row"
+          >
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell8-sc-12k1o8z c7"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Weber, Smitham and Lehner
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1111246"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Weber, Smitham and Lehner
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell9-sc-12k1o8z c9"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  7 months ago
+                </p>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell10-sc-12k1o8z c10"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Feb 11, 2019
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell11-sc-12k1o8z c11"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Senior Security Developer (144329)
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/jobs/144329"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Senior Security Developer (144329)
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell12-sc-12k1o8z c12"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Sandy Smith
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/company_representatives/1111247"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Sandy Smith
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css13="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell13-sc-12k1o8z c13"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Net 
+                90
+              </div>
+            </td>
+            <td
+              _css14="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell14-sc-12k1o8z c14 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $9,600.00
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingInvoicesTable-row"
+          >
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell8-sc-12k1o8z c7"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Weber, Smitham and Lehner
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1111246"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Weber, Smitham and Lehner
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell9-sc-12k1o8z c9"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  7 months ago
+                </p>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell10-sc-12k1o8z c10"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Feb 21, 2019
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell11-sc-12k1o8z c11"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Senior Security Developer (144329)
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/jobs/144329"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Senior Security Developer (144329)
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell12-sc-12k1o8z c12"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Sandy Smith
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c8 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/company_representatives/1111247"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Sandy Smith
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css13="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell13-sc-12k1o8z c13"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                Net 
+                90
+              </div>
+            </td>
+            <td
+              _css14="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingInvoicesTable___StyledTableCell14-sc-12k1o8z c14 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingInvoicesTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $4,800.00
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

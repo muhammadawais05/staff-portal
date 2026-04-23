@@ -1,0 +1,1 @@
+export { collectionSpeedSelectionOptions } from './collectionSpeedSelectOptions'

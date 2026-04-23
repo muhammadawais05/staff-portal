@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoicePayModalFormReceipt default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+      data-testid="InvoicePayModalFormReceipt"
+    >
+      <div
+        class="PicassoFormField-root"
+        data-field-has-error="false"
+        data-testid="pending-receipt-method-field"
+      >
+        <label
+          class="PicassoFormLabel-root"
+          data-testid="pending-receipt-method-label"
+          for="pending-receipt-method"
+        >
+          <span
+            class="PicassoFormLabel-medium"
+          >
+            <span
+              class="PicassoFormLabel-asterisk"
+            >
+              *
+            </span>
+            Payment Method
+          </span>
+        </label>
+        <div
+          class="makeStyles-root makeStyles-rootFull"
+        >
+          <div
+            class="makeStyles-inputWrapper"
+          >
+            <input
+              name="pendingReceiptPaymentMethod"
+              type="hidden"
+              value=""
+            />
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium makeStyles-outlinedInput MuiInputBase-fullWidth"
+              data-testid="pending-receipt-method"
+              role="textbox"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="off"
+                class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium"
+                id="pending-receipt-method"
+                placeholder="Please select a payment method"
+                readonly=""
+                size="1"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                style="padding-left: 8px;"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legend"
+                  style="width: 0.01px;"
+                >
+                  <span>
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <svg
+              class="PicassoSvgDropdownArrows16-root makeStyles-caret"
+              style="min-width: 16px; min-height: 16px;"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m10.997 10.29.707.707-3.707 3.707-3.707-3.707.707-.707 3 3 3-3Zm-3-9 3.707 3.707-.707.707-3-3-3 3-.707-.707 3-3 .707-.707Z"
+              />
+            </svg>
+          </div>
+        </div>
+        
+      </div>
+      <div
+        class="PicassoFormField-root"
+        data-field-has-error="false"
+        data-testid="pending-receipt-date-field"
+      >
+        <label
+          class="PicassoFormLabel-root"
+          data-testid="pending-receipt-date-label"
+          for="pending-receipt-date"
+        >
+          <span
+            class="PicassoFormLabel-medium"
+          >
+            <span
+              class="PicassoFormLabel-asterisk"
+            >
+              *
+            </span>
+            Expected Clearance Date
+          </span>
+        </label>
+        <div
+          data-testid="pending-receipt-date"
+        >
+          {"width":"full","testIds":{"input":"pending-receipt-date"},"name":"pendingReceiptOn","displayDateFormat":"","editDateFormat":"","id":"pending-receipt-date","weekStartsOn":0,"error":false}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;

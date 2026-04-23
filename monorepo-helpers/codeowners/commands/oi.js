@@ -1,0 +1,99 @@
+const program = require('commander');
+const fs = require('fs');
+const {
+  getAllOwnersSummary,
+  getParticularOwnersSummary,
+} = require('../core/owners-info/get-owners-summary');
+const {
+  printPackagesByOwnersBulletChart,
+  printFilesByOwnersBulletChart,
+} = require('../core/charts/print-owners-summary-charts');
+const processCodeBase = require('../core/process-codebase');
+
+program
+  .command('oi')
+  .option(
+    '-c, --codeowners-filename <filename>',
+    'specify CODEOWNERS filename',
+    'CODEOWNERS'
+  )
+  .option(
+    '-n, --ownerName <owner_names...>',
+    'prints summary for particular owners'
+  )
+  .option('-a, --all', 'prints summary for all owners', true)
+  .option(
+    '-v --verbose [level]',
+    [
+      '0: quiet',
+      '1: gives general info',
+      '2: + packages short info',
+      '3: + list of owned files',
+      '4: + list of coowners per file',
+    ].join('\n'),
+    1
+  )
+  .option('--json <file_path>')
+  .option('--chart')
+  .action((options) => {
+    const modes = {
+      ownerName: 'ownerName',
+      all: 'all',
+    };
+
+    // find first occurred mode
+    const verbose = +options.verbose;
+    const mode = Object.values(modes).filter((option) => options[option])[0];
+
+    const { filesToTeams, groupedByOwnerName, groupedByPackageName } =
+      processCodeBase(options);
+
+    let data;
+    switch (mode) {
+      case modes.all:
+        data = getAllOwnersSummary(
+          groupedByOwnerName,
+          groupedByPackageName,
+          filesToTeams,
+          options.verbose
+        );
+        break;
+
+      case modes.ownerName:
+        data = getParticularOwnersSummary(
+          groupedByOwnerName,
+          groupedByPackageName,
+          filesToTeams,
+          options.ownerName,
+          verbose
+        );
+        break;
+
+      default:
+        break;
+    }
+
+    if (verbose && data) {
+      console.dir(data, { depth: 7 });
+    }
+
+    if (options.chart) {
+      if (verbose) {
+        console.log('\n');
+      }
+
+      printPackagesByOwnersBulletChart(data);
+      console.log('\n');
+      printFilesByOwnersBulletChart(data);
+    }
+
+    if (options.json) {
+      try {
+        fs.writeFileSync(options.json, JSON.stringify(data, null, 2), 'utf-8');
+        console.log('Json file was successfully written.');
+      } catch (e) {
+        console.error('An error occurred during writing json file');
+        process.exit(1);
+      }
+    }
+  });

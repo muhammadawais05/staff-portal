@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceTaskCardContent card is rendered properly 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TaskCardLayout.Header"
+    >
+      <div
+        data-testid="TaskCardLayout.Title"
+      >
+        11234564
+      </div>
+      <div
+        data-testid="PaymentTaskCardActions"
+      >
+        "VjEtUGF5bWVudC0xMTA0NDI4"
+      </div>
+    </div>
+    <div
+      data-testid="PaymentTaskCardSummary"
+    >
+      "VjEtUGF5bWVudC0xMTA0NDI4"
+    </div>
+    <div
+      data-testid="TaskCardLayout.Content"
+    />
+    <div
+      data-testid="TaskCardLayout.Description"
+    >
+      <div
+        data-testid="TaskCardLayout.DescriptionFormatter"
+      >
+        {"description":"Commission for screening Technical 2 Core step of Martijn Meijer for his/her services on Python Developer for Rental Platform: June 21, 2020 to July 4, 2020."}
+      </div>
+    </div>
+  </div>
+</div>
+`;

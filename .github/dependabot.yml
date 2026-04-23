@@ -1,0 +1,49 @@
+version: 2
+registries:
+  npm-registry-registry-npmjs-org:
+    type: npm-registry
+    url: https://registry.npmjs.org
+    token: '${{secrets.NPM_REGISTRY_REGISTRY_NPMJS_ORG_TOKEN}}'
+
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '07:00'
+    pull-request-branch-name:
+      separator: '-'
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
+      - no-jira
+    ignore:
+      - dependency-name: '@babel/core'
+        versions:
+          - 7.13.15
+      - dependency-name: '@types/react-dom'
+        versions:
+          - 17.0.3
+      - dependency-name: '@types/jest'
+        versions:
+          - 26.0.20
+          - 26.0.21
+      - dependency-name: use-debounce
+        versions:
+          - 5.2.0
+      - dependency-name: react-test-renderer
+        versions:
+          - 16.14.0
+    registries:
+      - npm-registry-registry-npmjs-org
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: weekly
+      time: '07:00'
+    pull-request-branch-name:
+      separator: '-'
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - no-jira

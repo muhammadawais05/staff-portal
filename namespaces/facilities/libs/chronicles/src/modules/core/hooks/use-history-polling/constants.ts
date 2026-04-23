@@ -1,0 +1,3 @@
+export const NO_POLL_INTERVAL = 0
+export const DEFAULT_POLL_INTERVAL = 2000
+export const DEFAULT_POLL_DURATION = 10000

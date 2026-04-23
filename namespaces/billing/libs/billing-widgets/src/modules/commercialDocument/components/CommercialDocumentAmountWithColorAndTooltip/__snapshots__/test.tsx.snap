@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommercialDocumentAmountWithColorAndTooltip invoice render without tooltip 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+      data-testid="CommercialDocumentAmountWithColorAndTooltip-amount"
+    >
+      $2,295.00
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CommercialDocumentAmountWithColorAndTooltip payment render without tooltip 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+      data-testid="CommercialDocumentAmountWithColorAndTooltip-amount"
+    >
+      $7.71
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CommercialDocumentAmountWithColorAndTooltip with icon tooltip rendered before amount (position: left) 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+      data-testid="CommercialDocumentAmountWithColorAndTooltip-amount"
+    >
+      $2,295.00
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CommercialDocumentAmountWithColorAndTooltip with tooltip when preferredBillingOption is discountable 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+      data-testid="CommercialDocumentAmountWithColorAndTooltip-amount"
+    >
+      $2,295.00
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CommercialDocumentAmountWithColorAndTooltip with tooltip when preferredBillingOption is not discountable 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <span
+      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+      data-testid="CommercialDocumentAmountWithColorAndTooltip-amount"
+    >
+      $2,295.00
+    </span>
+  </div>
+</div>
+`;

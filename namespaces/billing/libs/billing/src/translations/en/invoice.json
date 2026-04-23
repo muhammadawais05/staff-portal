@@ -1,0 +1,394 @@
+{
+  "actions": {
+    "addDocumentNote": "Add Note",
+    "addMemorandumToCommercialDocument": "Add Memorandum",
+    "addNote": "Add Note",
+    "applyPrepayments": "Apply Prepayment",
+    "applyPromotions": "Apply promotions",
+    "applyUnallocatedMemorandumsToCommercialDocument": "Apply Memorandums",
+    "collectBadDebtInvoice": "Collect bad debt",
+    "details": "Details",
+    "disabledDownloadHtmlUrl": "HTML",
+    "disabledDownloadPdfUrl": "PDF",
+    "disputeCommercialDocument": "Dispute",
+    "disputeTalentPayments": "Dispute talent payments",
+    "downloadHtmlUrl": "HTML",
+    "downloadPdfUrl": "PDF",
+    "editDocumentNote": "Update Note",
+    "recordBadDebt": "Record bad debt",
+    "resolveDisputeOfCommercialDocument": "Resolve dispute",
+    "unconsolidate": "Revert Consolidation",
+    "updateCommercialDocumentDueDate": "Update Due Date",
+    "updateDispute": "Update dispute",
+    "updateIssueDate": "Update Issue Date",
+    "writeOff": "Write off"
+  },
+  "applyPrepaymentsModal": {
+    "amount": "Amount",
+    "applyPrepayments": "Apply prepayment",
+    "notification": {
+      "success": "Prepayment was successfully applied to Invoice #{{documentNumber}}."
+    },
+    "submitButton": "Apply",
+    "title": "Apply prepayment to Invoice #{{documentNumber}}",
+    "warningCannotAllocateMemorandums": "You cannot allocate memorandums to this invoice.",
+    "warningModalTitle": "Warning",
+    "warningNoPrepaymentsAvailable": "The user has no prepayments available."
+  },
+  "applyPromotions": {
+    "notification": {
+      "success": "The available promotions have been applied."
+    }
+  },
+  "assignPurchaseOrder": {
+    "notification": {
+      "success": {
+        "assign": "Purchase order #{{purchaseOrder}} was successfully assigned to the Invoice #{{invoiceNumber}}.",
+        "unAssign": "Purchase order was successfully unassigned from the Invoice #{{invoiceNumber}}."
+      }
+    }
+  },
+  "assignPurchaseOrderModal": {
+    "actions": {
+      "submit": "Update"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      },
+      "lineNumber": {
+        "label": "Line Number",
+        "placeholder": "Not Selected"
+      },
+      "purchaseOrder": {
+        "label": "Purchase Order Number",
+        "placeholder": "Not Selected"
+      }
+    },
+    "notification": {
+      "success": {
+        "assign": "Purchase order line was successfully assigned to the Invoice."
+      }
+    },
+    "title": "Update purchase order number"
+  },
+  "collectBadDebtModal": {
+    "actions": {
+      "submit": "Collect"
+    },
+    "description": "Please, specify the amount that has been collected, and the collection fee that should be paid to the collection agent.",
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason.",
+        "validationError": "You must specify a reason"
+      },
+      "feeAmount": {
+        "label": "Fee amount"
+      },
+      "transferAmount": {
+        "label": "Amount"
+      }
+    },
+    "notification": {
+      "success": "Bad debt for {{collectedAmount}} has been collected for Invoice #{{documentNumber}}."
+    },
+    "paymentMethodLabel": "Payment method",
+    "paymentMethodValue": "Wells Fargo Wire",
+    "title": "Add Payment for Invoice #{{invoiceDocumentNumber}}"
+  },
+  "components": {
+    "consolidatedInvoices": {
+      "originalTitle": "Original Invoices",
+      "title": "Consolidated Invoices"
+    }
+  },
+  "disputeResolveModal": {
+    "actions": {
+      "submit": "Resolve dispute"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      }
+    },
+    "intro": "Are you sure you want to resolve this dispute?",
+    "notification": {
+      "success": "The Invoice Dispute was successfully resolved."
+    },
+    "title": "Resolve dispute for Invoice #{{invoiceDocumentNumber}}"
+  },
+  "disputeTalentModal": {
+    "actions": {
+      "submit": "Dispute Payments"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please include as many details as possible."
+      }
+    },
+    "intro": "Are you sure you want to dispute related talent payments for this invoice?",
+    "notification": {
+      "success": "The related Talent Payments were successfully disputed."
+    },
+    "title": "Dispute talent payments of Invoice #{{documentNumber}}"
+  },
+  "invoiceDetails": {
+    "amount": "Amount",
+    "balanceDue": "Balance due",
+    "consolidatedBalance": "Consolidated balance",
+    "consolidatedInvoice": "Consolidated Invoice",
+    "createdOn": "Generated",
+    "dateDue": "Due date",
+    "duePeriod": "Due period",
+    "duePeriodUponReceipt": "Upon Receipt",
+    "duePeriodValue": "Net {{duePeriod}}",
+    "engagement": "Engagement",
+    "financeTeamMember": "Finance team member",
+    "header": {
+      "actions": {
+        "addPayment": "Add payment"
+      },
+      "cannotPayDraftInvoice": "You cannot add payment to a draft invoice.",
+      "cannotPayOriginalInvoice": "You cannot add payment to the original invoice (pay consolidated invoice instead).",
+      "title": "Invoice #{{documentNumber}}"
+    },
+    "invoiceFor": "Invoice for",
+    "issueDate": "Issue date",
+    "jobStatus": "Job status",
+    "originalAmount": "Original amount",
+    "overbilling": "Warning: This invoice exceeds the balance remaining on PO #{{poNumber}} by {{exceeded, formatAsUSD}}",
+    "preferredBillingOption": "Preferred payment method",
+    "purchaseOrder": "Purchase order number",
+    "purchaseOrdersEditor": {
+      "budgetLeftLabel": "{{text}} - {{budget}} left",
+      "current": " - Current on Job",
+      "currentLabel": "{{text}} - Current PO",
+      "next": " - Next on Job",
+      "nextLabel": "{{text}} - Next PO",
+      "notSelected": "Not Selected",
+      "poLineBudgetLeft": "{{text}} ({{budgetLeft}} Left)"
+    },
+    "status": "Status",
+    "subtitle": "Details",
+    "talent": "Talent",
+    "title": "Invoice #{{documentNumber}}",
+    "tooltips": {
+      "fullAmount": {
+        "discountedPreferred": "The company will pay a rate of {{rate, formatAsUSD}} ({{discount}}% discount) if they use their primary payment method, which is {{preferredBillingOption}}.",
+        "undiscountedPreferred": "The company has selected {{preferredBillingOption}} as their primary payment method. They can reduce the amount to {{rate, formatAsUSD}} ({{discount}}% discount) by switching to ACH or Wire."
+      },
+      "partialAmount": {
+        "discountedPreferred": "The company will pay a rate of {{rate, formatAsUSD}} ({{discount}}% discount) if they use their primary payment method, which is {{preferredBillingOption}}.",
+        "undiscountedPreferred": "The company has selected {{preferredBillingOption}} as their primary payment method. They can receive a {{discount}}% discount by switching to ACH or Wire and pay a rate of {{rate, formatAsUSD}}."
+      }
+    },
+    "unassigned": "Unassigned"
+  },
+  "operations": {
+    "downloadDisabled": "You cannot download an original invoice"
+  },
+  "payModal": {
+    "actions": {
+      "submit": "Add Payment"
+    },
+    "amountToPay": {
+      "discounted": "{{amount, formatAsUSD}} (if paid by ACH, Wire, Unapplied Cash or Check)",
+      "label": "Amount to pay",
+      "undiscounted": "{{amount, formatAsUSD}} (if paid by Credit Card or PayPal)"
+    },
+    "billingNotes": "Finance notes",
+    "fields": {
+      "ach": {
+        "fields": {
+          "date": {
+            "label": "Processing date"
+          },
+          "info": {
+            "label": "ACH"
+          }
+        },
+        "label": "Charge via ACH"
+      },
+      "amount": {
+        "label": "Amount"
+      },
+      "comment": {
+        "label": "Comment",
+        "validationError": "Please specify comment"
+      },
+      "creditCard": {
+        "fields": {
+          "date": {
+            "label": "Processing date"
+          },
+          "info": {
+            "alternativeHelp": "Company has alternative billing options.",
+            "defaultHelp": "Company credit card will be charged",
+            "label": "Credit Card"
+          }
+        },
+        "label": "Charge via Credit Card",
+        "labelInvalid": "Charge via Credit Card (expired or unverified credit cards)"
+      },
+      "invoice": {
+        "label": "Invoice for link"
+      },
+      "paymentSource": {
+        "label": "Payment source",
+        "validationError": "Please specify payment source"
+      },
+      "pendingReceipt": {
+        "fields": {
+          "date": {
+            "label": "Expected clearance date"
+          },
+          "paymentMethod": {
+            "label": "Payment method",
+            "placeholder": "Please select a payment method"
+          }
+        },
+        "label": "Pending receipt"
+      },
+      "record": {
+        "fields": {
+          "date": {
+            "label": "Date received"
+          },
+          "label": "Company credit card will be charged.",
+          "paymentMethod": {
+            "label": "Payment method",
+            "placeholder": "Please select a payment method"
+          }
+        },
+        "label": "Record external payment (once payment has cleared)"
+      },
+      "unappliedCash": {
+        "cash": "Select Cash",
+        "date": "Effective date",
+        "label": "Unapplied Cash",
+        "validationError": "The value cannot be greater than Unapplied Cash balance"
+      }
+    },
+    "fullyCovered": "Invoice amount is fully covered with payments. There is no reason to add other payments to this invoice. If you want to add a memorandum to the company, use <0>memorandums page</0>.",
+    "notPaid": "Invoice status is not paid yet because some of the payments are still processing. If these payments are charged successfully, invoice will be updated to paid. If charge fails you will be able to add new payment.",
+    "notPending": "You can only add payment to pending invoices.",
+    "notification": {
+      "success": "The Payment To Invoice #{{documentNumber}} was successfully added."
+    },
+    "outstandingAmount": "outstanding amount",
+    "title": "Add Payment for Invoice #{{documentNumber}}"
+  },
+  "recordBadDebtModal": {
+    "actions": {
+      "submit": "Record bad debt"
+    },
+    "confirmationMessage": "Are you sure you want to record this invoice as bad debt?",
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      }
+    },
+    "notification": {
+      "success": "#{{documentNumber}} has been recorded as a bad debt."
+    },
+    "title": "Record Invoice #{{invoiceDocumentNumber}} as bad debt"
+  },
+  "shortDescription": {
+    "companyBill": "{{shortDuration}} <0>{{talent}}</0> for <1>{{job}}</1>",
+    "companyDeposit": "Deposit (prepayment) for <2>{{company}}</2>",
+    "companyDepositJob": "Deposit for <1>{{job}}</1>",
+    "companyFine": "Fee for <1>{{job}}</1> of <0>{{talent}}</0>",
+    "consolidated": "Consolidated invoice from {{dateRange}}",
+    "extraExpenses": "Extra expenses from <0>{{talent}}</0> for <1>{{job}}</1>",
+    "extraHours": "{{shortDuration}} extra hours <0>{{talent}}</0> for <1>{{job}}</1>",
+    "placementFeeFraction": "1/{{placementFeesCount}} of placement fee for <0>{{talent}}</0> for <1>{{job}}</1>",
+    "placementFeeSingle": "Placement fee for <0>{{talent}}</0> for <1>{{job}}</1>",
+    "toptalServicesBill": "Toptal services invoice for <2>{{company}}</2>",
+    "unconsolidated": "Unconsolidated invoice"
+  },
+  "taskCard": {
+    "actions": {
+      "addMemo": "Add Memorandum",
+      "addPayment": "Add Payment",
+      "sendEmail": "Send Email",
+      "timeline": "Timeline"
+    },
+    "description": {
+      "title": "Concept"
+    },
+    "details": {
+      "claimer": "Claimer",
+      "designerMatcher": "Designer Matcher",
+      "developerMatcher": "Developer Matcher",
+      "dueDate": "Due Date",
+      "financeExpert": "Finance Expert Matcher",
+      "invoiceFor": "Invoice for",
+      "paymentMethod": "Payment Method",
+      "productManager": "Product Manager Matcher",
+      "projectManager": "Project Manager Matcher",
+      "totalAmount": "Total Amount"
+    },
+    "summary": {
+      "balance": "Balance",
+      "jobStatus": "Job Status",
+      "netTerms": "Net Terms",
+      "status": "Status"
+    },
+    "title": {
+      "subTitle": "Consolidated {{consolidatedInvoiceText}}"
+    }
+  },
+  "unconsolidateModalForm": {
+    "actions": {
+      "submit": "Unconsolidate"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      }
+    },
+    "notification": {
+      "success": "Invoice #{{documentNumber}} has been unconsolidated."
+    },
+    "title": "Revert Consolidation"
+  },
+  "updateIssueDateModalForm": {
+    "actions": {
+      "submit": "Update"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      },
+      "issueDate": {
+        "label": "Issue date"
+      }
+    },
+    "notification": {
+      "success": "Issue date of Invoice #{{documentNumber}} has been successfully updated."
+    },
+    "title": "Update issue date of Invoice #{{documentNumber}}"
+  },
+  "writeOffModalForm": {
+    "actions": {
+      "submit": "Write off"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      }
+    },
+    "notification": {
+      "success": "Invoice #{{documentNumber}} has been written off."
+    },
+    "title": "Write off Invoice #{{documentNumber}}"
+  }
+}

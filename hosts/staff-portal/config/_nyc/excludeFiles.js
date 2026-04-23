@@ -1,0 +1,21 @@
+module.exports = [
+  'src/@types/**/*',
+  'src/**/*-type.*',
+  'src/**/*-types.*',
+  'src/**/*.gql.*',
+  'src/**/*.pact.*',
+  'src/**/*.spec.*',
+  'src/**/*.stories.*',
+  'src/**/*.types.*',
+  'src/**/*mock*',
+  'src/**/enums.*',
+  'src/**/enums/*',
+  'src/**/index.*',
+  'src/**/index*.*',
+  'src/**/segment-events.ts',
+  'src/**/skeleton*',
+  'src/**/Skeleton*',
+  'src/**/styles.ts',
+  'src/**/types.*',
+  'src/**/types/*'
+]

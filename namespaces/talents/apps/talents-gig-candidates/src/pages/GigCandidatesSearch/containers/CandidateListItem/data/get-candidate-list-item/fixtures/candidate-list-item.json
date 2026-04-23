@@ -1,0 +1,198 @@
+{
+  "id": "VjEtVGFsZW50LTI1MjEyMzA",
+  "fullName": "Rena Bins",
+  "photo": null,
+  "webResource": {
+    "url": "http://localhost:3000/platform/staff/talents/2521230",
+    "__typename": "Link"
+  },
+  "resumeUrl": "http://localhost:3000/resume/obfuscated_slug_1437056",
+  "suspended": false,
+  "sendToJobUrl": "http://localhost:3000/platform/staff/engagements/new?engagement%5Btalent_id%5D=2521230",
+  "cumulativeStatus": "ACTIVE",
+  "newcomer": false,
+  "topShield": false,
+  "associatedRoles": {
+    "nodes": [],
+    "__typename": "RoleOrClientConnection"
+  },
+  "blogPosts": { "nodes": [], "__typename": "BlogPostConnection" },
+  "talentPartner": null,
+  "cityDescription": "Hereford",
+  "locationV2": {
+    "countryName": "United Kingdom",
+    "__typename": "Location"
+  },
+  "timeZone": {
+    "name": "(UTC+00:00) Europe - London",
+    "__typename": "TimeZone"
+  },
+  "currentSignInAt": "2021-12-09T10:41:43-05:00",
+  "currentSignInIp": "84.92.125.76",
+  "ipLocation": {
+    "cityName": "East Molesey",
+    "countryName": "United Kingdom",
+    "__typename": "Location"
+  },
+  "lastVisitedDate": "2021-12-14",
+  "activatedAt": "2021-06-03T11:55:34-04:00",
+  "updatedAt": "2021-07-12T05:17:31-04:00",
+  "joinedAt": "2021-05-13T09:39:09-04:00",
+  "deltaWaitingDays": 0,
+  "lastClosedEngagementEndDate": null,
+  "lastAvailabilityIncreaseDate": "2021-06-03",
+  "ofacStatus": "NORMAL",
+  "ofacStatusComment": null,
+  "hourlyRate": "85.0",
+  "defaultClientRates": {
+    "hourlyRate": "142",
+    "weeklyRateFullTime": "4544.0",
+    "weeklyRatePartTime": "2272.0",
+    "__typename": "DefaultClientRates"
+  },
+  "investigations": {
+    "nodes": [],
+    "__typename": "InvestigationConnection"
+  },
+  "currentInterviews": {
+    "totalCount": 0,
+    "inLast2DaysCounts": [],
+    "inLast2To7DaysCounts": [],
+    "__typename": "TalentCurrentInterviews"
+  },
+  "vertical": {
+    "id": "VjEtVmVydGljYWwtMQ",
+    "specializations": {
+      "totalCount": 14,
+      "__typename": "VerticalSpecializationConnection"
+    },
+    "__typename": "Vertical"
+  },
+  "specializationApplications": {
+    "nodes": [
+      {
+        "id": "VjEtU3BlY2lhbGl6YXRpb25BcHBsaWNhdGlvbi01OTgyMDI",
+        "status": "APPROVED",
+        "specialization": {
+          "id": "VjEtU3BlY2lhbGl6YXRpb24tMQ",
+          "title": "Core",
+          "__typename": "Specialization"
+        },
+        "__typename": "SpecializationApplication"
+      }
+    ],
+    "__typename": "SpecializationApplicationConnection"
+  },
+  "operations": {
+    "createTalentAvailabilityRequest": {
+      "callable": "ENABLED",
+      "messages": [],
+      "__typename": "Operation"
+    },
+    "__typename": "TalentOperations",
+    "subscribeToTalentAvailabilityUpdates": {
+      "messages": [],
+      "callable": "ENABLED",
+      "__typename": "Operation"
+    }
+  },
+  "type": "Developer",
+  "allocatedHoursAvailability": "UNAVAILABLE",
+  "allocatedHoursAvailabilityIncludingEndingEngagements": "UNAVAILABLE",
+  "availableHours": 0,
+  "availableHoursIncludingEndingEngagements": 0,
+  "allocatedHours": 40,
+  "allocatedHoursConfirmedAt": "2021-07-12T05:17:31-04:00",
+  "availabilityRequestMetadata": {
+    "lowActivity": false,
+    "pending": 0,
+    "prediction": 0.1134994271816873,
+    "recentConfirmed": 0,
+    "recentRejected": 0,
+    "__typename": "TalentAvailabilityRequestMetadata"
+  },
+  "preliminarySearchSetting": {
+    "enabled": true,
+    "__typename": "TalentPreliminarySearchSetting"
+  },
+  "endingEngagements": {
+    "nodes": [],
+    "__typename": "EndingEngagementConnection"
+  },
+  "__typename": "Talent",
+  "profile": {
+    "id": "VjEtVGFsZW50UHJvZmlsZS0xMTgyNzc0",
+    "yearsOfManagementExperience": 0,
+    "yearsOfEnterpriseExperience": "1",
+    "employments": {
+      "cumulativeReportRange": null,
+      "__typename": "TalentProfileEmploymentConnection"
+    },
+    "customRequirements": {
+      "backgroundCheck": null,
+      "drugTest": null,
+      "timeTrackingTools": null,
+      "__typename": "TalentCustomRequirementFields"
+    },
+    "travelVisas": {
+      "nodes": [],
+      "totalCount": 0,
+      "__typename": "TalentTravelVisaConnection"
+    },
+    "industries": {
+      "nodes": [],
+      "totalCount": 0,
+      "__typename": "IndustryConnection"
+    },
+    "__typename": "TalentProfile"
+  },
+  "feedbackStatistics": {
+    "nodes": [
+      {
+        "answers": {
+          "nodes": [
+            {
+              "label": "Hire again",
+              "score": 100,
+              "__typename": "FeedbackStatisticAnswerEntry"
+            },
+            {
+              "label": "Timeline adherence",
+              "score": 100,
+              "__typename": "FeedbackStatisticAnswerEntry"
+            },
+            {
+              "label": "Communication",
+              "score": 100,
+              "__typename": "FeedbackStatisticAnswerEntry"
+            },
+            {
+              "label": "Quality of work",
+              "score": 100,
+              "__typename": "FeedbackStatisticAnswerEntry"
+            }
+          ],
+          "totalCount": 1,
+          "__typename": "FeedbackStatisticAnswerEntryConnection"
+        },
+        "__typename": "FeedbackStatisticEntry"
+      }
+    ],
+    "__typename": "FeedbackStatisticEntryConnection"
+  },
+  "engagements": {
+    "counters": {
+      "workingNumber": 1,
+      "clientsNumber": 2,
+      "repeatedClientsNumber": 0,
+      "acceptedInterviewsNumber": 2,
+      "approvedTrialsNumber": 2,
+      "interviewsNumber": 2,
+      "successRate": 100,
+      "trialsNumber": 2,
+      "__typename": "TalentEngagementsCounters"
+    },
+    "__typename": "TalentEngagementConnection"
+  },
+  "viewerActiveAvailabilitySubscription": null
+}

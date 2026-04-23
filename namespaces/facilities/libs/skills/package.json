@@ -1,0 +1,25 @@
+{
+  "name": "@staff-portal/skills",
+  "description": "Staff Portal's skill-related commons",
+  "version": "0.0.19",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/graphql": "0.4.0",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StaffOverviewPage when data exist default render 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c2 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    >
+      <div
+        class="PicassoContainer-mediumPadding PicassoContainer-toplargeMargin PicassoContainer-bordered PicassoContainer-rounded"
+        data-testid="StaffOverviewPage"
+      >
+        <div
+          class=""
+          data-testid="EntOverviewBilling"
+        >
+          <div
+            _css="flex-grow:1;"
+            class="EntOverviewBillingHeader___StyledContainer-sc-53rxe1 c1"
+            data-testid="EntOverviewBillingHeader"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2"
+            >
+              Billing Overview
+            </h2>
+            <div
+              class="MuiTabs-root"
+              data-testid="EntOverviewBillingHeaderFilter"
+            >
+              <div
+                class="MuiTabs-scrollable"
+                style="width: 99px; height: 99px; position: absolute; top: -9999px; overflow: scroll;"
+              />
+              <div
+                class="MuiTabs-scroller MuiTabs-scrollable"
+                style="margin-bottom: 0px;"
+              >
+                <div
+                  class="MuiTabs-flexContainer"
+                  role="tablist"
+                >
+                  <button
+                    aria-selected="true"
+                    class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected"
+                    data-testid="tab-my-team"
+                    role="tab"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiTab-wrapper"
+                    >
+                      <div
+                        class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-inherit PicassoTypography-semibold MuiTypography-body1"
+                      >
+                        My Billing
+                      </div>
+                    </span>
+                  </button>
+                </div>
+                <span
+                  class="PrivateTabIndicator-root PrivateTabIndicator-colorSecondary MuiTabs-indicator"
+                  style="left: 0px; width: 0px;"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="EntOverviewBillingInvoicesTable"
+          >
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-title"
+            >
+              Most Recently Disputed Invoices
+            </span>
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-actions"
+            />
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-variant"
+            />
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-subtitle"
+            />
+            <div
+              _css="border-bottom:solid 1px ,#e5e7ea,;"
+              class="EntOverviewEmpty___StyledContainer-yu8lup c2"
+            >
+              <div
+                class=""
+                style="margin-left: 1rem;"
+              >
+                <div
+                  class=""
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+                  >
+                    No data available at the moment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="EntOverviewBillingInvoicesTable"
+          >
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-title"
+            >
+              Longest Overdue Invoices
+            </span>
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-actions"
+            />
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-variant"
+            />
+            <span
+              data-testid="EntOverviewBillingInvoicesTable-subtitle"
+            />
+            <div
+              _css="border-bottom:solid 1px ,#e5e7ea,;"
+              class="EntOverviewEmpty___StyledContainer-yu8lup c2"
+            >
+              <div
+                class=""
+                style="margin-left: 1rem;"
+              >
+                <div
+                  class=""
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+                  >
+                    No data available at the moment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="EntOverviewBillingPurchaseOrdersTable"
+          >
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-title"
+            >
+              Purchase Orders Closest to Expiration
+            </span>
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-actions"
+            />
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-variant"
+            />
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-subtitle"
+            />
+            <div
+              _css="border-bottom:solid 1px ,#e5e7ea,;"
+              class="EntOverviewEmpty___StyledContainer-yu8lup c2"
+            >
+              <div
+                class=""
+                style="margin-left: 1rem;"
+              >
+                <div
+                  class=""
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+                  >
+                    No data available at the moment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="EntOverviewBillingPurchaseOrdersTable"
+          >
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-title"
+            >
+              Purchase Orders Closest to Reaching the Limit
+            </span>
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-actions"
+            />
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-variant"
+            />
+            <span
+              data-testid="EntOverviewBillingPurchaseOrdersTable-subtitle"
+            />
+            <div
+              _css="border-bottom:solid 1px ,#e5e7ea,;"
+              class="EntOverviewEmpty___StyledContainer-yu8lup c2"
+            >
+              <div
+                class=""
+                style="margin-left: 1rem;"
+              >
+                <div
+                  class=""
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+                  >
+                    No data available at the moment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="EntOverviewBillingTimesheetsTable"
+          >
+            <span
+              data-testid="EntOverviewBillingTimesheetsTable-title"
+            >
+              Longest Overdue Timesheets
+            </span>
+            <span
+              data-testid="EntOverviewBillingTimesheetsTable-actions"
+            />
+            <span
+              data-testid="EntOverviewBillingTimesheetsTable-variant"
+            />
+            <span
+              data-testid="EntOverviewBillingTimesheetsTable-subtitle"
+            />
+            <div
+              _css="border-bottom:solid 1px ,#e5e7ea,;"
+              class="EntOverviewEmpty___StyledContainer-yu8lup c2"
+            >
+              <div
+                class=""
+                style="margin-left: 1rem;"
+              >
+                <div
+                  class=""
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <p
+                    class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+                  >
+                    No data available at the moment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StaffOverviewPage when data is null render null 1`] = `
+.c0 {
+  position: relative;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    />
+  </div>
+</div>
+`;
+
+exports[`StaffOverviewPage when data is undefined render undefined 1`] = `
+.c0 {
+  position: relative;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    />
+  </div>
+</div>
+`;

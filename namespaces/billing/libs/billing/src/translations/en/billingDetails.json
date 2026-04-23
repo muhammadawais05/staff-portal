@@ -1,0 +1,353 @@
+{
+  "actions": {
+    "createConsolidationDefault": {
+      "notification": {
+        "success": "The Consolidation Default was successfully created."
+      }
+    },
+    "createJobTemplate": {
+      "notification": {
+        "error": "The client already has a job template.",
+        "success": "The Job Template was successfully created."
+      }
+    },
+    "downloadClientBillingReport": {
+      "label": "Billing Report"
+    },
+    "preferEnterpriseBillingOption": {
+      "notification": {
+        "success": "This payment method has been set as the primary payment method for this account."
+      }
+    },
+    "recordUnappliedCash": {
+      "button": "Record Unapplied Cash",
+      "notification": {
+        "success": "The Unapplied Cash was successfully recorded."
+      }
+    },
+    "removeBillingOption": {
+      "confirmRemove": {
+        "lastPullMethod": "This is the last pull method!",
+        "message": "Are you sure you want to delete this payment method?",
+        "submitText": "Delete Payment Method",
+        "title": "Delete Payment Method"
+      },
+      "notification": {
+        "success": "The Payment Method has been successfully removed."
+      }
+    },
+    "reverifyCreditCardBillingOption": {
+      "label": "Reverify",
+      "notification": {
+        "success": "The Billing Option Verification process was successfully started."
+      }
+    },
+    "showInvoices": {
+      "disabled": {
+        "tooltip": "This company does not have any invoices."
+      },
+      "label": "Show Invoices"
+    },
+    "unsetPreferredBillingOption": {
+      "confirmUnset": {
+        "message": "Do you really want to unset the primary payment method?",
+        "submitText": "Confirm",
+        "title": "Unset the primary payment method"
+      },
+      "notification": {
+        "success": "The primary payment method has been successfully removed."
+      }
+    },
+    "unverifyWireBillingOption": {
+      "label": "Unverify",
+      "tooltip": "Mark option as pending verification"
+    },
+    "updateBillingNotes": {
+      "submit": "Save Note"
+    },
+    "updateJobTemplate": {
+      "notification": {
+        "error": "The requested resource is no longer available",
+        "success": "The Job Template was successfully updated."
+      }
+    },
+    "verifyWireBillingOption": {
+      "label": "Verify",
+      "tooltip": "Confirm verification of this billing option"
+    }
+  },
+  "billingOption": {
+    "fields": {
+      "verification": "Verification status"
+    }
+  },
+  "consolidationDefaults": {
+    "actions": {
+      "create": "Create new CD",
+      "showExpired": "Show Expired/Deleted CD"
+    },
+    "list": {
+      "actions": {
+        "delete": {
+          "content": "Are you sure you want to delete the consolidation default named {{name}}? This action cannot be undone.",
+          "label": "Delete",
+          "notification": "{{name}}  has been successfully deleted.",
+          "title": "Delete Consolidation Default"
+        },
+        "edit": {
+          "label": "Edit",
+          "notification": "{{name}}  has been successfully updated."
+        }
+      },
+      "empty": "Currently, there are no consolidation defaults.",
+      "engagements": {
+        "empty": "Currently, there are no Engagements",
+        "head": {
+          "company": "Company",
+          "consolidationDefault": "CD Name",
+          "job": "Job",
+          "poNumber": "PO Number",
+          "talent": "Talent"
+        },
+        "title": "Engagements"
+      },
+      "head": {
+        "creationDate": "Creation Date",
+        "name": "CD Name",
+        "status": "Status"
+      },
+      "notSelectable": "This engagement already belongs to {0} and cannot be selected.",
+      "notWorking": "This engagement is no longer active.",
+      "selectableEmpty": "This company has no active engagements to select.",
+      "status": {
+        "active": "Active",
+        "deleted": "Deleted",
+        "expired": "Expired"
+      }
+    },
+    "select": {
+      "placeholder": "Select multiple companies",
+      "selectAllLabel": "Select All Companies"
+    },
+    "title": "Consolidation Defaults"
+  },
+  "downloadBillingReport": {
+    "title": "Download Billing Report"
+  },
+  "jobBillingDefaults": {
+    "title": "Job Billing Defaults"
+  },
+  "labels": {
+    "attachTimesheetsToInvoices": "Add timesheets to invoices",
+    "autoAllocateMemos": "Auto allocate memos",
+    "billingAddress": "Billing Address",
+    "billingNotes": "Notes",
+    "billingPhone": "Billing phone",
+    "collectionSpeed": "Collection speed",
+    "investmentGrade": "Investment Grade",
+    "minimumCommitment": "Minimum Commitment",
+    "netTerms": "Net terms",
+    "notifyAboutNewInvoices": "Notify about new invoices"
+  },
+  "modals": {
+    "billingAddressEdit": {
+      "fields": {
+        "additionalInfo": {
+          "label": "Additional info"
+        },
+        "address": {
+          "label": "Address"
+        },
+        "city": {
+          "label": "City"
+        },
+        "country": {
+          "label": "Country"
+        },
+        "name": {
+          "label": "Company name"
+        },
+        "phone": {
+          "label": "Phone"
+        },
+        "state": {
+          "label": "State",
+          "placeholder": "Please select state"
+        },
+        "zip": {
+          "label": "Zip code"
+        }
+      },
+      "notification": {
+        "success": "The Billing Information was successfully updated."
+      },
+      "submit": "Update billing address",
+      "title": "Billing Address for Company {{companyName}}"
+    },
+    "billingOptionUpdate": {
+      "fields": {
+        "bankName": {
+          "label": "Bank name"
+        },
+        "businessName": {
+          "label": "Business name"
+        },
+        "nameOnAccount": {
+          "label": "Name on account"
+        },
+        "username": {
+          "label": "Email"
+        }
+      },
+      "notification": {
+        "success": "The Billing Option was successfully updated."
+      },
+      "title": "Edit billing option"
+    },
+    "billingReportDownload": {
+      "fields": {
+        "endDate": {
+          "label": "End date"
+        },
+        "startDate": {
+          "label": "Start date"
+        }
+      },
+      "notification": {
+        "success": "Your download should begin momentarily. Please do not refresh the page. If for some reason the download doesn't initiate, please click <0>this link</0> to download the document manually."
+      },
+      "title": "Download Billing Report"
+    },
+    "consolidationDefault": {
+      "clientSelector": {
+        "placeholder": "Select Multiple Companies",
+        "selectAll": "Select All Companies"
+      },
+      "fields": {
+        "engagements": {
+          "label": "Engagement",
+          "sortOrder": {
+            "label": "Sort by ascending order",
+            "poNumber": "PO Number",
+            "startDate": "Start Date",
+            "talent": "Talent"
+          }
+        },
+        "name": {
+          "label": "Consolidation Default Name"
+        },
+        "relatedCompanies": {
+          "label": "Related Companies",
+          "selectAll": "Select All Companies"
+        }
+      }
+    },
+    "createConsolidationDefault": {
+      "title": "Create Consolidation Default for {{clientName}}"
+    },
+    "createJobTemplate": {
+      "title": "Create Job Template"
+    },
+    "jobTemplate": {
+      "fields": {
+        "billCycle": {
+          "label": "Invoice Frequency"
+        },
+        "billDay": {
+          "label": "Invoice Day of Week"
+        },
+        "commitment": {
+          "label": "Commitment"
+        }
+      },
+      "validation": {
+        "shouldBeBlank": "Should be blank"
+      },
+      "warning": {
+        "hasAffectedChildren": "These defaults will affect {{affectedChildrenCount}} subsidiary companies.",
+        "hasExcludedChildren": "{{excludedChildrenCount}} subsidiary companies won't be affected by this change: <0></0>.",
+        "hasParentJobTemplate": "<0>{{parentFullName}}</0> already has billing defaults. These changes will override those settings."
+      }
+    },
+    "jobTemplateDelete": {
+      "message": "Are you sure you want to remove this Job Template?",
+      "notification": {
+        "success": "The Job Template was successfully removed."
+      },
+      "title": "Remove Job Template?"
+    },
+    "minimumCommitmentEdit": {
+      "actions": {
+        "edit": "Update minimum commitment"
+      },
+      "fields": {
+        "comment": {
+          "label": "Comment"
+        },
+        "minimumHours": {
+          "hint": "hours per week",
+          "info": "Minimum Commitment is a fee charged to the client when a billing cycle has less than 5 hrs/week logged for an hourly engagement. It’s different from the Estimated Weekly Hours, which is an estimate for the weekly workload.",
+          "label": "Minimum commitment"
+        }
+      },
+      "notification": {
+        "success": "Minimum commitment settings were successfully updated."
+      },
+      "title": "Edit Minimum Commitment for {{fullName}}"
+    },
+    "recordUnappliedCash": {
+      "fields": {
+        "amount": {
+          "label": "Amount"
+        },
+        "comment": {
+          "label": "Notes"
+        },
+        "effectiveDate": {
+          "label": "Received Date"
+        }
+      },
+      "title": "Record Unapplied Cash"
+    },
+    "updateConsolidationDefault": {
+      "title": "Update Consolidation Default for {{clientName}}"
+    },
+    "updateJobTemplate": {
+      "title": "Update Job Template"
+    },
+    "wireVerification": {
+      "fields": {
+        "comment": {
+          "label": {
+            "unverify": "Comment",
+            "verify": "Payment Identifier"
+          },
+          "placeholder": {
+            "unverify": "Put additional details here, this comment is visible to admins only",
+            "verify": "Enter unique identifier and any other comments. This is visible to admins only."
+          }
+        }
+      },
+      "message": "This will mark billing options as pending verification",
+      "notification": {
+        "success": {
+          "unverify": "The Billing Option was successfully unverified.",
+          "verify": "The Billing Option was successfully verified."
+        }
+      },
+      "title": {
+        "unverify": "Unverify Billing Option",
+        "verify": "Verify Billing Option"
+      }
+    }
+  },
+  "title": "Billing Details",
+  "values": {
+    "hoursPerWeek": "{{count}} hour per week",
+    "hoursPerWeek_plural": "{{count}} hours per week",
+    "net": {
+      "empty": "Upon Receipt",
+      "existing": "Net {{terms}}"
+    }
+  }
+}

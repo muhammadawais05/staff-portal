@@ -1,0 +1,4 @@
+export enum JobAction {
+  SEARCH_CANDIDATES = 'SEARCH_CANDIDATES',
+  DELETE = 'DELETE'
+}

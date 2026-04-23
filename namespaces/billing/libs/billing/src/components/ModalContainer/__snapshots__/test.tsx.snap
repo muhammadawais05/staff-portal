@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContainer default render 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="display:flex;flex-direction:column;overflow:auto;"
+      class="ModalContainer___StyledContainer-sc-5d0cbu c0"
+    />
+  </div>
+</div>
+`;

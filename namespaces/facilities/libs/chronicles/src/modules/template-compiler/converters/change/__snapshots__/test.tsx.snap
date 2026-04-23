@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`change payload type should render template with change payload 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    System
+     changed inactive rejection date of 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     
+     from 
+    —
+     to Jul 26, 2019
+    
+  </div>
+</div>
+`;
+
+exports[`change payload type should render template with change payload containing kay as a label 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/sales/859288"
+    >
+      Mackenzie Messenger
+    </a>
+     updated call 
+    counterparty
+     from 
+    —
+     to 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/companies/1242682"
+    >
+      Stamm-Herzog
+    </a>
+    
+  </div>
+</div>
+`;
+
+exports[`change payload type should render template with change payload containing label and name 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+     
+    updated
+     
+    developer
+     
+    Allow anonymous booking
+     from 
+    No
+     to 
+    Yes
+    
+  </div>
+</div>
+`;

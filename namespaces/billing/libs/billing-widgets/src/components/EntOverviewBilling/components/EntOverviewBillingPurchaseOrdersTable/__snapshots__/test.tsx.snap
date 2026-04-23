@@ -1,0 +1,2035 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntOverviewBillingPurchaseOrdersTable With null data 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingPurchaseOrdersTable"
+    >
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-title"
+      >
+        Purchase Orders Closest to Expiration
+      </span>
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingPurchaseOrdersTable With variant \`closestToExpiration\` 1`] = `
+.c7 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c12 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c11 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c10 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c9 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c8 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c6 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c5 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c4 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c3 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c2 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c1 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c0 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingPurchaseOrdersTable"
+    >
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-title"
+      >
+        Purchase Orders Closest to Expiration
+      </span>
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-subtitle"
+      />
+      <table
+        class="MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root PicassoTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+          >
+            <th
+              _css="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell-sc-14npnfa c0"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Company
+              </div>
+            </th>
+            <th
+              _css2="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell2-sc-14npnfa c1 MuiTableCell-alignLeft"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Expiry Date
+              </div>
+            </th>
+            <th
+              _css3="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell3-sc-14npnfa c2"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Number
+              </div>
+            </th>
+            <th
+              _css4="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell4-sc-14npnfa c3 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Total Amount
+              </div>
+            </th>
+            <th
+              _css5="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell5-sc-14npnfa c4 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Invoiced Total
+              </div>
+            </th>
+            <th
+              _css6="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell6-sc-14npnfa c5 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Amount Left
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Weber, Smitham and Lehner
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1111246"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Weber, Smitham and Lehner
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignLeft"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  Dec 31, 2020
+                </p>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    994176585
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/1771"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        994176585
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $35,900.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $11,590.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-yellow MuiTypography-body1"
+                  >
+                    <span
+                      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                    >
+                      $24,310.00
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Gusikowski, Wiza and Murazik
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1645890"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Gusikowski, Wiza and Murazik
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignLeft"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  Dec 31, 2020
+                </p>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    4467
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/1711"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        4467
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $687,530.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $50,200.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-yellow MuiTypography-body1"
+                  >
+                    <span
+                      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                    >
+                      $637,330.00
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Gusikowski, Wiza and Murazik
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1645890"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Gusikowski, Wiza and Murazik
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignLeft"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  Dec 31, 2020
+                </p>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    4425
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/1709"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        4425
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $95,000.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $17,480.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-black MuiTypography-body1"
+                  >
+                    <span
+                      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                    >
+                      $77,520.00
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Schroeder, Turner and Weimann
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/609522"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Schroeder, Turner and Weimann
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignLeft"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  Jul 15, 2020
+                </p>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    994169163
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/1758"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        994169163
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $46,080.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $0.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-black MuiTypography-body1"
+                  >
+                    <span
+                      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                    >
+                      $46,080.00
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Champlin, Schmitt and Rippin
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/731786"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Champlin, Schmitt and Rippin
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignLeft"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  Jun 30, 2020
+                </p>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    994165810
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/1744"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        994165810
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $50,226.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $15,840.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-yellow MuiTypography-body1"
+                  >
+                    <span
+                      class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                    >
+                      $34,386.00
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingPurchaseOrdersTable With variant \`closestToLimit\` 1`] = `
+.c7 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c12 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c11 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c10 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c9 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c8 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c6 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c5 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c4 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c3 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c2 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c1 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.c0 {
+  width: 14.28%;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingPurchaseOrdersTable"
+    >
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-title"
+      >
+        Purchase Orders Closest to Reaching the Limit
+      </span>
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-subtitle"
+      />
+      <table
+        class="MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root PicassoTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+          >
+            <th
+              _css="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell-sc-14npnfa c0"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Company
+              </div>
+            </th>
+            <th
+              _css2="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell2-sc-14npnfa c1 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Amount Left
+              </div>
+            </th>
+            <th
+              _css3="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell3-sc-14npnfa c2"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Number
+              </div>
+            </th>
+            <th
+              _css4="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell4-sc-14npnfa c3 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Total Amount
+              </div>
+            </th>
+            <th
+              _css5="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell5-sc-14npnfa c4 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Invoiced Total
+              </div>
+            </th>
+            <th
+              _css6="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head EntOverviewBillingPurchaseOrdersTable___StyledTableCell6-sc-14npnfa c5 MuiTableCell-alignRight"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Expiry Date
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Weber, Smitham and Lehner
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1111246"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Weber, Smitham and Lehner
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                  >
+                    -$8,640.00
+                  </span>
+                </span>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    993997054
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/415"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        993997054
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $20,160.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $28,800.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                  />
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Beer-Bauch ME
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/731828"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Beer-Bauch ME
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                  >
+                    -$7,072.52
+                  </span>
+                </span>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    993881013
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/285"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        993881013
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $62,400.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $69,472.52
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                  />
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Hahn, Miller and Douglas
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1581333"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Hahn, Miller and Douglas
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                  >
+                    -$7,000.00
+                  </span>
+                </span>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    4150583462
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/1591"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        4150583462
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $70,000.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $77,000.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                  />
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Weber, Smitham and Lehner
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/1111246"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Weber, Smitham and Lehner
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                  >
+                    -$5,760.00
+                  </span>
+                </span>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    993935743
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/343"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        993935743
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $80,640.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $86,400.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                  />
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+            data-testid="EntOverviewBillingPurchaseOrdersTable-row"
+          >
+            <td
+              _css7="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell7-sc-14npnfa c6"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    Schroeder, Turner and Weimann
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/companies/609522"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Schroeder, Turner and Weimann
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css8="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell8-sc-14npnfa c8 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                  >
+                    -$3,600.00
+                  </span>
+                </span>
+              </div>
+            </td>
+            <td
+              _css9="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell9-sc-14npnfa c9"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <div
+                  data-testid="Tooltip"
+                >
+                  <div
+                    data-testid="Tooltip-content"
+                  >
+                    993905059
+                  </div>
+                  <div
+                    data-testid="Tooltip-children"
+                  >
+                    <p
+                      _css="overflow:hidden;text-overflow:ellipsis;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit EntOverviewExternalLink___StyledTypography-sc-12byidp c7 MuiTypography-body1"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                        data-testid="EntOverviewExternalLink-link"
+                        href="http://localhost:3000/platform/staff/purchase_orders/311"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        993905059
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    data-testid="Tooltip-placement"
+                  >
+                    right
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              _css10="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell10-sc-14npnfa c10 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $46,800.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css11="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell11-sc-14npnfa c11 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <span
+                  class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+                >
+                  $50,400.00
+                </span>
+              </div>
+            </td>
+            <td
+              _css12="width:14.28%;max-width:0;white-space:nowrap;"
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body EntOverviewBillingPurchaseOrdersTable___StyledTableCell12-sc-14npnfa c12 MuiTableCell-alignRight"
+              data-testid="EntOverviewBillingPurchaseOrdersTable-cell"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+              >
+                <p
+                  class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                >
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-red MuiTypography-body1"
+                  />
+                </p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingPurchaseOrdersTable Without rows 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingPurchaseOrdersTable"
+    >
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-title"
+      >
+        Purchase Orders Closest to Expiration
+      </span>
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingPurchaseOrdersTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

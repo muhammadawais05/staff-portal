@@ -1,0 +1,47 @@
+{
+  "header": {
+    "actions": {
+      "payMultiple": "Pay Multiple"
+    },
+    "title": "Payment Groups"
+  },
+  "modals": {
+    "payPaymentGroups": {
+      "defaultWarning": "Only payment groups that have an outstanding status and a preferred payment method are displayed.",
+      "fields": {
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Please leave a comment"
+        }
+      },
+      "info": "Payment groups selected: {{selectedCount}} of {{totalCount}}. Total amount: {{totalAmount, formatAsUSD}}.",
+      "noPaymentGroupsWithPreferredPaymentMethodWarning": "No more payment groups matching search criteria with a preferred payment method could be found. Note that external screeners must have an associated talent role with a preferred payment method.",
+      "notification": {
+        "success": "{{paidCount}} payment groups successfully paid"
+      },
+      "submit": "Pay Selected",
+      "title": "Pay Multiple Payment Groups"
+    }
+  },
+  "table": {
+    "empty": {
+      "message": "There are no payment groups for this search criteria"
+    },
+    "head": {
+      "actions": "Actions",
+      "amount": "Amount",
+      "date": "Date issued",
+      "id": "ID",
+      "payee": "Payee",
+      "status": "Status"
+    },
+    "item": {
+      "status": {
+        "outstanding": "Outstanding",
+        "paid": "Paid",
+        "pendingCancel": "Pending Cancel",
+        "pendingPayment": "Pending Payment"
+      }
+    }
+  }
+}

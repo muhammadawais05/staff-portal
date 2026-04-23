@@ -1,0 +1,40 @@
+{
+  "name": "@staff-portal/communication",
+  "description": "Staff Portal's communication-related modals",
+  "version": "0.0.7",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test --config ../../../../config/jest-with-global-mocks.specs.js",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/current-user": "0.0.50",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/forms": "0.2.30",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/modals-service": "0.60.31",
+    "@staff-portal/mutation-result-handlers": "0.2.18",
+    "@staff-portal/navigation": "0.151.0",
+    "@staff-portal/routes": "0.14.4",
+    "@staff-portal/string": "0.3.23",
+    "@staff-portal/ui": "0.10.13",
+    "@staff-portal/utils": "0.0.2",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-forms": "^44.0.0",
+    "@toptal/staff-portal-message-bus": "1.0.22",
+    "react": "16.14.0",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "sideEffects": false
+}

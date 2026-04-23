@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PurchaseOrderAssignment default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TypographyOverflow"
+    >
+      <span
+        data-testid="LinkWrapper"
+      >
+        {"children":"—"}
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with NO purchase order - EDITABLE 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+          data-testid="componentTogglerWithForm"
+        >
+          <div
+            data-testid="TypographyOverflow"
+          >
+            <span
+              data-testid="LinkWrapper"
+            >
+              {"children":"—"}
+            </span>
+          </div>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="purchaseOrderEditorToggle"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgPencil16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.5.793 15.207 4.5 4.707 15H1v-3.707L8.793 3.5V3.5l.707-.707 2-2Zm-2 3.415-7.5 7.5V14h2.293l7.499-7.5L9.5 4.208Zm2-2L10.207 3.5l2.292 2.293L13.793 4.5 11.5 2.207Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with a custom LABEL - EDITABLE 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+          data-testid="componentTogglerWithForm"
+        >
+          <div
+            data-testid="TypographyOverflow"
+          >
+            <span
+              data-testid="LinkWrapper"
+            >
+              {"children":"test label"}
+            </span>
+          </div>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="purchaseOrderEditorToggle"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgPencil16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.5.793 15.207 4.5 4.707 15H1v-3.707L8.793 3.5V3.5l.707-.707 2-2Zm-2 3.415-7.5 7.5V14h2.293l7.499-7.5L9.5 4.208Zm2-2L10.207 3.5l2.292 2.293L13.793 4.5 11.5 2.207Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with a custom LABEL and a purchase order - EDITABLE 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+          data-testid="componentTogglerWithForm"
+        >
+          <div
+            data-testid="TypographyOverflow"
+          >
+            <span
+              data-testid="LinkWrapper"
+            >
+              {"children":"test label"}
+            </span>
+          </div>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="purchaseOrderEditorToggle"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgPencil16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.5.793 15.207 4.5 4.707 15H1v-3.707L8.793 3.5V3.5l.707-.707 2-2Zm-2 3.415-7.5 7.5V14h2.293l7.499-7.5L9.5 4.208Zm2-2L10.207 3.5l2.292 2.293L13.793 4.5 11.5 2.207Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with a custom LABEL and a selected purchase order - EDITABLE, showing EDITOR 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+          data-testid="componentTogglerWithForm"
+        >
+          <div
+            data-testid="purchaseOrderEditorForm"
+          >
+            {"purchaseOrders":[{"text":"Not Selected","value":""}],"submitting":false}
+          </div>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="purchaseOrderEditorToggle"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgPencil16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.5.793 15.207 4.5 4.707 15H1v-3.707L8.793 3.5V3.5l.707-.707 2-2Zm-2 3.415-7.5 7.5V14h2.293l7.499-7.5L9.5 4.208Zm2-2L10.207 3.5l2.292 2.293L13.793 4.5 11.5 2.207Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with a custom LABEL and a selected purchase order without ID 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TypographyOverflow"
+    >
+      <span
+        data-testid="LinkWrapper"
+      >
+        {"children":"test label"}
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with a custom LABEL, purchase orders and a selected purchase order 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TypographyOverflow"
+    >
+      <span
+        data-testid="LinkWrapper"
+      >
+        {"children":"test label"}
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with a purchase order - EDITABLE 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+    >
+      <form>
+        <div
+          class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+          data-testid="componentTogglerWithForm"
+        >
+          <div
+            data-testid="TypographyOverflow"
+          >
+            <span
+              data-testid="LinkWrapper"
+            >
+              {"children":"testNumber"}
+            </span>
+          </div>
+          <div
+            class=""
+            style="margin-left: 0.5rem;"
+          >
+            <button
+              class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+              data-component-type="button"
+              data-testid="purchaseOrderEditorToggle"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+              >
+                <svg
+                  class="PicassoSvgPencil16-root PicassoButton-icon"
+                  style="min-width: 16px; min-height: 16px;"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.5.793 15.207 4.5 4.707 15H1v-3.707L8.793 3.5V3.5l.707-.707 2-2Zm-2 3.415-7.5 7.5V14h2.293l7.499-7.5L9.5 4.208Zm2-2L10.207 3.5l2.292 2.293L13.793 4.5 11.5 2.207Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with a purchase order 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TypographyOverflow"
+    >
+      <span
+        data-testid="LinkWrapper"
+      >
+        {"children":"testNumber"}
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PurchaseOrderAssignment with purchase orders and a selected purchase order 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TypographyOverflow"
+    >
+      <span
+        data-testid="LinkWrapper"
+      >
+        {"children":"testNumber"}
+      </span>
+    </div>
+  </div>
+</div>
+`;

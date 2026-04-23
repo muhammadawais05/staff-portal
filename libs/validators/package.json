@@ -1,0 +1,18 @@
+{
+  "name": "@staff-portal/validators",
+  "description": "Staff Portal's validators library",
+  "version": "0.0.7",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/config": "0.137.7",
+    "@toptal/picasso-forms": "^44.0.0"
+  },
+  "sideEffects": false
+}

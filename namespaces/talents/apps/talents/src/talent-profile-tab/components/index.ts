@@ -1,0 +1,1 @@
+export { TalentProfileTab } from './TalentProfileTab'

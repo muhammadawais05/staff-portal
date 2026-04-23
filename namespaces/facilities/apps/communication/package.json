@@ -1,0 +1,14 @@
+{
+  "name": "@staff-portal/communication-app",
+  "description": "Staff Portal's communication-related pages",
+  "version": "0.0.28",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "storybook": "kurama storybook",
+    "typecheck": "kurama typecheck"
+  },
+  "sideEffects": false
+}

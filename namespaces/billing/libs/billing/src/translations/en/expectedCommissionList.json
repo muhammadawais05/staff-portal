@@ -1,0 +1,39 @@
+{
+  "filters": {
+    "fields": {
+      "checkboxes": {
+        "kind": {
+          "companyClaimingCommission": "Company claiming commission",
+          "enterpriseClientPartnerCommission": "Enterprise client partner commission",
+          "enterpriseCompanyClaimingCommission": "Enterprise company claiming commission",
+          "jobClaimingCommission": "Job claiming commission",
+          "projectSalesCommission": "Project sales commission",
+          "referredCommission": "Referred commission",
+          "roleStepCommission": "Role step commission",
+          "salesAnalysisCommission": "Sales analysis commission",
+          "salesOwnerCommission": "Sales owner commission",
+          "sourcingCommission": "Sourcing commission",
+          "topSkillBonusReferredCommission": "Top skill bonus referred commission",
+          "topSkillBonusTalentSourcingCommission": "Top skill bonus talent sourcing commission"
+        }
+      },
+      "common": {
+        "kinds": "Kinds"
+      }
+    }
+  },
+  "header": {
+    "title": "Expected commissions"
+  },
+  "table": {
+    "empty": {
+      "message": "No commissions found for the given search criteria"
+    },
+    "head": {
+      "amount": "Amount",
+      "description": "Description",
+      "expectedDate": "Expected Date",
+      "payee": "Payee"
+    }
+  }
+}

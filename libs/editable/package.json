@@ -1,0 +1,31 @@
+{
+  "name": "@staff-portal/editable",
+  "description": "Staff Portal editable",
+  "version": "0.2.30",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/date-time-utils": "0.5.24",
+    "@staff-portal/forms": "0.2.30",
+    "@staff-portal/ui": "0.10.13",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-forms": "^44.0.0",
+    "react": "16.14.0",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "private": true,
+  "sideEffects": false
+}

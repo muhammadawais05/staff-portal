@@ -1,0 +1,9 @@
+# This file can be used to provide client schema extensions.
+# The definitions added below will be merged with the Lens schema.
+#
+# To extend existing enum with a value that will be soon added to the remote schema,
+# add the enum extension:
+#
+# extend enum SomeExistingEnum {
+#   NEW_VALUE
+# }

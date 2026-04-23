@@ -1,0 +1,33 @@
+{
+  "name": "@staff-portal/error-handling",
+  "description": "Staff Portal error handling",
+  "version": "0.1.24",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/monitoring-service": "0.1.7",
+    "@staff-portal/navigation": "0.151.0",
+    "@staff-portal/routes": "0.14.4",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-provider": "^1.1.2",
+    "graphql": "^15.5.0",
+    "history": "4.10.1",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "private": true,
+  "sideEffects": false
+}

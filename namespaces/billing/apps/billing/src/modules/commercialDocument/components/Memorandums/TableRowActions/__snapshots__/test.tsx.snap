@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableRowActions renders dropdown menu when at least one menu item is present 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TableRowActions"
+    >
+      <span
+        data-testid="TableRowActions-options"
+      />
+      <span
+        data-testid="TableRowActions-content"
+      >
+        <div
+          data-testid="OperationFetcherForActions"
+        >
+          {"actionItems":["downloadHtmlUrl","downloadPdfUrl","revertInvoicePrepayments","revertCommercialDocumentMemorandum"],"id":"VjEtTWVtb3JhbmR1bS0xNjUzMjY"}
+        </div>
+      </span>
+      <span
+        data-testid="TableRowActions-children"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+          data-component-type="button"
+          data-testid="TableRowActions-button"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            More
+            <span
+              data-testid="dropdown-arrow"
+            />
+          </span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+`;

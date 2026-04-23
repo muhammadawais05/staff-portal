@@ -1,0 +1,61 @@
+import { Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { ColoredStatus } from './ColoredStatus'
+
+# ColoredStatus
+
+## Overview
+
+Use `ColoredStatus` to show a status text with different color options.
+
+<Canvas>
+  <Story id='ui-coloredstatus--default' />
+</Canvas>
+
+## Props
+
+<ArgsTable of={ColoredStatus} />
+
+## Usage
+
+Commonly used to show a text with different color types based on the status
+
+## Variants
+
+### Typography Colors
+
+<Canvas>
+  <Story id='ui-coloredstatus--color' />
+</Canvas>
+
+### Typography Weight
+
+The `weight` prop changes the font weight.
+
+<Canvas>
+  <Story id='ui-coloredstatus--weight' />
+</Canvas>
+
+### Typography Size
+
+The `size` prop changes the text size.
+
+<Canvas>
+  <Story id='ui-coloredstatus--size' />
+</Canvas>
+
+### Tooltip Content
+
+You can use the `tooltipContent` prop to add an icon with a tooltip:
+
+<Canvas>
+  <Story id='ui-coloredstatus--tooltip-content' />
+</Canvas>
+
+### Tooltip Icon
+
+Use the `tooltipIcon` prop to change the default tooltip icon:
+
+<Canvas>
+  <Story id='ui-coloredstatus--tooltip-icon' />
+</Canvas>

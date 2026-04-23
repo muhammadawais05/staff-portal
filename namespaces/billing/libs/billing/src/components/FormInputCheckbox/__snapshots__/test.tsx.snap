@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInputCheckbox default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoFormField-root"
+      data-field-has-error="false"
+      data-testid="undefined-field"
+    >
+      <span
+        class="PicassoContainer-flex PicassoContainer-inline PicassoCheckbox-checkboxWrapper"
+      >
+        <span
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root MuiCheckbox-root PicassoCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <input
+              class="PrivateSwitchBase-input"
+              data-indeterminate="false"
+              name="foo"
+              type="checkbox"
+              value=""
+            />
+            <div
+              class="PicassoCheckbox-uncheckedIcon"
+            />
+          </span>
+        </span>
+      </span>
+      
+    </div>
+  </div>
+</div>
+`;

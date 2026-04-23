@@ -1,0 +1,14 @@
+{
+  "table": {
+    "empty": {
+      "message": "No jobs have been assigned to this purchase order yet"
+    },
+    "head": {
+      "engagement": "Engagement ID",
+      "id": "Job ID",
+      "status": "Status",
+      "title": "Title"
+    }
+  },
+  "title": "Jobs"
+}

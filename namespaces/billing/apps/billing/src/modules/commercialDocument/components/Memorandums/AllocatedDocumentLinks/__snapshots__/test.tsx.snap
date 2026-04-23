@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllocatedDocumentLinks when memorandum is allocated to another invoice only renders link to invoice without "current" annotation 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoContainer-flex PicassoContainer-column"
+      data-testid="AllocatedDocumentLinks"
+    >
+      <div
+        class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+      >
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+          data-testid="AllocatedDocumentLinks-link"
+          href="http://localhost:3000/platform/staff/invoices/414280"
+          style="line-height: 1.5em;"
+        >
+          #414280
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AllocatedDocumentLinks when memorandum is allocated to multiple invoices renders list of links to all invoices 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoContainer-flex PicassoContainer-column"
+      data-testid="AllocatedDocumentLinks"
+    >
+      <div
+        class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+      >
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+          data-testid="AllocatedDocumentLinks-link"
+          href="http://localhost:3000/platform/staff/invoices/414280"
+          style="line-height: 1.5em;"
+        >
+          #414280
+        </a>
+      </div>
+      <div
+        class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+      >
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+          data-testid="AllocatedDocumentLinks-link"
+          href="http://localhost:3000/platform/staff/invoices/377249"
+          style="line-height: 1.5em;"
+        >
+          #377249
+        </a>
+      </div>
+      <div
+        class="PicassoContainer-centerAlignItems PicassoContainer-flex"
+      >
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+          data-testid="AllocatedDocumentLinks-link"
+          href="http://localhost:3000/platform/staff/invoices/315924"
+          style="line-height: 1.5em;"
+        >
+          #315924
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AllocatedDocumentLinks when memorandum is not allocated renders only a "long dash" character 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="PicassoContainer-flex PicassoContainer-column"
+      data-testid="AllocatedDocumentLinks"
+    >
+      —
+    </div>
+  </div>
+</div>
+`;

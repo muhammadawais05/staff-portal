@@ -1,0 +1,19 @@
+# This workflow runs features for Staff Portal project
+
+name: Trigger features on merge to master
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency: features-on-merge-to-master
+
+jobs:
+  features:
+    name: Trigger features for Staff Portal
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger "staff-portal-master-features-distrib" on "jenkins-features.toptal.net"
+        run: curl -X POST "https://toptal-bot:${{ secrets.TOPTAL_BOT_JENKINS_FEATURES_TOKEN }}@jenkins-features.toptal.net/job/staff-portal/job/staff-portal-master-features-distrib//buildWithParameters"

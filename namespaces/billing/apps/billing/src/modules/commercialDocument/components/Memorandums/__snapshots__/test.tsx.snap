@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Memorandums when memorandums are not empty default render 1`] = `
+.c0 {
+  position: relative;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    >
+      <div
+        data-testid="MemorandumsTable"
+      >
+        {"isAllocated":true,"nodeType":"invoice","commercialDocumentId":"VjEtSW52b2ljZS0zNzcyNDk","memorandums":[]}
+      </div>
+      <div
+        data-testid="MemorandumsTable"
+      >
+        {"nodeType":"invoice","commercialDocumentId":"VjEtSW52b2ljZS0zNzcyNDk","memorandums":[]}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Memorandums when memorandums are undefined default render 1`] = `
+.c0 {
+  position: relative;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    >
+      <div
+        data-testid="MemorandumsTable"
+      >
+        {"isAllocated":true,"nodeType":"invoice","commercialDocumentId":"VjEtSW52b2ljZS0zNzcyNDk","memorandums":[]}
+      </div>
+      <div
+        data-testid="MemorandumsTable"
+      >
+        {"nodeType":"invoice","commercialDocumentId":"VjEtSW52b2ljZS0zNzcyNDk","memorandums":[]}
+      </div>
+    </div>
+  </div>
+</div>
+`;

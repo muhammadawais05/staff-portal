@@ -1,0 +1,140 @@
+{
+  "actions": {
+    "cancel": "Cancel",
+    "claimRefund": "Refund",
+    "markFailed": "Failed",
+    "pay": "Paid",
+    "rollback": "Revert",
+    "postpone": "Postpone"
+  },
+  "cancelForm": {
+    "actions": {
+      "submit": "Cancel Payment"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      }
+    },
+    "intro": "Are you sure you want to cancel payment?",
+    "notification": {
+      "success": "The Payment was successfully cancelled."
+    },
+    "title": "Cancel Payment"
+  },
+  "rollbackForm": {
+    "actions": {
+      "submit": "Revert Payment"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      }
+    },
+    "intro": "You are about to revert a payment in the amount of {0}. Would you like to proceed?",
+    "notification": {
+      "success": "The Payment was successfully reverted."
+    },
+    "title": "Revert Payment"
+  },
+  "claimRefundForm": {
+    "actions": {
+      "submit": "Confirm Refund"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment"
+      },
+      "refundAmount": {
+        "label": "Refund amount"
+      }
+    },
+    "intro": "Are you sure you want to refund this transaction?",
+    "notification": {
+      "success": "The Payment Refund was successfully initiated."
+    },
+    "title": "Confirm Refund"
+  },
+  "empty": "There are no payments yet.",
+  "markFailedForm": {
+    "actions": {
+      "submit": "Mark Failed"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      }
+    },
+    "intro": "Are you sure you want to mark current transaction failed?",
+    "notification": {
+      "success": "The Payment was successfully marked 'failed'."
+    },
+    "title": "Mark Payment Failed"
+  },
+  "payForm": {
+    "actions": {
+      "submit": "Mark Paid"
+    },
+    "fields": {
+      "amount": {
+        "label": "Amount"
+      },
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      },
+      "effectiveDate": {
+        "errorBeforeTransferCreated": "Cannot be before the date of transfer creation",
+        "errorInTheFuture": "Cannot be in the future",
+        "label": "Date received"
+      }
+    },
+    "intro": "Are you sure you want to mark current transaction paid?",
+    "notification": {
+      "success": "The Payment was successfully marked 'paid'."
+    },
+    "title": "Mark Payment Paid"
+  },
+  "postponeForm": {
+    "actions": {
+      "submit": "Postpone"
+    },
+    "fields": {
+      "comment": {
+        "label": "Comment",
+        "placeholder": "Please specify a reason."
+      },
+      "date": {
+        "label": "Expected clearance date"
+      }
+    },
+    "intro": "Are you sure you want to postpone payment?",
+    "notification": {
+      "success": "The Payment was successfully postponed."
+    },
+    "title": "Postpone Payment"
+  },
+  "status": {
+    "CANCELLED": "Cancelled",
+    "FAILED": "Failed",
+    "FAILED_REFUND": "Failed refund",
+    "PENDING": "Pending",
+    "PENDING_REFUND": "Pend. refund",
+    "REFUNDED": "Refunded",
+    "REVERTED": "Reverted",
+    "SUCCEEDED": "Paid",
+    "none": "—"
+  },
+  "table": {
+    "amount": "Amount",
+    "collectionFees": "+ {{amount}} fees",
+    "date": "Date",
+    "details": "Details",
+    "paymentMethod": "Payment method",
+    "status": "Status"
+  },
+  "title": "Payments"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@staff-portal/visualize-folder-dependencies",
+  "description": "Helps to understand what needs to be done before converting folder into a package",
+  "version": "1.0.0",
+  "author": "Toptal",
+  "license": "ISC",
+  "scripts": {
+    "lint": "exit 0"
+  },
+  "dependencies": {
+    "dependency-cruiser": "^11.0.0"
+  }
+}

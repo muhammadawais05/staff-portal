@@ -1,0 +1,86 @@
+{
+  "dashboard": {
+    "action": "See Payments",
+    "data": "Recent Earnings",
+    "empty": "As soon as your referrals are approved and actively working, you'll start receiving commissions from their payments.",
+    "subtitle": "Total Earnings",
+    "title": "Commissions"
+  },
+  "modals": {
+    "changeRoleReferrer": {
+      "form": {
+        "actions": {
+          "submit": "Reassign Referrer"
+        },
+        "fields": {
+          "comment": {
+            "label": "Comment"
+          },
+          "notice": "For referrals that have fixed sourcing commissions. payment will be sent immediately",
+          "referrerId": {
+            "error": "Please provide existing Payee as the referrer.",
+            "label": "Referrer"
+          }
+        }
+      },
+      "notification": {
+        "success": "The referrer has been successfully changed."
+      },
+      "title": "Change Referrer"
+    },
+    "clientBusinessTypeUpdate": {
+      "form": {
+        "actions": {
+          "submit": "Change Business Type"
+        },
+        "fields": {
+          "businessType": {
+            "label": "Business type"
+          }
+        }
+      },
+      "message": "Selected claimer does not match business type of company. Please update business type.",
+      "notification": {
+        "success": "The Business Type was successfully changed."
+      },
+      "title": "Change business type"
+    },
+    "clientClaimerUpdate": {
+      "form": {
+        "actions": {
+          "submit": "Change Claimer"
+        },
+        "fields": {
+          "claimerId": {
+            "label": "Claimer"
+          },
+          "comment": {
+            "label": "Comment"
+          }
+        }
+      },
+      "notification": {
+        "success": "The Claimer was successfully changed."
+      },
+      "title": "Change Claimer"
+    }
+  },
+  "widget": {
+    "claimer": {
+      "label": "Claimer"
+    },
+    "commissionReceiver": {
+      "label": "Commission Receiver"
+    },
+    "referrer": {
+      "label": {
+        "withCommission": {
+          "amount": "Referrer ({{commission, formatAsUSD}})",
+          "rate": "Referrer ({{ratePercent, formatAsPercentageWithSingleDecimal}})"
+        },
+        "withoutCommission": "Referrer"
+      }
+    },
+    "title": "Commissions (out of {{pot, formatAsPercentageWithSingleDecimal}} pot)"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@staff-portal/query-params-state",
+  "description": "Staff Portal's Query Params State",
+  "version": "0.1.7",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/navigation": "0.151.0",
+    "deep-equal": "^2.0.3",
+    "react": "16.14.0",
+    "use-debounce": "^7.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.6",
+    "@toptal/picasso": "^25.0.0",
+    "history": "4.10.1"
+  },
+  "sideEffects": false
+}

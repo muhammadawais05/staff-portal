@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+      data-testid="ModalFormCommissionsWarning"
+      style="margin-top: 1rem;"
+    >
+      <div
+        class="PicassoContainer-redVariant PicassoContainer-mediumPadding PicassoContainer-rounded PicassoHelpbox-root"
+      >
+        <div
+          class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-black MuiTypography-body1"
+          data-testid="ModalFormCommissionsWarning-affects-commissions-warning"
+        >
+          Warning: performing this action will prevent the memo from impacting commission calculations.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

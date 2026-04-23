@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#renderEngagementLinkOrEmpty when engagement exists renders a link to engagement 1`] = `
+<LinkWrapper
+  href="https://staging.toptal.net/platform/staff/engagements/235107"
+>
+  #171608
+</LinkWrapper>
+`;

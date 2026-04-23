@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceUpdatePurchaseOrder Displays a warning when overbilling 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="PurchaseOrderAssignment"
+    >
+      {"label":"","purchaseOrder":{},"isDisabled":false}
+    </div>
+    <p
+      class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-red MuiTypography-body1"
+      data-testid="overbilling-warning"
+    >
+      Warning: This invoice exceeds the balance remaining on PO #PO-1724 by $9,950.00
+    </p>
+  </div>
+</div>
+`;

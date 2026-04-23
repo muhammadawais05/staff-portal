@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:4016",
+  "browser": "electron",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 20000,
+  "pageLoadTimeout": 100000,
+  "video": false,
+  "watchForFileChanges": false,
+  "scrollBehavior": "center",
+  "retries": {
+    "runMode": 1
+  }
+}

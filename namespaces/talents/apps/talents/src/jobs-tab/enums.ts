@@ -1,0 +1,5 @@
+export enum JobsFilterType {
+  WORKING = 'WORKING',
+  IN_EVALUATION = 'IN_EVALUATION',
+  TERMINAL = 'TERMINAL'
+}

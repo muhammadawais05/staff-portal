@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommitmentChangeModalFormTable default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <form
+      data-testid="CommitmentChangeModalForm"
+    >
+      <div
+        class="PicassoModalTitle-root"
+        data-testid="CommitmentChangeModalForm-title"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h2"
+        >
+          Change Commitment
+        </h2>
+      </div>
+      <div
+        class="PicassoModalContent-wrapper"
+      >
+        <div
+          class="PicassoModalContent-modalContent"
+        >
+          <h3
+            class="MuiTypography-root PicassoTypography-headingMedium MuiTypography-h3"
+            data-testid="CommitmentChangeModalForm-job-title"
+          >
+            Facemoji Keyboard Designer
+          </h3>
+          <div
+            class=""
+            style="margin-top: 2rem; margin-bottom: 2rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyMedium MuiTypography-body1"
+              data-testid="CommitmentChangeModalForm-note"
+            >
+              Are you sure you want to change commitment for this engagement?
+              <br />
+              Changes will be applied starting from the change date.
+            </p>
+          </div>
+          <div
+            class=""
+            style="margin-top: 2rem; margin-bottom: 2rem;"
+          >
+            <div
+              class="PicassoContainer-redVariant PicassoContainer-mediumPadding PicassoContainer-rounded PicassoHelpbox-root"
+            >
+              <div
+                class="PicassoContainer-bottomsmallMargin"
+              >
+                <h4
+                  class="MuiTypography-root MuiTypography-h4"
+                >
+                  Warning
+                </h4>
+              </div>
+              <div
+                class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-black MuiTypography-body1"
+              >
+                All related invoices, payments, and commissions will be sent to the accounting team for review and updated accordingly.
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="FormInputSelect"
+          />
+          <div
+            data-testid="FormInputDatePicker"
+          >
+            {"input":{"name":"changeDate","value":"2020-04-04"},"meta":{"active":false,"data":{},"dirty":false,"dirtySinceLastSubmit":false,"initial":"2020-04-04","invalid":false,"modified":false,"modifiedSinceLastSubmit":false,"pristine":true,"submitFailed":false,"submitSucceeded":false,"submitting":false,"touched":false,"valid":true,"validating":false,"visited":false},"inputProps":{},"label":"Change date","required":true,"testId":"changeDate"}
+          </div>
+          <div
+            data-testid="FormInputSelect"
+          />
+          <div
+            class="PicassoFormField-root"
+            data-field-has-error="false"
+            data-testid="markup-field"
+          >
+            <label
+              class="PicassoFormLabel-root"
+              data-testid="markup-label"
+              for="markup"
+            >
+              <span
+                class="PicassoFormLabel-medium"
+              >
+                <span
+                  class="PicassoFormLabel-asterisk"
+                >
+                  *
+                </span>
+                Markup
+              </span>
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root PicassoOutlinedInput-root PicassoInput-root PicassoOutlinedInput-rootFull PicassoOutlinedInput-rootMedium Mui-disabled Mui-disabled MuiInputBase-fullWidth MuiInputBase-adornedStart MuiOutlinedInput-adornedStart MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
+            >
+              <div
+                class="MuiInputAdornment-root PicassoInputAdornment-root PicassoInputAdornment-rootDisabled MuiInputAdornment-disablePointerEvents MuiInputAdornment-positionStart"
+              >
+                <span
+                  class="PicassoInput-icon"
+                  role="presentation"
+                >
+                  $
+                </span>
+              </div>
+              <input
+                aria-invalid="false"
+                autocomplete="none"
+                class="MuiInputBase-input MuiOutlinedInput-input PicassoOutlinedInput-input PicassoOutlinedInput-inputMedium Mui-disabled Mui-disabled MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
+                data-testid="markup"
+                disabled=""
+                id="markup"
+                name="markup"
+                type="number"
+                value="10"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root MuiOutlinedInput-notchedOutline PicassoOutlinedInput-notchedOutline"
+                style="padding-left: 8px;"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legend"
+                  style="width: 0.01px;"
+                >
+                  <span>
+                    ​
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            
+          </div>
+          <div
+            data-testid="CommitmentChangeModalFormTable"
+          >
+            {"rateMethodSelected":"default"}
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="InvoiceModalVariations"
+      >
+        <button
+          class="MuiButtonBase-root PicassoButton-medium PicassoButton-positive PicassoButton-root"
+          data-component-type="button"
+          data-testid="submit"
+          tabindex="0"
+          type="submit"
+        >
+          <span
+            class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+          >
+            Change Commitment
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

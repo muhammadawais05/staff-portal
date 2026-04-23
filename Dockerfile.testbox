@@ -1,0 +1,130 @@
+# Multi-stage build, stage 0, pull GQL schemas from production bucket
+FROM google/cloud-sdk:alpine as gql-schemas
+
+WORKDIR /app
+COPY . .
+
+RUN --mount=type=secret,id=gcloud,dst=/root/gcloud /app/.testbox/pull_gql_schemas.sh
+
+# Multi-stage build, stage 1, enable layer caching for node_modules
+FROM node:14-alpine as packages
+
+WORKDIR /app
+RUN chown -R node /app
+
+USER node
+
+COPY --chown=node:node package.json yarn.lock lerna.json ./
+
+# Copy all packages
+COPY --chown=node:node hosts hosts
+COPY --chown=node:node namespaces namespaces
+COPY --chown=node:node libs libs
+COPY --chown=node:node monorepo-helpers monorepo-helpers
+
+# Find and remove non-package.json files
+RUN \
+  find hosts \! -name "package.json" -mindepth 2 -maxdepth 2 -print | xargs rm -rf ; \
+  find namespaces \! -name "package.json" -mindepth 4 -maxdepth 4 -print | xargs rm -rf ; \
+  find libs \! -name "package.json" -mindepth 2 -maxdepth 2 -print | xargs rm -rf
+
+# Copy patches
+COPY --chown=node:node patches patches
+
+# Multi-stage build, stage 2, build an actual image
+FROM node:14-alpine as builder
+
+ARG NPM_TOKEN
+ENV NPM_TOKEN ${NPM_TOKEN}
+
+ENV APK_BRANCH=3.10
+
+ENV DAVINCI_CUCUMBER_MODE true
+ENV DAVINCI_ENV development
+
+RUN printf "http://nl.alpinelinux.org/alpine/v$APK_BRANCH/%s\n" community main > /etc/apk/repositories && \
+  apk add --no-cache \
+  harfbuzz \
+  nss \
+  git \
+  curl \
+  jq \
+  chromium \
+  openssh-client \
+  bash \
+  sed \
+  shadow
+
+# Change default 'node' user id to match jenkins CI user id
+# so when we will be running container from CI it would have
+# all necessary rights for npm/yarn publish
+RUN groupmod -g 469 node && usermod -u 469 -g 469 node
+
+WORKDIR /app
+RUN chown -R node /app
+
+USER node
+
+# Copy files from the first build stage:
+# here we copy only package.json, yarn.lock, lerna.json and patch files
+# (there are no other files in `/app` at this point)
+# https://docs.docker.com/develop/develop-images/multistage-build/
+COPY --chown=node:node --from=packages /app .
+
+# Add github.com to known ssh hosts
+RUN mkdir ~/.ssh
+RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+# Needs to be updated for publishing package to npm
+RUN printf '//registry.npmjs.org/:_authToken=${NPM_TOKEN}\nalways-auth=true\n' > .npmrc
+
+ENV PACT_SKIP_BINARY_INSTALL true
+RUN --mount=type=cache,sharing=locked,mode=0777,id=yarn-sp,uid=469,gid=469,target=/var/cache/buildkit/yarn-staff-portal \
+  YARN_CACHE_FOLDER=/var/cache/buildkit/yarn-staff-portal yarn install --frozen-lockfile --network-timeout 120000
+
+COPY --chown=node:node --from=gql-schemas /tmp-graphql ./tmp-graphql/
+COPY --chown=node:node . /app
+
+RUN export NODE_OPTIONS=--max_old_space_size=4096 && \
+  yarn generate:types:from-local-schema && \
+  yarn build:testbox
+
+# Multi-stage build, stage 3: copy artifacts from builder to nginx for static serving
+FROM nginx:alpine as release
+
+COPY --from=builder /app/.testbox /.testbox
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/node_modules/@toptal/davinci/docker/nginx-vhost.conf /etc/nginx/conf.d/default.conf
+
+# Copy the entrypoint to prepare env variables
+COPY --from=builder /app/node_modules/@toptal/davinci-ci/src/configs/docker/env-runtime.entrypoint.sh /usr/local/bin/env-runtime.entrypoint.sh
+RUN chmod +x /usr/local/bin/env-runtime.entrypoint.sh
+
+# version is used in build process, so the value won't be available here otherwise
+ARG VERSION
+
+ENV DAVINCI_DATA_DOG_APP_ID ""
+ENV DAVINCI_DATA_DOG_CLIENT_TOKEN ""
+ENV DAVINCI_DATA_DOG_SERVICE "staff-portal"
+ENV DAVINCI_DATA_DOG_SITE "datadoghq.com"
+ENV DAVINCI_GOOGLE_MAPS_API_KEY "AIzaSyBTLjOlha0E62iWnWL-tADwSdg-VQvXzqg"
+ENV DAVINCI_KIPPER_API_URL ""
+ENV DAVINCI_LOG_ROCKET_APPID "vk1pxz/test-project-siadq"
+ENV DAVINCI_LOG_ROCKET_HOSTNAME ""
+ENV DAVINCI_NEW_RELIC_ACCOUNT_ID ""
+ENV DAVINCI_NEW_RELIC_APP_ID ""
+ENV DAVINCI_NEW_RELIC_LICENSE_KEY ""
+ENV DAVINCI_PENDO_AGENT_KEY "76c266e0-6e0e-486f-7b75-6badd08d893b"
+ENV DAVINCI_RELEASE_VERSION ""
+ENV DAVINCI_SEGMENT_ID ""
+ENV DAVINCI_SENTRY_DSN ""
+
+ENV DAVINCI_CUCUMBER_MODE true
+ENV DAVINCI_ENV development
+ENV DAVINCI_RELEASE_VERSION $VERSION
+
+RUN echo $VERSION > /usr/share/nginx/html/REVISION.txt
+
+ENTRYPOINT ["/usr/local/bin/env-runtime.entrypoint.sh"]
+
+CMD ["nginx", "-g", "daemon off;"]

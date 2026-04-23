@@ -1,0 +1,6 @@
+export { default as BreaksSection } from './BreaksSection'
+export { default as CompanySection } from './CompanySection'
+export { default as StatusSection } from './StatusSection'
+export { default as TalentSection } from './TalentSection'
+export { default as FeedbacksSection } from './FeedbacksSection'
+export { default as InterviewsSection } from './InterviewsSection'

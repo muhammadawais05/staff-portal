@@ -1,0 +1,327 @@
+name: Deploy to staging
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency: deploy-to-staging
+
+env:
+  REPOSITORY_NAME: staff-portal
+  DEV_IMAGE_NAME: staff-portal-dev
+  RELEASE_IMAGE_NAME: staff-portal-release
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GCR_ACCOUNT_KEY: ${{ secrets.GCR_ACCOUNT_KEY }}
+  GCS_SCHEMAS_KEY: ${{ secrets.GCR_GQLGW_SCHEMAS_BUCKET_ACCOUNT }}
+  GCS_SOURCEMAPS_KEY: ${{ secrets.STAFF_PORTAL_DEPLOYMENT }}
+  JENKINS_USER: toptal-jenkins
+  TOPTAL_BOT_JENKINS_DEPLOYMENT_TOKEN: ${{ secrets.TOPTAL_BOT_JENKINS_DEPLOYMENT_TOKEN }}
+  SENTRY_ORG: toptal
+  SENTRY_PROJECT: staff-portal
+  SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_SOURCEMAP_UPLOAD_TOKEN }}
+  SLACK_CHANNEL: staff-portal-bullhorn
+
+jobs:
+  buildandpushdevimage:
+    name: Build and push staff-portal-dev image
+    runs-on:
+    - org/toptal
+    - os/linux
+    - arch/x64
+    - size/standard
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout staff-portal
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Docker meta (dev image)
+        id: meta-dev
+        uses: docker/metadata-action@v4
+        with:
+          images: gcr.io/toptal-hub/${{ env.DEV_IMAGE_NAME }}
+          tags: |
+            type=sha,prefix=,format=long
+          flavor: |
+            latest=true
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to GCloud Registry
+        uses: docker/login-action@v2
+        with:
+          registry: gcr.io
+          username: _json_key
+          password: ${{ env.GCR_ACCOUNT_KEY }}
+
+      - name: Build and push dev image
+        uses: docker/build-push-action@v3
+        with:
+          tags: ${{ steps.meta-dev.outputs.tags }}
+          push: true
+          context: .
+          file: ./docker/Dockerfile.dev
+          build-args: |
+            NPM_TOKEN=${{ secrets.NPM_TOKEN_PUBLISH }}
+
+  buildandpushreleaseimage:
+    name: Build and push staff-portal-release image
+    runs-on:
+    - org/toptal
+    - os/linux
+    - arch/x64
+    - size/large
+    timeout-minutes: 30
+    outputs:
+      publishPackageOutcome: ${{ steps.publish-package.outcome }}
+
+    steps:
+      - name: Checkout staff-portal
+        uses: actions/checkout@v3
+        with:
+          path: app
+          persist-credentials: false
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: '0'
+
+      - name: Checkout davinci
+        uses: actions/checkout@v3
+        with:
+          repository: toptal/davinci
+          token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+          path: davinci
+
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+          cache: 'yarn'
+          cache-dependency-path: 'app/**/yarn.lock'
+
+      - name: Install dependencies
+        working-directory: ./app
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --silent --non-interactive
+
+      - name: Copy Docker files from Davinci
+        run: |
+          cp ./davinci/packages/davinci/docker/nginx-vhost.conf ./app/docker/nginx-vhost.conf
+          cp ./davinci/packages/ci/src/configs/docker/env-runtime.entrypoint.sh ./app/docker/env-runtime.entrypoint.sh
+
+      - name: Set up Google cloud toolchain for schemas bucket access
+        uses: google-github-actions/setup-gcloud@v0.6.0
+        with:
+          service_account_key: ${{ env.GCS_SCHEMAS_KEY }}
+          export_default_credentials: true
+
+      - name: Fetch gql schemas
+        working-directory: ./app
+        run: yarn fetch:graphql-schemas
+
+      - name: Check types cache
+        uses: actions/cache@v3
+        id: gql-types-cache
+        with:
+          path: |
+            app/libs/graphql
+            app/**/*.gql.types.tsx
+          key: ${{ runner.os }}-types-${{ hashFiles('app/**/codegen.js', 'app/**/*.graphql', 'app/**/*.gql.ts') }}
+
+      - name: Generate types
+        if: ${{ steps.gql-types-cache.outputs.cache-hit != 'true' }}
+        working-directory: ./app
+        run: yarn generate:types
+
+      - name: Build
+        working-directory: ./app
+        run: yarn build:ci
+
+      - name: Cache the dist folder
+        uses: actions/cache@v3
+        id: dist-folder-cache
+        with:
+          path: ./app/dist
+          key: ${{ github.sha }}
+
+      # TODO: re-enable later on https://toptal-core.atlassian.net/browse/SP-1998
+      #- name: Release changes
+      #  working-directory: ./app
+      #  env:
+      #    GH_TOKEN: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+      #  run: |
+      #    git config user.email "bot@toptal.com"
+      #    git config user.name "toptal-bot"
+      #    git remote set-url origin https://x-access-token:${{ secrets.TOPTAL_DEVBOT_TOKEN }}@github.com/toptal/staff-portal
+      #    yarn release
+      - name: Publish billing-frontend-legacy package
+        id: publish-package
+        continue-on-error: true
+        working-directory: ./app
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUBLISH }}
+          SENTRY_AUTH_TOKEN: ${{ env.SENTRY_AUTH_TOKEN }}
+        run: |
+          yarn release-package
+
+      - name: Docker meta (release image)
+        id: meta-release
+        uses: docker/metadata-action@v4
+        with:
+          images: gcr.io/toptal-hub/${{ env.RELEASE_IMAGE_NAME }}
+          tags: |
+            type=sha,prefix=,format=long
+          flavor: |
+            latest=true
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to GCloud Registry
+        uses: docker/login-action@v2
+        with:
+          registry: gcr.io
+          username: _json_key
+          password: ${{ env.GCR_ACCOUNT_KEY }}
+
+      - name: Build and push release image
+        uses: docker/build-push-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64
+          tags: ${{ steps.meta-release.outputs.tags }}
+          push: true
+          context: .
+          file: ./davinci/packages/ci/src/configs/docker/Dockerfile.gha-deploy
+          build-args: |
+            ENV_RUNTIME_ENTRYPOINT=./app/docker/env-runtime.entrypoint.sh
+            DIST_FOLDER=./app/hosts/staff-portal/dist
+            NGINX_CONFIG=./app/docker/nginx-vhost.conf
+            VERSION=${{ github.sha }}
+
+  deploytostaging:
+    name: 'Deploy to staging'
+    needs: [buildandpushdevimage, buildandpushreleaseimage]
+    runs-on:
+    - org/toptal
+    - os/linux
+    - arch/x64
+    - size/standard
+    timeout-minutes: 15
+    steps:
+      - name: Checkout staff-portal
+        uses: actions/checkout@v3
+        with:
+          path: app
+          persist-credentials: false
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: '0'
+
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+          cache: 'yarn'
+          cache-dependency-path: 'app/**/yarn.lock'
+
+      - name: Install dependencies
+        working-directory: ./app
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --silent --non-interactive
+
+      - name: Get env variables
+        id: get-env-variables
+        working-directory: ./app
+        run: echo "::set-output name=vars::$(./.github/scripts/readEnvVars.sh ./hosts/staff-portal/.env.staging)"
+
+      - name: Get commit author
+        id: get-commit-author
+        working-directory: ./app
+        run: echo "::set-output name=commitAuthor::$(git log '${{ github.sha }}' -1 --pretty=format:'%an')"
+
+      - name: Trigger deployment job
+        uses: toptal/jenkins-job-trigger-action@1.0.0
+        with:
+          jenkins_url: https://jenkins-build.toptal.net/
+          jenkins_user: ${{ env.JENKINS_USER }}
+          jenkins_token: ${{ secrets.TOPTAL_JENKINS_BUILD_TOKEN }}
+          proxy: http://${{ secrets.HTTP_PROXY }}
+          job_name: '${{ env.REPOSITORY_NAME }}/job/${{ env.REPOSITORY_NAME }}-deploy-helm-run'
+          job_params: |
+            {
+              "REPOSITORY_NAME": "${{ env.REPOSITORY_NAME }}",
+              "GIT_COMMIT": "${{ github.sha }}",
+              "RELEASE": "staging",
+              "ENV": "${{ steps.get-env-variables.outputs.vars }}",
+              "HELM_BRANCH": "CNI-284-umbrella-chart-davinci-staff-portal"
+            }
+          job_timeout: '1200'
+
+      - name: Set up Google cloud toolchain for source maps bucket access
+        uses: google-github-actions/setup-gcloud@v0.6.0
+        with:
+          service_account_key: ${{ env.GCS_SOURCEMAPS_KEY }}
+          export_default_credentials: true
+
+      - name: Restore the dist folder
+        uses: actions/cache@v3
+        id: dist-folder-cache
+        with:
+          path: ./app/dist
+          key: ${{ github.sha }}
+
+      - name: Upload source maps to Google Cloud bucket
+        working-directory: ./app
+        continue-on-error: true
+        run: |
+          gsutil -m cp -r dist/** gs://staff-portal-source-maps/${{ github.sha }}
+
+      - name: Upload source maps to Sentry
+        working-directory: ./app
+        continue-on-error: true
+        run: |
+          if [[ -n "$SENTRY_AUTH_TOKEN" && $(yarn davinci help) == *"sentry-upload-source-maps"* ]]
+          then
+            yarn davinci engine sentry-upload-source-maps
+          else
+            echo "Your current davinci version is not supporting uploading source maps to Sentry. Please update davinci package version in your app."
+          fi
+
+      - name: Get commit details
+        if: ${{ success() || failure() }}
+        id: commit-details
+        env:
+          COMMIT_SHA: ${{ github.sha }}
+          PULL_REQUEST_ID: ${{ github.event.number }}
+          GIT_COMMIT_AUTHOR: ${{ steps.get-commit-author.outputs.commitAuthor }}
+        run: ./app/.github/scripts/getCommitDetails.sh
+        shell: bash
+
+      - name: Send a Slack notification on success / failure
+        if: ${{ success() || failure() }}
+        uses: slackapi/slack-github-action@v1.19
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        with:
+          channel-id: ${{ env.SLACK_CHANNEL }}
+          slack-message: "${{ job.status == 'success' && ':checkm: Current master version of staff-portal successfully released :green_heart:' || ':x: <!here> Current master version of staff-portal is broken.' }}\n${{ steps.commit-details.outputs.message }}"
+
+      - name: Send a Slack notification with publishing status
+        if: needs.buildandpushreleaseimage.outputs.publishPackageOutcome == 'success'
+        uses: slackapi/slack-github-action@v1.19
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        with:
+          channel-id: ${{ env.SLACK_CHANNEL }}
+          slack-message: 'Billing-frontend-legacy package is published to NPM :green_heart:'

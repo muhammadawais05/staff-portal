@@ -1,0 +1,11 @@
+{
+  "actions": {
+    "logBillingInfo": "Log billing information",
+    "saveAsNewVersion": "Save as new version"
+  },
+  "empty": "Currently, there are no billing information notes.",
+  "logBillingInfo": {
+    "title": "Billing information"
+  },
+  "title": "Billing Information Notes"
+}

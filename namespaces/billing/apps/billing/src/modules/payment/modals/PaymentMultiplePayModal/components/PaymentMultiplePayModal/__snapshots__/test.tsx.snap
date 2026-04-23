@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentMultiplePayModal default render 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c0,
+.c0 > div,
+.c0 > form,
+.c0 > div > form,
+ {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,&,& > div,& > form,& > div > form,{display:flex;flex-direction:column;overflow:auto;}"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    >
+      <div
+        class=""
+      >
+        <form
+          data-testid="PaymentMultiplePayModal"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

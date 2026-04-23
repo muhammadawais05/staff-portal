@@ -1,0 +1,28 @@
+{
+  "name": "@staff-portal/translation",
+  "description": "Staff Portal's translation related functionality",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/date-time-utils": "0.5.24",
+    "@staff-portal/string": "0.3.23",
+    "@toptal/picasso": "^25.0.0",
+    "i18next": "^20.4.0",
+    "react": "16.14.0",
+    "react-i18next": "^11.10.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "private": true,
+  "sideEffects": false
+}

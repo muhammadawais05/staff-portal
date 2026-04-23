@@ -1,0 +1,664 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimesheetListItem when \`!timesheetRecords.length\` render properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 37rem;
+}
+
+.c1 {
+  padding-right: 1rem;
+}
+
+.c2 {
+  color: #262d3d;
+  border-bottom: 1px dotted #262d3d;
+  margin-right: 0.5rem;
+}
+
+.c3 {
+  pointer-events: none;
+}
+
+.c4 {
+  pointer-events: none;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                _css="display:flex;justify-content:space-between;align-items:center;min-width:37rem;"
+                class="TimesheetListItem___StyledContainer-sc-15kcigk c0"
+                data-testid="TimesheetListItem"
+              >
+                <div
+                  _css2="padding-right:1rem;"
+                  class="TimesheetListItem___StyledContainer2-sc-15kcigk c1"
+                >
+                  <a
+                    _css3="color:,#262d3d,;border-bottom:1px dotted ,#262d3d,;margin-right:0.5rem;"
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root TimesheetListItem___StyledLink-sc-15kcigk c2 PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                    data-id="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                    data-testid="item-label"
+                  >
+                    From
+                     
+                    <strong
+                      _css4="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography-sc-15kcigk c3 MuiTypography-body1"
+                      data-testid="start-date"
+                    >
+                      Apr 22, 2019
+                    </strong>
+                     
+                    till
+                     
+                    <strong
+                      _css5="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography2-sc-15kcigk c4 MuiTypography-body1"
+                      data-testid="end-date"
+                    >
+                      May 5, 2019
+                    </strong>
+                  </a>
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-red MuiTypography-body1 MuiTypography-displayInline"
+                    data-testid="TimesheetStatus"
+                  >
+                    (Rejected)
+                  </span>
+                </div>
+                <div
+                  _css6="flex-shrink:0;"
+                  class="TimesheetListItem___StyledContainer3-sc-15kcigk c5"
+                >
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+                    data-component-type="button"
+                    data-testid="edit-button"
+                    tabindex="0"
+                    type="button"
+                    value="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      Create
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`TimesheetListItem when \`timesheetRecords.length\` render properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 37rem;
+}
+
+.c1 {
+  padding-right: 1rem;
+}
+
+.c2 {
+  color: #262d3d;
+  border-bottom: 1px dotted #262d3d;
+  margin-right: 0.5rem;
+}
+
+.c3 {
+  pointer-events: none;
+}
+
+.c4 {
+  pointer-events: none;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                _css="display:flex;justify-content:space-between;align-items:center;min-width:37rem;"
+                class="TimesheetListItem___StyledContainer-sc-15kcigk c0"
+                data-testid="TimesheetListItem"
+              >
+                <div
+                  _css2="padding-right:1rem;"
+                  class="TimesheetListItem___StyledContainer2-sc-15kcigk c1"
+                >
+                  <a
+                    _css3="color:,#262d3d,;border-bottom:1px dotted ,#262d3d,;margin-right:0.5rem;"
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root TimesheetListItem___StyledLink-sc-15kcigk c2 PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                    data-id="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                    data-testid="item-label"
+                  >
+                    From
+                     
+                    <strong
+                      _css4="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography-sc-15kcigk c3 MuiTypography-body1"
+                      data-testid="start-date"
+                    >
+                      Apr 22, 2019
+                    </strong>
+                     
+                    till
+                     
+                    <strong
+                      _css5="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography2-sc-15kcigk c4 MuiTypography-body1"
+                      data-testid="end-date"
+                    >
+                      May 5, 2019
+                    </strong>
+                  </a>
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-red MuiTypography-body1 MuiTypography-displayInline"
+                    data-testid="TimesheetStatus"
+                  >
+                    (Rejected)
+                  </span>
+                </div>
+                <div
+                  _css6="flex-shrink:0;"
+                  class="TimesheetListItem___StyledContainer3-sc-15kcigk c5"
+                >
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+                    data-component-type="button"
+                    data-testid="edit-button"
+                    tabindex="0"
+                    type="button"
+                    value="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      Edit
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`TimesheetListItem when no edit or unsubmit is allowed render properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 37rem;
+}
+
+.c1 {
+  padding-right: 1rem;
+}
+
+.c2 {
+  color: #262d3d;
+  border-bottom: 1px dotted #262d3d;
+  margin-right: 0.5rem;
+}
+
+.c3 {
+  pointer-events: none;
+}
+
+.c4 {
+  pointer-events: none;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                _css="display:flex;justify-content:space-between;align-items:center;min-width:37rem;"
+                class="TimesheetListItem___StyledContainer-sc-15kcigk c0"
+                data-testid="TimesheetListItem"
+              >
+                <div
+                  _css2="padding-right:1rem;"
+                  class="TimesheetListItem___StyledContainer2-sc-15kcigk c1"
+                >
+                  <a
+                    _css3="color:,#262d3d,;border-bottom:1px dotted ,#262d3d,;margin-right:0.5rem;"
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root TimesheetListItem___StyledLink-sc-15kcigk c2 PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                    data-id="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                    data-testid="item-label"
+                  >
+                    From
+                     
+                    <strong
+                      _css4="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography-sc-15kcigk c3 MuiTypography-body1"
+                      data-testid="start-date"
+                    >
+                      Apr 22, 2019
+                    </strong>
+                     
+                    till
+                     
+                    <strong
+                      _css5="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography2-sc-15kcigk c4 MuiTypography-body1"
+                      data-testid="end-date"
+                    >
+                      May 5, 2019
+                    </strong>
+                  </a>
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-red MuiTypography-body1 MuiTypography-displayInline"
+                    data-testid="TimesheetStatus"
+                  >
+                    (Rejected)
+                  </span>
+                </div>
+                <div
+                  _css6="flex-shrink:0;"
+                  class="TimesheetListItem___StyledContainer3-sc-15kcigk c5"
+                >
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+                    data-component-type="button"
+                    data-testid="unsubmit-button"
+                    tabindex="0"
+                    type="button"
+                    value="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      Unsubmit
+                    </span>
+                  </button>
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+                    data-component-type="button"
+                    data-testid="edit-button"
+                    tabindex="0"
+                    type="button"
+                    value="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      Edit
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`TimesheetListItem when unsubmit is allowed render properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 37rem;
+}
+
+.c1 {
+  padding-right: 1rem;
+}
+
+.c2 {
+  color: #262d3d;
+  border-bottom: 1px dotted #262d3d;
+  margin-right: 0.5rem;
+}
+
+.c3 {
+  pointer-events: none;
+}
+
+.c4 {
+  pointer-events: none;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                _css="display:flex;justify-content:space-between;align-items:center;min-width:37rem;"
+                class="TimesheetListItem___StyledContainer-sc-15kcigk c0"
+                data-testid="TimesheetListItem"
+              >
+                <div
+                  _css2="padding-right:1rem;"
+                  class="TimesheetListItem___StyledContainer2-sc-15kcigk c1"
+                >
+                  <a
+                    _css3="color:,#262d3d,;border-bottom:1px dotted ,#262d3d,;margin-right:0.5rem;"
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root TimesheetListItem___StyledLink-sc-15kcigk c2 PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                    data-id="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                    data-testid="item-label"
+                  >
+                    From
+                     
+                    <strong
+                      _css4="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography-sc-15kcigk c3 MuiTypography-body1"
+                      data-testid="start-date"
+                    >
+                      Apr 22, 2019
+                    </strong>
+                     
+                    till
+                     
+                    <strong
+                      _css5="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography2-sc-15kcigk c4 MuiTypography-body1"
+                      data-testid="end-date"
+                    >
+                      May 5, 2019
+                    </strong>
+                  </a>
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-red MuiTypography-body1 MuiTypography-displayInline"
+                    data-testid="TimesheetStatus"
+                  >
+                    (Rejected)
+                  </span>
+                </div>
+                <div
+                  _css6="flex-shrink:0;"
+                  class="TimesheetListItem___StyledContainer3-sc-15kcigk c5"
+                >
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+                    data-component-type="button"
+                    data-testid="unsubmit-button"
+                    tabindex="0"
+                    type="button"
+                    value="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      Unsubmit
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`TimesheetListItem when update is allowed render properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 37rem;
+}
+
+.c1 {
+  padding-right: 1rem;
+}
+
+.c2 {
+  color: #262d3d;
+  border-bottom: 1px dotted #262d3d;
+  margin-right: 0.5rem;
+}
+
+.c3 {
+  pointer-events: none;
+}
+
+.c4 {
+  pointer-events: none;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                _css="display:flex;justify-content:space-between;align-items:center;min-width:37rem;"
+                class="TimesheetListItem___StyledContainer-sc-15kcigk c0"
+                data-testid="TimesheetListItem"
+              >
+                <div
+                  _css2="padding-right:1rem;"
+                  class="TimesheetListItem___StyledContainer2-sc-15kcigk c1"
+                >
+                  <a
+                    _css3="color:,#262d3d,;border-bottom:1px dotted ,#262d3d,;margin-right:0.5rem;"
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root TimesheetListItem___StyledLink-sc-15kcigk c2 PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                    data-id="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                    data-testid="item-label"
+                  >
+                    From
+                     
+                    <strong
+                      _css4="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography-sc-15kcigk c3 MuiTypography-body1"
+                      data-testid="start-date"
+                    >
+                      Apr 22, 2019
+                    </strong>
+                     
+                    till
+                     
+                    <strong
+                      _css5="pointer-events:none;"
+                      class="MuiTypography-root PicassoTypography-bodyInherit TimesheetListItem___StyledTypography2-sc-15kcigk c4 MuiTypography-body1"
+                      data-testid="end-date"
+                    >
+                      May 5, 2019
+                    </strong>
+                  </a>
+                  <span
+                    class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-red MuiTypography-body1 MuiTypography-displayInline"
+                    data-testid="TimesheetStatus"
+                  >
+                    (Rejected)
+                  </span>
+                </div>
+                <div
+                  _css6="flex-shrink:0;"
+                  class="TimesheetListItem___StyledContainer3-sc-15kcigk c5"
+                >
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+                    data-component-type="button"
+                    data-testid="unsubmit-button"
+                    tabindex="0"
+                    type="button"
+                    value="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      Unsubmit
+                    </span>
+                  </button>
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-secondary PicassoButton-root"
+                    data-component-type="button"
+                    data-testid="edit-button"
+                    tabindex="0"
+                    type="button"
+                    value="VjEtQmlsbGluZ0N5Y2xlLTMzMzY3Ng"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      Edit
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

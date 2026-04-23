@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteListItem default render 1`] = `
+.c0 {
+  border-radius: 0.4rem;
+  border: 1px solid #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0::before {
+  background: #e59c01;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 0.2rem;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="border-radius:0.4rem;border:1px solid ,#f3f4f6,;position:relative;overflow:hidden;&::before{background:,#e59c01,;display:block;height:100%;left:0;position:absolute;content:'';top:0;width:0.2rem;}"
+      class="PicassoContainer-bottommediumMargin NoteListItem___StyledContainer-sc-1dwab1a c0"
+      data-testid="NoteListItem"
+    >
+      <div
+        class="PicassoContainer-largePadding PicassoContainer-spaceBetweenJustifyContent PicassoContainer-flex"
+      >
+        <div
+          class=""
+        >
+          <div
+            class="PicassoContainer-bottomxsmallMargin"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-h4"
+              data-testid="NoteListItem-title"
+            >
+              Awesome title
+            </h4>
+          </div>
+          <div
+            class="PicassoContainer-bottomsmallMargin PicassoContainer-flex"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey MuiTypography-body1"
+              data-testid="NoteListItem-modified-status"
+            >
+              Thad Walter added on Apr 21, 2020 at 9:47am
+            </p>
+          </div>
+          <p
+            class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-black MuiTypography-body1"
+            data-testid="NoteListItem-comment"
+          >
+            <span
+              data-testid="MultilineComment"
+            >
+              Awesome comment
+            </span>
+          </p>
+          <div
+            class="PicassoContainer-topsmallMargin"
+            data-testid="NoteListItem-attachment"
+          >
+            <div
+              class="MuiChip-root PicassoLabel-root"
+            >
+              <span
+                class="MuiChip-label PicassoLabel-label"
+              >
+                <span
+                  class="PicassoLabel-innerLabel"
+                >
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue PicassoLink-noUnderline MuiTypography-colorPrimary"
+                    href="example.com/index.tsx"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    Download example text document
+                  </a>
+                  <button
+                    class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-transparent PicassoButtonCircular-root"
+                    data-component-type="button"
+                    data-note-attachment-id="example text document"
+                    data-note-id="VjEtTm90ZS0xMDUzODU0"
+                    data-testid="NoteListItem-delete-attachment"
+                    data-value="delete-attachment"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+                    >
+                      <svg
+                        class="PicassoSvgCloseMinor16-root PicassoButton-icon PicassoSvgCloseMinor16-black"
+                        style="min-width: 16px; min-height: 16px;"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m8.707 8 3.5 3.5-.707.707-3.5-3.5-3.5 3.5-.707-.707 3.5-3.5-3.5-3.5.707-.707 3.5 3.5 3.5-3.5.707.707-3.5 3.5Z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="PicassoContainer-flexStartAlignItems PicassoContainer-spaceEvenlyJustifyContent PicassoContainer-flex"
+        >
+          <button
+            class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+            data-component-type="button"
+            data-note-id="1053854"
+            data-note-title="Awesome title"
+            data-testid="NoteListItem-edit"
+            data-value="note-edit"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+            >
+              <svg
+                class="PicassoSvgPencil16-root PicassoButton-icon"
+                style="min-width: 16px; min-height: 16px;"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.5.793 15.207 4.5 4.707 15H1v-3.707L8.793 3.5V3.5l.707-.707 2-2Zm-2 3.415-7.5 7.5V14h2.293l7.499-7.5L9.5 4.208Zm2-2L10.207 3.5l2.292 2.293L13.793 4.5 11.5 2.207Z"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            class="MuiButtonBase-root PicassoButton-small PicassoButton-primary PicassoButton-root PicassoButtonCircular-flat PicassoButtonCircular-root"
+            data-component-type="button"
+            data-note-id="VjEtTm90ZS0xMDUzODU0"
+            data-note-title="Awesome title"
+            data-testid="NoteListItem-delete"
+            data-value="delete"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="PicassoContainer-centerAlignItems PicassoContainer-flex PicassoContainer-inline PicassoButton-content"
+            >
+              <svg
+                class="PicassoSvgTrash16-root PicassoButton-icon"
+                style="min-width: 16px; min-height: 16px;"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 4h1v12H2V4Zm0 11h12v1H2v-1ZM6 2V0h4v2h5v1H1V2h5Zm1 0h2V1H7v1Zm6 2h1v12h-1V4ZM6 7h1v5H6V7Zm3 0h1v5H9V7Z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

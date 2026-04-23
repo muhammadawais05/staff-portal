@@ -1,0 +1,8 @@
+# Set Git interface to collapse these file types diffs on default
+# prefer the newest versions when merging
+tmp-graphql/**/*                                  merge=unset
+libs/graphql/lens/index.ts                        merge=unset
+libs/graphql/staff/index.ts                       merge=unset
+libs/graphql/introspection-query-result.json      merge=unset
+*.types.tsx                                       linguist-generated
+yarn.lock                                         linguist-generated

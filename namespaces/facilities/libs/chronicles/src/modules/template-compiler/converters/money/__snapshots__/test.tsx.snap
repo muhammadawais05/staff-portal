@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`money payload type should render template with money payload 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    $7,200.00
+    
+  </div>
+</div>
+`;

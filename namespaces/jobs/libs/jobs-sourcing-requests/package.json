@@ -1,0 +1,41 @@
+{
+  "name": "@staff-portal/jobs-sourcing-requests",
+  "description": "SP jobs sourcing requests related functionality",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "graphql-codegen",
+    "generate:types:watch": "graphql-codegen --watch \"src/**/data/*.gql.ts\"",
+    "lint": "../../../../_scripts/run-package-lint.mjs",
+    "test": "davinci qa unit",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/error-handling": "0.1.24",
+    "@staff-portal/forms": "0.2.30",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/jobs": "0.0.30",
+    "@staff-portal/modals-service": "0.60.31",
+    "@staff-portal/mutation-result-handlers": "0.2.18",
+    "@staff-portal/operations": "0.5.13",
+    "@staff-portal/string": "0.3.23",
+    "@staff-portal/talents": "0.0.30",
+    "@staff-portal/ui": "0.10.13",
+    "@staff-portal/utils": "0.0.2",
+    "@staff-portal/validators": "0.0.7",
+    "@toptal/picasso": "^25.0.0",
+    "@toptal/picasso-forms": "^44.0.0",
+    "@toptal/staff-portal-message-bus": "1.0.22",
+    "react": "16.14.0",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "jest-when": "^3.3.1"
+  },
+  "sideEffects": false
+}

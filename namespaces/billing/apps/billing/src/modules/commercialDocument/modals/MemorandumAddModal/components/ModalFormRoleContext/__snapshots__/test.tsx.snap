@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+      data-testid="MemorandumAddModalFormRoleContext"
+    >
+      <div
+        id="test"
+      >
+        {"loading":false,"initialLoading":false,"initialValues":{"affectsCommissions":true,"notifyReceiver":true},"showReceiverField":true}
+      </div>
+    </div>
+  </div>
+</div>
+`;

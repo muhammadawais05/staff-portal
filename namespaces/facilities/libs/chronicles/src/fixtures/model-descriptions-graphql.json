@@ -1,0 +1,310 @@
+[
+  {
+    "gid": "gid://platform/Talent/545814",
+    "associationReferences": [],
+    "designation": "developer",
+    "reference": {
+      "text": "Tamiko Rau",
+      "accessible": true,
+      "options": [{ "name": "target", "value": "_blank" }],
+      "path": "/resume/andrija-djurisic"
+    }
+  },
+  {
+    "gid": "gid://platform/Staff/1209642",
+    "associationReferences": [],
+    "designation": "staff member",
+    "reference": {
+      "text": "Jill Arispe",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Payment/810543",
+    "associationReferences": [],
+    "designation": "payment",
+    "reference": {
+      "text": "Payment #810543 for Forest Shanahan",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/payments/810543"
+    }
+  },
+  {
+    "gid": "gid://platform/Payment/799505",
+    "associationReferences": [],
+    "designation": "payment",
+    "reference": {
+      "text": "Payment #799505 for Nieves Trantow",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/payments/799505"
+    }
+  },
+  {
+    "gid": "gid://platform/Invoice/336291",
+    "associationReferences": [],
+    "designation": "invoice",
+    "reference": {
+      "text": "Invoice #336291 for Mayert-Pagac",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/invoices/336291"
+    }
+  },
+  {
+    "gid": "gid://platform/Invoice/336272",
+    "associationReferences": [],
+    "designation": "invoice",
+    "reference": {
+      "text": "Invoice #336272 for Mayert-Pagac",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/invoices/336272"
+    }
+  },
+  {
+    "gid": "gid://platform/AccrualAccounting::Memorandum/123829",
+    "associationReferences": [],
+    "designation": "accrual accounting/memorandum",
+    "reference": {
+      "text": "credit memorandum with $620.80",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/memos/123829/download"
+    }
+  },
+  {
+    "gid": "gid://platform/AccrualAccounting::Memorandum/123830",
+    "associationReferences": [],
+    "designation": "accrual accounting/memorandum",
+    "reference": {
+      "text": "credit memorandum with $620.80",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/memos/123830/download"
+    }
+  },
+  {
+    "gid": "gid://platform/Company/256746",
+    "associationReferences": [],
+    "designation": "company",
+    "reference": {
+      "text": "Mayert-Pagac",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/companies/256746"
+    }
+  },
+  {
+    "gid": "gid://platform/Staff/818024",
+    "associationReferences": [],
+    "designation": "staff member",
+    "reference": {
+      "text": "Jota Oliveira",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/recruiters/818024"
+    }
+  },
+  {
+    "gid": "gid://platform/Talent/1400816",
+    "associationReferences": [],
+    "designation": "product manager",
+    "reference": {
+      "text": "Tempie Boyer",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/talents/1400816"
+    }
+  },
+  {
+    "gid": "gid://platform/Talent/1422114",
+    "associationReferences": [],
+    "designation": "developer",
+    "reference": {
+      "text": "Glynis Gaylord",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/talents/1422114"
+    }
+  },
+  {
+    "gid": "gid://platform/Talent/1425306",
+    "associationReferences": [],
+    "designation": "project manager",
+    "reference": {
+      "text": "Ernestina Kuhn",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/talents/1425306"
+    }
+  },
+  {
+    "gid": "gid://platform/Step/16",
+    "associationReferences": [],
+    "designation": "step",
+    "reference": {
+      "text": "Technical 1 Core",
+      "accessible": true,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Specialization/1",
+    "associationReferences": [],
+    "designation": "specialization",
+    "reference": {
+      "text": "Core",
+      "accessible": true,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Ability/69",
+    "associationReferences": [],
+    "designation": "ability",
+    "reference": {
+      "text": "Sales",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Ability/1471",
+    "associationReferences": [],
+    "designation": "ability",
+    "reference": {
+      "text": "Client: Manage Parent",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Staff/757839",
+    "associationReferences": [],
+    "designation": "staff member",
+    "reference": {
+      "text": "Grzegorz Kaczorek",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Talent/125545",
+    "associationReferences": [],
+    "designation": "developer",
+    "reference": {
+      "text": "Isiah Ferry",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/talents/125545"
+    }
+  },
+  {
+    "gid": "gid://platform/Staff/420656",
+    "associationReferences": [],
+    "designation": "staff member",
+    "reference": {
+      "text": "Joanna Cavazos",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/staff/420656"
+    }
+  },
+  {
+    "gid": "gid://platform/Company/1489755",
+    "associationReferences": [],
+    "designation": "company",
+    "reference": {
+      "text": "Bartoletti-O'Reilly",
+      "accessible": true,
+      "options": [],
+      "path": "/platform/staff/companies/1489755"
+    }
+  },
+  {
+    "gid": "gid://platform/Staff/411440",
+    "associationReferences": [],
+    "designation": "staff member",
+    "reference": {
+      "text": "Matthew Mitchell",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Staff/1259524",
+    "associationReferences": [],
+    "designation": "staff member",
+    "reference": {
+      "text": "Ruthanne Bartoletti",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/OperationalIssue/136540",
+    "associationReferences": [],
+    "designation": "operational issue",
+    "reference": {
+      "text": "Overdue tasks",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/OperationalIssueAssignment/21191",
+    "associationReferences": [],
+    "designation": "operational issue assignment",
+    "reference": {
+      "text": "level 0",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/Staff/667924",
+    "associationReferences": [],
+    "designation": "staff member",
+    "reference": {
+      "text": "Lucas Strick",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/OperationalIssueAssignmentCause/22667",
+    "associationReferences": [],
+    "designation": "operational issue assignment cause",
+    "reference": {
+      "text": "",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  },
+  {
+    "gid": "gid://platform/OperationalIssue/138084",
+    "associationReferences": [],
+    "designation": "operational issue",
+    "reference": {
+      "text": "Overdue tasks",
+      "accessible": false,
+      "options": [],
+      "path": null
+    }
+  }
+]

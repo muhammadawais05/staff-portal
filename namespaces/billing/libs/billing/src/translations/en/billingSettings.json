@@ -1,0 +1,108 @@
+{
+  "billing": {
+    "title": "Billing & Invoice Settings"
+  },
+  "billingSettingsEdit": {
+    "memorandums": "Memorandums",
+    "table": {
+      "changeBillingCycleSettings": {
+        "label": "Change Billing Cycle Settings"
+      },
+      "changeCommitment": {
+        "label": "Change Commitment"
+      }
+    },
+    "title": "Edit Billing Settings"
+  },
+  "engagement": {
+    "fields": {
+      "changeEngagement": {
+        "label": "For"
+      }
+    },
+    "subtitle": "Currently editing <strong>{{name}}</strong> Billing information",
+    "timesheets": {
+      "title": "Timesheets"
+    }
+  },
+  "forms": {
+    "invoiceNote": {
+      "actions": {
+        "cancel": "Cancel",
+        "update": "Update"
+      },
+      "fields": {
+        "note": {
+          "notice": "This note will be seen by the client. Make sure you have provided a clear message.",
+          "placeholder": "A note with additional details for the client"
+        }
+      },
+      "title": "Update Invoice Note"
+    },
+    "nextPurchaseOrder": {
+      "fields": {
+        "autocomplete": {
+          "label": "Next Purchase Order",
+          "placeholder": "Not Selected"
+        }
+      }
+    },
+    "purchaseOrder": {
+      "fields": {
+        "autocomplete": {
+          "label": "Purchase Order",
+          "placeholder": "Not Selected"
+        },
+        "comment": {
+          "label": "Comment",
+          "placeholder": "Leave a related comment here"
+        },
+        "poLines": {
+          "label": "Line Number",
+          "placeholder": "Not Selected"
+        }
+      }
+    }
+  },
+  "information": {
+    "title": "Billing Information"
+  },
+  "invoice": {
+    "fields": {
+      "addTimesheetToInvoice": {
+        "label": "Add Timesheet to Invoice",
+        "useCompanySetting": "Use company setting"
+      },
+      "invoiceNote": {
+        "fallback": "No invoice note added",
+        "label": "Invoice Note"
+      },
+      "nextPurchaseOrder": {
+        "label": "Next Purchase Order"
+      },
+      "purchaseOrder": {
+        "label": "Purchase Order",
+        "poLineSubLabel": "Line Number:",
+        "poSubLabel": "PO Number:"
+      }
+    },
+    "title": "Invoice Settings"
+  },
+  "job": {
+    "title": "Job Settings"
+  },
+  "notification": {
+    "invoiceNote": {
+      "success": "The Invoice Note was successfully updated."
+    },
+    "nextPurchaseOrder": {
+      "success": "The Next Purchase Order Number was successfully updated."
+    },
+    "purchaseOrder": {
+      "success": "The Purchase Order Number was successfully updated."
+    },
+    "updateBillingCycles": {
+      "success": "The billing cycle settings were successfully updated."
+    }
+  }
+}

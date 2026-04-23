@@ -1,0 +1,114 @@
+@Library('globalLibrary@master') _
+
+repositoryName = 'staff-portal'
+buildImageJobName = "${repositoryName}-build-image"
+buildReleaseImageJobName = "${repositoryName}-build-release-image"
+repositorySSHUrl = "git@github.com:toptal/${repositoryName}.git"
+
+pipeline {
+  agent { label 'docker' }
+
+  options {
+    ansiColor('xterm')
+    timestamps()
+    timeout(time: 1, unit: 'HOURS')
+    buildDiscarder(logRotator(numToKeepStr: '20'))
+    skipDefaultCheckout()
+  }
+
+  parameters {
+    string(name: 'BRANCH', defaultValue: 'master', description: 'Repository branch')
+    string(name: 'HELM_BRANCH', defaultValue: 'master', description: 'Helm branch')
+    string(name: 'TAG', defaultValue: '', description: 'Image tag to deploy')
+    string(name: 'ENV', defaultValue: 'ENV=null', description: 'Environment values in format ENV.key1=value1,ENV.key2=value2')
+  }
+
+  stages {
+    stage('Check params') {
+      steps {
+        script {
+          if (params.TAG == "") {
+            error("== TAG is a mandatory parameter ==")
+          }
+        }
+      }
+    } //stage
+
+    stage('Git checkout project') {
+      steps {
+        info "== Checking out ${BRANCH} =="
+        gitCheckout(
+          branches: params.BRANCH,
+          credentials: [username: 'toptal-build', description: "toptal-build-ssh-key"],
+          url: repositorySSHUrl,
+          additionalBehaviours: [
+            cleanBeforeCheckout: true
+          ])
+        success "== Checked out ${BRANCH} at ${gitCommit()}"
+      }
+    } //checkout project
+
+    stage('Build image') {
+      steps {
+        script {
+          buildWithParameters(
+            jobName: buildImageJobName,
+            propagate: true,
+            wait: true,
+            parameters: [
+              BRANCH: params.BRANCH,
+              VERSION: gitCommit(),
+              IMAGE_NAME: repositoryName,
+              REPOSITORY_NAME: repositoryName
+            ]
+          )
+        }
+      } //steps
+    } //stage
+
+    stage('Build release image') {
+      steps {
+        script {
+          buildWithParameters(
+            jobName: buildReleaseImageJobName,
+            propagate: false,
+            wait: true,
+            parameters: [
+              IMAGE_TAG: gitCommit(),
+              REPOSITORY_NAME: repositoryName
+            ]
+          )
+        }
+      } //steps
+    } //stage
+
+    stage('Deploy with Helm') {
+      steps {
+        script {
+          buildWithParameters(
+            jobName: 'staff-portal-deploy-helm-run',
+            propagate: true,
+            wait: true,
+            parameters: [
+              BRANCH: params.BRANCH,
+              HELM_BRANCH: params.HELM_BRANCH,
+              REPOSITORY_NAME: repositoryName,
+              GIT_COMMIT: params.TAG,
+              RELEASE: 'demo1',
+              ENV: params.ENV
+            ]
+          )
+        }
+      } //steps
+    } //stage
+  } //stages
+
+  post {
+    always {
+      script {
+        sendBuildData(currentBuild)
+      }
+    }
+  }
+}
+// vim:ft=groovy

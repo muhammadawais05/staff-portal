@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobsListSkeleton default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table
+      class="MuiTable-root"
+      data-testid="JobsListSkeleton"
+      style="table-layout: fixed;"
+    >
+      <tbody
+        class="MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-stripeEven PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="SkeletonLoader.Typography"
+              />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

@@ -1,0 +1,17 @@
+ignores: [
+    'dependency-cruiser', # we use it through terminal like `./node_modules/.bin/depcruise --config ...`
+    '@types/*', # we don't use this type of imports directly
+    '@toptal/davinci-engine', # used in config files
+    '@miovision/eslint-plugin-disallow-date', # used in eslint
+    'babel-plugin-istanbul', # used in config files for coverage
+    'null-loader', # used in webpack.config
+    'webpack-cli', # necessary for billing cypress
+    'pug', # necessary for billing cypress
+    'pug-loader' # necessary for billing cypress
+  ]
+ignore-patterns: [
+    'libs/graphql/lens', # folder with generated code
+    'libs/graphql/staff' # folder with generated code
+  ]
+# We don't want to check for missing dependencies. We want to check only unused dependencies
+skip-missing: true

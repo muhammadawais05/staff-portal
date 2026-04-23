@@ -1,0 +1,11 @@
+{
+  "id": "00058e3f-a27c-4be0-0000-000001d05592",
+  "occurredAt": "2019-07-22T10:00:43+03:00",
+  "action": "updated",
+  "subjectGID": "gid://platform/Payment/795082",
+  "subjectName": null,
+  "performerGID": null,
+  "comment": "Document has reached the due date",
+  "payload": "{\"status\":{\"to\":\"Due\",\"from\":\"Outstanding\",\"$type\":\"change\"}}",
+  "template": "%{performer} updated the status of %{subject} %{payload.status|nolabel}"
+}

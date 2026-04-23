@@ -1,0 +1,295 @@
+# This file defines individuals or teams that are responsible for code.
+#
+# https://github.com/blog/2392-introducing-code-owners
+# https://help.github.com/articles/about-codeowners/
+#
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+
+##################################
+# KEEP THIS IN SYNC WITH https://sentry.io/settings/toptal/projects/staff-portal/ownership/
+##################################
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence.
+
+* @toptal/staff-portal-eng
+.github/CODEOWNERS                                             @toptal/staff-portal-alpha
+
+### Cypress tests
+/hosts/staff-portal/cypress                                    @toptal/staff-portal-eng
+
+/namespaces/billing/apps/billing/cypress                                                          @toptal/billing-fe
+/hosts/staff-portal/cypress/integration/companies-list                         @toptal/armani-eng
+/hosts/staff-portal/cypress/integration/company-applicants                     @toptal/armani-eng
+/hosts/staff-portal/cypress/integration/company/hierarchy-page                 @toptal/armani-eng
+/hosts/staff-portal/cypress/integration/company/profile-actions                @toptal/armani-eng
+/hosts/staff-portal/cypress/integration/company/tabs/basic-info-tab            @toptal/client-retention-eng
+/hosts/staff-portal/cypress/integration/company/tabs/internal-data             @toptal/client-retention-eng
+/hosts/staff-portal/cypress/integration/company/tabs/web-and-social-tab        @toptal/client-retention-eng
+/hosts/staff-portal/cypress/integration/company/tabs/notes-tab                 @toptal/armani-eng
+/hosts/staff-portal/cypress/integration/company/tabs/jobs-tab                  @toptal/armani-eng @toptal/matrix
+/hosts/staff-portal/cypress/integration/engagement                             @toptal/matrix
+/hosts/staff-portal/cypress/integration/job                                    @toptal/matrix
+/hosts/staff-portal/cypress/integration/job-application                        @toptal/matrix
+/hosts/staff-portal/cypress/integration/opportunity                            @toptal/client-retention-eng
+/hosts/staff-portal/cypress/integration/staff-profile                          @toptal/staff-portal-bravo-eng
+/hosts/staff-portal/cypress/integration/publications                           @toptal/talent-post-hire-eng
+/hosts/staff-portal/cypress/integration/talents/talent-applicants              @toptal/screening-ops-eng
+/hosts/staff-portal/cypress/integration/talents/talent-edit-page               @toptal/screening-ops-eng
+/hosts/staff-portal/cypress/integration/talents/talent-list                    @toptal/matrix
+
+### SP Core teams
+# moved from /hosts/staff-portal/src/modules/core, /hosts/staff-portal/src/topkit/core
+/namespaces/facilities/libs/facilities                              @toptal/staff-portal-eng @toptal/staff-portal-tango-eng
+/namespaces/facilities/libs/feedbacks                               @toptal/staff-portal-eng
+/namespaces/facilities/libs/role-flags                               @toptal/staff-portal-eng
+/namespaces/facilities/libs/contracts                               @toptal/staff-portal-eng
+
+# unidentified owners
+/namespaces/facilities/libs/skills                                  @toptal/staff-portal-eng
+/namespaces/staff/apps/staff-beta-members                           @toptal/staff-portal-eng
+
+### SP Cache team
+/hosts/staff-portal/src/hosts/main/containers/SummarySidebar        @toptal/staff-portal-cache-eng
+/libs/counters                                                      @toptal/staff-portal-cache-eng
+/libs/filters                                                        @toptal/staff-portal-cache-eng
+/namespaces/facilities/apps/communication-email-templates           @toptal/staff-portal-cache-eng
+/namespaces/talents/apps/talents                                    @toptal/staff-portal-cache-eng @toptal/staff-portal-tango-eng
+# moved from /hosts/staff-portal/src/modules/status-messages
+/namespaces/facilities/libs/operational-issues                      @toptal/staff-portal-cache-eng
+/namespaces/facilities/libs/status-messages                         @toptal/staff-portal-cache-eng
+/namespaces/talents/apps/talents/src/sourced-talents-page           @toptal/staff-portal-cache-eng
+/namespaces/facilities/apps/tasks/src/pages/Playbook                @toptal/staff-portal-cache-eng
+/namespaces/talents/libs/talents                                    @toptal/staff-portal-cache-eng @toptal/staff-portal-tango-eng
+/namespaces/talents/libs/talents-quality                            @toptal/staff-portal-cache-eng @toptal/staff-portal-tango-eng
+/namespaces/talents/libs/talents-soft-skills                        @toptal/staff-portal-cache-eng @toptal/staff-portal-tango-eng
+/namespaces/talents/libs/talents-stats                              @toptal/staff-portal-cache-eng @toptal/staff-portal-tango-eng
+/namespaces/talents/libs/talents-workload                           @toptal/staff-portal-cache-eng @toptal/staff-portal-tango-eng
+
+### SP Tango team
+/namespaces/clients/libs/clients-task-card/src/components/ContactClientButton  @toptal/staff-portal-tango-eng
+/namespaces/engagements/apps/engagements/src/pages/candidate-sending           @toptal/staff-portal-tango-eng
+/namespaces/engagements/libs/engagements-candidate-sending                     @toptal/staff-portal-tango-eng
+/namespaces/jobs/apps/jobs-sourcing-requests/src/pages/SourcingRequestList     @toptal/staff-portal-tango-eng
+/namespaces/jobs/libs/jobs-sourcing-requests                                   @toptal/staff-portal-tango-eng
+/namespaces/facilities/apps/performed-actions                                  @toptal/staff-portal-tango-eng
+/namespaces/staff/apps/staff/src/pages/StaffList                               @toptal/staff-portal-tango-eng
+/namespaces/staff/apps/staff/src/pages/TeamsList                               @toptal/staff-portal-tango-eng
+/namespaces/staff/apps/staff/src/pages/TeamProfile                             @toptal/staff-portal-tango-eng
+/namespaces/facilities/libs/chronicles                                         @toptal/staff-portal-tango-eng
+/namespaces/facilities/libs/notes                                              @toptal/staff-portal-tango-eng
+/libs/runtime-validation                                                       @toptal/staff-portal-tango-eng
+/namespaces/talents/libs/talents-card-builder                                  @toptal/staff-portal-tango-eng
+
+### Billing FE team
+/namespaces/billing/apps/billing                                                           @toptal/billing-fe
+/namespaces/billing/libs                                                                   @toptal/billing-fe
+/namespaces/clients/apps/clients/src/billing-tab                                           @toptal/billing-fe
+/namespaces/clients/apps/clients/src/modals/hooks/use-unapplied-cash-modal.tsx             @toptal/billing-fe
+/namespaces/clients/apps/clients/src/modals/components/UnappliedCashModal                  @toptal/billing-fe
+/namespaces/clients/apps/clients/src/modals/components/RequestEngagementsPauseButton       @toptal/billing-fe
+/namespaces/clients/apps/clients/src/modals/components/RequestEngagementsPauseModal        @toptal/billing-fe
+
+### Staff Portal Bravo team
+/namespaces/clients/apps/clients                                    @toptal/staff-portal-bravo-eng
+/namespaces/clients/libs/clients-filters                            @toptal/staff-portal-bravo-eng
+/namespaces/staff/apps/staff                                        @toptal/staff-portal-bravo-eng @toptal/staff-portal-tango-eng
+/namespaces/staff/apps/staff/src/pages/StaffProfile                 @toptal/staff-portal-bravo-eng
+/namespaces/clients/libs/clients                                    @toptal/staff-portal-bravo-eng
+/namespaces/clients/apps/clients-tasks                              @toptal/staff-portal-bravo-eng
+
+### Staff Portal Alpha
+/libs                                                               @toptal/staff-portal-alpha
+/monorepo-helpers                                                   @toptal/staff-portal-alpha
+
+### Communication Tools team
+/namespaces/facilities/libs/communication/src/components/PhoneLink                          @toptal/communication-tools-eng
+/namespaces/facilities/libs/communication/src/components/PhoneLinkContent                   @toptal/communication-tools-eng
+/namespaces/facilities/libs/communication/src/components/ClientPhoneLink                    @toptal/communication-tools-eng
+/namespaces/facilities/libs/communication/src/components/StartCallLink                      @toptal/communication-tools-eng
+/namespaces/facilities/libs/communication/src/hooks/use-call-contact                        @toptal/communication-tools-eng
+/namespaces/facilities/libs/communication/src/hooks/use-call-contact-with-operation-check   @toptal/communication-tools-eng
+/namespaces/facilities/libs/communication/src/hooks/use-proceed-topcall                     @toptal/communication-tools-eng
+/namespaces/facilities/libs/communication-send-email                                        @toptal/communication-tools-eng
+/namespaces/facilities/apps/calls                                                           @toptal/communication-tools-eng
+/namespaces/facilities/apps/meetings                                                        @toptal/communication-tools-eng
+/namespaces/facilities/libs/meetings                                                        @toptal/communication-tools-eng
+
+### Screening Ops team
+/hosts/staff-portal/src/hosts/main/pages/Overview/containers/ClaimSteps                                       @toptal/screening-ops-eng
+/namespaces/talents/apps/talents-screening-specialists                                                        @toptal/screening-ops-eng
+/namespaces/talents/libs/talents-screening-specialists                                                        @toptal/screening-ops-eng
+/namespaces/talents/libs/talents-profile/src/components/IdVerificationField                                   @toptal/screening-ops-eng
+/namespaces/facilities/apps/communication-tracking                                                            @toptal/screening-ops-eng
+/namespaces/facilities/libs/communication                                                                     @toptal/screening-ops-eng
+/namespaces/talents/apps/talents/src/applicants-page                                                          @toptal/screening-ops-eng
+/namespaces/talents/apps/talents/src/talent-update-page                                                       @toptal/screening-ops-eng
+# moved from /hosts/staff-portal/src/modules/verticals
+/namespaces/talents/apps/talents-verticals                                                                    @toptal/screening-ops-eng
+/hosts/staff-portal/src/hosts/main/pages/Overview/containers/RecentActivity                                   @toptal/screening-ops-eng
+
+### Client Retention team
+/namespaces/facilities/libs/role-flags/src/components/AddRoleFlagModal                                  @toptal/client-retention-eng
+/namespaces/facilities/libs/role-flags/src/components/AddRoleFlagButton                                 @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/modals/components/RestoreCompanyFromBlackFlagButton                @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/modals/components/RestoreCompanyFromBlackFlagModal                 @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/modals/components/RestoreCompanyFromBlackFlagModalContent          @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/modals/components/RestoreFromBadLead                               @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/modals/components/RestoreApplicationModal                          @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/modals/components/RestoreApplicationModalButton                    @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/profile-page/components/DeleteDuplicate                            @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/profile-page/components/PossibleDuplicatesCompaniesSection         @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/profile-page/components/PossibleDuplicatesCompaniesSection/hooks/use-find-company-duplicates.ts   @toptal/client-retention-eng @toptal/armani-eng
+/namespaces/facilities/libs/facilities/src/containers/PossibleDuplicatesSection                         @toptal/client-retention-eng
+/namespaces/talents/apps/talents/src/talent-profile-tab/components/PossibleDuplicatesTalentsSection     @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/BlackFlagModal                                          @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/BlackFlagClientItem                                     @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/ResumeCompanyItem                                       @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/ResumeCompanyModal                                      @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/RepauseCompanyItem                                      @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/RepauseCompanyModal                                     @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/PauseClientItem                                         @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/PauseClientModal                                        @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/MarkAsBadLeadModal                                      @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/MarkAsBadLeadModalButton                                @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/DeleteApplicationModal                                  @toptal/client-retention-eng
+/namespaces/clients/libs/clients/src/containers/DeleteApplicationModalButton                            @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/components/SystemInformation                                       @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/components/Investigations                                          @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/components/CompanyFinancialInformation                             @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/components/SocialMedia                                             @toptal/client-retention-eng
+# TODO: change back to @toptal/core-platform-eng below (https://github.com/toptal/staff-portal/pull/6235)
+/namespaces/clients/apps/clients/src/components/Comments                                                @toptal/client-retention-eng @toptal/coresmiths-team
+/namespaces/clients/apps/clients/src/basic-info-tab                                                     @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/internal-data-tab                                                  @toptal/client-retention-eng
+/namespaces/clients/apps/clients/src/web-and-social-tab                                                 @toptal/client-retention-eng
+/namespaces/community/libs/community-event-task-card                                                    @toptal/client-retention-eng
+/namespaces/facilities/libs/facilities/src/data/login-as                                                @toptal/client-retention-eng
+/namespaces/jobs/apps/jobs-station                                                                      @toptal/client-retention-eng
+/namespaces/jobs/libs/jobs-cards                                                                        @toptal/client-retention-eng
+/namespaces/facilities/apps/opportunities                                                               @toptal/client-retention-eng
+/namespaces/facilities/libs/opportunities                                                               @toptal/client-retention-eng
+/namespaces/clients/libs/clients-task-card                                                              @toptal/client-retention-eng
+/namespaces/facilities/libs/activities                                                                  @toptal/client-retention-eng
+/namespaces/facilities/libs/tasks                                                                       @toptal/client-retention-eng
+/namespaces/facilities/libs/tasks-cards                                                                 @toptal/client-retention-eng
+/namespaces/facilities/libs/tasks-list-item                                                             @toptal/client-retention-eng
+# TODO: change back to @toptal/core-platform-eng below (https://github.com/toptal/staff-portal/pull/6235)
+/namespaces/facilities/libs/tasks-lists                                                                 @toptal/client-retention-eng @toptal/coresmiths-team
+/namespaces/talents/libs/talents-task-card                                                              @toptal/client-retention-eng
+
+### Armani team
+/namespaces/clients/apps/clients/src/components/ClientCard                                 @toptal/armani-eng
+/hosts/staff-portal/src/hosts/main/pages/Overview/containers/CompanyVerificationRateChart  @toptal/armani-eng
+/hosts/staff-portal/src/hosts/main/pages/Overview/containers/ReferralsSection              @toptal/armani-eng
+/namespaces/clients/apps/clients/src/clients-page                                          @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page                                          @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page/pages/ClientProfile                      @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page/components/EditableClientName            @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page/components/EnableEmbeddedSigningModal    @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page/components/DisableEmbeddedSigningModal   @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/StartNegotiationModal               @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/StartNegotiationMenuItem            @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/SuspendNegotiationMenuItem          @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/SuspendNegotiationModal             @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/UpdateNegotiationStatusMenuItem     @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/UpdateNegotiationStatusModal        @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page/components/TurnIntoTalent                @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page/components/InviteContactModal            @toptal/armani-eng
+/namespaces/clients/apps/clients/src/profile-page/components/ClaimClientEnterpriseModal    @toptal/armani-eng
+/namespaces/clients/apps/clients/src/basic-info-tab/components/CallRequestsSection         @toptal/armani-eng
+/namespaces/clients/libs/clients-applicants                                                @toptal/armani-eng
+/namespaces/clients/libs/clients/src/containers/CheckComplianceButton                      @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/ApproveCompanyButton                @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/ImportSTAModal                      @toptal/armani-eng
+/namespaces/clients/apps/clients/src/modals/components/ImportSTAMenuItem                   @toptal/armani-eng
+/namespaces/clients/apps/clients/src/notes-tab                                             @toptal/armani-eng
+/namespaces/clients/apps/clients/src/notes-tab/components/ClientApproveModal               @toptal/armani-eng
+# TODO: change back to @toptal/core-platform-eng below (https://github.com/toptal/staff-portal/pull/6235)
+/namespaces/facilities/libs/ofac-compliance                                                @toptal/armani-eng @toptal/coresmiths-team
+# TODO: change back to @toptal/core-platform-eng below (https://github.com/toptal/staff-portal/pull/6235)
+/namespaces/clients/apps/clients/src/components/Quiz                                       @toptal/armani-eng @toptal/coresmiths-team
+/namespaces/clients/apps/clients/src/legal-tab                                             @toptal/armani-eng
+/namespaces/clients/apps/clients/src/applicants-page                                       @toptal/armani-eng
+/namespaces/clients/apps/clients/src/contacts-tab                                          @toptal/armani-eng
+/namespaces/clients/apps/clients/src/hierarchy-page                                        @toptal/armani-eng
+/namespaces/clients/apps/clients-call-requests                                             @toptal/armani-eng
+/namespaces/clients/libs/clients-call-requests                                             @toptal/armani-eng
+
+### Talent Post Hire
+/namespaces/talents/libs/talents-gigs                                        @toptal/talent-post-hire-eng
+/namespaces/talents/apps/talents-publication-gigs                            @toptal/talent-post-hire-eng
+/namespaces/talents/apps/talents-gig-candidates                              @toptal/talent-post-hire-eng
+
+### Matrix team
+/namespaces/engagements/apps/engagements/src/pages/engagement-page          @toptal/matrix
+/namespaces/jobs/apps/jobs                                                  @toptal/matrix
+/namespaces/jobs/apps/jobs-applications                                     @toptal/matrix
+/namespaces/jobs/libs/jobs                                                  @toptal/matrix
+/namespaces/jobs/libs/jobs-task-card                                        @toptal/matrix
+/namespaces/clients/apps/clients/src/jobs-tab/components/JobsTab            @toptal/matrix
+/namespaces/engagements/libs/engagements                                    @toptal/matrix
+/namespaces/engagements/libs/engagements-interviews                         @toptal/matrix
+/namespaces/talents/libs/talents-list                                       @toptal/matrix
+/namespaces/talents/apps/talents/src/talent-list-page                       @toptal/matrix
+
+### Client Portal team
+/namespaces/clients/apps/clients/src/profile-page/components/LeaveFeedbackModal                    @toptal/client-portal-team
+/namespaces/clients/apps/clients/src/components/ReviewAttempts                                     @toptal/client-portal-team
+/namespaces/clients/libs/clients/src/hooks/use-create-conversation-for-staff          @toptal/client-portal-team
+
+### Mobile team
+/namespaces/clients/apps/clients/src/profile-page/components/EnableMobileApp                           @toptal/mobile-eng @toptal/staff-portal-eng
+/namespaces/clients/apps/clients/src/profile-page/components/DisableMobileApp                          @toptal/mobile-eng @toptal/staff-portal-eng
+/namespaces/clients/apps/clients/src/profile-page/components/SendMobileAppInvitationsToClientModal     @toptal/mobile-eng @toptal/staff-portal-eng
+
+### Talent Engagement Acquisition modules
+/namespaces/talents/apps/talents-rate-change-requests                                    @toptal/talent-engagement-acquisition-eng
+/namespaces/talents/libs/talents-coaching                                                @toptal/talent-engagement-acquisition-eng
+/namespaces/talents/apps/talents-coaching                                                @toptal/talent-engagement-acquisition-eng
+/namespaces/talents/libs/talents-infractions                                             @toptal/talent-engagement-acquisition-eng
+/namespaces/talents/apps/talents-infractions                                             @toptal/talent-engagement-acquisition-eng
+/namespaces/talents/apps/talents/src/performance-tab                                     @toptal/talent-engagement-acquisition-eng
+/namespaces/talents/libs/talents-top-shield                                              @toptal/talent-engagement-acquisition-eng
+/namespaces/talents/apps/talents/src/top-shield-tab                                      @toptal/talent-engagement-acquisition-eng
+/namespaces/facilities/apps/quizzes                                                      @toptal/talent-engagement-acquisition-eng
+/namespaces/jobs/apps/jobs/src/job-page/components/RequestAvailabilityModal              @toptal/talent-engagement-acquisition-eng
+
+### Talent Acquisition
+/namespaces/facilities/apps/skills                                                                                                 @toptal/talent-acquisition-eng
+/namespaces/facilities/libs/meetings/src/components/MeetingActions/components/MeetingMarkAsCompletedWithSurveyButton               @toptal/talent-acquisition-eng
+/namespaces/facilities/libs/meetings/src/components/MeetingActions/components/MeetingMarkAsCompletedWithSurveyConfirmationModal    @toptal/talent-acquisition-eng
+/namespaces/facilities/libs/meetings/src/components/MeetingActions/components/MeetingMarkAsCompletedWithSurveyModal                @toptal/talent-acquisition-eng
+/namespaces/jobs/apps/jobs-sourcing-requests                                                                                       @toptal/talent-acquisition-eng
+/namespaces/talents/libs/talents/src/components/TalentAvatar                                                                       @toptal/talent-acquisition-eng
+
+### Talent Community
+/namespaces/community/libs/community-leaders                                                          @toptal/talent-community-eng
+/namespaces/community/apps/community-leaders                                                          @toptal/talent-community-eng
+/namespaces/community/apps/community-events                                                           @toptal/talent-community-eng
+/hosts/staff-portal/cypress/integration/community-leaders                                             @toptal/talent-community-eng
+/hosts/staff-portal/cypress/integration/talents/community-leader-tab                                  @toptal/talent-community-eng
+/hosts/staff-portal/cypress/mocks/responses/talents/get-community-leader-response.ts                  @toptal/talent-community-eng
+/hosts/staff-portal/cypress/mocks/schema-updates/community-leaders                                    @toptal/talent-community-eng
+/hosts/staff-portal/cypress/mocks/talent-community-leader-mock.ts                                     @toptal/talent-community-eng
+/hosts/staff-portal/cypress/modules/pages/talents/community-leader-tab                                @toptal/talent-community-eng
+/hosts/staff-portal/cypress/modules/pages/CommunityLeadersPage.ts                                     @toptal/talent-community-eng
+
+### Talent Profile
+/libs/ui/src/components/NamedPagination                                                               @toptal/talent-profile-eng
+/libs/ui/src/components/Separator                                                                     @toptal/talent-profile-eng
+/namespaces/talents/libs/talents-skills                                                               @toptal/talent-profile-eng
+
+### Topscreen team
+/namespaces/clients/apps/clients/src/topscreen-tab                                                    @toptal/topscreen-team-eng
+/namespaces/clients/apps/clients/src/modals/components/AddNewTopscreenPositionModal                   @toptal/topscreen-team-eng
+/hosts/staff-portal/cypress/mocks/request-stubs/companies/tabs/topscreen-stubs.ts                     @toptal/topscreen-team-eng
+/hosts/staff-portal/cypress/mocks/responses/companies/get-topscreen-positions-response.ts             @toptal/topscreen-team-eng
+
+### Pricing team
+/namespaces/jobs/apps/jobs/src/job-edit-page/components/JobDetailsFormContent/components/JobMaximumHourlyRateWrapper            @toptal/pricing-team-eng
+
+##################################
+# KEEP THIS IN SYNC WITH https://sentry.io/settings/toptal/projects/staff-portal/ownership/
+##################################

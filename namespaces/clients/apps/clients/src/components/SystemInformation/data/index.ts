@@ -1,0 +1,7 @@
+export { GetSystemInformationDocument } from './get-system-information.staff.gql.types'
+export type { SystemInformationFragment } from './system-information-fragment.staff.gql.types'
+export { SetPatchClientSystemInformationProfileDocument } from './set-patch-client-system-information.staff.gql.types'
+export { GetClientReviewLinkDocument } from './get-client-review-link.staff.gql.types'
+export { GetClientInterestedInDocument } from './get-client-interested-in.staff.gql.types'
+export { GetClientHowDidYouHearDocument } from './get-client-how-did-you-hear.staff.gql.types'
+export { GetClientHowDidYouHearDetailsDocument } from './get-client-how-did-you-hear-details.staff.gql.types'

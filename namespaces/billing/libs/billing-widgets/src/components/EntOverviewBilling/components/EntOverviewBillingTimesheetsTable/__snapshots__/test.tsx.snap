@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntOverviewBillingTimesheetsTable data is a empty list 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingTimesheetsTable"
+    >
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-title"
+      >
+        Longest Overdue Timesheets
+      </span>
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingTimesheetsTable data is null 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingTimesheetsTable"
+    >
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-title"
+      >
+        Longest Overdue Timesheets
+      </span>
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingTimesheetsTable default render 1`] = `
+.c0 {
+  border-bottom: solid 1px #e5e7ea;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="EntOverviewBillingTimesheetsTable"
+    >
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-title"
+      >
+        Longest Overdue Timesheets
+      </span>
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-actions"
+      />
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-variant"
+      />
+      <span
+        data-testid="EntOverviewBillingTimesheetsTable-subtitle"
+      />
+      <div
+        _css="border-bottom:solid 1px ,#e5e7ea,;"
+        class="EntOverviewEmpty___StyledContainer-yu8lup c0"
+      >
+        <div
+          class=""
+          style="margin-left: 1rem;"
+        >
+          <div
+            class=""
+            style="margin-bottom: 0.5rem;"
+          >
+            <p
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-grey MuiTypography-body1"
+            >
+              No data available at the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

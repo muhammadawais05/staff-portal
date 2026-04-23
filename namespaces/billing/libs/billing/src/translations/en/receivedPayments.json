@@ -1,0 +1,53 @@
+{
+  "header": {
+    "actions": {
+      "download": "Download Commissions",
+      "history": "Payment History",
+      "showProjections": "Show Projections"
+    },
+    "title": "Payments"
+  },
+  "modals": {
+    "commissions": {
+      "actions": {
+        "submit": "Download"
+      },
+      "fields": {
+        "commissionStatus": {
+          "fields": {
+            "outstanding": "Download outstanding commissions",
+            "paid": "Download paid commissions"
+          },
+          "label": "Commission Status"
+        },
+        "endDate": "End date",
+        "startDate": "Start date"
+      },
+      "title": "Download Commissions"
+    },
+    "history": {
+      "actions": {
+        "submit": "Download PDF"
+      },
+      "fields": {
+        "endDate": "End date",
+        "startDate": "Start date"
+      },
+      "title": "Payment History"
+    },
+    "notifications": {
+      "success": "Your download should begin momentarily. Please do not refresh the page. If for some reason the download doesn't initiate, please click this <0>link</0> to download the document manually."
+    },
+    "projections": {
+      "footerNote": " Note that these are projections only. They are subject to change at any time.",
+      "monthly": "Monthly: ",
+      "title": "Projected Earnings",
+      "totalsHeader": "Based on today's data of actively running engagements, your payment projections are:",
+      "weekly": "Weekly: ",
+      "yearly": "Yearly: "
+    }
+  },
+  "table": {
+    "empty": "You have not been issued any payments from Toptal"
+  }
+}

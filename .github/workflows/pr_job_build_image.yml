@@ -1,0 +1,148 @@
+name: Build Image
+
+on:
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: temploy-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build image
+    runs-on: ['org/toptal', 'os/linux', 'arch/x64', 'size/large']
+    timeout-minutes: 45
+    env:
+      DEVBOT_TOKEN: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPOSITORY_NAME: staff-portal
+      JENKINS_USER: toptal-jenkins
+    steps:
+      - name: Checkout Staff Portal
+        uses: actions/checkout@v3
+
+      - name: Checkout davinci
+        uses: actions/checkout@v3
+        with:
+          repository: toptal/davinci
+          token: ${{ env.DEVBOT_TOKEN }}
+          path: davinci
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Install dependencies
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --silent --non-interactive
+
+      - name: Setup Google cloud toolchain
+        uses: google-github-actions/setup-gcloud@v0.6.0
+        with:
+          service_account_key: ${{ secrets.GCR_GQLGW_SCHEMAS_BUCKET_ACCOUNT }}
+          export_default_credentials: true
+
+      - name: Fetch gql schemas
+        run: yarn fetch:graphql-schemas
+
+      - name: Check types cache
+        uses: actions/cache@v3
+        id: gql-types-cache
+        with:
+          path: |
+            libs/graphql
+            **/*.gql.types.tsx
+          key: ${{ runner.os }}-types-${{ hashFiles('**/codegen.js', '**/*.graphql', '**/*.gql.ts') }}
+
+      - name: Generate types
+        if: ${{ steps.gql-types-cache.outputs.cache-hit != 'true' }}
+        run: yarn generate:types
+
+      - name: Copy Docker files from Davinci
+        run: |
+          cp ./davinci/packages/davinci/docker/nginx-vhost.conf ./docker/nginx-vhost.conf
+          cp ./davinci/packages/ci/src/configs/docker/env-runtime.entrypoint.sh ./docker/env-runtime.entrypoint.sh
+
+      - name: Build
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
+        run: yarn build:ci
+
+      - name: Check size
+        run: yarn size
+
+      - name: Version tag
+        run: |
+          branchName=${GITHUB_HEAD_REF}
+          echo "::set-output name=version::$(git describe --tags --always)"
+          echo "::set-output name=branchName::${branchName//\//-}"
+        id: version-tag
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: gcr.io/toptal-hub/staff-portal-release
+          tags: |
+            ${{ github.event.pull_request.head.sha }}
+            ${{ steps.version-tag.outputs.version }}
+            ${{ steps.version-tag.outputs.branchName }}
+          flavor: latest=false
+
+      - name: Login to GCloud Registry
+        uses: docker/login-action@v2
+        with:
+          registry: gcr.io
+          username: _json_key
+          password: ${{ secrets.GCR_ACCOUNT_KEY }}
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and push image
+        uses: docker/build-push-action@v3
+        with:
+          tags: ${{ steps.meta.outputs.tags }}
+          push: true
+          context: .
+          file: ./davinci/packages/ci/src/configs/docker/Dockerfile.gha-deploy
+          build-args: |
+            ENV_RUNTIME_ENTRYPOINT=./docker/env-runtime.entrypoint.sh
+            DIST_FOLDER=./hosts/staff-portal/dist
+            NGINX_CONFIG=./docker/nginx-vhost.conf
+            VERSION=${{ github.event.pull_request.head.sha }}
+
+      - name: Get temploy env variables
+        id: get-env-variables
+        run: echo "::set-output name=vars::$(./.github/scripts/readEnvVars.sh ./hosts/staff-portal/.env.temploy)"
+
+      - name: Trigger temploy job
+        uses: toptal/jenkins-job-trigger-action@1.0.0
+        with:
+          jenkins_url: https://jenkins-build.toptal.net/
+          jenkins_user: ${{ env.JENKINS_USER }}
+          jenkins_token: ${{ secrets.TOPTAL_JENKINS_BUILD_TOKEN }}
+          proxy: http://${{ secrets.HTTP_PROXY }}
+          job_name: '${{ env.REPOSITORY_NAME }}/job/${{ env.REPOSITORY_NAME }}-temploy-helm-run'
+          job_params: |
+            {
+              "REPOSITORY_NAME": "${{ env.REPOSITORY_NAME }}",
+              "TAG": "${{ github.event.pull_request.head.sha }}",
+              "ENV": "${{ steps.get-env-variables.outputs.vars }}",
+              "RELEASE": "staff-portal-pr-${{ github.event.number }}"
+            }
+          job_timeout: '1200'
+
+      - name: Post the temploy link
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { repo: { owner, repo }  } = context
+            const body = `Your temploy is ready 🎉<br />Use the following URL to access your staff-portal instance:<br />https://staff-portal-pr-${{ github.event.number }}.toptal.rocks/`
+            github.rest.issues.createComment({ issue_number: ${{ github.event.number }}, owner, repo, body })

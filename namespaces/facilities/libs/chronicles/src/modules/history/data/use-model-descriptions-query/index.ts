@@ -1,0 +1,1 @@
+export { useModelDescriptionsQuery } from './gql'

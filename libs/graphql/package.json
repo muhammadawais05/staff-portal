@@ -1,0 +1,15 @@
+{
+  "name": "@staff-portal/graphql",
+  "description": "Staff Portal's GraphQL Types and Utils",
+  "version": "0.4.0",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types-combined": "graphql-codegen",
+    "lint": "exit 0",
+    "typecheck": "kurama typecheck"
+  },
+  "sideEffects": false
+}

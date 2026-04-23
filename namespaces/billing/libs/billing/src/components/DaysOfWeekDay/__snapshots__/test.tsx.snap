@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DaysOfWeekDay default render 1`] = `
+.c0 {
+  background-color: #f3f4f6;
+  border-left: solid 1px #c4c6ca;
+  border-right: solid 1px #c4c6ca;
+  -webkit-flex-basis: 14%;
+  -ms-flex-preferred-size: 14%;
+  flex-basis: 14%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 14px;
+  min-width: 14%;
+  border-top: solid 1px #c4c6ca;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="background-color:,#f3f4f6,;border-left:solid 1px ,#c4c6ca,;border-right:,solid 1px #c4c6ca,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+      class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c0 MuiGrid-item"
+      data-testid="DaysOfWeekDay"
+    >
+      <p
+        class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+      >
+        Sudnay
+      </p>
+    </div>
+  </div>
+</div>
+`;

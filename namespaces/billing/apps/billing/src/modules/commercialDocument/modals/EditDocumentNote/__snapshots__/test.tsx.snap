@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditDocumentNote \`loading\` is \`false\` default render 1`] = `
+.c0 {
+  position: relative;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    >
+      <div
+        data-testid="EditDocumentNoteForm"
+      >
+        {"initialValues":{"commercialDocumentId":"VjEtSW52b2ljZS0zNzcyNDk","note":"testedit"},"nodeId":"377249","nodeType":"invoice"}
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EditDocumentNote \`loading\` is \`true\` default render 1`] = `
+.c1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(255 255 255 / 80%);
+}
+
+.c0 {
+  position: relative;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css2="position:relative;,"
+      class="LoaderOverlay___StyledContainer-sc-1b017ii c0"
+      data-testid="LoaderOverlayWrapper"
+    >
+      <div
+        data-testid="EditDocumentNoteForm"
+      >
+        {"initialValues":{"commercialDocumentId":"VjEtSW52b2ljZS0zNzcyNDk","note":""},"nodeId":"377249","nodeType":"invoice"}
+      </div>
+      <div
+        _css="position:absolute;width:100%;height:100%;top:0;left:0;justify-content:center;background:rgba(255 255 255 / 80%);,false"
+        class="PicassoLoader-root LoaderOverlay___StyledLoader-sc-1b017ii c1"
+        data-testid="LoaderOverlay"
+      >
+        <div
+          aria-valuenow="35"
+          class="MuiCircularProgress-root PicassoCircularProgress-root PicassoLoader-spinnerBlue MuiCircularProgress-colorPrimary MuiCircularProgress-static"
+          role="progressbar"
+          style="width: 16px; height: 16px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleStatic"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20.2"
+              stroke-width="3.6"
+              style="stroke-dasharray: 126.920; stroke-dashoffset: 82.498px;"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

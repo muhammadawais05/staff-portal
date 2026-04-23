@@ -1,0 +1,44 @@
+{
+  "actions": {
+    "cancel": "Cancel",
+    "create": "Add Note",
+    "download": "Download {{name}}",
+    "edit": "Edit Note",
+    "upload": "Upload a new one"
+  },
+  "empty": "There are no notes yet.",
+  "form": {
+    "attachment": "No file chosen",
+    "comment": "Comment",
+    "commentField": "Notes, details or red flags.",
+    "title": {
+      "create": "Add Note",
+      "edit": "Edit Note"
+    },
+    "titleField": "Title"
+  },
+  "history": {
+    "added": "{{creatorName}} added on {{date}}",
+    "updated": "(updated on {{date}})"
+  },
+  "modal": {
+    "attachment": {
+      "description": "Are you sure you want to delete \"{{name}}\"?",
+      "title": "Delete Attachment"
+    },
+    "note": {
+      "confirm": "Delete Note",
+      "description": "Are you sure you want to delete this note?",
+      "title": "Remove Note: \"{{name}}\""
+    }
+  },
+  "notification": {
+    "success": {
+      "create": "Note has been created.",
+      "delete": "Note has been deleted.",
+      "deleteAttachment": "Attachment has been deleted.",
+      "update": "Note was successfully updated."
+    }
+  },
+  "title": "Notes"
+}

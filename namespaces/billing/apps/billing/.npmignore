@@ -1,0 +1,10 @@
+# https://docs.npmjs.com/cli/v6/using-npm/developers#keeping-files-out-of-your-package
+
+__mocks__
+__snapshots__
+_fixtures
+story
+test.ts
+test.tsx
+*.pact.ts
+*.graphql

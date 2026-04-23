@@ -1,0 +1,31 @@
+{
+  "name": "@toptal/talents-talents-skills",
+  "description": "Staff Portal Talent Skills library",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "homepage": "https://github.com/toptal/@toptal/staff-portal-monorepo/tree/master/namespaces/talents/libs/talents-skills",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build:package": "davinci engine compile-package",
+    "lint": "davinci syntax lint code . && davinci syntax lint styles .",
+    "storybook": "kurama storybook",
+    "test": "davinci qa unit --runInBand --passWithNoTests",
+    "test:integration": "echo 'There are no integration tests.'",
+    "test:integration:ci": "yarn test:integration",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@staff-portal/ui": "0.10.13",
+    "@staff-portal/utils": "0.0.2",
+    "@toptal/picasso": "^25.0.0",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "6.3.7",
+    "@testing-library/react": "^11.2.6",
+    "@toptal/picasso-provider": "^1.1.2"
+  },
+  "sideEffects": false
+}

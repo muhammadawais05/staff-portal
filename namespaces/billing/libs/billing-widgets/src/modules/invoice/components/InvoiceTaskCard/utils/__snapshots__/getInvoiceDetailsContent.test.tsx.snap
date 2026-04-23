@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getInvoiceDetailsContent content returned properly 1`] = `
+Array [
+  Object {
+    "key": "invoiceFor",
+    "label": "Invoice for",
+    "value": <LinkWrapper
+      href="http://localhost:3000/platform/staff/companies/1575810"
+      target="_blank"
+    >
+      <TypographyOverflow
+        color="inherit"
+      >
+        Thad Walter
+      </TypographyOverflow>
+    </LinkWrapper>,
+  },
+  Object {
+    "key": "totalAmount",
+    "label": "Total Amount",
+    "value": <Amount
+      amount="2295.0"
+    />,
+  },
+  Object {
+    "key": "paymentMethod",
+    "label": "Payment Method",
+    "value": "—",
+  },
+  Object {
+    "key": "dueDate",
+    "label": "Due Date",
+    "value": "Feb 6, 2020",
+  },
+  Object {
+    "key": "developerMatcher",
+    "label": "Developer Matcher",
+    "value": <Memo(ContactLink)
+      contact={
+        Object {
+          "__typename": "Staff",
+          "fullName": "Ramiro Agustin Palacios",
+          "id": "VjEtU3RhZmYtMTUzNDA2",
+          "webResource": Object {
+            "__typename": "Link",
+            "text": "Ramiro Agustin Palacios",
+            "url": "http://localhost:3000/platform/staff/staff/153406",
+          },
+        }
+      }
+      data-testid="developerMatcher"
+    />,
+  },
+  Object {
+    "key": "designerMatcher",
+    "label": "Designer Matcher",
+    "value": <Memo(ContactLink)
+      contact={
+        Object {
+          "__typename": "Staff",
+          "fullName": "Raymond Sharma",
+          "id": "VjEtU3RhZmYtMTQzOTcxOQ",
+          "webResource": Object {
+            "__typename": "Link",
+            "text": "Raymond Sharma",
+            "url": "http://localhost:3000/platform/staff/staff/1439719",
+          },
+        }
+      }
+      data-testid="designerMatcher"
+    />,
+  },
+  Object {
+    "key": "financeExpert",
+    "label": "Finance Expert Matcher",
+    "value": <Memo(ContactLink)
+      data-testid="financeExpert"
+    />,
+  },
+  Object {
+    "key": "projectManager",
+    "label": "Project Manager Matcher",
+    "value": <Memo(ContactLink)
+      contact={
+        Object {
+          "__typename": "Staff",
+          "fullName": "Carolina Della Corte",
+          "id": "VjEtU3RhZmYtMTY2NDI4OA",
+          "webResource": Object {
+            "__typename": "Link",
+            "text": "Carolina Della Corte",
+            "url": "http://localhost:3000/platform/staff/staff/1664288",
+          },
+        }
+      }
+      data-testid="projectManager"
+    />,
+  },
+  Object {
+    "key": "productManager",
+    "label": "Product Manager Matcher",
+    "value": <Memo(ContactLink)
+      contact={
+        Object {
+          "__typename": "Staff",
+          "fullName": "Carolina Della Corte",
+          "id": "VjEtU3RhZmYtMTY2NDI4OA",
+          "webResource": Object {
+            "__typename": "Link",
+            "text": "Carolina Della Corte",
+            "url": "http://localhost:3000/platform/staff/staff/1664288",
+          },
+        }
+      }
+      data-testid="productManager"
+    />,
+  },
+  Object {
+    "key": "claimer",
+    "label": "Claimer",
+    "value": <Memo(ContactLink)
+      contact={
+        Object {
+          "__typename": "Staff",
+          "fullName": "Michael Savva",
+          "id": "VjEtU3RhZmYtMTcxNzY1Nw",
+          "webResource": Object {
+            "__typename": "Link",
+            "text": "Michael Savva",
+            "url": "http://localhost:3000/platform/staff/staff/1717657",
+          },
+        }
+      }
+      data-testid="claimer"
+    />,
+  },
+]
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nolabel modifier for change payload type should render change template without a label 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    System
+     changed allocated hours of 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/125545"
+    >
+      Isiah Ferry
+    </a>
+     
+     from 
+    10
+     to 
+    20
+     hours/week
+  </div>
+</div>
+`;

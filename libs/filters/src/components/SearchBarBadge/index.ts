@@ -1,0 +1,1 @@
+export { SearchBarBadge } from './SearchBarBadge'

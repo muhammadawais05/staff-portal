@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentSelectableListRow default render 1`] = `
+.c0.c0 {
+  text-align: right;
+}
+
+.c1.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table
+      class="MuiTable-root"
+    >
+      <tbody
+        class="MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-stripeEven PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+            data-testid="PaymentSelectableListRow-payment-id"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <a
+                class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+                data-testid="LinkWrapper-link"
+                href="http://localhost:3000/platform/staff/payments/1104428"
+              >
+                #1104428
+              </a>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+            data-testid="PaymentSelectableListRow-recipient"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <a
+                class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+                data-testid="LinkWrapper-link"
+                href="http://localhost:3000/platform/staff/staff/1455082"
+              >
+                <div
+                  data-testid="TypographyOverflow"
+                >
+                  José Silva
+                </div>
+              </a>
+            </div>
+          </td>
+          <td
+            _css="&&{text-align:right;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body PaymentSelectableListRow___StyledTableCell-a1tysy c0"
+            data-testid="PaymentSelectableListRow-amount"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="CommercialDocumentAmountWithColorAndTooltip"
+              >
+                0
+              </div>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <p
+                class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1"
+                data-testid="PaymentSelectableListRow-created-on-date"
+              >
+                Jul 21, 2020
+              </p>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                class="PicassoContainer-flex"
+              >
+                <div
+                  _css2="&&{flex-grow:1;width:100%;}"
+                  class="PaymentSelectableListRow___StyledContainer-a1tysy c1"
+                >
+                  <div
+                    data-testid="TypographyOverflow"
+                  >
+                    <span
+                      data-testid="PaymentShortDescription"
+                    />
+                  </div>
+                </div>
+                <div
+                  class=""
+                  style="margin-left: 0.5rem;"
+                />
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

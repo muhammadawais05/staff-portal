@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceTaskCardTitle when there is \`consolidatedInvoice\` card is rendered properly 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    abc123
+    <br />
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      data-testid="consolidated-link"
+      href="http://localhost:3000/platform/staff/invoices/377249"
+    >
+      Consolidated Invoice #377249
+    </a>
+  </div>
+</div>
+`;
+
+exports[`InvoiceTaskCardTitle when there is no \`consolidatedInvoice\` card is rendered properly 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    abc123
+  </div>
+</div>
+`;

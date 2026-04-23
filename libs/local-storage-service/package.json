@@ -1,0 +1,21 @@
+{
+  "name": "@staff-portal/local-storage-service",
+  "description": "Staff Portal's local storage service",
+  "version": "0.142.3",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@toptal/picasso": "^25.0.0",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0"
+  },
+  "sideEffects": false
+}

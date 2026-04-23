@@ -1,0 +1,17 @@
+{
+  "name": "@staff-portal/runtime-validation",
+  "description": "Staff Portal's runtime validation library",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "yup": "0.32.11"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,6 @@
+export * from './get-claim-technical-generic-step-data/get-claim-technical-generic-step-data.staff.gql'
+export * from './get-claim-technical-generic-step-data/get-claim-technical-generic-step-data.staff.gql.types'
+export * from './claim-technical-one-role-step/claim-technical-one-role-step.staff.gql'
+export * from './claim-technical-one-role-step/claim-technical-one-role-step.staff.gql.types'
+export * from './claim-technical-two-role-step/claim-technical-two-role-step.staff.gql'
+export * from './claim-technical-two-role-step/claim-technical-two-role-step.staff.gql.types'

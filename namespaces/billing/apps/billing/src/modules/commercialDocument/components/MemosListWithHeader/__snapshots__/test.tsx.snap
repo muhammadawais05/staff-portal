@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MemosListWithHeader default render 1`] = `
+.c0.c0 {
+  text-align: right;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <table>
+      <tbody
+        class="MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableSectionHead-sectionHeaderRow PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+            colspan="100"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+            >
+              Some header
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody
+        class="MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                id="Field"
+              >
+                {"component":{"compare":null,"displayName":"FormInputCheckbox"},"name":"fieldArrayName","testId":"MemosListWithHeader-fieldArrayName-0","type":"checkbox","value":"VjEtSW52b2ljZS0zNzcyNDk"}
+              </div>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+            data-testid="MemosListWithHeader-id"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              112547
+            </div>
+          </td>
+          <td
+            _css="&&{text-align:right;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body MemosListWithHeader___StyledTableCell-sc-1qitwav c0"
+            data-testid="MemosListWithHeader-amount"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <span
+                class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+              >
+                $120.00
+              </span>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+            data-testid="MemosListWithHeader-description"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="TypographyOverflow"
+              >
+                This is a sample description of credit Memo 1
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-stripeEven PicassoTableRow-bordered"
+        >
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                id="Field"
+              >
+                {"component":{"compare":null,"displayName":"FormInputCheckbox"},"name":"fieldArrayName","testId":"MemosListWithHeader-fieldArrayName-1","type":"checkbox","value":"VjEtSW52b2ljZS0xMTI1MzQ"}
+              </div>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+            data-testid="MemosListWithHeader-id"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              112534
+            </div>
+          </td>
+          <td
+            _css="&&{text-align:right;}"
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body MemosListWithHeader___StyledTableCell-sc-1qitwav c0"
+            data-testid="MemosListWithHeader-amount"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <span
+                class="MuiTypography-root PicassoTypography-bodyInherit MuiTypography-body1 MuiTypography-displayInline"
+              >
+                $35.00
+              </span>
+            </div>
+          </td>
+          <td
+            class="MuiTableCell-root PicassoTableCell-root MuiTableCell-body"
+            data-testid="MemosListWithHeader-description"
+          >
+            <div
+              class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-darkGrey PicassoTypography-inheritWeight MuiTypography-body1"
+            >
+              <div
+                data-testid="TypographyOverflow"
+              >
+                This is a sample description of credit Memo 3452
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

@@ -1,0 +1,58 @@
+name: DangerJS
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+    branches: [master]
+
+concurrency:
+  group: danger-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  danger:
+    name: Check:DangerJS
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_ONLY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.17'
+
+      - name: Check node modules cache
+        uses: actions/cache@v3
+        id: node-modules-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-danger-node_modules-${{ github.event.pull_request.head.sha }}
+          restore-keys: |
+            ${{ runner.os }}-danger-node_modules-
+
+      - name: Get yarn cache directory path
+        if: ${{ steps.node-modules-cache.outputs.cache-hit != 'true' }}
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Check yarn cache
+        if: ${{ steps.node-modules-cache.outputs.cache-hit != 'true' }}
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: node-cache-${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-cache-${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: |
+          yarn policies set-version
+          yarn install --frozen-lockfile --ignore-optional --silent --non-interactive
+
+      - name: Run danger checks
+        run: yarn davinci ci danger

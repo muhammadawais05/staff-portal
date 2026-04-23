@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DaysOfWeek default render 1`] = `
+.c1 {
+  background-color: #fff;
+  border-left: solid 1px #c4c6ca;
+  border-right: none;
+  -webkit-flex-basis: 14%;
+  -ms-flex-preferred-size: 14%;
+  flex-basis: 14%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 14px;
+  min-width: 14%;
+  border-top: solid 1px #c4c6ca;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.c2 {
+  background-color: #f3f4f6;
+  border-left: solid 1px #c4c6ca;
+  border-right: none;
+  -webkit-flex-basis: 14%;
+  -ms-flex-preferred-size: 14%;
+  flex-basis: 14%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 14px;
+  min-width: 14%;
+  border-top: solid 1px #c4c6ca;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.c3 {
+  background-color: #f3f4f6;
+  border-left: solid 1px #c4c6ca;
+  border-right: solid 1px #c4c6ca;
+  -webkit-flex-basis: 14%;
+  -ms-flex-preferred-size: 14%;
+  flex-basis: 14%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 14px;
+  min-width: 14%;
+  border-top: solid 1px #c4c6ca;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.c0.c0 {
+  width: 100%;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="&&{width:100%;}"
+      class="MuiGrid-root DaysOfWeek___StyledGridItem-sc-10gbb2b c0 MuiGrid-item"
+    >
+      <div
+        class="PicassoContainer-spaceEvenlyJustifyContent PicassoContainer-flex"
+      >
+        <div
+          _css="background-color:,#fff,;border-left:solid 1px ,#c4c6ca,;border-right:,none,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+          class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c1 MuiGrid-item"
+          data-testid="DaysOfWeekDay"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            Mon
+          </p>
+        </div>
+        <div
+          _css="background-color:,#fff,;border-left:solid 1px ,#c4c6ca,;border-right:,none,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+          class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c1 MuiGrid-item"
+          data-testid="DaysOfWeekDay"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            Tue
+          </p>
+        </div>
+        <div
+          _css="background-color:,#fff,;border-left:solid 1px ,#c4c6ca,;border-right:,none,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+          class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c1 MuiGrid-item"
+          data-testid="DaysOfWeekDay"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            Wed
+          </p>
+        </div>
+        <div
+          _css="background-color:,#fff,;border-left:solid 1px ,#c4c6ca,;border-right:,none,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+          class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c1 MuiGrid-item"
+          data-testid="DaysOfWeekDay"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            Thu
+          </p>
+        </div>
+        <div
+          _css="background-color:,#fff,;border-left:solid 1px ,#c4c6ca,;border-right:,none,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+          class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c1 MuiGrid-item"
+          data-testid="DaysOfWeekDay"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            Fri
+          </p>
+        </div>
+        <div
+          _css="background-color:,#f3f4f6,;border-left:solid 1px ,#c4c6ca,;border-right:,none,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+          class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c2 MuiGrid-item"
+          data-testid="DaysOfWeekDay"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            Sat
+          </p>
+        </div>
+        <div
+          _css="background-color:,#f3f4f6,;border-left:solid 1px ,#c4c6ca,;border-right:,solid 1px #c4c6ca,;flex-basis:14%;flex-grow:1;font-size:14px;min-width:14%;border-top:solid 1px ,#c4c6ca,;padding:0.75rem;width:100%;"
+          class="MuiGrid-root DaysOfWeekDay___StyledGridItem-ywgn6a c3 MuiGrid-item"
+          data-testid="DaysOfWeekDay"
+        >
+          <p
+            class="MuiTypography-root PicassoTypography-bodyInherit PicassoTypography-semibold MuiTypography-body1 MuiTypography-alignCenter"
+          >
+            Sun
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

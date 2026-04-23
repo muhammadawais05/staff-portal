@@ -1,0 +1,23 @@
+{
+  "name": "@staff-portal/string",
+  "description": "Staff Portal's string helpers",
+  "version": "0.3.23",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@toptal/picasso": "^25.0.0",
+    "node-email-reply-parser": "^0.1.1",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntOverviewBillingHeader default render 1`] = `
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      _css="flex-grow:1;"
+      class="EntOverviewBillingHeader___StyledContainer-sc-53rxe1 c0"
+      data-testid="EntOverviewBillingHeader"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h2"
+      >
+        Billing Overview
+      </h2>
+      <div
+        data-testid="EntOverviewBillingHeaderFilter"
+      />
+    </div>
+  </div>
+</div>
+`;

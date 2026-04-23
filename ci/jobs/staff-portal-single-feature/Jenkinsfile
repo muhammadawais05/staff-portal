@@ -1,0 +1,247 @@
+@Library('globalLibrary@master') _
+
+anvilHelper = new helpers.AnvilHelper()
+
+pipeline {
+  agent { label 'slave_aws' }
+
+  options {
+    ansiColor('xterm')
+    skipDefaultCheckout()
+    timestamps()
+    timeout(time: 3, unit: 'HOURS')
+    buildDiscarder(logRotator(daysToKeepStr: '3'))
+  }
+
+  parameters {
+    string(name: 'ghprbActualCommit', defaultValue: '', description: '')
+    string(name: 'ghprbTargetBranch', defaultValue: '', description: '')
+    string(name: 'CI_NODE_INDEX', defaultValue: '', description: 'Current index of CI node')
+    string(name: 'CI_NODE_TOTAL', defaultValue: '', description: 'Total number of CI nodes')
+    string(name: 'COPY_REPORT_FROM_JOB', defaultValue: '', description: 'From which job to copy knapsack report from')
+    string(name: 'COPY_REPORT_FROM_BUILD', defaultValue: '', description: 'From which build to copy knapsack report from')
+    string(name: 'MACHINE_TYPE', defaultValue: '', description: '')
+    string(name: 'NUMBER_OF_PROCESSES', defaultValue: 'master', description: 'The number of parallel tests running at the same time')
+    string(name: 'CLIENT_PORTAL_REVISION', defaultValue: 'master', description: 'Client Portal branch name to run tests on')
+    string(name: 'PLATFORM_REVISION', defaultValue: 'master', description: 'Platform commit hash or branch to run tests on')
+    string(name: 'STAFF_PORTAL_GIT_COMMIT', defaultValue: 'master', description: 'Staff Portal commit hash to run tests on')
+    string(name: 'TALENT_PORTAL_BRANCH', defaultValue: 'master', description: '')
+    string(name: 'TALENT_ACTIVATION_BRANCH', defaultValue: 'master', description: '')
+    string(name: 'ANVIL_URL', defaultValue: '', description: '')
+    string(name: 'COMMIT_FOR_ANVIL', defaultValue: '', description: '')
+    string(name: 'ANVIL_PARENT_BUILD_ID', defaultValue: '', description: '')
+  }
+
+  environment {
+    GCE_ACCOUNT_EMAIL = credentials('jenkins-toptal-ci-google-service-account-email')
+    GCE_ACCOUNT_KEY = credentials('jenkins-toptal-ci-google-service-account-key')
+    GCE_GQL_SCHEMAS_BUCKET_ACCOUNT = credentials('gcr_gqlgw_schemas_bucket_account')
+    BUNDLE_ENTERPRISE__CONTRIBSYS__COM = credentials('sidekiq_ent_key')
+    NPM_TOKEN = credentials('npm-token-for-toptal-private-registry')
+    GCE_PROJECT = 'toptal-ci'
+    GCE_NETWORK = 'tests'
+    GCE_SUBNET = 'tests-us-c1'
+    GAE_PROXY_INTERNAL_IP = '10.181.0.35'
+  }
+
+  stages {
+    stage('Register build in Anvil') {
+      steps {
+        script {
+          env.ANVIL_BUILD_ID = anvilHelper.registerBuild()
+        }
+      }
+    }
+
+    stage('Git checkout') {
+      steps {
+        script {
+          if (env.ghprbActualCommit) {
+            info "== Checking out platform branch ${env.PLATFORM_REVISION}"
+            gitCheckout(
+              branches: "${env.PLATFORM_REVISION}",
+              credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+              url: 'git@github.com:toptal/platform.git',
+              additionalBehaviours: [
+                advancedCheckoutBehaviour: [timeout: 30],
+                advancedCloneBehaviour   : [depth: 0, noTags: true, reference: '', shallow: false, timeout: 30],
+                mergeBeforeBuild         : [mergeRemote: 'origin', mergeTarget: 'master', mergeStrategy: 'DEFAULT', fastForwardMode: 'FF']
+              ]
+            )
+            success "Platform checkout successful."
+
+            info "== Checking out staff portal commit ${env.ghprbActualCommit}"
+            gitCheckout(
+              branches: "${env.ghprbActualCommit}",
+              credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+              url: 'git@github.com:toptal/staff-portal.git',
+              additionalBehaviours: [
+                advancedCheckoutBehaviour: [timeout: 30],
+                advancedCloneBehaviour   : [depth: 0, noTags: true, reference: '', shallow: false, timeout: 30],
+                cleanBeforeCheckout      : true,
+                mergeBeforeBuild         : [mergeRemote: 'origin', mergeTarget: "${env.ghprbTargetBranch}", mergeStrategy: 'DEFAULT', fastForwardMode: 'FF'],
+                checkoutToSubDirectory: [ relativeTargetDir: 'staff-portal' ]
+              ]
+            )
+            success "Staff portal checkout successful."
+          } else {
+            info "== Checking out platform branch ${env.PLATFORM_REVISION}"
+            gitCheckout(
+              branches: "${env.PLATFORM_REVISION}",
+              credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+              url: 'git@github.com:toptal/platform.git',
+              additionalBehaviours: [
+                advancedCheckoutBehaviour: [timeout: 30],
+                advancedCloneBehaviour   : [depth: 0, noTags: true, reference: '', shallow: false, timeout: 30],
+                cleanBeforeCheckout      : true
+              ]
+            )
+            success "Platform checkout successful."
+            info "== Checking out staff portal master ${env.STAFF_PORTAL_GIT_COMMIT}"
+            gitCheckout(
+              branches: "${env.STAFF_PORTAL_GIT_COMMIT}",
+              credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+              url: 'git@github.com:toptal/staff-portal.git',
+              additionalBehaviours: [
+                advancedCheckoutBehaviour: [timeout: 30],
+                advancedCloneBehaviour   : [depth: 0, noTags: true, reference: '', shallow: false, timeout: 30],
+                cleanBeforeCheckout      : true,
+                checkoutToSubDirectory: [ relativeTargetDir: 'staff-portal' ]
+              ]
+            )
+            success "Staff portal checkout successful."
+          }
+          info "== Checking out client portal branch ${env.CLIENT_PORTAL_REVISION}"
+          gitCheckout(
+            branches: "${env.CLIENT_PORTAL_REVISION}",
+            credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+            url: 'git@github.com:toptal/client-portal.git',
+            additionalBehaviours: [
+              advancedCheckoutBehaviour: [timeout: 30],
+              advancedCloneBehaviour   : [depth: 0, noTags: false, reference: '', shallow: false, timeout: 30],
+              checkoutToSubDirectory: [ relativeTargetDir: 'portal' ]
+            ]
+          )
+          success "Client portal checkout successful."
+          info "== Checking out talent portal using revision ${params.TALENT_PORTAL_BRANCH}"
+          gitCheckout(
+            branches: "${params.TALENT_PORTAL_BRANCH}",
+            credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+            url: 'git@github.com:toptal/talent-portal-frontend.git',
+            additionalBehaviours: [
+              advancedCheckoutBehaviour: [timeout: 30],
+              advancedCloneBehaviour   : [depth: 0, noTags: true, reference: '', shallow: false, timeout: 30],
+              cleanBeforeCheckout      : true,
+              checkoutToSubDirectory: [ relativeTargetDir: 'talent_portal' ]
+            ]
+          )
+          success "Talent portal checkout successful."
+
+          info "== Checking out talent activation using revision ${params.TALENT_ACTIVATION_BRANCH}"
+          gitCheckout(
+            branches: "${params.TALENT_ACTIVATION_BRANCH}",
+            credentials: [username: 'toptal-build', description: 'toptal-build-ssh-key'],
+            url: 'git@github.com:toptal/talent-activation-frontend.git',
+            additionalBehaviours: [
+              advancedCheckoutBehaviour: [timeout: 30],
+              advancedCloneBehaviour   : [depth: 0, noTags: true, reference: '', shallow: false, timeout: 30],
+              cleanBeforeCheckout      : true,
+              checkoutToSubDirectory: [ relativeTargetDir: 'talent_activation' ]
+            ]
+          )
+          success "Talent activation checkout successful."
+        }//script
+        success "Checkout finished"
+      }//steps
+    }//stage
+
+    stage("Copy knapsack report") {
+      steps {
+        copyArtifacts(
+          projectName: env.COPY_REPORT_FROM_JOB,
+          filter: 'knapsack_cucumber_report.json',
+          selector: specific(env.COPY_REPORT_FROM_BUILD)
+        )
+      }
+    }
+
+    stage("Download schemas from the Google Cloud bucket") {
+      steps {
+        script {
+          sh """
+            gcloud auth activate-service-account --key-file $GCE_GQL_SCHEMAS_BUCKET_ACCOUNT
+
+            mkdir -p staff-portal/tmp-graphql/
+
+            gsutil cp \
+              gs://gqlgw-introspection/production_staff_schema.graphql \
+              staff-portal/tmp-graphql/gateway_schema.graphql
+            gsutil cp \
+              gs://gqlgw-introspection/production_lens_schema.graphql \
+              staff-portal/tmp-graphql/lens_schema.graphql
+          """
+        }
+      }
+    }
+
+    stage('Run features') {
+      steps {
+        script {
+            sshagent(credentials: ['f9bf19d3-ddcd-464d-8690-0fe98a5a35e8']) {
+              sh """
+                if [ -n "$MACHINE_TYPE" ];then
+                  export GCE_MACHINE_TYPE=$MACHINE_TYPE
+                fi
+
+                export GCE_DISK_TYPE=pd-standard
+                # FIXME: Use the default disk size when the dockerized Staff Portal is used.
+                export GCE_DISK_SIZE=40
+
+                GIT_COMMIT_CLIENT_PORTAL="\$(git -C portal rev-parse HEAD)"
+                ${anvilHelper.envVarsForBuild()}
+                rake -f lib/tasks/jenkins.rake "jenkins:features_staff_portal[:developer, \$GIT_COMMIT_CLIENT_PORTAL, $NUMBER_OF_PROCESSES]"
+               """
+          }//sshagent
+        }//script
+      }//steps
+    }//stage
+  }//stages
+
+  post {
+    success {
+      success 'Build succeeded.'
+    }
+
+    failure {
+      script {
+        err 'Build failed.'
+
+        archiveArtifacts(
+          artifacts: 'log/*.log, results/videos/*.mkv, results/json/*.json, log/*.gz,  log/*.xz, results/junit*/*.xml',
+          fingerprint: false,
+          allowEmptyArchive: true
+        )
+      }
+    }
+
+    always {
+      script {
+        publishHtmlReports(
+          reportName: 'Cucumber report',
+          reportDir: 'results/html',
+          reportFiles: 'index.html',
+          reportTitles: 'Cucumber'
+        )
+
+        junitArchive(testResults: 'results/junit/*.xml')
+
+        archiveArtifacts(
+          artifacts: 'new_knapsack*.json, *.xz, results/json/*.json, results/flaky/*.xml',
+          fingerprint: false,
+          allowEmptyArchive: true
+        )
+        sendBuildData(currentBuild)
+      }
+    }
+  }
+}

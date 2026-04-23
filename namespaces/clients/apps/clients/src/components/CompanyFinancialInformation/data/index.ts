@@ -1,0 +1,6 @@
+export type { CompanyFinancialInformationFragment } from './company-financial-information-fragment.staff.gql.types'
+export type { GetCompanyFinancialInformationQuery } from './get-company-financial-information.staff.gql.types'
+export { GetCompanyFinancialInformationDocument } from './get-company-financial-information.staff.gql.types'
+export type { GetClientStagesQuery } from './get-client-stages.staff.gql.types'
+export { GetClientStagesDocument } from './get-client-stages.staff.gql.types'
+export { SetPatchCompanyFinancialInformationDocument } from './set-patch-company-financial-information.staff.gql.types'

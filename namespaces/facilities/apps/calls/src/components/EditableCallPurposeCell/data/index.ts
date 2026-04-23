@@ -1,0 +1,6 @@
+export { getCallValuesHook } from './get-call-purpose-values/get-call-purpose-values.staff.gql'
+export * from './get-call-purpose-values/get-call-purpose-values.staff.gql.types'
+export { getCallPurposesOptionsHook } from './get-purposes-options/get-purposes-options.staff.gql'
+export * from './get-purposes-options/get-purposes-options.staff.gql.types'
+export { useUpdateCallPurpose } from './update-call-purpose/update-call-purpose.staff.gql'
+export * from './update-call-purpose/update-call-purpose.staff.gql.types'

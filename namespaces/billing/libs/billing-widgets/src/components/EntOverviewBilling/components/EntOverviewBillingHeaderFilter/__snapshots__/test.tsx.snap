@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntOverviewBillingHeaderFilter default render when \`isTeamLead\`: false 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="MuiTabs-root"
+      data-testid="EntOverviewBillingHeaderFilter"
+    >
+      <div
+        class="MuiTabs-scrollable"
+        style="width: 99px; height: 99px; position: absolute; top: -9999px; overflow: scroll;"
+      />
+      <div
+        class="MuiTabs-scroller MuiTabs-scrollable"
+        style="margin-bottom: 0px;"
+      >
+        <div
+          class="MuiTabs-flexContainer"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected"
+            data-testid="tab-my-team"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTab-wrapper"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-inherit PicassoTypography-semibold MuiTypography-body1"
+              >
+                My Billing
+              </div>
+            </span>
+          </button>
+        </div>
+        <span
+          class="PrivateTabIndicator-root PrivateTabIndicator-colorSecondary MuiTabs-indicator"
+          style="left: 0px; width: 0px;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EntOverviewBillingHeaderFilter default render when \`isTeamLead\`: true 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class="MuiTabs-root"
+      data-testid="EntOverviewBillingHeaderFilter"
+    >
+      <div
+        class="MuiTabs-scrollable"
+        style="width: 99px; height: 99px; position: absolute; top: -9999px; overflow: scroll;"
+      />
+      <div
+        class="MuiTabs-scroller MuiTabs-scrollable"
+        style="margin-bottom: 0px;"
+      >
+        <div
+          class="MuiTabs-flexContainer"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected"
+            data-testid="tab-my-team"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTab-wrapper"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-inherit PicassoTypography-semibold MuiTypography-body1"
+              >
+                My Billing
+              </div>
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+            data-testid="tab-team-billing"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiTab-wrapper"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodySmall PicassoTypography-inherit PicassoTypography-semibold MuiTypography-body1"
+              >
+                Team Billing
+              </div>
+            </span>
+          </button>
+        </div>
+        <span
+          class="PrivateTabIndicator-root PrivateTabIndicator-colorSecondary MuiTabs-indicator"
+          style="left: 0px; width: 0px;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

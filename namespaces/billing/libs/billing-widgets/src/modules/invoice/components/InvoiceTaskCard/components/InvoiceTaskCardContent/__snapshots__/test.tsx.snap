@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InvoiceTaskCardContent card is rendered properly 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      data-testid="TaskCardLayout.Header"
+    >
+      <div
+        data-testid="TaskCardLayout.Title"
+      >
+        11234564
+        <br />
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+          data-testid="consolidated-link"
+          href="http://localhost:3000/platform/staff/invoices/380600"
+        >
+          Consolidated Invoice #380600
+        </a>
+      </div>
+      <div
+        data-testid="InvoiceTaskCardActions"
+      >
+        {"invoiceId":"VjEtSW52b2ljZS0zNzcyNDk"}
+      </div>
+    </div>
+    <div
+      data-testid="InvoiceTaskCardSummary"
+    >
+      "VjEtSW52b2ljZS0zNzcyNDk"
+    </div>
+    <div
+      data-testid="TaskCardLayout.Content"
+    />
+    <div
+      data-testid="TaskCardLayout.Description"
+    >
+      <div
+        data-testid="TaskCardLayout.DescriptionFormatter"
+      >
+        {"description":"Hourly services from Hugh Wimberly for [Enterprise] Data Engineering Architect from December 29, 2019 to January 4, 2020. 15 hours of work billed."}
+      </div>
+    </div>
+  </div>
+</div>
+`;

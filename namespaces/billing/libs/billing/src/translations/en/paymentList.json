@@ -1,0 +1,111 @@
+{
+  "filters": {
+    "fields": {
+      "checkboxes": {
+        "kind": {
+          "cashLeadPromotion": "Cash lead promotion",
+          "cashLeadReward": "Cash lead reward",
+          "companyClaimingCommission": "Engagement letter commission",
+          "enterpriseClientPartnerCommission": "Enterprise client partner commission",
+          "enterpriseCompanyClaimingCommission": "Enterprise company claiming commission",
+          "jobClaimingCommission": "Engagement commission",
+          "projectSalesCommission": "SMB Project Sales commission",
+          "referredCommission": "Referred commission",
+          "returnedCredit": "Refunded credit balance",
+          "roleStepCommission": "Talent screening commission",
+          "salesAnalysisCommission": "Sales analysis commission",
+          "salesOwnerCommission": "SMB Sales commission",
+          "sourcingCommission": "Sourcing commission",
+          "talentPayment": "Talent payment",
+          "topSkillBonusReferredCommission": "Top skill bonus referred commission",
+          "topSkillBonusTalentSourcingCommission": "Top skill bonus talent sourcing commission"
+        },
+        "payeeRole": {
+          "company": "Company",
+          "companyRepresentative": "Contact",
+          "designer": "Designer",
+          "developer": "Developer",
+          "financeExpert": "Finance expert",
+          "leader": "Leader",
+          "productManager": "Product manager",
+          "projectManager": "Project manager",
+          "referralPartner": "Referral partner",
+          "staff": "Staff",
+          "talentPartner": "Talent partner"
+        },
+        "toptalPayments": {
+          "noTransferMethod": "No transfer method",
+          "notAcknowledged": "Not acknowledged"
+        }
+      },
+      "common": {
+        "kinds": "Kinds",
+        "payeeRole": "Payee role",
+        "preferredPaymentMethod": "Primary method",
+        "presets": "Preset",
+        "statuses": "Status",
+        "toptalPayments": "Toptal payments"
+      },
+      "radio": {
+        "preset": {
+          "default": "Not Selected",
+          "payoneer": "Payoneer",
+          "staffCommissions": "Staff commissions",
+          "toptalPayments": "Toptal payments"
+        }
+      }
+    }
+  },
+  "header": {
+    "actions": {
+      "createPaymentGroup": {
+        "label": "Create Payment Group",
+        "tooltip": "This will create payment group based on current selected search filters."
+      },
+      "downloadPayments": {
+        "label": "Download Payments",
+        "previouslyDownloaded": "{{alreadyDownloadedCount}} of {{totalCount}} payments have been previously downloaded and will not be included in the report.",
+        "reportTooLarge": "This report is too large to be generated on the fly. It will be emailed to you in a few minutes.",
+        "tooltip": "This will create payment groups based on current selected search filters. Click to download the payment information to be uploaded on Hyperwallet/Payoneer."
+      },
+      "payMultiple": "Pay Multiple"
+    },
+    "title": "Payments"
+  },
+  "modals": {
+    "createPaymentGroup": {
+      "confirmButtonText": "Create payment group",
+      "description": "This will create group of payments you can transfer to a single user account in bulk.",
+      "intro": "Are you sure that you want to create payment group for <strong>{{payee}} ({{role}})</strong>?",
+      "notification": {
+        "success": "Payment Group #{{id}} was successfully created."
+      },
+      "title": "Create payment group out of search results"
+    }
+  },
+  "table": {
+    "actions": {
+      "details": "Details",
+      "remove": "Remove",
+      "revert": "Restore"
+    },
+    "empty": {
+      "message": "There are no payments for this search criteria"
+    },
+    "head": {
+      "actions": "Actions",
+      "amount": "Amount",
+      "created": "Created",
+      "date": "Date issued",
+      "description": "Description",
+      "id": "ID",
+      "paidDate": "Paid on",
+      "recipient": "Payee",
+      "service": "Service",
+      "status": "Status"
+    },
+    "item": {
+      "paymentGroupLink": "(PG #{{paymentGroupId}})"
+    }
+  }
+}

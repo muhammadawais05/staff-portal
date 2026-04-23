@@ -1,0 +1,32 @@
+{
+  "name": "@staff-portal/talents-stats",
+  "description": "SP Talents Stats related functionality",
+  "version": "0.0.1",
+  "author": "Toptal",
+  "license": "ISC",
+  "main": "./src/index.ts",
+  "scripts": {
+    "generate:types": "kurama generate-types",
+    "generate:types:watch": "kurama generate-types --watch",
+    "lint": "kurama lint",
+    "test": "kurama test",
+    "typecheck": "kurama typecheck"
+  },
+  "dependencies": {
+    "@staff-portal/config": "0.137.7",
+    "@staff-portal/data-layer-service": "0.3.24",
+    "@staff-portal/graphql": "0.4.0",
+    "@staff-portal/talents": "0.0.30",
+    "@staff-portal/ui": "0.10.13",
+    "@toptal/picasso": "^25.0.0",
+    "react": "16.14.0"
+  },
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@staff-portal/test-utils": "0.1.24",
+    "@testing-library/react": "^11.2.6",
+    "graphql-tag": "^2.12.4"
+  },
+  "private": true,
+  "sideEffects": false
+}

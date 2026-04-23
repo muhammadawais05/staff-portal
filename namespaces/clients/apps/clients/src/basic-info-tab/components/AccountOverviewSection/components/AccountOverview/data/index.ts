@@ -1,0 +1,7 @@
+export * from './get-client-contact-name.staff.gql'
+export * from './get-client-contact-name.staff.gql.types'
+export * from './get-client-time-zone.staff.gql'
+export * from './get-client-time-zone.staff.gql.types'
+export { GetClientLeadSourceDocument } from './get-client-lead-source.staff.gql.types'
+export { SetUpdateClientLikelihoodToCloseDocument } from './set-update-client-likelihood-to-close.staff.gql.types'
+export { GetLikeliHoodToCloseDocument } from './get-client-likelihood-to-close.staff.gql.types'

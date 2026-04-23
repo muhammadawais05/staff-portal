@@ -1,0 +1,79 @@
+name: Required Updates
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: required-updates-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  STATUS_CHECK_NAME: Check:Required Updates
+  STATUS_TARGET_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+jobs:
+  checkUpdates:
+    name: Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set status check - pending
+        uses: actions/github-script@v6
+        env:
+          STATUS_STATE: pending
+        with:
+          script: |
+            const { owner, repo } = context.issue;
+            await github.rest.repos.createCommitStatus({
+              owner,
+              repo,
+              sha: context.sha,
+              context: process.env.STATUS_CHECK_NAME,
+              state: process.env.STATUS_STATE,
+              target_url: process.env.STATUS_TARGET_URL
+            })
+
+      - name: Get required commit
+        id: get-required-commit
+        run: |
+          REQUIRED_COMMIT_SHA=$(curl -H "Authorization: token $GITHUB_TOKEN" \
+            -H 'Accept: application/vnd.github.v3.raw' \
+            -L \
+            -X GET \
+            https://api.github.com/repos/toptal/staff-portal/contents/REQUIRED_COMMIT_SHA?ref=master)
+
+          echo "::set-output name=requiredCommit::$REQUIRED_COMMIT_SHA"
+
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        if: steps.get-required-commit.outputs.requiredCommit != ''
+        with:
+          # This makes Actions fetch all Git history so we can check required commit
+          fetch-depth: 0
+          # Check out pull request HEAD commit instead of merge commit
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Check required commit
+        if: steps.get-required-commit.outputs.requiredCommit != ''
+        env:
+          REQUIRED_COMMIT_SHA: ${{ steps.get-required-commit.outputs.requiredCommit }}
+        run: |
+          git merge-base --is-ancestor ${{ env.REQUIRED_COMMIT_SHA }} HEAD || (echo "Please make sure your branch includes this commit: https://github.com/toptal/staff-portal/commit/$REQUIRED_COMMIT_SHA" && exit 1)
+
+      - name: Set status check - success / failure / error
+        uses: actions/github-script@v6
+        if: ${{ always() }}
+        env:
+          STATUS_STATE: ${{ job.status != 'cancelled' && job.status || 'error' }}
+        with:
+          script: |
+            const { owner, repo } = context.issue;
+            await github.rest.repos.createCommitStatus({
+              owner,
+              repo,
+              sha: context.sha,
+              context: process.env.STATUS_CHECK_NAME,
+              state: process.env.STATUS_STATE,
+              target_url: process.env.STATUS_TARGET_URL
+            })

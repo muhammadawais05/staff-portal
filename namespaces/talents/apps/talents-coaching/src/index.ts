@@ -1,0 +1,1 @@
+export { TalentCoachingList } from './pages'

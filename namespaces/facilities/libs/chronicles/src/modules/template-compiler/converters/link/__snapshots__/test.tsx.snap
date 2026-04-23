@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link payload from Model Description object, accessible, with path, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    Performer sent email to 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/platform/staff/talents/1513001"
+    >
+      Piotr Imb
+    </a>
+    
+  </div>
+</div>
+`;
+
+exports[`link payload from Model Description object, accessible, with path, with options, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    Performer sent email to 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/resume/vijay-sharma"
+      rel="noopener"
+      target="_blank"
+    >
+      Dorathy Koepp
+    </a>
+    
+  </div>
+</div>
+`;
+
+exports[`link payload from Model Description object, accessible, without path, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    Performer sent email to 
+    Piotr Imb
+    
+  </div>
+</div>
+`;
+
+exports[`link payload from Model Description object, not accessible, with path, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    Performer sent email to 
+    Piotr Imb
+    
+  </div>
+</div>
+`;
+
+exports[`link payload from PerformedAction payload, accessible, with path, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/companies/123"
+    >
+      Super company
+    </a>
+    
+  </div>
+</div>
+`;
+
+exports[`link payload from PerformedAction payload, accessible, with path, with options, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover PicassoLink-root PicassoLink-blue MuiTypography-colorPrimary"
+      href="/companies/123"
+      rel="noopener"
+      target="_blank"
+    >
+      Super company
+    </a>
+    
+  </div>
+</div>
+`;
+
+exports[`link payload from PerformedAction payload, accessible, without path, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    Super company
+    
+  </div>
+</div>
+`;
+
+exports[`link payload from PerformedAction payload, not accessible, with path, should be rendered from template 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    
+    Super company
+    
+  </div>
+</div>
+`;

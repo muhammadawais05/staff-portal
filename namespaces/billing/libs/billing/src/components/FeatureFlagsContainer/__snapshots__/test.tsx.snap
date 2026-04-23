@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureFlagsContainer when \`flags\` provided default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <h1>
+      Test
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`FeatureFlagsContainer when \`url\` flags provided default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <h1>
+      Test
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`FeatureFlagsContainer when only \`defaultFeatureFlags\` provided default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <h1>
+      Test
+    </h1>
+  </div>
+</div>
+`;

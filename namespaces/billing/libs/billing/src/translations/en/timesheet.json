@@ -1,0 +1,118 @@
+{
+  "Timesheet": {
+    "breakDay": "Break Day",
+    "confirms": {
+      "submit": {
+        "actionTitle": "Submit Timesheet",
+        "description": "Are you sure you want to submit this timesheet?",
+        "notice": "<strong>Warning!</strong> Once submitted, timesheet will be presented to company and will be no longer available for editing. You can go back and save it as a draft to submit it later.",
+        "title": "Confirm Timesheet Submission"
+      }
+    },
+    "header": "Timesheets",
+    "title": "Timesheet",
+    "warnings": {
+      "blocked": "This timesheet is overdue and will need to be reviewed by your recruiter and processed manually.",
+      "hasBreak": "You cannot log hours for days you're on break. If you need to update your break days, please reach out to your recruiter.",
+      "overdue": "Talent has {{days}} to submit this timesheet for automatic processing. After that this timesheet will need to be reviewed by a recruiter.",
+      "submitted": "You're updating submitted timesheet which will result in related Billing Cycle. All related invoices, payments, and commissions will be sent to the accounting team for review and updated accordingly."
+    }
+  },
+  "TimesheetApproveReject": {
+    "actions": {
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "form": {
+      "comment": {
+        "placeholder": "Write any additional information here"
+      }
+    },
+    "title": "Approve/Reject timesheet"
+  },
+  "TimesheetContent": {
+    "timesheetComment": {
+      "title": "Comment"
+    },
+    "timesheetRejectionComment": {
+      "title": "Rejection"
+    },
+    "total": {
+      "title": "Total"
+    }
+  },
+  "TimesheetEditForm": {
+    "actions": {
+      "contactRecruiter": "Save Draft and Contact Recruiter",
+      "moveNext": "Move next",
+      "movePrev": "Move previous",
+      "save": "Save",
+      "saveDraft": "Save as Draft"
+    },
+    "form": {
+      "comment": {
+        "placeholder": "Write any additional information here"
+      }
+    }
+  },
+  "TimesheetJobTitle": {
+    "title": "Timesheet for"
+  },
+  "TimesheetList": {
+    "empty": "There are no {{type}} timesheets for this position right now",
+    "showMore": "Show more timesheets",
+    "title": {
+      "extraHours": "Extra Hours Timesheets",
+      "normal": "Timesheets"
+    },
+    "titleType": "{{type}} Timesheets"
+  },
+  "TimesheetListItem": {
+    "actions": {
+      "unsubmit": "Unsubmit"
+    }
+  },
+  "TimesheetStatus": {
+    "approved": "Approved",
+    "notSubmitted": "Not submitted",
+    "waitApproval": "Awaiting approval",
+    "warning": {
+      "blocked": "no automatic processing available",
+      "left": "{{days}} left for submission",
+      "overdue": "Submission overdue, {{desc}}",
+      "rejected": "Rejected"
+    }
+  },
+  "TimesheetSummary": {
+    "additionalNote": "Additional Note",
+    "hoursSubmitted": "Total Hours Submitted:",
+    "minimumCommitment": "Minimum Commitment Applied:",
+    "reasonHasBreak": "Minimum commitment not applied due to time off during the billing cycle.",
+    "reasonIsTrial": "Minimum commitment not applied due to trial during the billing cycle.",
+    "reasonNotFullLength": "Minimum commitment not applied due to short billing cycle.",
+    "summary": "Summary",
+    "totalHours": "Total Hours:",
+    "totalHoursCharged": "Total Hours Charged:"
+  },
+  "UnsubmitTimesheet": {
+    "actions": {
+      "unsubmit": "Unsubmit"
+    },
+    "form": {
+      "comment": {
+        "placeholder": "Write any additional information here"
+      }
+    },
+    "title": "Unsubmit timesheet",
+    "warning": "When you remove this timesheet, all related invoices, payments, and commissions will be sent to the Finance team for review and updated accordingly upon timesheet re-submission.",
+    "warningExtraHours": "When you remove this timesheet, all related invoices, payments, and commissions will be sent to the Finance team for review and updated accordingly."
+  },
+  "notification": {
+    "success": {
+      "approve": "Timesheet has been approved",
+      "reject": "Timesheet has been rejected",
+      "save": "Timesheet has been saved",
+      "unsubmit": "Timesheet has been unsubmitted"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommitmentChangeModalFormTable default render 1`] = `
+<div>
+  <div
+    class="Picasso-root"
+  >
+    <div
+      class=""
+      style="margin-bottom: 2rem;"
+    >
+      <table
+        class="MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root PicassoTableHead-root"
+          data-testid="CommitmentChangeModalFormTable-head"
+        >
+          <tr
+            class="MuiTableRow-root PicassoTableRow-root PicassoTableRow-bordered MuiTableRow-head"
+          >
+            <th
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head"
+              data-testid="CommitmentChangeModalFormTable-head-talent"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Talent
+              </div>
+            </th>
+            <th
+              class="MuiTableCell-root PicassoTableCell-root MuiTableCell-head"
+              data-testid="CommitmentChangeModalFormTable-head-company"
+              scope="col"
+            >
+              <div
+                class="MuiTypography-root PicassoTypography-bodyXsmall PicassoTypography-darkGrey PicassoTypography-semibold MuiTypography-body1"
+              >
+                Company
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            data-testid="CommitmentChangeModalFormTableRow"
+          >
+            <td>
+              {"type":"hourly"}
+            </td>
+          </tr>
+          <tr
+            data-testid="CommitmentChangeModalFormTableRow"
+          >
+            <td>
+              {"type":"partTime"}
+            </td>
+          </tr>
+          <tr
+            data-testid="CommitmentChangeModalFormTableRow"
+          >
+            <td>
+              {"type":"fullTime"}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class=""
+        style="margin-top: 1rem;"
+      >
+        <div
+          class="PicassoContainer-yellowVariant PicassoContainer-mediumPadding PicassoContainer-rounded PicassoHelpbox-root"
+        >
+          <div
+            class="MuiTypography-root PicassoTypography-bodyMedium PicassoTypography-black MuiTypography-body1"
+            data-testid="CommitmentChangeModalFormTable-warning"
+          >
+            Companies that pay with ACH or Wire will receive a 3% discount.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
