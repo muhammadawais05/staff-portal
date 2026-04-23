@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Set status check - pending
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           STATUS_STATE: pending
         with:
@@ -91,7 +91,7 @@ jobs:
 
       - name: Set status check - success / failure / error
         if: ${{ always() }}
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           STATUS_STATE: ${{ job.status != 'cancelled' && job.status || 'error' }}
         with:

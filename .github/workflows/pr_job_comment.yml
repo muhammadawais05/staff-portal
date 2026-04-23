@@ -28,7 +28,7 @@ jobs:
         run: echo $EVENT
 
       - id: prData
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         with:
           script: |
             const { owner, repo, number } = context.issue;
@@ -96,7 +96,7 @@ jobs:
         if: ${{ always() }}
         env:
           JOB_STATUS: ${{ job.status }}
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}
           script: |

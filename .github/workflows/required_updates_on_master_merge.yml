@@ -21,7 +21,7 @@ jobs:
           key: ${{ runner.os }}-required-commit-sha-${{ hashFiles('REQUIRED_COMMIT_SHA') }}
 
       - name: Notify opened PRs
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         if: ${{ steps.required-commit-cache.outputs.cache-hit != 'true' }}
         with:
           github-token: ${{ secrets.TOPTAL_DEVBOT_TOKEN }}

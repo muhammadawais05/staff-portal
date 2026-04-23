@@ -22,7 +22,7 @@ jobs:
     runs-on: ['org/toptal', 'os/linux', 'arch/x64', 'size/large']
     steps:
       - name: Set status check - pending
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           STATUS_STATE: pending
         with:
@@ -287,7 +287,7 @@ jobs:
     if: always()
     steps:
       - name: Set status check - success / failure / error
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           STATUS_STATE: ${{ needs.cypress_test_worker.result == 'success' && 'success' || 'error' }}
         with:
