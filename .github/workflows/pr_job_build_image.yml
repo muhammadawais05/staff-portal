@@ -94,7 +94,7 @@ jobs:
           flavor: latest=false
 
       - name: Login to GCloud Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v4
         with:
           registry: gcr.io
           username: _json_key
