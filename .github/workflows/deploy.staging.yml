@@ -310,7 +310,7 @@ jobs:
 
       - name: Send a Slack notification on success / failure
         if: ${{ success() || failure() }}
-        uses: slackapi/slack-github-action@v1.19
+        uses: slackapi/slack-github-action@v3.0
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
@@ -319,7 +319,7 @@ jobs:
 
       - name: Send a Slack notification with publishing status
         if: needs.buildandpushreleaseimage.outputs.publishPackageOutcome == 'success'
-        uses: slackapi/slack-github-action@v1.19
+        uses: slackapi/slack-github-action@v3.0
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
