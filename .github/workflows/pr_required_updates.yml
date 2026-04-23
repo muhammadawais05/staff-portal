@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Set status check - pending
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           STATUS_STATE: pending
         with:
@@ -62,7 +62,7 @@ jobs:
           git merge-base --is-ancestor ${{ env.REQUIRED_COMMIT_SHA }} HEAD || (echo "Please make sure your branch includes this commit: https://github.com/toptal/staff-portal/commit/$REQUIRED_COMMIT_SHA" && exit 1)
 
       - name: Set status check - success / failure / error
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         if: ${{ always() }}
         env:
           STATUS_STATE: ${{ job.status != 'cancelled' && job.status || 'error' }}
